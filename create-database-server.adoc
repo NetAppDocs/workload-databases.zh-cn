@@ -1,0 +1,390 @@
+---
+sidebar: sidebar 
+permalink: create-database-server.html 
+keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
+summary: 在Workload Factory中为数据库创建新的Microsoft SQL Server。 
+---
+= 在Workload Factory中为数据库创建数据库服务器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在数据库中创建新的Microsoft SQL Server或数据库主机需要部署FSx for ONTAP文件系统并为Active Directory提供资源。
+
+.关于此任务
+您需要AWS帐户凭据和_Automate权限。
+
+开始之前、请了解数据库主机配置可用的存储部署类型、Active Directory部署、工作负载出厂操作模式以及完成此操作的要求。
+
+部署完成后，您需要 <<第2步：在Microsoft SQL Server上启用远程连接,在Microsoft SQL Server上启用远程连接>>。
+
+FSx for ONTAP文件系统部署:: 创建新的Microsoft SQL Server需要FSx for ONTAP文件系统作为存储后端。您可以使用现有FSx for ONTAP文件系统、也可以创建新文件系统。如果您选择现有FSx for ONTAP文件系统作为数据库服务器存储后端、我们将为Microsoft SQL工作负载创建一个新的Storage VM。
++
+--
+FSx for ONTAP文件系统具有两种Microsoft SQL Server部署模式：_故障转移集群实例(FCI)_或_独立_。根据您选择的FSx for ONTAP部署模式、系统会为FSx for ONTAP文件系统创建不同的资源。
+
+* *故障转移集群实例(FCI) Microsoft SQL部署*：为NetApp ONTAP部署选择新的FSx for ONTAP文件系统时，将部署适用于FCI的多可用性区域FSx文件系统。对于FCI部署、系统会为数据、日志和tempdb文件创建单独的卷和LUN。系统会为Windows集群的Quorum或见证磁盘创建一个额外的卷和LUN。
+* *独立的Microsoft SQL部署*：创建新的Microsoft SQL Server时、将创建适用于ONTAP的单可用性区域FSx文件系统。此外、还会为数据、日志和tempdb文件创建单独的卷和LUN。
+
+
+--
+Active Directory:: 在部署期间、Active Directory (AD)会发生以下情况：
++
+--
+* 如果不提供现有的SQL服务帐户、则会在域中创建一个新的Microsoft SQL服务帐户。
+* Windows集群、节点主机名和Microsoft SQL FCI名称会作为受管计算机添加到Microsoft SQL服务帐户中。
+* Windows集群条目被分配了向域中添加计算机的权限。
+
+
+--
+资源回滚:: 如果您决定回滚域名系统(Domain Name System、DNS)资源、则不会自动删除AD和DNS中的资源记录。您可以按如下所示从DNS服务器和AD中删除记录。
++
+--
+* 对于用户管理的AD，请首先 link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps["卸下AD计算机"^]。然后，从DNS管理器和连接到DNS服务器 link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records["删除DNS资源记录"^]。
+* 对于AWS Managed Microsoft AD， link:https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_install_ad_tools.html["安装AD管理工具"^]。下一步， link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps["卸下AD计算机"^]。最后，从DNS管理器和连接到DNS服务器 link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records["删除DNS资源记录"^]。
+
+
+--
+工作负载出厂操作模式:: 根据您对让Workload Factory管理AWS资源的习惯程度、Workload Factory可提供三种操作模式。
++
+--
+*_Basic_ mode*：在此操作模式下、您无需在Workload Factory中关联任何AWS帐户凭据。您可以从CodeBox复制或下载部分填充的YAML模板、以便在Workload Factory之外完成。
+
+*_读取_模式*：在此操作模式下、您需要提供具有读取权限的AWS帐户凭据、以便填写_Quick cree_或_Advanced cree_表单、然后复制或下载该表单。您也可以使用填写好的表单详细信息从Workload Factory重定向到CloudFormation。您将能够在Workload Factory中管理已部署的数据库服务器。
+
+*_自动_模式*：在此操作模式下、您可以提供具有自动权限的AWS帐户凭据、以便在Workload Factory中创建和管理AWS资源。
+
+--
+
+
+.开始之前
+在创建新数据库主机之前、请确保满足以下前提条件。
+
+凭据和权限:: 您必须 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS帐户凭据和自动模式权限"^] 在Workload Factory中创建新的数据库主机。
++
+--
+或者、您也可以使用Codebox复制空模板或创建完整的模板、以便使用REST API、AWS命令行界面或AWS CloudFormation在工作负载工厂外部部署数据库。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["了解有关CodeBox自动化的更多信息"^](英文)
+
+--
+Active Directory:: 连接到Active Directory时、您必须具有具有执行以下操作的管理访问权限：
++
+--
+* 加入域
+* 创建计算机对象
+* 在默认组织单位(OU)中创建对象
+* 读取所有属性
+* 将域用户设置为AD节点上的本地管理员
+* 在AD中创建Microsoft SQL Server服务用户(如果尚不存在)
+
+
+--
+
+
+
+
+== 第1步：创建数据库服务器
+
+您可以使用_Quick create或_Advanced create部署模式在Workload Factory中以_Automate模式权限完成此任务。
+
+[role="tabbed-block"]
+====
+.快速创建
+--
+
+NOTE: 在_Quick creel_中、FCI是默认部署模式、Windows 2016是默认Windows版本、SQL 2019 Standard Edition是默认SQL版本。
+
+.步骤
+. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 在数据库磁贴中，选择*Deploy database host*。
+. 选择*快速创建*。
+. 在*AWS设置*下，提供以下内容：
++
+.. *AWS凭据*：选择具有自动化权限的AWS凭据以部署新数据库主机。
++
+通过具有_Automate权限的AWS凭据、Workload Factory可以通过您在Workload Factory中的AWS帐户部署和管理新的数据库主机。
+
++
+通过具有_read_权限的AWS凭据、Workload Factory可以生成CloudFormation模板、以供您在AWS CloudFormation控制台中使用。
+
++
+如果您在Workload Factory中没有关联的AWS凭据、而您希望在Workload Factory中创建新服务器、请按照*选项1*转到凭据页面。为数据库工作负载的_Automate_mode手动添加所需的凭据和权限。
+
++
+如果要在Workload Factory中完成创建新服务器表单、以便下载完整的YAML文件模板以在AWS CloudFormation中进行部署、请按照*选项2*进行操作、以确保您具有在AWS CloudFormation中创建新服务器所需的权限。为数据库工作负载的_Read_模式手动添加所需的凭据和权限。
+
++
+或者、您也可以从Codebox下载部分完成的YAML文件模板、以便在Workload Factory之外创建堆栈、而无需任何凭据或权限。从“代码”框的下拉列表中选择*CloudFormation*以下载YAML文件。
+
+.. *区域和VPC*：选择区域和VPC网络。
++
+确保现有接口端点的安全组允许对选定子网访问HTTPS (443)协议。
+
++
+AWS服务接口端点(SQS、FSx、EC2、CloudWatch、CloudFormation、 SSM)和S3网关端点会在部署期间创建(如果未找到)。
+
++
+如果尚未将VPC DNS属性 `EnableDnsSupport` 和 `EnableDnsHostnames` 设置为，则会对其进行修改以启用端点地址解析 `true`。
+
+.. *可用性分区*：根据故障转移集群实例(FCI)部署模式选择可用性分区和子网。
++
+
+NOTE: FCI部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。
+
++
+为实现高可用性、子网不应共享同一路由表。
+
++
+... 在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择MAZ FSx for ONTAP配置的主要可用性分区，并从*子网*下拉菜单中选择主要可用性分区中的子网。
+... 在*集群配置-节点2*字段中，从*可用性分区*下拉菜单中选择MAZ FSx for ONTAP配置的二级可用性分区，并从*子网*下拉菜单中选择一个子网。
+
+
+
+
+. 在*应用程序设置*下，输入*数据库凭据*的用户名和密码。
+. 在*连接*下，提供以下内容：
++
+.. *密钥对*：选择密钥对。
+.. *Active Directory*：
++
+... 在*域名*字段中，选择或输入域的名称。
++
+.... 对于AWS管理的Active Directory、域名显示在下拉菜单中。
+.... 对于用户管理的Active Directory，在*搜索和添加*字段中输入名称，然后单击*添加*。
+
+
+... 在*DNS地址*字段中，输入域的DNS IP地址。最多可以添加 3 个 IP 地址。
++
+对于AWS管理的Active Directory、DNS IP地址将显示在下拉菜单中。
+
+... 在*用户名*字段中，输入Active Directory域的用户名。
+... 在*密码*字段中，输入Active Directory域的密码。
+
+
+
+
+. 在*Infrastructure settings (基础架构设置)*下，提供以下内容：
++
+.. *FSx for ONTAP system*：创建新的FSx for ONTAP文件系统或使用现有FSx for ONTAP文件系统。
++
+... *创建新的FSx for FS* ONTAP：输入用户名和密码。
++
+新的FSx for ONTAP文件系统可能会增加30分钟或更长时间的安装时间。
+
+... *选择现有FSx for FS* ONTAP：从下拉菜单中选择FSx for ONTAP name，然后输入文件系统的用户名和密码。
+
+
+.. *数据驱动器大小*：输入数据驱动器容量并选择容量单位。
+
+
+. 摘要：
++
+.. *预览默认值*：查看Quick create设置的默认配置。
+.. *估计成本*：提供部署所示资源时可能产生的费用估计值。
+
+
+. 单击 * 创建 * 。
++
+或者、如果您现在要更改其中任何默认设置、请使用Advanced create创建数据库服务器。
+
++
+您也可以选择*保存配置*以在以后部署主机。
+
+
+
+--
+.高级创建
+--
+.步骤
+. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 在数据库磁贴中，选择*Deploy database host*。
+. 选择*高级创建*。
+. 对于*Deployment model*，请选择*Failover Cluster Instance*或*Single Instance*。
+. 在*AWS设置*下，提供以下内容：
++
+.. *AWS凭据*：选择具有自动化权限的AWS凭据以部署新数据库主机。
++
+通过具有_Automate权限的AWS凭据、Workload Factory可以通过您在Workload Factory中的AWS帐户部署和管理新的数据库主机。
+
++
+通过具有_read_权限的AWS凭据、Workload Factory可以生成CloudFormation模板、以供您在AWS CloudFormation控制台中使用。
+
++
+如果您在Workload Factory中没有关联的AWS凭据、而您希望在Workload Factory中创建新服务器、请按照*选项1*转到凭据页面。为数据库工作负载的_Automate_mode手动添加所需的凭据和权限。
+
++
+如果要在Workload Factory中完成创建新服务器表单、以便下载完整的YAML文件模板以在AWS CloudFormation中进行部署、请按照*选项2*进行操作、以确保您具有在AWS CloudFormation中创建新服务器所需的权限。为数据库工作负载的_Read_模式手动添加所需的凭据和权限。
+
++
+或者、您也可以从Codebox下载部分完成的YAML文件模板、以便在Workload Factory之外创建堆栈、而无需任何凭据或权限。从“代码”框的下拉列表中选择*CloudFormation*以下载YAML文件。
+
+.. *区域和VPC*：选择区域和VPC网络。
++
+确保现有接口端点的安全组允许对选定子网访问HTTPS (443)协议。
+
++
+AWS服务接口端点(SQS、FSx、EC2、CloudWatch、Cloud Formation、 SSM)和S3网关端点会在部署期间创建(如果未找到)。
+
++
+修改了VPC DNS属性 `EnableDnsSupport` 和 `EnableDnsHostnames` ，以便在尚未设置为时启用解析端点地址解析 `true`。
+
+.. *可用性分区*：根据您选择的部署模式选择可用性分区和子网。
++
+
+NOTE: FCI部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。
+
++
+为实现高可用性、子网不应共享同一路由表。
+
++
+适用于单实例部署::
++
+--
+... 在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择可用性分区，并从*子网*下拉菜单中选择子网。
+
+
+--
+FCI部署::
++
+--
+... 在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择MAZ FSx for ONTAP配置的主要可用性分区，并从*子网*下拉菜单中选择主要可用性分区中的子网。
+... 在*集群配置-节点2*字段中，从*可用性分区*下拉菜单中选择MAZ FSx for ONTAP配置的二级可用性分区，并从*子网*下拉菜单中选择一个子网。
+
+
+--
+
+
+.. *安全组*：选择现有安全组或创建新安全组。
++
+在新服务器部署期间、三个安全组会连接到SQL节点(EC2实例)。
+
++
+... 此时将创建一个工作负载安全组、以允许在节点上进行Microsoft SQL和Windows集群通信所需的端口和协议。
+... 如果使用的是AWS管理的Active Directory、则连接到目录服务的安全组会自动添加到Microsoft SQL节点中、以允许与Active Directory进行通信。
+... 对于现有FSx for ONTAP文件系统、与其关联的安全组会自动添加到SQL节点中、从而允许与文件系统进行通信。创建新的FSx for ONTAP系统时、将为FSx for ONTAP文件系统创建一个新安全组、并且同一安全组也会连接到SQL节点。
++
+对于用户管理的Active Directory、您可以选择一个安全组、以允许来自需要连接到数据库的现有系统的流量。安全组应允许从配置了适用于Microsoft SQL的EC2实例的子网与Active Directory域控制器进行通信。
+
+
+
+
+
+. 在*应用程序设置*下，提供以下内容：
++
+.. 在*SQL Server安装类型*下，选择*License included AMI*或*Use custom AMI*。
++
+... 如果选择*含许可证AMI*，请提供以下内容：
++
+.... *操作系统*：选择*Windows server 2016*、*Windows server 2019*或*Windows server 2022*。
+.... *数据库版本*：选择*SQL Server标准版*或*SQL Server企业版*。
+.... *数据库版本*：选择*SQL Server 2016*、*SQL Server 2019*或*SQL Server 2022*。
+.... *SQL Server AMI*：从下拉菜单中选择一个SQL Server AMI。
+
+
+... 如果选择*使用自定义AMI*，请从下拉菜单中选择一个AMI。
+
+
+.. *SQL Server排序规则*:为服务器选择排序规则集。
++
+
+NOTE: 如果选定的整理集与安装不兼容、建议您选择默认整理"SQL_Latin1_General CP1_CI_AS"。
+
+.. *数据库名称*：输入数据库集群名称。
+.. *数据库凭据*：输入新服务帐户的用户名和密码或使用Active Directory中的现有服务帐户凭据。
+
+
+. 在*连接*下，提供以下内容：
++
+.. *密钥对*：选择一个密钥对以安全地连接到实例。
+.. *Active Directory*：提供以下Active Directory详细信息：
++
+... 在*域名*字段中，选择或输入域的名称。
++
+.... 对于AWS管理的Active Directory、域名显示在下拉菜单中。
+.... 对于用户管理的Active Directory，在*搜索和添加*字段中输入名称，然后单击*添加*。
+
+
+... 在*DNS地址*字段中，输入域的DNS IP地址。最多可以添加 3 个 IP 地址。
++
+对于AWS管理的Active Directory、DNS IP地址将显示在下拉菜单中。
+
+... 在*用户名*字段中，输入Active Directory域的用户名。
+... 在*密码*字段中，输入Active Directory域的密码。
+
+
+
+
+. 在*Infrastructure settings (基础架构设置)*下，提供以下内容：
++
+.. *DB Instance type*:从下拉菜单中选择数据库实例类型。
+.. *FSx for ONTAP system*：创建新的FSx for ONTAP文件系统或使用现有FSx for ONTAP文件系统。
++
+... *创建新的FSx for FS* ONTAP：输入用户名和密码。
++
+新的FSx for ONTAP文件系统可能会增加30分钟或更长时间的安装时间。
+
+... *选择现有FSx for FS* ONTAP：从下拉菜单中选择FSx for ONTAP name，然后输入文件系统的用户名和密码。
+
+
+.. *Snapshot policy*:默认情况下处于启用状态。快照每天创建一次、保留期限为7天。
++
+快照将分配给为SQL工作负载创建的卷。
+
+.. *数据驱动器大小*：输入数据驱动器容量并选择容量单位。
+.. *已配置IOPs*：选择*自动*或*用户已配置*。如果选择*用户配置*，请输入IOPS值。
+.. *吞吐量*：从下拉菜单中选择吞吐量容量。
++
+在某些地区、您可以选择4 Gbps吞吐量。要配置4 Gbps吞吐量容量、必须为适用于ONTAP文件系统的FSx至少配置5、120 GiB SSD存储容量和16万次SSD IOPS。
+
+.. *加密*：从您的帐户中选择密钥或从其他帐户中选择密钥。您必须输入其他帐户的加密密钥ARN。
++
+根据服务适用性、不会列出FSx for ONTAP自定义加密密钥。选择适当的FSx加密密钥。非FSx加密密钥将导致服务器创建失败。
+
++
+AWS管理的密钥会根据服务适用性进行筛选。
+
+.. *标记*：您可以选择最多添加40个标记。
+.. *简单通知服务*：您也可以通过从下拉菜单中选择Microsoft SQL Server的SNS主题来为此配置启用简单通知服务(SNS)。
++
+... 启用简单通知服务。
+... 从下拉菜单中选择ARN。
+
+
+.. *CloudWatch监控*：您也可以启用CloudWatch监控。
++
+我们建议启用CloudWatch、以便在发生故障时进行调试。AWS CloudFormation控制台中显示的事件属于高级别事件、不会指定根本原因。所有详细日志均保存在 `C:\cfn\logs` EC2实例的文件夹中。
+
++
+在CloudWatch中、系统会使用堆栈的名称创建一个日志组。每个验证节点和SQL节点的日志流都会显示在日志组下。CloudWatch会显示脚本进度并提供相关信息、以帮助您了解部署是否以及何时失败。
+
+.. *资源回滚*：当前不支持此功能。
+
+
+. 摘要
++
+.. *估计成本*：提供部署所示资源时可能产生的费用估计值。
+
+
+. 单击*Create/*以部署新的数据库主机。
++
+或者、您也可以保存配置。
+
+
+
+--
+====
+
+
+== 第2步：在Microsoft SQL Server上启用远程连接
+
+服务器部署完成后、Workload Factory不会在Microsoft SQL Server上启用远程连接。要启用远程连接、请完成以下步骤。
+
+.步骤
+. 请参阅Microsoft文档中的、使用计算机身份进行NTLM link:https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-local-system-to-use-computer-identity-for-ntlm["网络安全：允许本地系统对NTLM使用计算机身份"^] 。
+. 请参阅Microsoft文档中的检查动态端口配置 link:https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection["在与SQL Server建立连接时出现与网络相关或特定于实例的错误"] 。
+. 在安全组中允许所需的客户端IP或子网。
+
+
+.下一步行动
+现在您可以 link:create-database.html["在Workload Factory中创建数据库"]。

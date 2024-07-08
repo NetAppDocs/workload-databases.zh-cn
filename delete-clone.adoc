@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: delete-clone.html 
+keywords: delete, clone 
+summary: 删除不再需要的沙盒克隆。 
+---
+= 从源数据库中拆分沙盒克隆
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您不再需要沙盒克隆并希望释放存储容量、请将其删除。
+
+.步骤
+. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 在数据库磁贴中，单击*转至数据库库存*。
+. 在数据库中，选择*沙盒*选项卡。
+. 单击要删除的沙盒克隆的三个点菜单。
+. 选择 * 删除 * 。
+. 在删除对话框中，单击*Delete*。
+

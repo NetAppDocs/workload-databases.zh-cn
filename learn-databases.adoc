@@ -1,0 +1,183 @@
+---
+sidebar: sidebar 
+permalink: learn-databases.html 
+keywords: Databases 
+summary: 数据库是一种端到端数据库部署和维护服务、具有内置的优化、自动精简克隆以及监控和解析功能最佳实践。 
+---
+= 了解适用于数据库的工作负载工厂
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Workload Factory for Database是一种端到端数据库部署和维护服务、具有内置的最佳实践、可用于优化、自动精简克隆以及监控和解决问题。
+
+
+
+== 什么是适用于数据库的工作负载工厂？
+
+Workload Factory for Database可检测、评估、规划、配置Microsoft SQL Server数据并将其迁移到Amazon FSx for NetApp ONTAP (FSx for ONTAP)部署中、该部署经过优化、可满足您对性能和成本的预期、同时遵循行业最佳实践。在整个生命周期内、Workload Factory可在FSx for ONTAP上为数据库提供持续优化和管理。
+
+有关Workload Factory的详细信息，请参阅 link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["工作负载工厂概述"^]。
+
+
+
+== 为自管理数据库提供的工作负载工厂优势
+
+Workload Factory为自管理数据库提供了以下有益的最佳实践和自动化功能。
+
+
+
+=== 最佳实践
+
+* 从AWS Cloud、Microsoft Windows和SQL Server以及NetApp ONTAP获得集成知识、用于在EC2实例上部署SQL Server。
+* 总拥有成本优化部署。
+* 遵循AWS、Microsoft和ONTAP最佳实践的端到端部署自动化。
+* "快速创建"部署模式可帮助您避免手动配置的潜在陷阱。
+
+
+
+
+=== 使用工作负载工厂代码框实现自动化
+
+Workload Factory通过_Codebox_引入了内置自动化功能。CodeBox具有以下自动化优势：
+
+* *代码段生成*：基础架构即代码(IAC)代码段是在资源创建期间生成的、可与现有流程编排工作流无缝集成。
+* *基础架构即代码联合试点*：Codebox是一种基础架构即代码(Infrastructure as Code、IAC)联合试点、可帮助开发人员和DevOps生成代码以执行Workload Factory支持的任何操作。
+* *代码查看器和自动化目录*：代码盒提供用于快速分析自动化的代码查看器和用于快速未来重复使用的自动化目录。
+
+
+
+
+=== 适用于数据库的工作负载工厂功能
+
+适用于数据库的工作负载工厂提供以下功能：
+
+* *简单、快速的部署*：通过选择规格问题的答案并省去研究如何在AWS上配置和配置Microsoft SQL Server通常所需的时间，简化和简化您的配置体验。
+* *自动化流程编排*：可通过工作负载工厂用户界面使用_Quick_和_Advanced_创建部署模式、工作负载工厂的Chatbot以及API与AWS CloudFormation。
+* *内置功能*：利用内置在部署配置中的NetApp、Microsoft和Amazon最佳实践和AWS资源选择。
+* *成本估算*：使用Workload Factory的存储计算器评估潜在的成本节省、该计算器可估算和详细说明与FSx for ONTAP相比、采用Elelic Block Store的现有Microsoft SQL Server部署的存储、计算、SQL许可、快照和克隆明细成本。
+* *可重复使用的自动化模板*：从Workload Factory Code-Box创建、重复使用和自定义CloudFormation模板，以供将来在多个环境中部署Microsoft SQL Server时使用。
+* *AWS资源发现和配置*：自动检测从AWS帐户部署的FSx for ONTAP、FSx for Windows文件服务器和Elelic Block Store上的Microsoft SQL Server。数据库清单是探索其他AWS存储系统中服务器的成本节省机会的起点、也是基于ONTAP的服务器和实例FSx的管理工具。
+* *沙盒创建*：创建一个可用于测试、集成、诊断和培训的按需隔离数据库环境、而不会影响生产数据。
+* *数据库创建*：使用_Quick_或_Advanced_创建模式为现有Microsoft SQL Server创建用户数据库，以配置数据库整理、文件名和大小。包括存储配置。
+* *作业监控*：监控和跟踪数据库作业执行进度，并在发生任何故障时诊断和排除问题。
+
+
+
+
+== Amazon FSx for ONTAP为自助管理数据库带来的优势
+
+* *持久性、可用性和可靠性*：FSx for ONTAP提供了多种功能来增强FSx for ONTAP上托管的自管理数据库的持久性和可用性、例如支持单可用性区域和多可用性区域部署的高可用性、应用程序感知型快照、使用复制改进的灾难恢复以及高效备份。
+* *性能和可扩展性*：FSx for ONTAP可通过高吞吐量、低延迟、高速网络连接以及多个文件系统的可扩展性实现性能优化、从而扩展工作负载所需的聚合性能。
+* *数据管理和效率*：FSx for ONTAP提供了多种可增强数据管理和效率的功能、例如节省空间的精简克隆、精简配置、数据压缩和重复数据删除以及将不常访问的数据分层到容量池。
+
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["了解FSx for ONTAP for Workload Factory"^](英文)
+
+
+
+=== 工作负载工厂中的操作模式
+
+三种不同的操作模式-_BASIC、_Read_和_Automate _为工作负载工厂内外的部署提供了灵活的选项。在_BASIC模式下、通过代码段在Workload Factory外部使用、以零信任获得即时价值。在_read_和_Automate _模式下、通过增量信任获得增量价值。
+
+详细了解 link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["工作负载工厂中的操作模式"^]。
+
+
+
+== 部署详细信息
+
+
+
+=== 支持的配置
+
+根据AWS、NetApp ONTAP和SQL Server最佳实践、适用于Microsoft SQL Server的工作负载工厂既支持高可用性(无故障转移集群实例)、也支持单实例部署。
+
+[cols="2a,2a,2a,2a"]
+|===
+| SQL Server版本 | Windows Server 2016 | Windows Server 2019 | Windows Server 2022 
+
+
+ a| 
+SQL Server 2016
+ a| 
+是
+ a| 
+是
+ a| 
+否
+
+
+
+ a| 
+SQL Server 2019
+ a| 
+是
+ a| 
+是
+ a| 
+是
+
+
+
+ a| 
+SQL Server 2022
+ a| 
+否
+ a| 
+是
+ a| 
+是
+
+|===
+
+
+=== 部署架构
+
+数据库支持单个可用性区域和多个可用性区域部署架构。
+
+.单个可用性区域
+下图显示了单个区域中具有单个可用性区域的独立架构。
+
+image:diagram-SAZ-database-architecture.png["独立架构示意图、其中在一个区域中部署了Amazon FSx for NetApp ONTAP的单个可用性区域"]
+
+.多个可用性区域
+下图显示了一个区域中具有故障转移集群实例(Failover Cluster Instance、FCI)集群的双节点高可用性(HA)架构。
+
+image:diagram-MAZ-database-architecture.png["故障转移集群实例集群位于单个区域的双节点高可用性架构示意图"]
+
+
+
+=== 集成AWS服务
+
+数据库包括以下集成AWS服务：
+
+* 云形成
+* Simple Notification Service
+* CloudWatch
+* Systems Manager
+* 机密管理器
+
+
+
+
+=== 支持的区域
+
+支持FSx for ONTAP的所有商业区域均支持数据库。 https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["查看支持的 Amazon 地区。"^]
+
+不支持以下AWS区域：
+
+* 中国地区
+* GovCloud (美国)地区
+* 机密云
+* 云的绝密
+
+
+
+
+== 获取帮助
+
+适用于NetApp ONTAP 的Amazon FSX是AWS第一方解决方案。如有与您的FSx for ONTAP文件系统、基础架构或使用此服务的任何解决方案相关的问题或技术支持问题、请使用AWS管理控制台中的支持中心创建AWS支持案例。选择 "FSX for ONTAP " 服务和相应的类别。提供创建 AWS 支持案例所需的其余信息。
+
+有关Workload Factory或Workload Factory应用程序和服务的一般问题，请参阅 link:get-help-databases.html["获取有关Workload Factory数据库的帮助"]。

@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: automate-codebox.html 
+keywords: automation, code automation, automate 
+summary: 您可以使用CodeBox自动执行主机部署、数据库创建等操作。 
+---
+= 使用CodeBox实现自动化
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用CodeBox自动执行主机部署、数据库创建等操作。CodeBox是一款基础架构即代码(Infrastructure as Code、IAC)联合试点产品、可帮助您生成代码以执行Workload Factory支持的任何操作。
+
+详细了解 link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["CodeBox自动化"^] 以及如何使用它。

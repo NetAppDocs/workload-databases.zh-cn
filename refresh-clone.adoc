@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: refresh-clone.html 
+keywords: refresh clone, sync, update, database, Microsoft SQL 
+summary: 在Workload Factory中刷新数据库的沙盒克隆。 
+---
+= 在Workload Factory中刷新数据库的沙盒克隆
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+刷新数据库克隆、使其相当于当前时刻或上一时间点的源数据库。
+
+.关于此任务
+刷新克隆会将克隆更新到当前的源数据库或前一个时间点创建的源数据库快照。对沙盒克隆所做的任何更改都将被删除。
+
+.开始之前
+只有在源数据库处于活动状态时才可以刷新。
+
+要从快照刷新数据库克隆、源数据库必须至少具有一个快照才能执行此操作。
+
+.步骤
+. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 在数据库磁贴中，选择*转至数据库库存*。
+. 在数据库中，选择*沙盒*选项卡。
+. 在沙盒选项卡中、单击要刷新的沙盒克隆的三个点菜单。
+. 选择*刷新*。
+. 在刷新对话框中、选择以下选项之一：
++
+.. *刷新到当前时间*
+.. *刷新到时间点*
++
+对于此选项、请从下拉菜单中选择要刷新到的数据库快照。
+
+
+
+. 单击 * 刷新 * 。
+

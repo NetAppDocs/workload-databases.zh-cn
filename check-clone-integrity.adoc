@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: check-clone-integrity.html 
+keywords: integrity check, data corruption 
+summary: 运行完整性检查以确定沙盒克隆数据是否完好无损。 
+---
+= 检查沙盒克隆中数据的完整性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+运行完整性检查以确定沙盒克隆数据是否完好无损。
+
+.关于此任务
+如果在源数据库繁忙时从该数据库创建沙盒克隆、则该克隆的数据可能与源数据库的最新快照不同步。此操作会检查沙盒克隆中所有对象的完整性、以确定沙盒克隆数据是否为最新数据。
+
+.步骤
+. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 在数据库磁贴中，选择*转至数据库库存*。
+. 在数据库中，选择*沙盒*选项卡。
+. 在沙盒选项卡中、单击沙盒克隆的三个点菜单以检查的完整性。
+. 选择*运行完整性检查*。
+. 在完整性检查对话框中，单击*Integrity check*。
+. 在沙盒或作业监控中检查完整性检查的状态。
+
+
+如果完整性检查失败、建议您不要使用沙盒克隆并创建新的沙盒克隆。

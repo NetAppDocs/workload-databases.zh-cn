@@ -1,0 +1,110 @@
+---
+sidebar: sidebar 
+permalink: known-limitations.html 
+keywords: limitations, databases 
+summary: 已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。仔细审查这些限制。 
+---
+= 已知限制
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。仔细审查这些限制。
+
+
+
+== AMI映像版本支持
+
+对于每个SQL版本、我们最多只会显示四个最新版本或修订版的AMI映像。我们不允许从早于最新四个版本的AMI映像进行安装。
+
+
+
+== 自定义AMI
+
+使用自定义AMI进行部署会假定映像中存在安装介质。FCI配置需要执行此操作的原因如下：
+
+* 卸载并重新配置以构成FCI集群
+* 在独立部署映像中选择除整理集之外的其他整理
+
+
+在部署过程中、Workload Factory不会为多个Microsoft SQL Server实例安装自定义AMI。在部署过程中、仅会选择并配置默认的Microsoft SQL Server实例。
+
+
+
+== 对于失败的部署、请回滚并重试
+
+Workload Factory不支持对失败的部署执行回滚和重试。您可以从AWS中的CloudFormation控制台回滚或重试故障堆栈。
+
+
+
+== Active Directory和DNS资源回滚
+
+从AWS中的CloudFormation控制台回滚测试或失败的部署时、不会从Active Directory和DNS中删除以下DNS资源：
+
+* SQL部署中的每个节点的管理IP地址
+* 对于FCI、将Windows集群名称更改为EC2实例的预留辅助IP地址
+* 从FCI中的两个EC2实例中将SQL FCI名称添加到两个保留IP地址
+
+
+您需要手动清除这些条目、或者等待域清除陈旧条目。
+
+
+
+== 始终可用性组配置支持
+
+Workload Factory不支持管理无中断可用性组配置。
+
+
+
+== 用户管理的Active Directory安全组
+
+如果您在Workload Factory中部署Microsoft SQL Server期间选择了"用户管理的Active Directory"、则必须提供一个安全组、以允许在EC2实例与目录服务之间进行流量部署。Workload Factory不会像为AWS托管的Microsoft AD那样自动为用户管理的Active Directory附加安全组。
+
+
+
+== 自定义加密密钥
+
+根据服务适用性、不会列出FSx for ONTAP的自定义加密密钥。您必须选择适当的密钥。AWS托管密钥会根据服务适用性进行筛选。
+
+
+
+== Microsoft SQL Server检测
+
+未保存Microsoft SQL Server检测。每次访问Workload Factory中的数据库时、Microsoft SQL Server检测都会再次运行、以确定该区域中的SQL安装。
+
+
+
+== CloudFormation模板
+
+下载或复制的CodeBox生成的CloudFormation模板(YAML文件)的保留期限为7天。
+
+
+
+== 沙盒支持
+
+* 可以从数据库服务器创建的沙盒克隆的最大数量为50个。
+* 在以下情况下、不支持创建沙盒：
++
+** 数据和日志文件位于同一磁盘上。
+** 源数据库包含多个数据文件。
+
+
+
+
+
+
+== Microsoft SQL Server检测和管理
+
+* 如果使用没有外部连接的专用网络、则不支持检测和管理Microsoft SQL实例。
+* 如果Microsoft SQL实例阻止基于Windows的身份验证并仅允许Microsoft SQL用户身份验证、则支持Microsoft SQL Server检测、但不支持管理操作。
+
+
+
+
+== 了解节省量
+
+* 在"清单"选项卡中、为每个Microsoft SQL实例显示的估计成本是在ONTAP文件系统级别(而不是托管此SQL实例的卷)的FSx上计算的。
+* FSx for Windows File Server不支持Explore节省计算。
+

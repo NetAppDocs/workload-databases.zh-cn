@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: create-sandbox-clone.html 
+keywords: create, clone, sandbox 
+summary: 在Workload Factory中为数据库创建沙盒克隆。 
+---
+= 在Workload Factory中为数据库创建沙盒克隆
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+通过在Workload Factory中为数据库创建沙盒克隆、您可以使用该克隆进行开发、测试、集成、分析、培训、 QA等、而不更改源数据库。
+
+.关于此任务
+沙盒克隆是从源数据库上的最新快照创建的。它可以与源数据库在同一Microsoft SQL Server中克隆、也可以在另一个Microsoft SQL Server中克隆、只要它们共享同一FSx for ONTAP文件系统即可。
+
+.开始之前
+在创建沙盒克隆之前、请确保满足以下前提条件。
+
+凭据和权限:: 您必须 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS帐户凭据和_Read_或_Automate _模式权限"^] 在Workload Factory中创建沙盒克隆。
++
+--
+或者、您也可以使用代码框复制部分完成的模板或创建已完成的模板、以便使用REST API在工作负载工厂外部创建沙盒克隆。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["了解有关CodeBox自动化的更多信息"^](英文)
+
+--
+Microsoft SQL Server:: 您必须在Workload Factory中拥有受管的Microsoft SQL Server、以便数据库托管新的沙盒克隆。
+AWS Systems Manager:: 确保 `NT Authority\SYSTEM` 已通过AWS Systems Manager在Microsoft SQL主机中启用用户权限。
+源数据库:: 您需要一个可用于克隆的源数据库。
+
+
+.步骤
+. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 在数据库磁贴中，选择*转至数据库库存*。
+. 在数据库中，选择*沙盒*选项卡。
+. 在沙盒选项卡中，选择*创建新沙盒*。
+. 在"Create new sandbox"页面上的"Database sourcing"下、提供以下内容：
++
+.. *源数据库主机*：选择源数据库主机。
+.. *源数据库实例*:选择源数据库实例。
+.. *Source DATABASE：选择要从中克隆的源数据库。
+
+
+. 在数据库目标下、提供以下内容：
++
+.. *目标数据库主机*：为沙盒克隆选择一个目标数据库主机、该主机与源主机位于同一个VPC中、并具有相同的FSx for ONTAP文件系统。
+.. *目标数据库实例*：为沙盒克隆选择目标数据库实例。
+.. *目标数据库*：输入沙盒克隆的名称。
+
+
+. *挂载*：选择*自动分配挂载点*或*定义挂载点路径*。如果选择*define mount point path*，请输入挂载点路径。
+. *define tag：选择用于定义沙盒克隆的标记。
+. 单击 * 创建 * 。
+
+
+要检查作业的进度，请转到*作业监控*选项卡。

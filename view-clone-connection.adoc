@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: view-clone-connection.html 
+keywords: view clone connection, copy connection information 
+summary: 查看和复制沙盒克隆的连接信息。 
+---
+= 查看沙盒克隆的连接信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+查看和复制沙盒克隆的连接信息。
+
+.步骤
+. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 在数据库磁贴中，选择*转至数据库库存*。
+. 在数据库中，选择*沙盒*选项卡。
+. 在沙盒选项卡中、单击沙盒克隆的三个点菜单以查看其连接信息。
+. 选择*显示连接信息*。
+. 在显示连接信息对话框中、根据需要复制连接信息。
+. 单击 * 关闭 * 。
+

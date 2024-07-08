@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: explore-savings.html 
+keywords: cost, savings, compare costs, EBS, FSx for ONTAP 
+summary: '了解使用Amazon Elasic Block Store (EBS)存储为数据库工作负载节省的空间。' 
+---
+= 了解在适用于数据库的Workload Factory中节省的空间
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+了解使用Amazon Elasic Block Store (EBS)存储为数据库工作负载节省的空间。
+
+Workload Factory提供了一个计算器、用于比较在FSx for ONTAP文件系统上为数据库工作负载运行Microsoft SQL Server工作负载(例如存储、计算、SQL许可证、快照和克隆)时的各种成本要素与Elasic Block Store (EBS)存储进行比较。根据您的存储要求、您可能会发现适用于ONTAP文件系统的FSx对于数据库工作负载来说最经济高效。
+
+计算器将显示如果您使用FSx for ONTAP文件系统、这些Microsoft SQL Server上用于数据库工作负载的存储成本是否会降低。
+
+如果Workload Factory确定您可以通过在FSx for ONTAP文件系统上运行这些工作负载来节省资金、则可以直接从Workload Factory中的计算器通过FSx for ONTAP部署Microsoft SQL。在某些情况下、Workload Factory可能会建议您根据当前使用的存储量以及数据库工作负载的性能特征部署多个文件系统。在某些情况下、Workload Factory可能会建议您根据当前使用的存储量以及数据库工作负载的性能特征部署多个文件系统。
+
+
+
+== 提供您的系统要求
+
+如果通过向Workload Factory帐户添加AWS凭据来启用_Automate模式link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["了解有关模式的更多信息"]()，则Workload Factory可以确定AWS帐户中可用的所有存储系统，并在存储清单页面中显示这些系统上的卷特征。搜索的AWS帐户基于您在Workload Factory帐户中定义的凭据。
+
+此图显示了在AWS帐户中发现的FSx for Windows File Server系统上的卷。
+
+image:screenshot-storage-inventory.png["显示FSx for Windows File Server上卷的当前清单的存储清单页面。"]
+
+如果您尚未添加凭据将工作负载工厂帐户与AWS帐户(称为_BASIC _模式)关联起来、则可以手动输入要部署的存储系统所需的特征、存储计算器将根据成本确定最佳文件系统。您可以使用此方法确定新FSx for ONTAP文件系统的范围、同时也可以使用_Automate模式。
+
+此图显示了存储计算器页面、其中比较了FSx for ONTAP与EBS存储。
+
+image:screenshot-ebs-calculator.png["存储计算器页面、其中比较了FSx for ONTAP存储和Elagic Block Store存储。"]
+
+.开始之前
+开始之前、请满足以下前提条件：
+
+* 请确保 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_Automate权限"^] 使用AWS帐户检测数据库清单中的Elasic Block Store (EBS)系统。
+* 在数据库清单中检测EBS存储中的主机。link:detect-host.html["了解如何检测主机"](英文)
+
+
+.步骤
+. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 在数据库磁贴中，选择*转至数据库清单*。
+. 选择*浏览节省*选项卡。
+. 对于使用EBS存储的数据库服务器，单击*Explore savings *。
+. (可选)提供以下有关EBS存储中的克隆和快照的详细信息、以便更准确地估算成本节省。
++
+.. *快照频率*：从下拉列表中选择快照频率。
+.. *克隆刷新频率*：从下拉列表中选择克隆刷新频率。
+.. *每月变更率*：输入克隆和快照数据每月平均变更的百分比。
+
+
+. 查看页面上提供的计算结果和建议。
++
+此外，向下滚动到页面底部至*Export PDF*。
+
+
+
+
+
+== 部署FSx for ONTAP文件系统
+
+如果要切换到FSx for ONTAP以节省成本，请直接从创建FSx for ONTAP文件系统向导中单击*Creation*来创建文件系统，或者单击*Save*来保存建议的配置供以后使用。
+
+部署方法:: 在_Automate模式下、您可以直接从Workload Factory部署FSx for ONTAP文件系统。您还可以从代码框窗口复制内容、并使用其中一种代码框方法部署系统。
++
+--
+在_BASIC模式下、您可以从CodeBox窗口复制内容、并使用其中一种CodeBox方法部署FSx for ONTAP文件系统。
+
+--
+
