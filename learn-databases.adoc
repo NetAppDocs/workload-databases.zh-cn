@@ -140,12 +140,12 @@ SQL Server 2022
 .单个可用性区域
 下图显示了单个区域中具有单个可用性区域的独立架构。
 
-image:diagram-SAZ-database-architecture.png["独立架构示意图、其中在一个区域中部署了Amazon FSx for NetApp ONTAP的单个可用性区域"]
+image:diagram-SAZ-database-architecture.png["一个独立架构示意图、其中一个可用性区域部署的Amazon FSx for NetApp ONTAP位于一个区域中"]
 
 .多个可用性区域
 下图显示了一个区域中具有故障转移集群实例(Failover Cluster Instance、FCI)集群的双节点高可用性(HA)架构。
 
-image:diagram-MAZ-database-architecture.png["故障转移集群实例集群位于单个区域的双节点高可用性架构示意图"]
+image:diagram-MAZ-database-architecture.png["双节点高可用性架构示意图、其中故障转移集群实例集群位于一个区域中"]
 
 
 
