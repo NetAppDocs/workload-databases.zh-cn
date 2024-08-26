@@ -30,6 +30,11 @@ FSx for ONTAP文件系统具有两种Microsoft SQL Server部署模式：_故障�
 
 
 --
+Microsoft多路径I/O配置:: Microsoft SQL Server部署模式都要求使用iSCSI存储协议创建LUN。在通过FSx for ONTAP为SQL Server配置LUN的过程中、Workload Factory会配置Microsoft多路径I/O (MPIO)。MPIO根据AWS和NetApp最佳实践进行配置。
+
+
+有关详细信息，请参阅 link:https://aws.amazon.com/blogs/modernizing-with-aws/sql-server-high-availability-amazon-fsx-for-netapp-ontap/["使用Amazon FSx for NetApp ONTAP进行SQL Server高可用性部署"^]。
+
 Active Directory:: 在部署期间、Active Directory (AD)会发生以下情况：
 +
 --
@@ -173,6 +178,14 @@ NOTE: FCI部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。
 新的FSx for ONTAP文件系统可能会增加30分钟或更长时间的安装时间。
 
 ... *选择现有FSx for FS* ONTAP：从下拉菜单中选择FSx for ONTAP name，然后输入文件系统的用户名和密码。
++
+对于现有FSx for ONTAP文件系统、请确保满足以下要求：
+
++
+**** 连接到FSx for ONTAP的路由组允许使用到子网的路由进行部署。
+**** 此安全组允许来自用于部署的子网的流量、尤其是HTTPS (443)和iSCSI (3260) TCP端口。
+
+
 
 
 .. *数据驱动器大小*：输入数据驱动器容量并选择容量单位。
@@ -264,7 +277,7 @@ FCI部署::
 ... 如果使用的是AWS管理的Active Directory、则连接到目录服务的安全组会自动添加到Microsoft SQL节点中、以允许与Active Directory进行通信。
 ... 对于现有FSx for ONTAP文件系统、与其关联的安全组会自动添加到SQL节点中、从而允许与文件系统进行通信。创建新的FSx for ONTAP系统时、将为FSx for ONTAP文件系统创建一个新安全组、并且同一安全组也会连接到SQL节点。
 +
-对于用户管理的Active Directory、您可以选择一个安全组、以允许来自需要连接到数据库的现有系统的流量。安全组应允许从配置了适用于Microsoft SQL的EC2实例的子网与Active Directory域控制器进行通信。
+对于用户管理的Active Directory、请确保在AD实例上配置的安全组允许来自用于部署的子网的流量。安全组应允许从配置了适用于Microsoft SQL的EC2实例的子网与Active Directory域控制器进行通信。
 
 
 
@@ -325,6 +338,14 @@ NOTE: 如果选定的整理集与安装不兼容、建议您选择默认整理"S
 新的FSx for ONTAP文件系统可能会增加30分钟或更长时间的安装时间。
 
 ... *选择现有FSx for FS* ONTAP：从下拉菜单中选择FSx for ONTAP name，然后输入文件系统的用户名和密码。
++
+对于现有FSx for ONTAP文件系统、请确保满足以下要求：
+
++
+**** 连接到FSx for ONTAP的路由组允许使用到子网的路由进行部署。
+**** 此安全组允许来自用于部署的子网的流量、尤其是HTTPS (443)和iSCSI (3260) TCP端口。
+
+
 
 
 .. *Snapshot policy*:默认情况下处于启用状态。快照每天创建一次、保留期限为7天。

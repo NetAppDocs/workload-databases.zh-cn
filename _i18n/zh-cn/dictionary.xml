@@ -129,7 +129,6 @@
   <block id="ba4f09fe932ad91d759a5dd3636acec6" category="list-text">此时将创建一个工作负载安全组、以允许在节点上进行Microsoft SQL和Windows集群通信所需的端口和协议。</block>
   <block id="1f653bdd2a02e3ebdc4f28328a96b00f" category="list-text">如果使用的是AWS管理的Active Directory、则连接到目录服务的安全组会自动添加到Microsoft SQL节点中、以允许与Active Directory进行通信。</block>
   <block id="84c62c2707904a024819612ef450ef1d" category="list-text">对于现有FSx for ONTAP文件系统、与其关联的安全组会自动添加到SQL节点中、从而允许与文件系统进行通信。创建新的FSx for ONTAP系统时、将为FSx for ONTAP文件系统创建一个新安全组、并且同一安全组也会连接到SQL节点。</block>
-  <block id="9379b88943e79d06a7624e886bcd4ea3" category="paragraph">对于用户管理的Active Directory、您可以选择一个安全组、以允许来自需要连接到数据库的现有系统的流量。安全组应允许从配置了适用于Microsoft SQL的EC2实例的子网与Active Directory域控制器进行通信。</block>
   <block id="1001245fbd8a96ced15590168ee50912" category="list-text">在*应用程序设置*下，提供以下内容：</block>
   <block id="5f90cc9084764f349d384957856b0b40" category="list-text">在*SQL Server安装类型*下，选择*License included AMI*或*Use custom AMI*。</block>
   <block id="51af4699ded2f99936c69e9d355ac856" category="list-text">如果选择*含许可证AMI*，请提供以下内容：</block>
@@ -765,4 +764,12 @@
   <block id="85f439a5ead422005f331327c6b4d189" category="inline-link-macro">利用FSx for ONTAP为数据库工作负载节省空间。</block>
   <block id="ffcdb01d64d534ead82555dabfbdd7da" category="paragraph"><block ref="ffcdb01d64d534ead82555dabfbdd7da" category="inline-link-macro-rx"></block></block>
   <block id="1d949c7c5600289e10795f178278edd1" category="section-title">2024年7月7日</block>
+  <block id="b43b4421683dbb9b1b6736babc3a3104" category="list-text">Microsoft多路径I/O配置</block>
+  <block id="bc032bc6a4cd520164072ac886f6e6fe" category="list-text">Microsoft SQL Server部署模式都要求使用iSCSI存储协议创建LUN。在通过FSx for ONTAP为SQL Server配置LUN的过程中、Workload Factory会配置Microsoft多路径I/O (MPIO)。MPIO根据AWS和NetApp最佳实践进行配置。</block>
+  <block id="79cd591b45c99c7009501060c190216b" category="inline-link-macro">使用Amazon FSx for NetApp ONTAP进行SQL Server高可用性部署</block>
+  <block id="1ff667d8710153a8539d76d68aecd4b5" category="paragraph">有关详细信息，请参阅 <block ref="36ceba25653f76919b1587a7f1d056fa" category="inline-link-macro-rx"></block>。</block>
+  <block id="42284190cc0e4af01d69e70bf8966f0e" category="paragraph">对于现有FSx for ONTAP文件系统、请确保满足以下要求：</block>
+  <block id="996d6e2f42d7b52c1cba72a8225cbb65" category="list-text">连接到FSx for ONTAP的路由组允许使用到子网的路由进行部署。</block>
+  <block id="74c33b9e5d949f9ac1669cc2da38be60" category="list-text">此安全组允许来自用于部署的子网的流量、尤其是HTTPS (443)和iSCSI (3260) TCP端口。</block>
+  <block id="513217cdb8cfdacc4a193bdd0bbbee78" category="paragraph">对于用户管理的Active Directory、请确保在AD实例上配置的安全组允许来自用于部署的子网的流量。安全组应允许从配置了适用于Microsoft SQL的EC2实例的子网与Active Directory域控制器进行通信。</block>
 </blocks>
