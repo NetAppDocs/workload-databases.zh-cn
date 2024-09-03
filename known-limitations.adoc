@@ -70,12 +70,6 @@ Workload Factory不支持管理无中断可用性组配置。
 
 
 
-== Microsoft SQL Server检测
-
-未保存Microsoft SQL Server检测。每次访问Workload Factory中的数据库时、Microsoft SQL Server检测都会再次运行、以确定该区域中的SQL安装。
-
-
-
 == CloudFormation模板
 
 下载或复制的CodeBox生成的CloudFormation模板(YAML文件)的保留期限为7天。
@@ -85,12 +79,7 @@ Workload Factory不支持管理无中断可用性组配置。
 == 沙盒支持
 
 * 可以从数据库服务器创建的沙盒克隆的最大数量为50个。
-* 在以下情况下、不支持创建沙盒：
-+
-** 数据和日志文件位于同一磁盘上。
-** 源数据库包含多个数据文件。
-
-
+* 如果源数据库中的多个数据文件分布在2个以上的磁盘上、则不支持创建沙盒。
 
 
 
@@ -98,7 +87,7 @@ Workload Factory不支持管理无中断可用性组配置。
 == Microsoft SQL Server检测和管理
 
 * 如果使用没有外部连接的专用网络、则不支持检测和管理Microsoft SQL实例。
-* 如果Microsoft SQL实例阻止基于Windows的身份验证并仅允许Microsoft SQL用户身份验证、则支持Microsoft SQL Server检测、但不支持管理操作。
+* 未保存Microsoft SQL Server检测。每次访问Workload Factory中的数据库时、Microsoft SQL Server检测都会再次运行、以确定该区域中的SQL安装。
 
 
 
