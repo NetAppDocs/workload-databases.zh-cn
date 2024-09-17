@@ -233,7 +233,6 @@
   <block id="b6b9aec3a98d2a803dfd7a3e7b836cb2" category="list-text">*目标数据库主机*：为沙盒克隆选择一个目标数据库主机、该主机与源主机位于同一个VPC中、并具有相同的FSx for ONTAP文件系统。</block>
   <block id="04bd2b110b2a3aaa82dccc7fe837f151" category="list-text">*目标数据库实例*：为沙盒克隆选择目标数据库实例。</block>
   <block id="26e615a604b088a660581f026763c30b" category="list-text">*目标数据库*：输入沙盒克隆的名称。</block>
-  <block id="7f63d4b83f27b850d1eb970cfa4666b3" category="list-text">*挂载*：选择*自动分配挂载点*或*定义挂载点路径*。如果选择*define mount point path*，请输入挂载点路径。</block>
   <block id="f3346b0efa80289c47d4e6113a73a3ab" category="list-text">*define tag：选择用于定义沙盒克隆的标记。</block>
   <block id="34775e5e4b0b832c45a2707ae9b18f95" category="paragraph">要检查作业的进度，请转到*作业监控*选项卡。</block>
   <block id="18a852f2a54ab28755adc6bcf4897e75" category="summary">删除不再需要的沙盒克隆。</block>
@@ -781,4 +780,11 @@
   <block id="e6ae9aa516c09658fbcbb0830276915c" category="paragraph">在_BASIC模式下、您可以从CodeBox窗口复制内容、并使用其中一种CodeBox方法部署建议的配置。</block>
   <block id="0bbe82b56668e820bcb7722aa8566ea5" category="list-text">如果源数据库中的多个数据文件分布在2个以上的磁盘上、则不支持创建沙盒。</block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">2024年9月1日</block>
+  <block id="969e7140d33129e87f01e95c59fed40f" category="list-text">*挂载*：克隆包含多个数据和/或日志文件的SQL数据库时、Workload Factory会克隆自动分配或定义的驱动器盘符下的所有文件。</block>
+  <block id="ed09bad7864ec765b3bccff9b87f25fb" category="paragraph">选择以下选项之一：</block>
+  <block id="f5154bf526cc04b2839db0c72b2a7c22" category="list-text">*自动分配挂载点*</block>
+  <block id="c9e660490143e459ec13d72934832f2c" category="list-text">*定义挂载点路径*</block>
+  <block id="8dc9fd2e016e27559302505db1795c2c" category="paragraph">提供以下内容以定义挂载点路径：</block>
+  <block id="431673d13b715d86ce4d92ad7cf17f75" category="list-text">输入数据文件路径的驱动器号。</block>
+  <block id="d8cf051243077cb10ccd52dd0de9d181" category="list-text">输入日志文件路径的驱动器盘符。</block>
 </blocks>
