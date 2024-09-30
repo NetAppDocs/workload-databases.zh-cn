@@ -769,9 +769,6 @@
   <block id="8dc9fd2e016e27559302505db1795c2c" category="paragraph">提供以下内容以定义挂载点路径：</block>
   <block id="431673d13b715d86ce4d92ad7cf17f75" category="list-text">输入数据文件路径的驱动器号。</block>
   <block id="d8cf051243077cb10ccd52dd0de9d181" category="list-text">输入日志文件路径的驱动器盘符。</block>
-  <block id="2153d6ab291e00be0a49d2a42e481b36" category="paragraph"><block ref="9a178ca3815f6aeb284a65e10447f086" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="4ac33bc47ec0338e6c23f5e315a2b5ec" category="inline-link-macro">了解使用FSx for ONTAP为数据库工作负载节省的空间^。</block>
-  <block id="f9ca6ec7df5da581020634d84b3e477c" category="paragraph"><block ref="f9ca6ec7df5da581020634d84b3e477c" category="inline-link-macro-rx"></block></block>
   <block id="b6e7a46e866a97d8ad38a3ce2e41e926" category="inline-image-macro">工作负载出厂控制台主页的屏幕截图。图中显示了一个新的"浏览节省量"按钮的"数据库"图块。单击按钮以打开下拉菜单。下拉菜单有两个选项- Microsoft SQL Server on EBS和Microsoft SQL Server on FSx for Windows File Server。</block>
   <block id="a7396d19dde0193e37cada3b5524bb0b" category="paragraph"><block ref="a7396d19dde0193e37cada3b5524bb0b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cf88fa43b4b0e1b1bfb66e894b188442" category="doc">了解FSx for Windows File Server上检测到的Microsoft SQL Server的节省量</block>
@@ -798,4 +795,7 @@
   <block id="cfa54b7dd19dd91bb87ede68126951eb" category="list-text"><block ref="25f6388206f436c2d1de63216302b13d" prefix="" category="inline-code"></block></block>
   <block id="8d461d34b0f2c02565383f3301044282" category="list-text"><block ref="fea0543b0b4b9d4c240c6219de0db41c" prefix="" category="inline-code"></block></block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">2024年9月29日</block>
+  <block id="9a178ca3815f6aeb284a65e10447f086" category="paragraph"><block ref="9a178ca3815f6aeb284a65e10447f086" category="inline-link-macro-rx"></block></block>
+  <block id="7d6d6d8a97f883d860bff04c0be1019c" category="inline-link-macro">利用FSx for ONTAP为数据库工作负载节省空间</block>
+  <block id="293758d509326f8da42abf75db2d37e6" category="paragraph"><block ref="293758d509326f8da42abf75db2d37e6" category="inline-link-macro-rx"></block></block>
 </blocks>
