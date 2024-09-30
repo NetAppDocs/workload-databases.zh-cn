@@ -278,12 +278,7 @@
   <block id="b9c536d894e64c5ba02e664043160322" category="doc">了解在适用于数据库的Workload Factory中节省的空间</block>
   <block id="bfe3baeb9acd99f2f2bce618befc4139" category="paragraph">开始之前、请满足以下前提条件：</block>
   <block id="ed8b2920ddc5b14cb6c0ba24c4b6c3af" category="inline-link-macro">授予_Automate权限</block>
-  <block id="fb9d6e1577faaf2582c56f2b6e871a0e" category="list-text">请确保 <block ref="d9270f60c282b5496f17a4b48a6da305" category="inline-link-macro-rx"></block> 使用AWS帐户检测数据库清单中的Elasic Block Store (EBS)系统。</block>
   <block id="def9511b261c88922ac5674a45135773" category="inline-link-macro">了解如何检测主机</block>
-  <block id="00cfda556057e95fb5c041a6d6e864eb" category="list-text">在数据库清单中检测EBS存储中的主机。<block ref="c3d02703f332265b4bfd19fd03e6dd21" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="e721578ef71057f68d9b8f95eaa8a01b" category="list-text">选择*浏览节省*选项卡。</block>
-  <block id="a9a4b0133e73452e9114b1d65b1a03c5" category="list-text">对于使用EBS存储的数据库服务器，单击*Explore savings *。</block>
-  <block id="b6934442f27355012b8f3897d317094b" category="list-text">(可选)提供以下有关EBS存储中的克隆和快照的详细信息、以便更准确地估算成本节省。</block>
   <block id="201c4d58b6fa62f021a1865e894234ef" category="list-text">*每月变更率*：输入克隆和快照数据每月平均变更的百分比。</block>
   <block id="6b08b43202e1e504a7c87375b1a13b76" category="list-text">查看页面上提供的计算结果和建议。</block>
   <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">部署方法</block>
@@ -393,10 +388,8 @@
   <block id="0d966ee7b6d851b13a0a1f2ed24a24f2" category="section-title">沙盒支持</block>
   <block id="db3c885c5e8af2c0a6d13c3c191c6317" category="list-text">可以从数据库服务器创建的沙盒克隆的最大数量为50个。</block>
   <block id="16af4c40ef745904a4b9f7f47ce1554d" category="section-title">Microsoft SQL Server检测和管理</block>
-  <block id="b51c61da776514997803f3c2d879f6cd" category="list-text">如果使用没有外部连接的专用网络、则不支持检测和管理Microsoft SQL实例。</block>
   <block id="cf48d7891f28d92c4308fb5debb574b0" category="section-title">了解节省量</block>
   <block id="dc1fe4aeb4ef49ddd2886b9ad39d5fa0" category="list-text">在"清单"选项卡中、为每个Microsoft SQL实例显示的估计成本是在ONTAP文件系统级别(而不是托管此SQL实例的卷)的FSx上计算的。</block>
-  <block id="15e6f9d1eeb705afffca65fbfcab4fb8" category="list-text">FSx for Windows File Server不支持Explore节省计算。</block>
   <block id="08a80e13fd6056e3676428e5f462bea2" category="summary">数据库是一种端到端数据库部署和维护服务、具有内置的优化、自动精简克隆以及监控和解析功能最佳实践。</block>
   <block id="da799d994391b08e1d7460381c98559f" category="doc">了解适用于数据库的工作负载工厂</block>
   <block id="84f91afd14d8353e5afe232c3387e4ca" category="paragraph">Workload Factory for Database是一种端到端数据库部署和维护服务、具有内置的最佳实践、可用于优化、自动精简克隆以及监控和解决问题。</block>
@@ -668,7 +661,6 @@
   <block id="ed54fefae379fac8157c0d466e30a150" category="section-title">适用于数据库的Workload Factory初始版本</block>
   <block id="7737adcb101b7285a3a8567ae4d22021" category="paragraph">初始版本包括以下功能：使用Amazon FSx for NetApp ONTAP作为数据库工作负载的存储环境、检测、管理和部署Microsoft SQL Server、部署和克隆数据库以及在Workload Factory中监控这些作业、从而了解节省的空间。</block>
   <block id="76d820a16128270adf6a061b253cca06" category="inline-link-macro">了解数据库</block>
-  <block id="c8b559206fbe2064f93b1a567d84e637" category="paragraph"><block ref="eda6f6881c0c5cc5180d85b417e4f376" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="701d958bca3a33a19f563321cfb869c3" category="sidebar">在BlueXP Workload Factory中的FSx for ONTAP文件系统存储上部署Microsoft SQL Server配置并管理数据库环境。</block>
   <block id="e3e11adbab76168641c9e2c9a8f51784" category="sidebar">适用于数据库的工作负载工厂工作负载文档</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">开始使用</block>
@@ -731,8 +723,6 @@
   <block id="c740ba36619fc4bc695bdeaf1e4ec860" category="paragraph">现在、对于使用Amazon Elasic Block Store托管多个Microsoft SQL Server实例的配置、数据库可以提供成本节省计算。</block>
   <block id="6c8658cb4905e48d7d602b288bfcf8be" category="list-text">自定义计算器设置</block>
   <block id="3d97983d64bf9e9b4ee62805c09d1774" category="paragraph">现在、您可以自定义Microsoft SQL Server、Amazon EC2和Elelic Block Store的设置、以手动探索节省的空间。节省量计算器将根据成本确定最佳配置。</block>
-  <block id="85f439a5ead422005f331327c6b4d189" category="inline-link-macro">利用FSx for ONTAP为数据库工作负载节省空间。</block>
-  <block id="ffcdb01d64d534ead82555dabfbdd7da" category="paragraph"><block ref="ffcdb01d64d534ead82555dabfbdd7da" category="inline-link-macro-rx"></block></block>
   <block id="1d949c7c5600289e10795f178278edd1" category="section-title">2024年7月7日</block>
   <block id="b43b4421683dbb9b1b6736babc3a3104" category="list-text">Microsoft多路径I/O配置</block>
   <block id="bc032bc6a4cd520164072ac886f6e6fe" category="list-text">Microsoft SQL Server部署模式都要求使用iSCSI存储协议创建LUN。在通过FSx for ONTAP为SQL Server配置LUN的过程中、Workload Factory会配置Microsoft多路径I/O (MPIO)。MPIO根据AWS和NetApp最佳实践进行配置。</block>
@@ -746,15 +736,11 @@
   <block id="bfbd25ddeba7cedc974f1a5a1d0a295c" category="paragraph">现在、您可以在节省量计算器中使用FSx for Windows File Server和Elelic Block Store存储为Amazon EC2上的Microsoft SQL Server自定义配置设置。根据您的存储要求、您可能会发现FSx for ONTAP存储对于您的数据库工作负载来说最经济高效。</block>
   <block id="f94c119bb7d164adbb1a390a249741e0" category="section-title">从主页导航到节省量计算器</block>
   <block id="370242ff4edf6eea7ad9f29f501888cd" category="paragraph">现在、您可以从<block ref="ed002915dbbbf90a20b3d8fdf4cc2390" category="inline-link-macro-rx"></block>主页导航到节省量计算器。从El生 性块存储和FSx for Windows File Server中进行选择以开始使用。</block>
-  <block id="1bd7517fe14fe5f1784a4d71ebf0c2e1" category="inline-image-macro">工作负载出厂控制台主页的屏幕截图。图中显示了一个新的"浏览节省量"按钮的"数据库"图块。单击按钮以打开下拉菜单。下拉菜单有两个选项- Elelic Block Store和FSx for Windows File Server。选择任一选项将转到节省量计算器以了解节省量。</block>
-  <block id="ace456f52a384b923a9eedd83d20db48" category="paragraph"><block ref="ace456f52a384b923a9eedd83d20db48" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ed63f509875218d0378b5ddba1aecb80" category="summary">通过比较将Amazon Elasic Block Store (EBS)和FSx for Windows File Server存储与FSx for ONTAP存储结合使用的成本、探索为数据库工作负载节省的空间。</block>
   <block id="700bbf9bdd344aa4590539879dabfb86" category="paragraph">Workload Factory提供了一个节省计算器、可用于比较在适用于ONTAP文件系统的FSx上为数据库工作负载运行Microsoft SQL Server工作负载(例如存储、计算、SQL许可证、快照和克隆)时的各种成本组件与适用于Windows文件服务器存储的Elasic Block Store (EBS)和FSx。根据您的存储要求、您可能会发现适用于ONTAP文件系统的FSx对于数据库工作负载来说最经济高效。计算器将显示如果您使用FSx for ONTAP文件系统、这些Microsoft SQL Server上用于数据库工作负载的存储成本是否会降低。</block>
   <block id="61d9dc1380811848e422522f4e4122a9" category="paragraph">如果Workload Factory确定您可以通过在FSx for ONTAP文件系统上运行这些工作负载来节省资金、则可以直接从Workload Factory中的计算器通过FSx for ONTAP部署Microsoft SQL。如果您在Elanic Block Store或FSx for Windows File Server存储上有多个Microsoft SQL Server实例、我们建议使用一个SQL实例配置FSx for ONTAP。</block>
   <block id="9c34331abb32017c0949af1d664fefb5" category="section-title">计算器选项</block>
-  <block id="a235c1c225af92b6423395beadcd9990" category="paragraph">您可以使用两个计算器选项来比较您的系统和FSx for ONTAP之间的成本—针对您的Amazon存储环境进行自定义和自动检测。</block>
   <block id="58e73141ee65f1324f33ca6b0e47a481" category="paragraph">通过自定义了解节省的空间：您可以为Amazon EC2上使用EBS或FSx for Windows File Server的Microsoft SQL Server提供配置设置、包括区域、部署模式、SQL Server版本、每月数据变更率、快照频率等。</block>
-  <block id="4ee8a0888e15ce32635ae1f06ea7dcba" category="paragraph">了解检测到的存储环境的节省量：Workload Factory可链接到您的现有AWS存储环境、并将详细信息提取到计算器中以进行自动比较。要使用此计算器选项、您需要授予"自动执行"权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。</block>
   <block id="c4765968842ae076126d5ea6e55cb9cb" category="paragraph">按照适用于您的存储类型的选项卡下的步骤进行操作。</block>
   <block id="8e276a5c4eecb9cd5c1fbb0729744eb5" category="open-title">Amazon Elastic Block Store (EBS)</block>
   <block id="1feb39b44e4fcef3d4be063a2f0c0c2c" category="list-text">登录到 <block ref="372504cb6bb48559009ff8f8cdb9a245" category="inline-link-macro-rx"></block></block>
@@ -771,14 +757,10 @@
   <block id="68d83ae7a042e508f76dc0e27a5f9a29" category="list-text">*配置的SSD IOPs*：输入配置的SSD IOPS。</block>
   <block id="9b6155708dd8947d64ec42276f1174dd" category="list-text">*吞吐量(MB/秒)*：以MB/秒为单位输入吞吐量</block>
   <block id="a5d2a4e28080feba2d0ba29a55f0eeab" category="list-text">在EC2规范下，从下拉菜单中选择*实例类型*。</block>
-  <block id="754cab29df96851e5cc6bac19fb8e4de" category="section-title">了解为检测到的EBS主机节省的空间</block>
-  <block id="de1eb6dc4a8c018c4d8f3fcc5ceb9221" category="paragraph">Workload Factory会输入检测到的El生 性块存储主机特征、以便您可以自动探索节省的空间。</block>
-  <block id="72255b529ff08813154e30f94dac81c3" category="list-text">在数据库中，选择*转至数据库清单*。</block>
   <block id="10d39a5cdb7cfb8abf1a05097e8f20bc" category="section-title">使用FSx for ONTAP在AWS EC2上部署Microsoft SQL Server</block>
   <block id="933800b579b2bf7e0f9916f0fa54607d" category="paragraph">如果要切换到FSx for ONTAP以节省成本，请直接从“创建新的Microsoft SQL Server”向导中单击*Creation*创建建议的配置，或者单击*Save*保存建议的配置供以后使用。</block>
   <block id="97bdf4c6d565fdd5cba849eeb1621649" category="list-text">在_Automate模式下、您可以直接从Workload Factory使用FSx for ONTAP在AWS EC2上部署新的Microsoft SQL Server。您还可以从代码框窗口复制内容、并使用其中一种代码框方法部署建议的配置。</block>
   <block id="e6ae9aa516c09658fbcbb0830276915c" category="paragraph">在_BASIC模式下、您可以从CodeBox窗口复制内容、并使用其中一种CodeBox方法部署建议的配置。</block>
-  <block id="0bbe82b56668e820bcb7722aa8566ea5" category="list-text">如果源数据库中的多个数据文件分布在2个以上的磁盘上、则不支持创建沙盒。</block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">2024年9月1日</block>
   <block id="969e7140d33129e87f01e95c59fed40f" category="list-text">*挂载*：克隆包含多个数据和/或日志文件的SQL数据库时、Workload Factory会克隆自动分配或定义的驱动器盘符下的所有文件。</block>
   <block id="ed09bad7864ec765b3bccff9b87f25fb" category="paragraph">选择以下选项之一：</block>
@@ -787,4 +769,33 @@
   <block id="8dc9fd2e016e27559302505db1795c2c" category="paragraph">提供以下内容以定义挂载点路径：</block>
   <block id="431673d13b715d86ce4d92ad7cf17f75" category="list-text">输入数据文件路径的驱动器号。</block>
   <block id="d8cf051243077cb10ccd52dd0de9d181" category="list-text">输入日志文件路径的驱动器盘符。</block>
+  <block id="2153d6ab291e00be0a49d2a42e481b36" category="paragraph"><block ref="9a178ca3815f6aeb284a65e10447f086" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="4ac33bc47ec0338e6c23f5e315a2b5ec" category="inline-link-macro">了解使用FSx for ONTAP为数据库工作负载节省的空间^。</block>
+  <block id="f9ca6ec7df5da581020634d84b3e477c" category="paragraph"><block ref="f9ca6ec7df5da581020634d84b3e477c" category="inline-link-macro-rx"></block></block>
+  <block id="b6e7a46e866a97d8ad38a3ce2e41e926" category="inline-image-macro">工作负载出厂控制台主页的屏幕截图。图中显示了一个新的"浏览节省量"按钮的"数据库"图块。单击按钮以打开下拉菜单。下拉菜单有两个选项- Microsoft SQL Server on EBS和Microsoft SQL Server on FSx for Windows File Server。</block>
+  <block id="a7396d19dde0193e37cada3b5524bb0b" category="paragraph"><block ref="a7396d19dde0193e37cada3b5524bb0b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cf88fa43b4b0e1b1bfb66e894b188442" category="doc">了解FSx for Windows File Server上检测到的Microsoft SQL Server的节省量</block>
+  <block id="0df73578de7c34ef150c1f37953113f5" category="paragraph">现在、您可以在节省量计算器中探索使用FSx for Windows File Server存储在Amazon EC2上检测到的Microsoft SQL Server的节省量。根据您的SQL Server和存储要求、您可能会发现FSx for ONTAP存储是最经济高效的数据库工作负载。</block>
+  <block id="b68e42fa600661a13849ea15c997cea3" category="paragraph">您可以使用两个计算器选项来比较系统与FSx for ONTAP之间的成本—自定义和检测。</block>
+  <block id="dd095c788b75342151d27fab6777362e" category="paragraph">了解检测到的主机的节省量：Workload Factory可链接到现有Microsoft SQL Server、并将详细信息提取到计算器中以进行自动比较。要使用此计算器选项、您需要授予"自动执行"权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。</block>
+  <block id="0e98c2470a9fecd3035980d6c9bd5dfe" category="section-title">了解检测到的主机的节省量</block>
+  <block id="e5af3e73361e966fe2adc79aadc34d57" category="paragraph">Workload Factory会输入检测到的Elacic Block Store和FSx for Windows File Server主机特征、以便您可以自动探索节省的空间。</block>
+  <block id="6db04c74eaedc9c295cd941f8d691d5f" category="list-text">确保<block ref="d9270f60c282b5496f17a4b48a6da305" category="inline-link-macro-rx"></block>在AWS帐户中检测数据库清单中的Elasic Block Store (EBS)和FSx for Windows系统。</block>
+  <block id="70cd361d4d146e35701d6144f1c0ab2b" category="list-text">在数据库清单中检测EBS和FSx for Windows存储中的主机。<block ref="c3d02703f332265b4bfd19fd03e6dd21" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="8f334cc9204ebef849d5d29b3d23b485" category="list-text">在“数据库”磁贴中，从下拉菜单中选择*Explore savings *，然后选择*Microsoft SQL Server on FSx for Windows*。</block>
+  <block id="bd0005565e08b9807da651535d09e628" category="inline-xref">了解通过自定义实现的节省</block>
+  <block id="8792c25f641e40dfbd968350e410bed0" category="paragraph">如果Workload Factory检测到EBS主机、则会重定向到Explore savings选项卡。如果Workload Factory未检测到EBS主机，则会将您重定向到计算器<block ref="1aa155ccc357a88465786c9c4e421569" category="inline-xref-macro-rx"></block>。</block>
+  <block id="b2b254b73e406acc574452e9f29f5d9a" category="list-text">在Explore savings选项卡中，单击*Explore savings * of the database server using EBS storage。</block>
+  <block id="3f1c1b5d06b7f8c588cd928fa1ac5e90" category="list-text">在节省量计算器中(可选)提供有关EBS存储中的克隆和快照的以下详细信息、以便更准确地估算节省的成本。</block>
+  <block id="7ca6391eb61738d8b33e189705bb5857" category="paragraph">如果Workload Factory检测到适用于Windows主机的FSx、则会重定向到Explore savings选项卡。如果Workload Factory未检测到适用于Windows主机的FSx，则会将您重定向到计算器<block ref="1aa155ccc357a88465786c9c4e421569" category="inline-xref-macro-rx"></block>。</block>
+  <block id="8918771901c5636214df46e39006b50c" category="list-text">在Explore savings选项卡中、单击*浏览使用FSx for Windows File Server存储的数据库服务器的节省*。</block>
+  <block id="60d184cc6fb4054879723de86764a020" category="list-text">(可选)在节省量计算器中、提供以下有关FSx for Windows存储中的克隆(卷影副本)和快照的详细信息、以便更准确地估算节省的成本。</block>
+  <block id="c552646e3717f4144059bd229d9b3c96" category="paragraph">如果检测到FSx for Windows卷影副本、则默认值为*每日*。如果未检测到卷影副本，则默认值为*无快照频率*。</block>
+  <block id="724d4c3a0255dd97a61657dd67fdf48f" category="list-text">*克隆副本数*：在FSx for Windows配置中输入克隆副本数。</block>
+  <block id="55376293ec338d45989562b49241fa71" category="paragraph">要在没有外部连接的专用网络中管理主机实例、需要在VPC中提供以下端点、并将其与存在SQL Server的子网相关联。确保接口端点允许连接的安全组中的端口443。</block>
+  <block id="021cd7b44c92e0977eee47344e7f4a7b" category="list-text"><block ref="d2c8dc6d0833da0998d37357f2d65fca" prefix="" category="inline-code"></block></block>
+  <block id="afe3dddd43fed2e0f76617fa08ab254a" category="list-text"><block ref="078aab7ae8c1a0df339ac8525790d5e1" prefix="" category="inline-code"></block></block>
+  <block id="cfa54b7dd19dd91bb87ede68126951eb" category="list-text"><block ref="25f6388206f436c2d1de63216302b13d" prefix="" category="inline-code"></block></block>
+  <block id="8d461d34b0f2c02565383f3301044282" category="list-text"><block ref="fea0543b0b4b9d4c240c6219de0db41c" prefix="" category="inline-code"></block></block>
+  <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">2024年9月29日</block>
 </blocks>

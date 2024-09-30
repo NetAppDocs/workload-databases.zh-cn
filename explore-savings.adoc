@@ -23,11 +23,11 @@ image:screenshot-ebs-savings-calculator.png["节省量计算器页面的屏幕�
 
 == 计算器选项
 
-您可以使用两个计算器选项来比较您的系统和FSx for ONTAP之间的成本—针对您的Amazon存储环境进行自定义和自动检测。
+您可以使用两个计算器选项来比较系统与FSx for ONTAP之间的成本—自定义和检测。
 
 通过自定义了解节省的空间：您可以为Amazon EC2上使用EBS或FSx for Windows File Server的Microsoft SQL Server提供配置设置、包括区域、部署模式、SQL Server版本、每月数据变更率、快照频率等。
 
-了解检测到的存储环境的节省量：Workload Factory可链接到您的现有AWS存储环境、并将详细信息提取到计算器中以进行自动比较。要使用此计算器选项、您需要授予"自动执行"权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。
+了解检测到的主机的节省量：Workload Factory可链接到现有Microsoft SQL Server、并将详细信息提取到计算器中以进行自动比较。要使用此计算器选项、您需要授予"自动执行"权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。
 
 
 
@@ -111,23 +111,31 @@ image:screenshot-ebs-savings-calculator.png["节省量计算器页面的屏幕�
 ====
 
 
-== 了解为检测到的EBS主机节省的空间
+== 了解检测到的主机的节省量
 
-Workload Factory会输入检测到的El生 性块存储主机特征、以便您可以自动探索节省的空间。
+Workload Factory会输入检测到的Elacic Block Store和FSx for Windows File Server主机特征、以便您可以自动探索节省的空间。
 
 .开始之前
 开始之前、请满足以下前提条件：
 
-* 请确保 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_Automate权限"^] 使用AWS帐户检测数据库清单中的Elasic Block Store (EBS)系统。
-* 在数据库清单中检测EBS存储中的主机。link:detect-host.html["了解如何检测主机"](英文)
+* 确保link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_Automate权限"^]在AWS帐户中检测数据库清单中的Elasic Block Store (EBS)和FSx for Windows系统。
+* 在数据库清单中检测EBS和FSx for Windows存储中的主机。link:detect-host.html["了解如何检测主机"](英文)
 
 
+按照适用于您的存储类型的选项卡下的步骤进行操作。
+
+[role="tabbed-block"]
+====
+.Amazon Elastic Block Store (EBS)
+--
 .步骤
 . 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
-. 在数据库中，选择*转至数据库清单*。
-. 选择*浏览节省*选项卡。
-. 对于使用EBS存储的数据库服务器，单击*Explore savings *。
-. (可选)提供以下有关EBS存储中的克隆和快照的详细信息、以便更准确地估算成本节省。
+. 在“数据库”磁贴中，从下拉菜单中选择*Explore savings *，然后选择*Microsoft SQL Server on FSx for Windows*。
++
+如果Workload Factory检测到EBS主机、则会重定向到Explore savings选项卡。如果Workload Factory未检测到EBS主机，则会将您重定向到计算器<<了解通过自定义实现的节省,了解通过自定义实现的节省>>。
+
+. 在Explore savings选项卡中，单击*Explore savings * of the database server using EBS storage。
+. 在节省量计算器中(可选)提供有关EBS存储中的克隆和快照的以下详细信息、以便更准确地估算节省的成本。
 +
 .. *快照频率*：从下拉菜单中选择快照频率。
 .. *克隆刷新频率*：从下拉菜单中选择克隆刷新的频率。
@@ -141,6 +149,35 @@ Workload Factory会输入检测到的El生 性块存储主机特征、以便您�
 
 
 
+--
+.Amazon FSx for Windows File Server
+--
+.步骤
+. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 在“数据库”磁贴中，从下拉菜单中选择*Explore savings *，然后选择*Microsoft SQL Server on FSx for Windows*。
++
+如果Workload Factory检测到适用于Windows主机的FSx、则会重定向到Explore savings选项卡。如果Workload Factory未检测到适用于Windows主机的FSx，则会将您重定向到计算器<<了解通过自定义实现的节省,了解通过自定义实现的节省>>。
+
+. 在Explore savings选项卡中、单击*浏览使用FSx for Windows File Server存储的数据库服务器的节省*。
+. (可选)在节省量计算器中、提供以下有关FSx for Windows存储中的克隆(卷影副本)和快照的详细信息、以便更准确地估算节省的成本。
++
+.. *快照频率*：从下拉菜单中选择快照频率。
++
+如果检测到FSx for Windows卷影副本、则默认值为*每日*。如果未检测到卷影副本，则默认值为*无快照频率*。
+
+.. *克隆刷新频率*：从下拉菜单中选择克隆刷新的频率。
+.. *克隆副本数*：在FSx for Windows配置中输入克隆副本数。
+.. *每月变更率*：输入克隆和快照数据每月平均变更的百分比。
+
+
+. 查看页面上提供的计算结果和建议。
++
+此外，向下滚动到页面底部至*导出PDF*或*查看计算*。
+
+
+
+--
+====
 
 
 == 使用FSx for ONTAP在AWS EC2上部署Microsoft SQL Server

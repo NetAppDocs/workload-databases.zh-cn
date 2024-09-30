@@ -78,25 +78,19 @@ Workload Factory不支持管理无中断可用性组配置。
 
 == 沙盒支持
 
-* 可以从数据库服务器创建的沙盒克隆的最大数量为50个。
-* 如果源数据库中的多个数据文件分布在2个以上的磁盘上、则不支持创建沙盒。
-
+可以从数据库服务器创建的沙盒克隆的最大数量为50个。
 
 
 
 == Microsoft SQL Server检测和管理
 
-* 如果使用没有外部连接的专用网络、则不支持检测和管理Microsoft SQL实例。
-* 未保存Microsoft SQL Server检测。每次访问Workload Factory中的数据库时、Microsoft SQL Server检测都会再次运行、以确定该区域中的SQL安装。
-
+未保存Microsoft SQL Server检测。每次访问Workload Factory中的数据库时、Microsoft SQL Server检测都会再次运行、以确定该区域中的SQL安装。
 
 
 
 == 了解节省量
 
-* 在"清单"选项卡中、为每个Microsoft SQL实例显示的估计成本是在ONTAP文件系统级别(而不是托管此SQL实例的卷)的FSx上计算的。
-* FSx for Windows File Server不支持Explore节省计算。
-
+在"清单"选项卡中、为每个Microsoft SQL实例显示的估计成本是在ONTAP文件系统级别(而不是托管此SQL实例的卷)的FSx上计算的。
 
 
 

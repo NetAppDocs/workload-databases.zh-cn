@@ -35,6 +35,14 @@ Microsoft SQL Server实例管理包括以下任务：
 
 管理为主机检测到的或非受管的Microsoft SQL Server实例。
 
+要在没有外部连接的专用网络中管理主机实例、需要在VPC中提供以下端点、并将其与存在SQL Server的子网相关联。确保接口端点允许连接的安全组中的端口443。
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
+
+
 .开始之前
 开始之前、请满足以下前提条件：
 
