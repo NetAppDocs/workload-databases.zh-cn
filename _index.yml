@@ -22,6 +22,6 @@ indexpage:
   - title: 知识和支持
     links:
     - title: 注册以获得支持
-      url: "/support-registration-databases.html"
+      url: "/support-registration.html"
     - title: 获取帮助
-      url: "/get-help-databases.html"
+      url: "/get-help.html"

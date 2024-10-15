@@ -180,4 +180,4 @@ image:diagram-MAZ-database-architecture.png["双节点高可用性架构示意�
 
 适用于NetApp ONTAP 的Amazon FSX是AWS第一方解决方案。如有与您的FSx for ONTAP文件系统、基础架构或使用此服务的任何解决方案相关的问题或技术支持问题、请使用AWS管理控制台中的支持中心创建AWS支持案例。选择 "FSX for ONTAP " 服务和相应的类别。提供创建 AWS 支持案例所需的其余信息。
 
-有关Workload Factory或Workload Factory应用程序和服务的一般问题，请参阅 link:get-help-databases.html["获取有关Workload Factory数据库的帮助"]。
+有关Workload Factory或Workload Factory应用程序和服务的一般问题，请参阅 link:get-help.html["获取有关Workload Factory数据库的帮助"]。
