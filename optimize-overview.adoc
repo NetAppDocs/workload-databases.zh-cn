@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: optimize-overview.html 
+keywords: continuous optimization, optimize, assess, assessment, scan, optimization, Microsoft SQL Server, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
+summary: 适用于数据库的BlueXP  工作负载工厂可为基于Amazon FSx for NetApp ONTAP存储的Microsoft SQL Server部署提供持续优化。 
+---
+= 持续优化数据库的BlueXP  工作负载工厂
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+适用于数据库的BlueXP  工作负载工厂可为基于Amazon FSx for NetApp ONTAP存储的Microsoft SQL Server部署提供持续优化。
+
+持续优化可自动大规模扫描和评估您的数据库基础架构、以确保大型资产达到峰值性能、成本效益并符合最佳实践。此功能可为您提供一份全面的报告、其中包含有关优化的见解和建议。
+
+通过持续优化、您可以检测数据库基础架构中的问题、了解需要更改的内容并采取措施。
+
+主要功能包括：
+
+* 持续评估
+* 自动最佳实践验证
+* 规模合适的建议
+* 主动可观察性
+* 从洞察力到行动
+* AWS架构完善的Framework Advisor
+
+
+优化范围因评估的组件而异。例如、存储优化在SQL实例级别进行、而计算优化在主机级别进行。
+
+link:optimize-configurations.html["优化Microsoft SQL Server部署的配置"]

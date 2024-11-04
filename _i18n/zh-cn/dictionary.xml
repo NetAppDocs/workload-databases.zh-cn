@@ -71,7 +71,6 @@
   <block id="8b018b615821339740a7c79a7473918a" category="list-text">将域用户设置为AD节点上的本地管理员</block>
   <block id="045b984ac75a0da892fea6afe6b83555" category="list-text">在AD中创建Microsoft SQL Server服务用户(如果尚不存在)</block>
   <block id="15d1ade99815746ab0088981bd7585d3" category="section-title">第1步：创建数据库服务器</block>
-  <block id="e501215e9258fda8d54793a123ed721f" category="paragraph">您可以使用_Quick create或_Advanced create部署模式在Workload Factory中以_Automate模式权限完成此任务。</block>
   <block id="956eaa6186169471a13345860cad0757" category="open-title">快速创建</block>
   <block id="542af019e2aa3ef9ca4b187a71c918bb" category="admonition">在_Quick creel_中、FCI是默认部署模式、Windows 2016是默认Windows版本、SQL 2019 Standard Edition是默认SQL版本。</block>
   <block id="b26136a388864ee3f9e813ac8f6109ee" category="list-text">在数据库磁贴中，选择*Deploy database host*。</block>
@@ -798,4 +797,66 @@
   <block id="293758d509326f8da42abf75db2d37e6" category="paragraph"><block ref="293758d509326f8da42abf75db2d37e6" category="inline-link-macro-rx"></block></block>
   <block id="fbcbba8054f71f57fa8e2b950179bb23" category="paragraph">可以从数据库服务器创建的沙盒克隆的最大数量为90个。</block>
   <block id="642917b2f642764c3a6f56b4bd9b6b24" category="paragraph">有关Workload Factory或Workload Factory应用程序和服务的一般问题，请参阅 <block ref="cdcdf14c020a2cc1f9ea3df8ed40ccf4" category="inline-link-macro-rx"></block>。</block>
+  <block id="0928468cb2283b21e6802a78c6a64e3a" category="doc">使用数据库持续优化Microsoft SQL Server工作负载</block>
+  <block id="e73fa899152fb6836032fef4e1c95da4" category="paragraph">BlueXP  工作负载工厂引入了持续指导和保障措施、以确保在Amazon FSx for NetApp ONTAP上对Microsoft SQL Server工作负载的存储组件进行持续优化并遵循最佳实践。此功能会持续脱机扫描您的Microsoft SQL Server资产、为您提供一份全面的见解、机会和建议报告、帮助您实现最佳性能、成本效益和合规性。</block>
+  <block id="5d743e351f2bc0b96d19c12d46be8be2" category="inline-link-macro">优化SQL Server工作负载</block>
+  <block id="72d1af9ffdd277a1cf7789b588da9b4d" category="paragraph"><block ref="72d1af9ffdd277a1cf7789b588da9b4d" category="inline-link-macro-rx"></block></block>
+  <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Terraform支持</block>
+  <block id="822802a1673e79cb7dbd54947e4dc32c" category="paragraph">现在、您可以从CodeBox中使用Terraform部署Microsoft SQL Server。</block>
+  <block id="d83b54de9b50110195e4bf3c1f3c6a67" category="list-text"><block ref="d83b54de9b50110195e4bf3c1f3c6a67" category="inline-link-macro-rx"></block></block>
+  <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">使用CodeBox中的Terraform</block>
+  <block id="11cb17d1b990bbf37a24337d5692efa1" category="list-text"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
+  <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">了解如何使用CodeBox实现自动化</block>
+  <block id="d3d10fb8f4b8181d69ae2092b30c544a" category="paragraph">您可以使用_Quick create或_Advanced create部署模式在Workload Factory中以_Automate模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API、CloudFormation和Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="5de582d1d412797088979e47e496c2fe" category="admonition">使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 和<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 密码。运行代码时、您需要重新输入密码。除了_Autome_模式权限之外，您还需要为用户帐户提供以下权限：<block ref="7f862a4b8fc22b0af5dda5c9ababa346" prefix=" " category="inline-code"></block>和<block ref="319bffed0f518819193d82ffe99b1444" prefix=" " category="inline-code"></block>。</block>
+  <block id="b2636246cf1e5e567e3ded4a9d65b1da" category="section-title">使用Terraform在专用网络中部署Microsoft SQL Server的区域可用性</block>
+  <block id="eb4fca182b3b78e9a38aa1f6f59c8857" category="paragraph">只有us-east-1 (北弗吉尼亚)地区才支持在没有使用Terraform的出站连接的专用网络中部署Microsoft SQL Server。</block>
+  <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">*持续优化*：持续脱机扫描您的Microsoft SQL Server资产，为您提供全面的见解、机会和建议报告，帮助您实现卓越运营。</block>
+  <block id="0d9b99cb00c934d1cd88332ae901fc26" category="section-title">用于使用Workload Factory的工具</block>
+  <block id="76737aecf42a629e0422271332fcc5a3" category="paragraph">您可以将BlueXP Workload Factory与以下工具结合使用：</block>
+  <block id="0fc51b33bbeafc6425a9bd19ec449966" category="list-text">*工作负载工厂控制台*：工作负载工厂控制台提供了一个可视化界面，可让您全面了解应用程序和项目</block>
+  <block id="a0ba060c8b176de6550d97a1fc8b4a2a" category="list-text">*REST API*：工作负载工厂REST API允许您部署和管理Microsoft SQL Server和其他AWS资源</block>
+  <block id="fb2bf23fd8d69c944827de16f09d3bb7" category="list-text">*CloudFormation*：AWS CloudFormation代码允许您执行在Workload Factory控制台中定义的操作、以便在AWS帐户中对CloudFormation堆栈中的AWS和第三方资源进行建模、配置和管理。</block>
+  <block id="887582b3338810bdcfbc9b5a8ff6b6d7" category="list-text">*Terraform BlueXP Workload Factory提供程序*：Terraform可用于构建和管理在Workload Factory控制台中生成的基础架构工作流。</block>
+  <block id="d12f14d8e346018dc03c07aa6b74bf9e" category="summary">数据库会扫描Microsoft SQL Server的存储配置、提供洞察力和建议、帮助您实现卓越运营。</block>
+  <block id="13025ba9f92de77af2aeaf1af07a4aa8" category="doc">优化Microsoft SQL Server部署的配置</block>
+  <block id="a843374a240a6303e99f9130260dec04" category="paragraph">适用于数据库的BlueXP  工作负载工厂会持续扫描和评估在Amazon FSx for NetApp ONTAP上运行的Microsoft SQL Server部署配置。评估可提供洞察力、建议和优化、帮助您实现卓越运营。</block>
+  <block id="6f2bcb2f8d4f34c036395a199095be9a" category="paragraph">对于采用工作负载工厂管理的FSx for ONTAP存储的Microsoft SQL Server实例、此评估每天自动持续运行一次。只有在部署后或管理实例后运行每日计划作业时、优化信息板才会显示评估报告。</block>
+  <block id="72e34efcd5e12ef888a19ad8bd33c28b" category="paragraph">工作负载工厂根据FSx for ONTAP存储的最佳实践提供了详细的配置优化建议。</block>
+  <block id="246db1206cb640c61b32f7cea2560b8e" category="list-text">扫描的内容</block>
+  <block id="af27bafd548aa3e366e582049aeb65f1" category="list-text">工作负载工厂会评估Microsoft SQL Server实例的以下配置的优化状态：</block>
+  <block id="04dff47f9a41cfa54b616dd86a4a6043" category="list-text">存储规模估算：包括存储层、文件系统余量、日志驱动器大小和TempDB驱动器大小</block>
+  <block id="b1107628010e55afc5ec740439838f10" category="list-text">存储布局：包括用户数据文件放置、日志文件放置和TempDB放置</block>
+  <block id="8bc38d27c74401312cd5c45bfd8a7d05" category="list-text">存储配置：包括容量管理、精简配置、分层策略、快照和多路径I/O状态、策略和会话等</block>
+  <block id="96ca9ac0bd1d71d3fe0162c29b8a4ff3" category="list-text">计算：包括规模估算</block>
+  <block id="1a0e703f0bdb101f4848a5510dd8ec1c" category="list-text">您必须具有具有读取或自动执行权限的凭据。</block>
+  <block id="86bd4600548ee1b734f704338ab13665" category="list-text">要评估Microsoft SQL Server实例的存储、该实例必须由工作负载工厂进行管理、并且存储类型必须为FSx for ONTAP。</block>
+  <block id="40213188bf240529a1293728c4187a56" category="list-text">在选择优化设置或配置之前、请确保仔细查看每个建议。</block>
+  <block id="1833c64ed881d7aac5733a15a8116354" category="list-text">选择要扫描的实例的三个点菜单，然后选择*Optimize*。</block>
+  <block id="3adf495aa133934a4330d99e0ad90fc1" category="list-text">在主机的优化实例页面上、查看存储评估结果。</block>
+  <block id="a09500dc3402d71be1fe58158c5cdfc9" category="paragraph">可以使用筛选器按类别、子类别、状态、严重性和标记进行排序。</block>
+  <block id="49aaa10529fcf35af76ba4e06450bb15" category="paragraph">如果需要，您可以通过选择*导出PDF*来下载结果报告。</block>
+  <block id="5f4f392649432d3064fdf2a04015472b" category="list-text">选择下拉箭头可查看任何配置的建议。请务必仔细阅读此建议。</block>
+  <block id="c9e425055996f71ecfc858708d926276" category="paragraph">此建议说明了未优化配置的最佳实践和潜在陷阱。</block>
+  <block id="ea3bf0643d3540c97b9b92a3fb2bbf75" category="list-text">选择此选项可*优化*未优化的配置。</block>
+  <block id="fa01f4b57079f7ca82b8d852cbf4ed43" category="list-text">查看优化对话框中显示的优化摘要和操作项、了解选择优化后会发生什么情况。某些优化操作可能会导致实例停机或服务中断。</block>
+  <block id="78a5af6b8a486797f81f9b0dff06821e" category="list-text">选择*继续*以优化配置。</block>
+  <block id="c6ff3995f3c633f2808f96020f887fd9" category="paragraph">此时将启动优化过程。选择*作业监控*选项卡以查看操作状态。</block>
+  <block id="0c47496112bcf6ed0b29fe1fe1d65d62" category="summary">适用于数据库的BlueXP  工作负载工厂可为基于Amazon FSx for NetApp ONTAP存储的Microsoft SQL Server部署提供持续优化。</block>
+  <block id="9d62eb1e78c18c53c2bc3d807f4d5b04" category="doc">持续优化数据库的BlueXP  工作负载工厂</block>
+  <block id="b97ec9fa7955169dbb93f4727a02e87d" category="paragraph">持续优化可自动大规模扫描和评估您的数据库基础架构、以确保大型资产达到峰值性能、成本效益并符合最佳实践。此功能可为您提供一份全面的报告、其中包含有关优化的见解和建议。</block>
+  <block id="638c7d8777be813a6cc36be0ae2ccf68" category="paragraph">通过持续优化、您可以检测数据库基础架构中的问题、了解需要更改的内容并采取措施。</block>
+  <block id="1c11d2e59190fe6a4e37f1e68abafcb4" category="paragraph">主要功能包括：</block>
+  <block id="5767d06d754465b4eceaed828d43069f" category="list-text">持续评估</block>
+  <block id="8c0981b34ea19373e1dcf1c3d034f097" category="list-text">自动最佳实践验证</block>
+  <block id="029d49350caff46ab3e1f31c9c60f494" category="list-text">规模合适的建议</block>
+  <block id="3583e4a3e4e2e122cff65b8ad9045348" category="list-text">主动可观察性</block>
+  <block id="16fcd85dc9469370b62b4b46381f8e2a" category="list-text">从洞察力到行动</block>
+  <block id="7a3fc3cf12e9da54628c7311398bee5c" category="list-text">AWS架构完善的Framework Advisor</block>
+  <block id="de29686d1474303323860ff8044fc4ed" category="paragraph">优化范围因评估的组件而异。例如、存储优化在SQL实例级别进行、而计算优化在主机级别进行。</block>
+  <block id="ca3feda4f22b6d2a240006fa0a33f99e" category="paragraph"><block ref="ca3feda4f22b6d2a240006fa0a33f99e" category="inline-link-macro-rx"></block></block>
+  <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">2024年11月3日</block>
+  <block id="372aea905d324ed9cf6878e3f3ed7abc" category="sidebar">优化SQL Server</block>
+  <block id="6ca43380ae924ff967599986889184b3" category="sidebar">持续优化概述</block>
+  <block id="d1e68728a28b7936858b1484445ef50f" category="sidebar">优化配置</block>
 </blocks>

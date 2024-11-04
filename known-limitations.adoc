@@ -97,3 +97,9 @@ Workload Factory不支持管理无中断可用性组配置。
 == 多个FSx for ONTAP文件系统
 
 Workload Factory不支持为具有多个FSx for ONTAP文件系统的Microsoft SQL Server创建或保存配置。仅支持部署一个FSx for ONTAP文件系统配置。
+
+
+
+== 使用Terraform在专用网络中部署Microsoft SQL Server的区域可用性
+
+只有us-east-1 (北弗吉尼亚)地区才支持在没有使用Terraform的出站连接的专用网络中部署Microsoft SQL Server。

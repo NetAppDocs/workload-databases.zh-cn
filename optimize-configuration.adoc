@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: optimize-configurations.html 
+keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
+summary: 数据库会扫描Microsoft SQL Server的存储配置、提供洞察力和建议、帮助您实现卓越运营。 
+---
+= 优化Microsoft SQL Server部署的配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+适用于数据库的BlueXP  工作负载工厂会持续扫描和评估在Amazon FSx for NetApp ONTAP上运行的Microsoft SQL Server部署配置。评估可提供洞察力、建议和优化、帮助您实现卓越运营。
+
+.关于此任务
+对于采用工作负载工厂管理的FSx for ONTAP存储的Microsoft SQL Server实例、此评估每天自动持续运行一次。只有在部署后或管理实例后运行每日计划作业时、优化信息板才会显示评估报告。
+
+工作负载工厂根据FSx for ONTAP存储的最佳实践提供了详细的配置优化建议。
+
+扫描的内容:: 工作负载工厂会评估Microsoft SQL Server实例的以下配置的优化状态：
++
+--
+* 存储规模估算：包括存储层、文件系统余量、日志驱动器大小和TempDB驱动器大小
+* 存储布局：包括用户数据文件放置、日志文件放置和TempDB放置
+* 存储配置：包括容量管理、精简配置、分层策略、快照和多路径I/O状态、策略和会话等
+* 计算：包括规模估算
+
+
+--
+
+
+.开始之前
+* 您必须具有具有读取或自动执行权限的凭据。
+* 要评估Microsoft SQL Server实例的存储、该实例必须由工作负载工厂进行管理、并且存储类型必须为FSx for ONTAP。
+* 在选择优化设置或配置之前、请确保仔细查看每个建议。
+
+
+.步骤
+. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 在数据库磁贴中，选择*转至数据库库存*。
+. 在数据库中，选择*Inventory*选项卡。
+. 单击下拉箭头展开主机所在行以查看其受管实例。
++
+此时、主机将展开并显示主机实例。
+
+. 选择要扫描的实例的三个点菜单，然后选择*Optimize*。
+. 在主机的优化实例页面上、查看存储评估结果。
++
+可以使用筛选器按类别、子类别、状态、严重性和标记进行排序。
+
++
+如果需要，您可以通过选择*导出PDF*来下载结果报告。
+
+. 选择下拉箭头可查看任何配置的建议。请务必仔细阅读此建议。
++
+此建议说明了未优化配置的最佳实践和潜在陷阱。
+
+. 选择此选项可*优化*未优化的配置。
+. 查看优化对话框中显示的优化摘要和操作项、了解选择优化后会发生什么情况。某些优化操作可能会导致实例停机或服务中断。
+. 选择*继续*以优化配置。
+
+
+.结果
+此时将启动优化过程。选择*作业监控*选项卡以查看操作状态。
