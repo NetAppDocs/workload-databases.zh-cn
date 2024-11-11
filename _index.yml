@@ -1,7 +1,7 @@
 ---
 indexpage:
-  title: 适用于数据库的工作负载工厂工作负载文档
-  lead: 在BlueXP Workload Factory中的FSx for ONTAP文件系统存储上部署Microsoft SQL Server配置并管理数据库环境。
+  title: 数据库文档的BlueXP  工作负载工厂
+  lead: 在BlueXP  工作负载工厂中、基于FSx for ONTAP文件系统存储部署Microsoft SQL Server配置并管理数据库环境。
   tiles:
   - title: 开始使用
     links:

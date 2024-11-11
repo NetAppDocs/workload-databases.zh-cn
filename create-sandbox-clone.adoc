@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-sandbox-clone.html 
 keywords: create, clone, sandbox 
-summary: 在Workload Factory中为数据库创建沙盒克隆。 
+summary: 在BlueXP  工作负载工厂中为数据库创建沙盒克隆。 
 ---
-= 在Workload Factory中为数据库创建沙盒克隆
+= 在BlueXP  工作负载工厂中为数据库创建沙盒克隆
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-通过在Workload Factory中为数据库创建沙盒克隆、您可以使用该克隆进行开发、测试、集成、分析、培训、 QA等、而不更改源数据库。
+通过在BlueXP  Workload Factory中为数据库创建沙盒克隆、您可以使用该克隆进行开发、测试、集成、分析、培训、QA等操作、而无需更改源数据库。
 
 .关于此任务
 沙盒克隆是从源数据库上的最新快照创建的。它可以与源数据库在同一Microsoft SQL Server中克隆、也可以在另一个Microsoft SQL Server中克隆、只要它们共享同一FSx for ONTAP文件系统即可。
@@ -19,19 +19,19 @@ summary: 在Workload Factory中为数据库创建沙盒克隆。
 .开始之前
 在创建沙盒克隆之前、请确保满足以下前提条件。
 
-凭据和权限:: 您必须 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS帐户凭据和_Read_或_Automate _模式权限"^] 在Workload Factory中创建沙盒克隆。
+凭据和权限:: 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS帐户凭据和_Read_或_Automate _模式权限"^]在工作负载出厂时创建沙盒克隆。
 +
 --
-或者、您也可以使用代码框复制部分完成的模板或创建已完成的模板、以便使用REST API在工作负载工厂外部创建沙盒克隆。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["了解有关CodeBox自动化的更多信息"^](英文)
+或者、您也可以使用代码框复制部分完成的模板或创建已完成的模板、以便可以使用REST API在工作负载出厂时创建沙盒克隆。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["了解有关CodeBox自动化的更多信息"^](英文)
 
 --
-Microsoft SQL Server:: 您必须在Workload Factory中拥有受管的Microsoft SQL Server、以便数据库托管新的沙盒克隆。
+Microsoft SQL Server:: 您必须在工作负载出厂时拥有受管Microsoft SQL Server、数据库才能托管新的沙盒克隆。
 AWS Systems Manager:: 确保 `NT Authority\SYSTEM` 已通过AWS Systems Manager在Microsoft SQL主机中启用用户权限。
 源数据库:: 您需要一个可用于克隆的源数据库。
 
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库库存*。
 . 在数据库中，选择*沙盒*选项卡。
 . 在沙盒选项卡中，选择*创建新沙盒*。
@@ -49,7 +49,7 @@ AWS Systems Manager:: 确保 `NT Authority\SYSTEM` 已通过AWS Systems Manager�
 .. *目标数据库*：输入沙盒克隆的名称。
 
 
-. *挂载*：克隆包含多个数据和/或日志文件的SQL数据库时、Workload Factory会克隆自动分配或定义的驱动器盘符下的所有文件。
+. *挂载*：克隆包含多个数据和/或日志文件的SQL数据库时、工作负载出厂时会克隆自动分配或定义的驱动器盘符下的所有文件。
 +
 选择以下选项之一：
 

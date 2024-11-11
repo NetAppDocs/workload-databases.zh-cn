@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-server.html 
 keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage 
-summary: 在Workload Factory中管理数据库的Microsoft SQL Server实例。 
+summary: 在BlueXP  工作负载工厂中管理数据库的Microsoft SQL Server实例。 
 ---
-= 管理Microsoft SQL Server实例
+= 在BlueXP  工作负载工厂中管理Microsoft SQL Server实例
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-管理Microsoft SQL Server实例、以便在Workload Factory中监控数据库的实例和数据库状态、资源利用率、保护和存储性能。
+管理Microsoft SQL Server实例、以在BlueXP  工作负载工厂中监控数据库的实例和数据库状态、资源利用率、保护和存储性能。
 
 数据库只能使用FSx管理ONTAP文件系统存储的Microsoft SQL Server实例。
 
@@ -61,7 +61,7 @@ Microsoft SQL Server实例管理包括以下任务：
 
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库库存*。
 . 在数据库中，选择*Inventory*选项卡。
 . 单击要管理的主机所在行中的*Manage*。
@@ -69,7 +69,7 @@ Microsoft SQL Server实例管理包括以下任务：
 . 单击*Manage*。
 
 
-如果Microsoft SQL Server缺少某些PowerShell模块和管理脚本、则操作将失败。Workload Factory会触发一个准备资源作业来安装缺少的模块和脚本、您可以在作业监控选项卡中查看这些模块和脚本。作业完成后、重试以管理主机实例。
+如果Microsoft SQL Server缺少某些PowerShell模块和管理脚本、则操作将失败。工作负载出厂时会触发准备资源作业以安装缺少的模块和脚本、您可以在作业监控选项卡中查看这些模块和脚本。作业完成后、重试以管理主机实例。
 
 
 
@@ -78,7 +78,7 @@ Microsoft SQL Server实例管理包括以下任务：
 您可以按照以下步骤查看受管实例。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库库存*。
 . 在数据库中，选择*Inventory*选项卡。
 . 单击下拉箭头展开主机所在行以查看其受管实例。
@@ -98,7 +98,7 @@ Microsoft SQL Server实例管理包括以下任务：
 您可以按照以下步骤查看受管实例管理的数据库。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库库存*。
 . 在数据库中，选择*Inventory*选项卡。
 . 单击下拉箭头展开主机所在的行以查看其数据库。
@@ -119,7 +119,7 @@ Microsoft SQL Server实例管理包括以下任务：
 按照以下步骤取消管理主机实例。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库库存*。
 . 在数据库中，选择*Inventory*选项卡。
 . 单击下拉箭头、展开要取消管理的主机实例所在的行。

@@ -4,20 +4,20 @@ permalink: explore-savings.html
 keywords: cost, savings, compare costs, EBS, FSx for ONTAP 
 summary: '通过比较将Amazon Elasic Block Store (EBS)和FSx for Windows File Server存储与FSx for ONTAP存储结合使用的成本、探索为数据库工作负载节省的空间。' 
 ---
-= 了解在适用于数据库的Workload Factory中节省的空间
+= 了解BlueXP  工作负载工厂为数据库节省的空间
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-通过比较将Amazon Elasic Block Store (EBS)和FSx for Windows File Server存储与FSx for ONTAP存储结合使用的成本、探索为数据库工作负载节省的空间。
+通过比较将Amazon Elasic Block Store (EBS)和FSx for Windows文件服务器存储与FSx for ONTAP存储结合使用的成本、了解BlueXP  工作负载工厂为数据库工作负载节省的成本。
 
-Workload Factory提供了一个节省计算器、可用于比较在适用于ONTAP文件系统的FSx上为数据库工作负载运行Microsoft SQL Server工作负载(例如存储、计算、SQL许可证、快照和克隆)时的各种成本组件与适用于Windows文件服务器存储的Elasic Block Store (EBS)和FSx。根据您的存储要求、您可能会发现适用于ONTAP文件系统的FSx对于数据库工作负载来说最经济高效。计算器将显示如果您使用FSx for ONTAP文件系统、这些Microsoft SQL Server上用于数据库工作负载的存储成本是否会降低。
+Workload Factory提供了一个节省计算器、可用于比较在FSx for ONTAP文件系统上为数据库工作负载运行Microsoft SQL Server工作负载(例如存储、计算、SQL许可证、快照和克隆)时的各种成本组件与Elasic Block Store (EBS)和FSx for Windows File Server存储的成本。根据您的存储要求、您可能会发现适用于ONTAP文件系统的FSx对于数据库工作负载来说最经济高效。计算器将显示如果您使用FSx for ONTAP文件系统、这些Microsoft SQL Server上用于数据库工作负载的存储成本是否会降低。
 
 image:screenshot-ebs-savings-calculator.png["节省量计算器页面的屏幕截图显示了左侧选定的Microsoft SQL Server on Amazon El生 性块存储配置、并提供了用于自定义快照和克隆值的选项。左侧显示的是在FSx for ONTAP上使用Microsoft SQL Server和El生 性块存储节省的成本(以美元和百分比表示)以及每月总成本。"]
 
-如果Workload Factory确定您可以通过在FSx for ONTAP文件系统上运行这些工作负载来节省资金、则可以直接从Workload Factory中的计算器通过FSx for ONTAP部署Microsoft SQL。如果您在Elanic Block Store或FSx for Windows File Server存储上有多个Microsoft SQL Server实例、我们建议使用一个SQL实例配置FSx for ONTAP。
+如果工作负载工厂确定可以通过在FSx for ONTAP文件系统上运行这些工作负载来节省资金、则可以直接从工作负载工厂的计算器中部署基于FSx for ONTAP的Microsoft SQL。如果您在Elanic Block Store或FSx for Windows File Server存储上有多个Microsoft SQL Server实例、我们建议使用一个SQL实例配置FSx for ONTAP。
 
 
 
@@ -27,7 +27,7 @@ image:screenshot-ebs-savings-calculator.png["节省量计算器页面的屏幕�
 
 通过自定义了解节省的空间：您可以为Amazon EC2上使用EBS或FSx for Windows File Server的Microsoft SQL Server提供配置设置、包括区域、部署模式、SQL Server版本、每月数据变更率、快照频率等。
 
-了解检测到的主机的节省量：Workload Factory可链接到现有Microsoft SQL Server、并将详细信息提取到计算器中以进行自动比较。要使用此计算器选项、您需要授予"自动执行"权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。
+探索检测到的主机节省的空间：工作负载出厂链接到现有Microsoft SQL Server、并将详细信息提取到计算器中以进行自动比较。要使用此计算器选项、您需要授予"自动执行"权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。
 
 
 
@@ -40,7 +40,7 @@ image:screenshot-ebs-savings-calculator.png["节省量计算器页面的屏幕�
 .Amazon Elastic Block Store (EBS)
 --
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库中，选择*Explore savings *，然后选择*Microsoft SQL Server on EBS*。
 . 在节省量计算器中、提供以下详细信息：
 +
@@ -78,7 +78,7 @@ image:screenshot-ebs-savings-calculator.png["节省量计算器页面的屏幕�
 .Amazon FSx for Windows File Server
 --
 .步骤
-. 登录到 link:https://console.workloads.netapp.com/["工作负载出厂控制台"^]
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库中，选择*Explore savings *，然后选择*Microsoft SQL Server on FSx for Windows*。
 . 在节省量计算器中、提供以下详细信息：
 +
@@ -113,7 +113,7 @@ image:screenshot-ebs-savings-calculator.png["节省量计算器页面的屏幕�
 
 == 了解检测到的主机的节省量
 
-Workload Factory会输入检测到的Elacic Block Store和FSx for Windows File Server主机特征、以便您可以自动探索节省的空间。
+工作负载出厂时会输入检测到的Elacic Block Store和FSx for Windows File Server主机特征、以便您可以自动探索节省的空间。
 
 .开始之前
 开始之前、请满足以下前提条件：
@@ -129,10 +129,10 @@ Workload Factory会输入检测到的Elacic Block Store和FSx for Windows File S
 .Amazon Elastic Block Store (EBS)
 --
 .步骤
-. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在“数据库”磁贴中，从下拉菜单中选择*Explore savings *，然后选择*Microsoft SQL Server on FSx for Windows*。
 +
-如果Workload Factory检测到EBS主机、则会重定向到Explore savings选项卡。如果Workload Factory未检测到EBS主机，则会将您重定向到计算器<<了解通过自定义实现的节省,了解通过自定义实现的节省>>。
+如果工作负载出厂检测到EBS主机、您将重定向到Explore savings选项卡。如果工作负载工厂未检测到EBS主机，则会将您重定向到计算器<<了解通过自定义实现的节省,了解通过自定义实现的节省>>。
 
 . 在Explore savings选项卡中，单击*Explore savings * of the database server using EBS storage。
 . 在节省量计算器中(可选)提供有关EBS存储中的克隆和快照的以下详细信息、以便更准确地估算节省的成本。
@@ -153,10 +153,10 @@ Workload Factory会输入检测到的Elacic Block Store和FSx for Windows File S
 .Amazon FSx for Windows File Server
 --
 .步骤
-. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在“数据库”磁贴中，从下拉菜单中选择*Explore savings *，然后选择*Microsoft SQL Server on FSx for Windows*。
 +
-如果Workload Factory检测到适用于Windows主机的FSx、则会重定向到Explore savings选项卡。如果Workload Factory未检测到适用于Windows主机的FSx，则会将您重定向到计算器<<了解通过自定义实现的节省,了解通过自定义实现的节省>>。
+如果工作负载工厂检测到FSx for Windows主机、则会重定向到Explore savings选项卡。如果工作负载工厂未检测到FSx for Windows主机，您将被重定向到计算器<<了解通过自定义实现的节省,了解通过自定义实现的节省>>。
 
 . 在Explore savings选项卡中、单击*浏览使用FSx for Windows File Server存储的数据库服务器的节省*。
 . (可选)在节省量计算器中、提供以下有关FSx for Windows存储中的克隆(卷影副本)和快照的详细信息、以便更准确地估算节省的成本。
@@ -187,7 +187,7 @@ Workload Factory会输入检测到的Elacic Block Store和FSx for Windows File S
 
 NOTE: Workload Factory不支持为ONTAP文件系统保存或创建多个FSx。
 
-部署方法:: 在_Automate模式下、您可以直接从Workload Factory使用FSx for ONTAP在AWS EC2上部署新的Microsoft SQL Server。您还可以从代码框窗口复制内容、并使用其中一种代码框方法部署建议的配置。
+部署方法:: 在_Automate模式下、您可以直接从工作负载工厂使用FSx for ONTAP在AWS EC2上部署新的Microsoft SQL Server。您还可以从代码框窗口复制内容、并使用其中一种代码框方法部署建议的配置。
 +
 --
 在_BASIC模式下、您可以从CodeBox窗口复制内容、并使用其中一种CodeBox方法部署建议的配置。

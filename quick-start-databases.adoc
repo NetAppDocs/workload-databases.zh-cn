@@ -4,32 +4,32 @@ permalink: quick-start-databases.html
 keywords: requirements, basic mode, read mode, automate mode 
 summary: 数据库有三种不同的模式、它们具有不同的要求。 
 ---
-= 数据库快速入门
+= 快速入门—适用于数据库的BlueXP  工作负载工厂
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-使用数据库、您可以在_BASIC模式下立即开始使用。如果您要使用Workload Factory来发现主机、管理资源等、可以通过几个步骤开始操作。
+借助适用于数据库的BlueXP  工作负载工厂、您可以立即在_BASIC模式下开始使用。如果您希望使用工作负载工厂来发现主机、管理资源等、可以通过几个步骤开始操作。
 
-您必须拥有AWS帐户才能开始使用。
+要使用数据库、您必须拥有AWS帐户。
 
-按照以下步骤开始使用Workload Factory数据库。
+请按照以下步骤开始操作。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"] 登录到Workload Factory
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]登录到BlueXP  工作负载工厂
 [role="quick-margin-para"]
-您需要 link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["使用Workload Factory设置帐户"^] 和 link:https://console.workloads.netapp.com["登录"^]
+您需要link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["在Workload Factory中设置一个帐户"^]使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 添加凭据和权限
 [role="quick-margin-para"]
 选择 link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["_BASIC _、_Read_和_Automate _操作模式"^]。
 
 [role="quick-margin-para"]
-如果您在_BASIC模式下运行、则无需再继续操作。您可以开始使用工作负载工厂数据库复制部分完成的代码示例。在数据库磁贴中，单击*Deploy database host*。link:create-database-server.html["了解如何部署数据库服务器"](英文)
+如果您在_BASIC模式下运行、则无需再继续操作。您可以开始使用数据库复制部分完成的代码示例。在数据库磁贴中，单击*Deploy database host*。link:create-database-server.html["了解如何部署数据库服务器"](英文)
 
 [role="quick-margin-para"]
-如果您在_Read_或_Automate _模式下运行、则需要执行以下操作：选择数据库和AI等工作负载功能、创建IAM策略以确保您拥有在_Read_或_Automate _模式下运行所需 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手动向帐户添加凭据"^] 的正确权限。
+如果您在_Read_或_Automate _模式下运行、则需要执行以下操作：选择工作负载功能(如数据库和GenAI)、创建IAM策略以确保您拥有在_Read_或_Automate _模式下运行所需link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手动向帐户添加凭据"^]的正确权限。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 部署数据库服务器
 [role="quick-margin-para"]

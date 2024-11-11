@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: revert-clone.html 
 keywords: re-baseline, revert clone, database, Microsoft SQL 
-summary: 在Workload Factory中还原数据库的沙盒克隆。 
+summary: 在BlueXP  工作负载出厂时还原数据库的沙盒克隆。 
 ---
-= 在Workload Factory中还原数据库的沙盒克隆
+= 在BlueXP  工作负载出厂时还原数据库的沙盒克隆
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在创建数据库克隆时将其还原为原始版本。
+在BlueXP  Workload Factory中为数据库创建数据库克隆时、请将其还原为原始版本。
 
 .关于此任务
 克隆数据库时、创建时的克隆为_baseline克隆。克隆数据库中的数据与创建时的源数据库相同。由于沙盒数据库克隆中的数据会随时间发生变化、因此您可能需要在首次创建克隆时将数据还原回基线。此操作称为为克隆重新设定基线。重新设定克隆基线而不是创建新克隆可节省空间；但是、对沙盒克隆所做的任何更改都将被删除。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库库存*。
 . 在数据库中，选择*沙盒*选项卡。
 . 在沙盒选项卡中、单击要还原的沙盒克隆的三个点菜单。

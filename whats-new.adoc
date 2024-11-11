@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, workload factory, databases, workload factory' 
-summary: 了解适用于数据库的Workload Factory的新增功能。 
+summary: 了解BlueXP  数据库工作负载工厂的新增功能。 
 ---
-= 新增功能
+= BlueXP  数据库工作负载工厂的新增功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -105,8 +105,8 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["利�
 
 
 
-=== 适用于数据库的Workload Factory初始版本
+=== 适用于数据库的BlueXP  工作负载工厂的初始版本
 
-初始版本包括以下功能：使用Amazon FSx for NetApp ONTAP作为数据库工作负载的存储环境、检测、管理和部署Microsoft SQL Server、部署和克隆数据库以及在Workload Factory中监控这些作业、从而了解节省的空间。
+初始版本包括以下功能：使用Amazon FSx for NetApp ONTAP作为数据库工作负载的存储环境来了解节省的空间；检测、管理和部署Microsoft SQL Server；部署和克隆数据库；以及在工作负载工厂内监控这些作业。
 
 link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["了解数据库"^]

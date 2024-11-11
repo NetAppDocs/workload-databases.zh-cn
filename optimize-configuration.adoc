@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-configurations.html 
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
-summary: 数据库会扫描Microsoft SQL Server的存储配置、提供洞察力和建议、帮助您实现卓越运营。 
+summary: 适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL Server的存储配置、提供洞察力和建议、帮助您实现卓越运营。 
 ---
 = 优化Microsoft SQL Server部署的配置
 :allow-uri-read: 
@@ -37,7 +37,7 @@ summary: 数据库会扫描Microsoft SQL Server的存储配置、提供洞察力
 
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库库存*。
 . 在数据库中，选择*Inventory*选项卡。
 . 单击下拉箭头展开主机所在行以查看其受管实例。

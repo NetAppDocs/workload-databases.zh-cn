@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: detect-host.html 
 keywords: detect, detect server instance, instance, detect a database host, instance 
-summary: 在Workload Factory中检测数据库的Microsoft SQL Server实例。 
+summary: 在BlueXP  工作负载工厂中检测数据库的Microsoft SQL Server实例。 
 ---
 = 检测Microsoft SQL Server实例
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: 在Workload Factory中检测数据库的Microsoft SQL Server实例。
 
 
 [role="lead"]
-在Workload Factory中检测数据库的Microsoft SQL Server实例。
+在BlueXP  工作负载工厂中检测数据库的Microsoft SQL Server实例。
 
 此任务用于检测_undetected instance_。
 
 .关于此任务
-如果AWS凭据与Workload Factory关联、则数据库可以从SQL Server 2016开始自动发现具有以下AWS存储类型的Microsoft SQL Server：
+如果AWS凭据在工作负载工厂关联、则数据库可以从SQL Server 2016开始自动发现具有以下AWS存储类型的Microsoft SQL Server：
 
 * 适用于 ONTAP 的 FSX
 * 弹性块存储(EBS)
@@ -28,19 +28,19 @@ summary: 在Workload Factory中检测数据库的Microsoft SQL Server实例。
 * _undetected instances _：工作负载工厂已自动发现的未检测实例。在以下情况下、不会检测到实例：
 +
 ** Microsoft SQL Server身份验证失败。
-** Microsoft SQL Server的FSx for ONTAP文件系统未注册到您在Workload Factory中的帐户中。
+** 适用于Microsoft SQL Server的FSx for ONTAP文件系统未在工作负载工厂向您的帐户注册。
 
 
-* _Unmanaged Instances _：检测到不受Workload Factory管理的实例
-* _Managed Instances _：检测到由Workload Factory管理的实例
+* _Unmanaged Instances _：检测到不受工作负载工厂管理的实例
+* _Managed Instances _：检测到由工作负载工厂管理的实例
 
 
-在Workload Factory中管理数据库的Microsoft SQL Server实例或主机实例的第一步是检测未检测到的数据库服务器实例。
+在工作负载工厂中管理数据库的Microsoft SQL Server实例或主机实例的第一步是检测未检测到的数据库服务器实例。
 
 .开始之前
 检测未检测到的数据库服务器实例的要求如下：
 
-* 您必须 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS帐户凭据"^] 在Workload Factory中检测数据库服务器实例。
+* 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS帐户凭据"^]在工作负载工厂中检测数据库服务器实例。
 * 实例的存储类型必须为以下类型之一：
 +
 ** 适用于 ONTAP 的 FSX
@@ -55,7 +55,7 @@ summary: 在Workload Factory中检测数据库的Microsoft SQL Server实例。
 
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库库存*。
 . 在数据库中，选择*Inventory*选项卡。
 . 单击下拉箭头、展开要检测的主机所在的行。
@@ -66,10 +66,10 @@ summary: 在Workload Factory中检测数据库的Microsoft SQL Server实例。
 . 单击*detect*。
 . 在*DETECT Instances*对话框中，提供Microsoft SQL Server用户名和密码或FSx for ONTAP用户名和密码。
 +
-Workload Factory会尝试验证您的Microsoft SQL凭据或FSx for ONTAP凭据。
+工作负载工厂会验证您的Microsoft SQL凭据或FSx for ONTAP凭据。
 
 +
-如果其中任一凭据不可用、Workload Factory将尝试在PowerShell中安装此 `aws.tools.SimpleSystemsManagement` 模块。
+如果其中任一凭据不可用、则Workload Factory会尝试在PowerShell中安装此 `aws.tools.SimpleSystemsManagement`模块。
 
 . 单击*detect*。
 +
@@ -80,4 +80,4 @@ Workload Factory会尝试验证您的Microsoft SQL凭据或FSx for ONTAP凭据�
 
 
 .下一步行动
-如果主机实例的存储类型为FSx for ONTAP，则可以 link:manage-server.html["通过Workload Factory管理实例"]。
+如果主机实例的存储类型为FSx for ONTAP，则可以 link:manage-server.html["通过工作负载工厂管理实例"]。

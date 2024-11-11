@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: 在Workload Factory中跟踪数据库作业并监控数据库以查找数据库。 
+summary: 在BlueXP  工作负载工厂中跟踪数据库作业并监控数据库、以查找数据库。 
 ---
-= 监控数据库
+= 在BlueXP  工作负载工厂中监控数据库
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-使用Workload Factory for database跟踪数据库作业并监控数据库。
+在BlueXP  工作负载工厂中跟踪数据库作业并监控数据库、以查找数据库。
 
 .关于此任务
 数据库提供作业监控功能、以便您可以跟踪作业进度、并在发生任何故障时进行诊断和故障排除。此外、按类型和状态、搜索功能以及用于下载作业表的选项进行筛选有助于数据库作业导航和报告。
@@ -36,7 +36,7 @@ summary: 在Workload Factory中跟踪数据库作业并监控数据库以查找�
 == 监控作业
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库库存*。
 . 在数据库中，选择*作业监视*选项卡。
 . 在作业监控选项卡中、使用筛选器或搜索缩小作业结果范围。您也可以下载作业报告。

@@ -11,13 +11,13 @@ summary: 使用REST API代码将沙盒克隆连接到CI/CD管道、以通过自�
 
 
 [role="lead"]
-使用REST API代码将沙盒克隆连接到持续集成和持续交付(Continuous Integration and Continuous Delivery、CI/CD)管道、以通过自动化改进软件交付。
+使用REST API代码将沙盒克隆连接到持续集成和持续交付(Continuous Integration and Continuous Delivery、CI/CD)管道、以便通过BlueXP  工作负载工厂中的数据库自动化改进软件交付。
 
 .关于此任务
 要自动向数据库克隆交付新版本的软件、您应连接到CI/CD管道。使用此操作提供的REST API代码进行连接。
 
 .步骤
-. 登录到 link:https://console.workloads.netapp.com["工作负载出厂控制台"^]。
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库库存*。
 . 在数据库中，选择*沙盒*选项卡。
 . 在沙盒选项卡中、单击沙盒克隆的三个点菜单以连接到CI/CD工具。
