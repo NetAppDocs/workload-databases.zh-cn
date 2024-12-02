@@ -67,7 +67,7 @@ Active Directory:: 在部署期间、Active Directory (AD)会发生以下情况�
 凭据和权限:: 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS帐户凭据和自动模式权限"^]在工作负载出厂时创建新的数据库主机。
 +
 --
-或者、您也可以使用代码框复制空模板或创建完成的模板、以便使用REST API、AWS命令行界面或AWS CloudFormation在工作负载工厂外部部署数据库。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["了解有关CodeBox自动化的更多信息"^](英文)
+或者、您也可以使用代码框复制空模板或创建完整的模板、以便使用REST API、AWS命令行界面和AWS CloudFormation在工作负载工厂外部部署数据库。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["了解有关CodeBox自动化的更多信息"^](英文)
 
 --
 Active Directory:: 连接到Active Directory时、您必须具有具有执行以下操作的管理访问权限：
@@ -102,7 +102,7 @@ NOTE: 在_Quick creel_中、FCI是默认部署模式、Windows 2016是默认Wind
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*Deploy database host*。
+. 在数据库磁贴中，选择*Deploy database host*，然后从下拉菜单中选择*Microsoft SQL Server*。
 . 选择*快速创建*。
 . 在*AWS设置*下，提供以下内容：
 +
@@ -136,9 +136,6 @@ AWS服务接口端点(SQS、FSx、EC2、CloudWatch、CloudFormation、 SSM)和S3
 +
 
 NOTE: FCI部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。
-
-+
-为实现高可用性、子网不应共享同一路由表。
 
 +
 ... 在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择MAZ FSx for ONTAP配置的主要可用性分区，并从*子网*下拉菜单中选择主要可用性分区中的子网。
@@ -211,7 +208,7 @@ NOTE: FCI部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。
 --
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*Deploy database host*。
+. 在数据库磁贴中，选择*Deploy database host*，然后从下拉菜单中选择*Microsoft SQL Server*。
 . 选择*高级创建*。
 . 对于*Deployment model*，请选择*Failover Cluster Instance*或*Single Instance*。
 . 在*AWS设置*下，提供以下内容：

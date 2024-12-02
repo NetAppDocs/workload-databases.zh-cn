@@ -11,7 +11,7 @@ settings:
   rss_page: whats-new.html
   release_notes_autogen:
     release_notes_repo: workload-relnotes
-  langs: zh-cn,us-en,ja-jp,ko-kr,zh-tw,de-de,es-es,fr-fr,it-it
+  langs: zh-cn,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-tw
 sidebar:
   entries:
   - title: 数据库工作负载文档
@@ -33,7 +33,11 @@ sidebar:
     - title: 了解节省量
       url: "/explore-savings.html"
     - title: 创建新的数据库服务器
-      url: "/create-database-server.html"
+      entries:
+      - title: 创建Microsoft SQL Server
+        url: "/create-database-server.html"
+      - title: 创建PostgreSQL服务器
+        url: "/create-postgresql-server.html"
     - title: 检测数据库服务器
       url: "/detect-host.html"
     - title: 创建数据库

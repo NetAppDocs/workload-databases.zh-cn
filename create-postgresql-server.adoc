@@ -1,0 +1,184 @@
+---
+sidebar: sidebar 
+permalink: create-postgresql-server.html 
+keywords: create, server, PostgreSQL, deploy, host, deploy a database host, database host 
+summary: 在BlueXP  工作负载工厂中为数据库创建新的PostgreSQL SQL服务器。 
+---
+= 在BlueXP  工作负载工厂中创建PostgreSQL服务器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在BlueXP  工作负载工厂中为数据库创建新的PostgreSQL服务器或数据库主机需要部署FSx for ONTAP文件系统并为Active Directory提供资源。
+
+.关于此任务
+您需要AWS帐户凭据和_Automate权限。
+
+开始之前、请了解数据库主机配置可用的存储部署类型、Active Directory部署、工作负载出厂操作模式以及完成此操作的要求。
+
+FSx for ONTAP文件系统部署:: 创建新的PostgreSQL服务器需要FSx for ONTAP文件系统作为存储后端。您可以使用现有FSx for ONTAP文件系统、也可以创建新文件系统。如果您选择一个现有FSx for ONTAP文件系统作为数据库服务器存储后端、我们将为PostgreSQL工作负载创建一个新的Storage VM。
+
+
+FSx for ONTAP文件系统支持PostgreSQL的_standalone_部署。除了为数据、日志和tempdb文件创建单独的卷和LUN之外、工作负载工厂还会为ONTAP文件系统创建一个单一可用性区域FSx。
+
+工作负载出厂操作模式:: 工作负载工厂提供三种操作模式、具体取决于您在让工作负载工厂管理AWS资源方面的适应程度。
+
+
+*_Basic_ mode*：在此操作模式下、您无需在工作负载工厂关联任何AWS帐户凭据。您可以从CodeBox复制或下载部分填充的YAML模板、以便在工作负载出厂时完成。
+
+*_读取_模式*：在此操作模式下、您需要提供具有读取权限的AWS帐户凭据、以便填写_Quick cree_或_Advanced cree_表单、然后复制或下载该表单。您也可以使用填写好的表单详细信息从工作负载工厂重定向到CloudFormation。您将能够在工作负载工厂管理已部署的数据库服务器。
+
+*_Automation_mode*：在此操作模式下、您可以提供具有自动化权限的AWS帐户凭据、以便在工作负载工厂中创建和管理AWS资源。
+
+.开始之前
+在创建新数据库主机之前、请确保满足以下前提条件。
+
+凭据和权限:: 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS帐户凭据和自动模式权限"^]在工作负载出厂时创建新的数据库主机。
++
+--
+或者、您也可以使用代码框复制空模板或创建完成的模板、以便使用REST API、AWS命令行界面或AWS CloudFormation在工作负载工厂外部部署数据库。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["了解有关CodeBox自动化的更多信息"^](英文)
+
+--
+
+
+
+
+== 创建数据库服务器
+
+您可以使用_Quick cre成_或_Advanced cre成_部署模式在工作负载工厂中以_Automate _模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API和CloudFormation。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["了解如何使用CodeBox实现自动化"^](英文)
+
++
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在数据库磁贴中，选择*Deploy database host*，然后从下拉菜单中选择*PostgreSQL。
+. 选择*高级创建*。
+. 对于*Deployment model*，*独立实例*为默认值。
+. 在*AWS设置*下，提供以下内容：
++
+.. *AWS凭据*：选择具有自动化权限的AWS凭据以部署新数据库主机。
++
+通过具有_Automate权限的AWS凭据、Workload Factory可以在工作负载工厂中使用您的AWS帐户部署和管理新的数据库主机。
+
++
+通过具有_read_权限的AWS凭据、Workload Factory可以生成CloudFormation模板、以供您在AWS CloudFormation控制台中使用。
+
++
+如果您在工作负载工厂中没有关联的AWS凭据、而您希望在工作负载工厂中创建新服务器、请按照*选项1*转到凭据页面。为数据库工作负载的_Automate_mode手动添加所需的凭据和权限。
+
++
+如果要在工作负载工厂中完成创建新服务器表单、以便下载完整的YAML文件模板以在AWS CloudFormation中部署、请按照*选项2*操作、确保您具有在AWS CloudFormation中创建新服务器所需的权限。为数据库工作负载的_Read_模式手动添加所需的凭据和权限。
+
++
+或者、您也可以从Codebox下载部分完成的YAML文件模板、以便在工作负载出厂时创建堆栈、而无需任何凭据或权限。从“代码”框的下拉列表中选择*CloudFormation*以下载YAML文件。
+
+.. *区域和VPC*：选择区域和VPC网络。
++
+确保现有接口端点的安全组允许对选定子网访问HTTPS (443)协议。
+
++
+AWS服务接口端点(SQS、FSx、EC2、CloudWatch、Cloud Formation、 SSM)和S3网关端点会在部署期间创建(如果未找到)。
+
++
+修改了VPC DNS属性 `EnableDnsSupport` 和 `EnableDnsHostnames` ，以便在尚未设置为时启用解析端点地址解析 `true`。
+
+.. *可用性分区*：选择可用性分区和子网。
++
+适用于单实例部署::
++
+--
+... 在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择可用性分区，并从*子网*下拉菜单中选择子网。
+
+
+--
+
+
+.. *安全组*：选择现有安全组或创建新安全组。
++
+在新服务器部署期间、两个安全组会连接到SQL节点(EC2实例)。
+
++
+... 创建了一个工作负载安全组、用于支持PostgreSQL所需的端口和协议。
+... 对于现有FSx for ONTAP文件系统、与其关联的安全组会自动添加到PostgreSQL节点中、从而允许与文件系统进行通信。创建新的FSx for ONTAP系统时、将为FSx for ONTAP文件系统创建一个新安全组、并且同一安全组也会连接到SQL节点。
+
+
+
+
+. 在*应用程序设置*下，提供以下内容：
++
+.. 从下拉菜单中选择*操作系统*。
+.. 从下拉菜单中选择*PostgreSQL版本*。
+.. *数据库服务器名称*：输入数据库集群名称。
+.. *数据库凭据*：输入新服务帐户的用户名和密码或使用Active Directory中的现有服务帐户凭据。
+
+
+. 在*Connectity*下，选择要安全连接到实例的密钥对。
+. 在*Infrastructure settings (基础架构设置)*下，提供以下内容：
++
+.. *DB Instance type*:从下拉菜单中选择数据库实例类型。
+.. *FSx for ONTAP system*：创建新的FSx for ONTAP文件系统或使用现有FSx for ONTAP文件系统。
++
+... *创建新的FSx for FS* ONTAP：输入用户名和密码。
++
+新的FSx for ONTAP文件系统可能会增加30分钟或更长时间的安装时间。
+
+... *选择现有FSx for FS* ONTAP：从下拉菜单中选择FSx for ONTAP name，然后输入文件系统的用户名和密码。
++
+对于现有FSx for ONTAP文件系统、请确保满足以下要求：
+
++
+**** 连接到FSx for ONTAP的路由组允许使用到子网的路由进行部署。
+**** 此安全组允许来自用于部署的子网的流量、尤其是HTTPS (443)和iSCSI (3260) TCP端口。
+
+
+
+
+.. *Snapshot policy*:默认情况下处于启用状态。快照每天创建一次、保留期限为7天。
++
+快照将分配给为PostgreSQL工作负载创建的卷。
+
+.. *数据驱动器大小*：输入数据驱动器容量并选择容量单位。
+.. *已配置IOPs*：选择*自动*或*用户已配置*。如果选择*用户配置*，请输入IOPS值。
+.. *吞吐量*：从下拉菜单中选择吞吐量容量。
++
+在某些地区、您可以选择4 Gbps吞吐量。要配置4 Gbps吞吐量容量、必须为适用于ONTAP文件系统的FSx至少配置5、120 GiB SSD存储容量和16万次SSD IOPS。
+
+.. *加密*：从您的帐户中选择密钥或从其他帐户中选择密钥。您必须输入其他帐户的加密密钥ARN。
++
+根据服务适用性、不会列出FSx for ONTAP自定义加密密钥。选择适当的FSx加密密钥。非FSx加密密钥将导致服务器创建失败。
+
++
+AWS管理的密钥会根据服务适用性进行筛选。
+
+.. *标记*：您可以选择最多添加40个标记。
+.. *简单通知服务*：您也可以通过从下拉菜单中选择Microsoft SQL Server的SNS主题来为此配置启用简单通知服务(SNS)。
++
+... 启用简单通知服务。
+... 从下拉菜单中选择ARN。
+
+
+.. *CloudWatch监控*：您也可以启用CloudWatch监控。
++
+我们建议启用CloudWatch、以便在发生故障时进行调试。AWS CloudFormation控制台中显示的事件属于高级别事件、不会指定根本原因。所有详细日志均保存在 `C:\cfn\logs` EC2实例的文件夹中。
+
++
+在CloudWatch中、系统会使用堆栈的名称创建一个日志组。每个验证节点和SQL节点的日志流都会显示在日志组下。CloudWatch会显示脚本进度并提供相关信息、以帮助您了解部署是否以及何时失败。
+
+.. *资源回滚*：当前不支持此功能。
+
+
+. 摘要
++
+.. *估计成本*：提供部署所示资源时可能产生的费用估计值。
+
+
+. 单击*Create/*以部署新的数据库主机。
++
+或者、您也可以保存配置。
+
+
+
+.下一步行动
+现在您可以 link:create-database.html["在BlueXP  工作负载工厂中为数据库创建数据库"]。
