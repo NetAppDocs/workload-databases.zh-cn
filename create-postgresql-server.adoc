@@ -19,37 +19,34 @@ summary: 在BlueXP  工作负载工厂中为数据库创建新的PostgreSQL SQL
 开始之前、请了解数据库主机配置可用的存储部署类型、Active Directory部署、工作负载出厂操作模式以及完成此操作的要求。
 
 FSx for ONTAP文件系统部署:: 创建新的PostgreSQL服务器需要FSx for ONTAP文件系统作为存储后端。您可以使用现有FSx for ONTAP文件系统、也可以创建新文件系统。如果您选择一个现有FSx for ONTAP文件系统作为数据库服务器存储后端、我们将为PostgreSQL工作负载创建一个新的Storage VM。
-
-
++
+--
 FSx for ONTAP文件系统支持PostgreSQL的_standalone_部署。除了为数据、日志和tempdb文件创建单独的卷和LUN之外、工作负载工厂还会为ONTAP文件系统创建一个单一可用性区域FSx。
 
+--
 工作负载出厂操作模式:: 工作负载工厂提供三种操作模式、具体取决于您在让工作负载工厂管理AWS资源方面的适应程度。
-
-
++
+--
 *_Basic_ mode*：在此操作模式下、您无需在工作负载工厂关联任何AWS帐户凭据。您可以从CodeBox复制或下载部分填充的YAML模板、以便在工作负载出厂时完成。
 
 *_读取_模式*：在此操作模式下、您需要提供具有读取权限的AWS帐户凭据、以便填写_Quick cree_或_Advanced cree_表单、然后复制或下载该表单。您也可以使用填写好的表单详细信息从工作负载工厂重定向到CloudFormation。您将能够在工作负载工厂管理已部署的数据库服务器。
 
 *_Automation_mode*：在此操作模式下、您可以提供具有自动化权限的AWS帐户凭据、以便在工作负载工厂中创建和管理AWS资源。
 
+--
+
+
 .开始之前
 在创建新数据库主机之前、请确保满足以下前提条件。
 
 凭据和权限:: 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS帐户凭据和自动模式权限"^]在工作负载出厂时创建新的数据库主机。
-+
---
-或者、您也可以使用代码框复制空模板或创建完成的模板、以便使用REST API、AWS命令行界面或AWS CloudFormation在工作负载工厂外部部署数据库。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["了解有关CodeBox自动化的更多信息"^](英文)
-
---
 
 
 
 
 == 创建数据库服务器
 
-您可以使用_Quick cre成_或_Advanced cre成_部署模式在工作负载工厂中以_Automate _模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API和CloudFormation。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["了解如何使用CodeBox实现自动化"^](英文)
-
-+
+您可以使用_Advanced create部署模式在工作负载工厂中以_Automate模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API、AWS命令行界面和AWS CloudFormation。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["了解如何使用CodeBox实现自动化"^](英文)
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
@@ -179,6 +176,3 @@ AWS管理的密钥会根据服务适用性进行筛选。
 或者、您也可以保存配置。
 
 
-
-.下一步行动
-现在您可以 link:create-database.html["在BlueXP  工作负载工厂中为数据库创建数据库"]。

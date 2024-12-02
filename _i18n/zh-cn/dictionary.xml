@@ -734,8 +734,6 @@
   <block id="a538aa1311e84c0f42a362aece349223" category="paragraph">*_读取_模式*：在此操作模式下、您需要提供具有读取权限的AWS帐户凭据、以便填写_Quick cree_或_Advanced cree_表单、然后复制或下载该表单。您也可以使用填写好的表单详细信息从工作负载工厂重定向到CloudFormation。您将能够在工作负载工厂管理已部署的数据库服务器。</block>
   <block id="02b7989729e7d5233996b9d03d093fc1" category="paragraph">*_Automation_mode*：在此操作模式下、您可以提供具有自动化权限的AWS帐户凭据、以便在工作负载工厂中创建和管理AWS资源。</block>
   <block id="6e604948d399e1365a2d5a11ee7838d8" category="list-text">您必须<block ref="6d0e9cd8cac3e1654b2b4423d6d0dc45" category="inline-link-macro-rx"></block>在工作负载出厂时创建新的数据库主机。</block>
-  <block id="8f10f2087cc578fb58ebdc9c43f20b29" category="paragraph">或者、您也可以使用代码框复制空模板或创建完成的模板、以便使用REST API、AWS命令行界面或AWS CloudFormation在工作负载工厂外部部署数据库。<block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="7e7ea1d0ebe76ee78c10b35c9a89d522" category="paragraph">您可以使用_Quick cre成_或_Advanced cre成_部署模式在工作负载工厂中以_Automate _模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API、CloudFormation和Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="cef4156e4fa9e5869d4dee02c1b39d6e" category="paragraph">通过具有_Automate权限的AWS凭据、Workload Factory可以在工作负载工厂中使用您的AWS帐户部署和管理新的数据库主机。</block>
   <block id="cc04c98a943715d655ef7f99796aae2a" category="paragraph">通过具有_read_权限的AWS凭据、Workload Factory可以生成CloudFormation模板、以供您在AWS CloudFormation控制台中使用。</block>
   <block id="b4db11619512665a02befd7699ec1538" category="paragraph">如果您在工作负载工厂中没有关联的AWS凭据、而您希望在工作负载工厂中创建新服务器、请按照*选项1*转到凭据页面。为数据库工作负载的_Automate_mode手动添加所需的凭据和权限。</block>
@@ -865,15 +863,12 @@
   <block id="49db1f79602c9ba8e5704a68010c4023" category="paragraph">现在、您可以在数据库中部署和管理独立的PostgreSQL服务器部署。</block>
   <block id="3627a14d7dc2feba3834d63a37ebb394" category="inline-link-macro">创建PostgreSQL服务器</block>
   <block id="02b7dd87f2a54e2b540ac84598c20252" category="paragraph"><block ref="02b7dd87f2a54e2b540ac84598c20252" category="inline-link-macro-rx"></block></block>
-  <block id="a08c0d26c5f5640f1f5e9c497b9e6819" category="paragraph">或者、您也可以使用代码框复制空模板或创建完整的模板、以便使用REST API、AWS命令行界面和AWS CloudFormation在工作负载工厂外部部署数据库。<block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="6a5525182ed1f6bca47fea4ee51a3e58" category="list-text">在数据库磁贴中，选择*Deploy database host*，然后从下拉菜单中选择*Microsoft SQL Server*。</block>
   <block id="16982b5e2c79b1d8f052bfa663a64d77" category="summary">在BlueXP  工作负载工厂中为数据库创建新的PostgreSQL SQL服务器。</block>
   <block id="c4f70f11159098cce8873623bffb07aa" category="doc">在BlueXP  工作负载工厂中创建PostgreSQL服务器</block>
   <block id="5f8d928d8901c8b01302b1c3be720b44" category="paragraph">在BlueXP  工作负载工厂中为数据库创建新的PostgreSQL服务器或数据库主机需要部署FSx for ONTAP文件系统并为Active Directory提供资源。</block>
   <block id="7a65409a338637d9c410720ad6eb8500" category="list-text">创建新的PostgreSQL服务器需要FSx for ONTAP文件系统作为存储后端。您可以使用现有FSx for ONTAP文件系统、也可以创建新文件系统。如果您选择一个现有FSx for ONTAP文件系统作为数据库服务器存储后端、我们将为PostgreSQL工作负载创建一个新的Storage VM。</block>
   <block id="0f691a321e4cb91f0a8529931ba7bd47" category="paragraph">FSx for ONTAP文件系统支持PostgreSQL的_standalone_部署。除了为数据、日志和tempdb文件创建单独的卷和LUN之外、工作负载工厂还会为ONTAP文件系统创建一个单一可用性区域FSx。</block>
-  <block id="2fd4d401e5c831dec7c9d6e1b557896e" category="paragraph">您可以使用_Quick cre成_或_Advanced cre成_部署模式在工作负载工厂中以_Automate _模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API和CloudFormation。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
   <block id="dc1a4c3a44cba39fe1ecdcc15fe01cc7" category="list-text">在数据库磁贴中，选择*Deploy database host*，然后从下拉菜单中选择*PostgreSQL。</block>
   <block id="26bef182e4e84557ce657df6398df5a0" category="list-text">对于*Deployment model*，*独立实例*为默认值。</block>
   <block id="75b39c0795d7295af69b1d13bbf82285" category="list-text">*可用性分区*：选择可用性分区和子网。</block>
@@ -891,4 +886,6 @@
   <block id="6ad17d07338dffda7982d8efdad3a276" category="section-title">2024年12月1日</block>
   <block id="d35a0f72475ce4ac5dbb2e790338586d" category="sidebar">创建Microsoft SQL Server</block>
   <block id="b7414b1741661cf43c6fb35227e98183" category="sidebar">创建PostgreSQL服务器</block>
+  <block id="723e2c2f1ab301b9588bd4fda85b4eae" category="paragraph">您可以使用_Quick cre成_或_Advanced cre成_部署模式在工作负载工厂中以_Automate _模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API、AWS CLI、AWS CloudFormation和Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="21e80f3d16a915bc267e2251c057686f" category="paragraph">您可以使用_Advanced create部署模式在工作负载工厂中以_Automate模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API、AWS命令行界面和AWS CloudFormation。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
 </blocks>
