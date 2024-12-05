@@ -667,7 +667,6 @@
   <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">使用CodeBox中的Terraform</block>
   <block id="11cb17d1b990bbf37a24337d5692efa1" category="list-text"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">了解如何使用CodeBox实现自动化</block>
-  <block id="5de582d1d412797088979e47e496c2fe" category="admonition">使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 和<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 密码。运行代码时、您需要重新输入密码。除了_Autome_模式权限之外，您还需要为用户帐户提供以下权限：<block ref="7f862a4b8fc22b0af5dda5c9ababa346" prefix=" " category="inline-code"></block>和<block ref="319bffed0f518819193d82ffe99b1444" prefix=" " category="inline-code"></block>。</block>
   <block id="b2636246cf1e5e567e3ded4a9d65b1da" category="section-title">使用Terraform在专用网络中部署Microsoft SQL Server的区域可用性</block>
   <block id="eb4fca182b3b78e9a38aa1f6f59c8857" category="paragraph">只有us-east-1 (北弗吉尼亚)地区才支持在没有使用Terraform的出站连接的专用网络中部署Microsoft SQL Server。</block>
   <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">*持续优化*：持续脱机扫描您的Microsoft SQL Server资产，为您提供全面的见解、机会和建议报告，帮助您实现卓越运营。</block>
@@ -888,4 +887,8 @@
   <block id="b7414b1741661cf43c6fb35227e98183" category="sidebar">创建PostgreSQL服务器</block>
   <block id="723e2c2f1ab301b9588bd4fda85b4eae" category="paragraph">您可以使用_Quick cre成_或_Advanced cre成_部署模式在工作负载工厂中以_Automate _模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API、AWS CLI、AWS CloudFormation和Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="21e80f3d16a915bc267e2251c057686f" category="paragraph">您可以使用_Advanced create部署模式在工作负载工厂中以_Automate模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API、AWS命令行界面和AWS CloudFormation。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="81a9b579c806be28ed6e048084a47b52" category="inline-link-macro">了解如何使用CodeBox中的Terraform</block>
+  <block id="0ec2c706568900a3077d2c43bb52bde7" category="admonition">使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 和<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 密码。运行代码时、您需要重新输入密码。除了_Autome_模式权限之外，您还需要为用户帐户提供以下权限：<block ref="7f862a4b8fc22b0af5dda5c9ababa346" prefix=" " category="inline-code"></block>和<block ref="319bffed0f518819193d82ffe99b1444" prefix=" " category="inline-code"></block>。<block ref="916d5d5f037ba2ec9358c38001da7d8f" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="037f00cd2eafb994bfbd866e78bb7bc3" category="paragraph">您可以在已部署的PostgreSQL服务器上手动配置用户、远程访问和数据库。</block>
+  <block id="3b801b5b7ccdf00990044d1e2711d31e" category="paragraph">PostgreSQL不支持Amazon CloudWatch或在专用网络中部署。</block>
 </blocks>
