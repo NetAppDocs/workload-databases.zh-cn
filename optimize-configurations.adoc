@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-configurations.html 
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
-summary: 适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL Server的存储配置、提供洞察力和建议、帮助您实现卓越运营。 
+summary: 适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL Server配置、提供洞察力和建议、帮助您实现卓越运营。 
 ---
 = 优化Microsoft SQL Server部署的配置
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL 
 
 
 [role="lead"]
-适用于数据库的BlueXP  工作负载工厂会持续扫描和评估在Amazon FSx for NetApp ONTAP上运行的Microsoft SQL Server部署配置。评估可提供洞察力、建议和优化、帮助您实现卓越运营。
+适用于数据库的BlueXP  工作负载工厂会持续扫描和评估在Amazon FSx for NetApp ONTAP上运行的Microsoft SQL Server部署配置。此功能可提供洞察力和建议、并可选择自动优化未经优化的配置、以便数据库工作负载实现卓越运营。
 
 .关于此任务
 对于采用工作负载工厂管理的FSx for ONTAP存储的Microsoft SQL Server实例、此评估每天自动持续运行一次。只有在部署后或管理实例后运行每日计划作业时、优化信息板才会显示评估报告。
@@ -24,7 +24,8 @@ summary: 适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL 
 * 存储规模估算：包括存储层、文件系统余量、日志驱动器大小和TempDB驱动器大小
 * 存储布局：包括用户数据文件放置、日志文件放置和TempDB放置
 * 存储配置：包括容量管理、精简配置、分层策略、快照和多路径I/O状态、策略和会话等
-* 计算：包括规模估算
+* 计算：包括规模估算和操作系统修补程序
+* 应用程序：包括Microsoft SQL Server许可证
 
 
 --
@@ -38,19 +39,18 @@ summary: 适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL 
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库库存*。
-. 在数据库中，选择*Inventory*选项卡。
-. 单击下拉箭头展开主机所在行以查看其受管实例。
+. 在数据库磁贴中，选择*转至数据库清单*。
+. 在*Inventory*选项卡中，选择下拉箭头展开主机行以查看其受管实例。
 +
 此时、主机将展开并显示主机实例。
 
-. 选择要扫描的实例的三个点菜单，然后选择*Optimize*。
-. 在主机的优化实例页面上、查看存储评估结果。
+. 选择实例的三点菜单，然后选择*Optimize*。
+. 在SQL Server实例的优化实例页面上、查看评估结果。
 +
-可以使用筛选器按类别、子类别、状态、严重性和标记进行排序。
+您可以按类别、子类别、状态、严重性和标记进行筛选。
 
 +
-如果需要，您可以通过选择*导出PDF*来下载结果报告。
+您也可以通过选择*导出PDF*来下载评估结果报告。
 
 . 选择下拉箭头可查看任何配置的建议。请务必仔细阅读此建议。
 +

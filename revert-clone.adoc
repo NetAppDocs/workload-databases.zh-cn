@@ -18,9 +18,9 @@ summary: 在BlueXP  工作负载出厂时还原数据库的沙盒克隆。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库库存*。
+. 在数据库磁贴中，选择*转至数据库清单*。
 . 在数据库中，选择*沙盒*选项卡。
-. 在沙盒选项卡中、单击要还原的沙盒克隆的三个点菜单。
+. 在沙盒选项卡中、单击要还原的沙盒克隆的三点菜单。
 . 选择*重新基线*。
 . 在Re-baseline (重新基线)对话框中，单击*Re-baseline (重新基线)*。
 

@@ -13,11 +13,48 @@ summary: '通过比较将Amazon Elasic Block Store (EBS)和FSx for Windows File 
 [role="lead"]
 通过比较将Amazon Elasic Block Store (EBS)和FSx for Windows文件服务器存储与FSx for ONTAP存储结合使用的成本、了解BlueXP  工作负载工厂为数据库工作负载节省的成本。
 
-Workload Factory提供了一个节省计算器、可用于比较在FSx for ONTAP文件系统上为数据库工作负载运行Microsoft SQL Server工作负载(例如存储、计算、SQL许可证、快照和克隆)时的各种成本组件与Elasic Block Store (EBS)和FSx for Windows File Server存储的成本。根据您的存储要求、您可能会发现适用于ONTAP文件系统的FSx对于数据库工作负载来说最经济高效。计算器将显示如果您使用FSx for ONTAP文件系统、这些Microsoft SQL Server上用于数据库工作负载的存储成本是否会降低。
+
+
+== 关于此任务
+
+Workload Factory提供了一个节省计算器、可用于比较在FSx for ONTAP文件系统上为数据库工作负载运行Microsoft SQL Server工作负载(例如存储、计算、SQL许可证、快照和克隆)时的各种成本组件与Elasic Block Store (EBS)和FSx for Windows File Server存储的成本。根据您的存储要求、您可能会发现适用于ONTAP文件系统的FSx对于数据库工作负载来说最经济高效。
+
+计算器将显示如果您使用FSx for ONTAP文件系统、这些Microsoft SQL Server上用于数据库工作负载的存储成本是否会降低。
 
 image:screenshot-ebs-savings-calculator.png["节省量计算器页面的屏幕截图显示了左侧选定的Microsoft SQL Server on Amazon El生 性块存储配置、并提供了用于自定义快照和克隆值的选项。左侧显示的是在FSx for ONTAP上使用Microsoft SQL Server和El生 性块存储节省的成本(以美元和百分比表示)以及每月总成本。"]
 
 如果工作负载工厂确定可以通过在FSx for ONTAP文件系统上运行这些工作负载来节省资金、则可以直接从工作负载工厂的计算器中部署基于FSx for ONTAP的Microsoft SQL。如果您在Elanic Block Store或FSx for Windows File Server存储上有多个Microsoft SQL Server实例、我们建议使用一个SQL实例配置FSx for ONTAP。
+
+
+
+== SQL Server部署分析
+
+计算器将对SQL Server部署进行全面分析、以确保所利用的资源和功能与SQL Server版本正确匹配。下面是在建议降级到Standard Edition之前计算器检查的关键因素和条件：
+
+部署模式:: 计算器将评估部署模式以及是否需要Enterprise Edition。
+已分配资源:: 计算器将评估以下因许可证而分配的资源的条件：
++
+--
+* 目标实例vCPU：实例具有48个或更少的虚拟CPU。
+* Memory分配：实例的内存不超过128 GB。
+
+
+--
+企业功能使用情况:: 计算器将验证是否正在使用以下任何企业功能：
++
+--
+* 数据库级企业功能
+* 联机索引操作
+* 资源管理器
+* 对等或Oracle复制
+* R/Python扩展
+* 内存优化的TempDB
+
+
+--
+
+
+如果评估的SQL Server实例未使用上述任何Enterprise功能并满足资源限制、计算器将建议将许可证降级到Standard Edition。此建议旨在帮助您在不影响性能或功能的情况下优化SQL Server许可成本。
 
 
 
@@ -31,7 +68,7 @@ image:screenshot-ebs-savings-calculator.png["节省量计算器页面的屏幕�
 
 
 
-== 了解通过自定义实现的节省
+=== 了解通过自定义实现的节省
 
 按照适用于您的存储类型的选项卡下的步骤进行操作。
 
@@ -111,7 +148,7 @@ image:screenshot-ebs-savings-calculator.png["节省量计算器页面的屏幕�
 ====
 
 
-== 了解检测到的主机的节省量
+=== 了解检测到的主机的节省量
 
 工作负载出厂时会输入检测到的Elacic Block Store和FSx for Windows File Server主机特征、以便您可以自动探索节省的空间。
 

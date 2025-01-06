@@ -38,4 +38,4 @@ summary: 数据库有三种不同的模式、它们具有不同的要求。
 .下一步行动
 如果数据库清单中有FSx for ONTAP受管主机，则可以 link:create-database.html["创建用户数据库"] 或 link:create-sandbox-clone.html["克隆主机以创建沙盒"]。
 
-如果数据库清单中包含Elasic Block Store主机，则可以 link:explore-savings.html["使用存储节省计算器了解节省量"]。
+如果数据库清单中包含Elasic Block Store或FSx for Windows File Server主机，则可以link:explore-savings.html["使用节省量计算器了解节省量"]。

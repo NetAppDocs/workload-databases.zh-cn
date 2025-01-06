@@ -49,10 +49,10 @@ AWS Systems Manager:: 确保已通过AWS System Manager在Microsoft SQL主机中
 --
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库库存*。
+. 在数据库磁贴中，选择*转至数据库清单*。
 . 在数据库中，选择*Inventory*选项卡。
 . 在清单选项卡中、选择具有托管SQL Server实例的数据库服务器以在其中创建数据库。
-. 单击受管实例的三点菜单，然后选择*Create user database (创建用户数据库)*。
+. 单击受管实例的三点菜单，然后选择*创建用户数据库*。
 . 在创建用户数据库页面上的数据库信息下、提供以下内容：
 +
 .. *数据库名称*：输入数据库的名称。
@@ -82,10 +82,10 @@ AWS Systems Manager:: 确保已通过AWS System Manager在Microsoft SQL主机中
 --
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库库存*。
+. 在数据库磁贴中，选择*转至数据库清单*。
 . 在数据库中，选择*Inventory*选项卡。
 . 在清单选项卡中、选择具有托管SQL Server实例的数据库服务器以在其中创建数据库。
-. 单击受管实例的三点菜单，然后选择*Create user database (创建用户数据库)*。
+. 单击受管实例的三点菜单，然后选择*创建用户数据库*。
 . 选择*创建用户数据库*。
 . 在创建用户数据库页面上的数据库信息下、提供以下内容：
 +

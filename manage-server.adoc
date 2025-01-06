@@ -62,7 +62,7 @@ Microsoft SQL Server实例管理包括以下任务：
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库库存*。
+. 在数据库磁贴中，选择*转至数据库清单*。
 . 在数据库中，选择*Inventory*选项卡。
 . 单击要管理的主机所在行中的*Manage*。
 . 选择一个或多个要管理的主机实例。
@@ -79,13 +79,13 @@ Microsoft SQL Server实例管理包括以下任务：
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库库存*。
+. 在数据库磁贴中，选择*转至数据库清单*。
 . 在数据库中，选择*Inventory*选项卡。
 . 单击下拉箭头展开主机所在行以查看其受管实例。
 +
 此时、主机将展开并显示主机实例。
 
-. 单击要查看的实例的三个点菜单，然后选择*查看实例*。
+. 单击要查看的实例的三点菜单，然后选择*查看实例*。
 
 
 .结果
@@ -99,13 +99,13 @@ Microsoft SQL Server实例管理包括以下任务：
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库库存*。
+. 在数据库磁贴中，选择*转至数据库清单*。
 . 在数据库中，选择*Inventory*选项卡。
 . 单击下拉箭头展开主机所在的行以查看其数据库。
 +
 此时、主机将展开并显示主机实例。
 
-. 单击包含要查看的数据库的实例的三个点菜单。
+. 单击包含要查看的数据库的实例的三点菜单。
 . 选择*查看数据库*。
 
 
@@ -120,7 +120,7 @@ Microsoft SQL Server实例管理包括以下任务：
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库库存*。
+. 在数据库磁贴中，选择*转至数据库清单*。
 . 在数据库中，选择*Inventory*选项卡。
 . 单击下拉箭头、展开要取消管理的主机实例所在的行。
 +

@@ -18,9 +18,9 @@ summary: 使用REST API代码将沙盒克隆连接到CI/CD管道、以通过自�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库库存*。
+. 在数据库磁贴中，选择*转至数据库清单*。
 . 在数据库中，选择*沙盒*选项卡。
-. 在沙盒选项卡中、单击沙盒克隆的三个点菜单以连接到CI/CD工具。
+. 在沙盒选项卡中、单击沙盒克隆的三点菜单以连接到CI/CD工具。
 . 选择*连接到CI/CD工具*。
 . 在CI/CD对话框中、复制或下载连接到CI/CD工具所需的REST API代码。
 . 单击 * 关闭 * 。

@@ -32,7 +32,7 @@ AWS Systems Manager:: 确保 `NT Authority\SYSTEM` 已通过AWS Systems Manager�
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库库存*。
+. 在数据库磁贴中，选择*转至数据库清单*。
 . 在数据库中，选择*沙盒*选项卡。
 . 在沙盒选项卡中，选择*创建新沙盒*。
 . 在"Create new sandbox"页面上的"Database sourcing"下、提供以下内容：

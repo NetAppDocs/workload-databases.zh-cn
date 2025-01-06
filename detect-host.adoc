@@ -56,13 +56,13 @@ summary: 在BlueXP  工作负载工厂中检测数据库的Microsoft SQL Server
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库库存*。
+. 在数据库磁贴中，选择*转至数据库清单*。
 . 在数据库中，选择*Inventory*选项卡。
 . 单击下拉箭头、展开要检测的主机所在的行。
 +
 此时、主机将展开并显示主机实例。
 
-. 单击要检测的实例的三个点菜单。
+. 单击要检测的实例的三点菜单。
 . 单击*detect*。
 . 在*DETECT Instances*对话框中，提供Microsoft SQL Server用户名和密码或FSx for ONTAP用户名和密码。
 +
