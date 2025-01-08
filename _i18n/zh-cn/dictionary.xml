@@ -639,7 +639,6 @@
   <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">使用CodeBox中的Terraform</block>
   <block id="11cb17d1b990bbf37a24337d5692efa1" category="list-text"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">了解如何使用CodeBox实现自动化</block>
-  <block id="b2636246cf1e5e567e3ded4a9d65b1da" category="section-title">使用Terraform在专用网络中部署Microsoft SQL Server的区域可用性</block>
   <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">*持续优化*：持续脱机扫描您的Microsoft SQL Server资产，为您提供全面的见解、机会和建议报告，帮助您实现卓越运营。</block>
   <block id="13025ba9f92de77af2aeaf1af07a4aa8" category="doc">优化Microsoft SQL Server部署的配置</block>
   <block id="6f2bcb2f8d4f34c036395a199095be9a" category="paragraph">对于采用工作负载工厂管理的FSx for ONTAP存储的Microsoft SQL Server实例、此评估每天自动持续运行一次。只有在部署后或管理实例后运行每日计划作业时、优化信息板才会显示评估报告。</block>
@@ -901,7 +900,6 @@
   <block id="fc3e8f3c2017c33d444d483913a485ba" category="paragraph">加入工作负载工厂社区、关注正在进行的讨论或创建新的讨论。</block>
   <block id="ffa18fada5deeeb1e533786297855e7d" category="paragraph">要使用*创建案例*功能，您必须先注册支持。请将您的NetApp支持站点凭据与您的工作负载出厂登录名关联起来。<block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">在工作负载工厂控制台的右上角，选择*Help &gt; Support*。</block>
-  <block id="eb3607016e0d79a6f82dfbbdd3422282" category="paragraph">只有us-east-1 (北弗吉尼亚)地区才支持在没有使用Terraform的出站连接的专用网络中部署Microsoft SQL Server。PostgreSQL不支持Amazon CloudWatch或在专用网络中部署。</block>
   <block id="e75c7b17297b3cf3a7564e3033ef939f" category="list-text">单击要查看的实例的三点菜单，然后选择*查看实例*。</block>
   <block id="6b30d701929b5a35aad77b847528d165" category="list-text">单击包含要查看的数据库的实例的三点菜单。</block>
   <block id="77b932b7ecf2d2b3689c445fe72bb66a" category="list-text">单击要取消管理的实例的三点菜单。</block>
@@ -926,4 +924,11 @@
   <block id="2cbcc262b0a39ec19c5f69bffccb70fb" category="paragraph">注册获取支持不会为云提供商文件服务启用NetApp支持。有关与云提供商文件服务、其基础架构或任何使用该服务的解决方案相关的技术支持、请参阅该产品的工作负载工厂文档中的"获得帮助"。</block>
   <block id="195066d54d760bc240b0879aa7a483bf" category="list-text">在沙盒选项卡中、单击沙盒克隆的三点菜单以查看其连接信息。</block>
   <block id="13ac5039f81a1aa4ae7419bf17b5b6a0" category="section-title">2025年1月6日</block>
+  <block id="f2398fe4ddb880ba6c52b376ef9b960c" category="list-text"><block ref="f2398fe4ddb880ba6c52b376ef9b960c" category="inline-link-macro-rx"></block></block>
+  <block id="f7626e6c4414254923965c059c538355" category="section-title">操作系统修补程序评估以实现优化</block>
+  <block id="caf2103b4a30210f2be52ce13c522aad" category="inline-link-macro">AWS云运营博客"如何使用AWS Systems Manager修补专用子网中的Windows EC2实例"</block>
+  <block id="51d9963cd25d44afd5ce890896443f71" category="paragraph">为优化目的而进行的操作系统修补程序评估可能无法在专用网络中运行。评估依赖于AWS Patch Manager。要了解如何修补专用网络中的Windows EC2实例，请参阅<block ref="8e97bc3ab59f50cb9b025f85a2445baf" category="inline-link-macro-rx"></block>。</block>
+  <block id="a61ebf6aa74399e268808d3801b03702" category="section-title">优化计算规模</block>
+  <block id="f72f493648b25528319887c50a65f0ce" category="inline-link-macro">Amazon Elel生 计算云文档</block>
+  <block id="bd5d7b32e4164faa655582f169744a05" category="paragraph">更改为某些实例类型时、可能会重置网络配置、从而可能导致优化期间节点连接失败并导致作业失败。检查和更新DNS设置和iSCSI会话可能需要手动干预。有关EC2大小调整限制的详细信息、请参见<block ref="b8406a09c509d5c1d937367114bd51b3" category="inline-link-macro-rx"></block>。</block>
 </blocks>
