@@ -16,7 +16,7 @@ summary: 适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL 
 .关于此任务
 对于采用工作负载工厂管理的FSx for ONTAP存储的Microsoft SQL Server实例、此评估每天自动持续运行一次。只有在部署后或管理实例后运行每日计划作业时、优化信息板才会显示评估报告。
 
-工作负载工厂根据FSx for ONTAP存储的最佳实践提供了详细的配置优化建议。
+工作负载工厂根据FSx for ONTAP存储的最佳实践提供了详细的配置优化建议。您可以查看这些建议并选择优化未优化的配置。
 
 扫描的内容:: 工作负载工厂会评估Microsoft SQL Server实例的以下配置的优化状态：
 +
@@ -24,8 +24,8 @@ summary: 适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL 
 * 存储规模估算：包括存储层、文件系统余量、日志驱动器大小和TempDB驱动器大小
 * 存储布局：包括用户数据文件放置、日志文件放置和TempDB放置
 * 存储配置：包括容量管理、精简配置、分层策略、快照和多路径I/O状态、策略和会话等
-* 计算：包括规模估算和操作系统修补程序
-* 应用程序：包括Microsoft SQL Server许可证
+* 计算：包括规模估算、操作系统修补程序和网络适配器设置、例如接收端扩展(RSS)和TCP负载分流
+* 应用程序：包括Microsoft SQL Server许可证、Microsoft SQL Server修补程序和MAXDOP设置
 
 
 --
@@ -34,8 +34,11 @@ summary: 适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL 
 .开始之前
 * 您必须具有具有读取或自动执行权限的凭据。
 * 要评估Microsoft SQL Server实例的存储、该实例必须由工作负载工厂进行管理、并且存储类型必须为FSx for ONTAP。
-* 在选择优化设置或配置之前、请确保仔细查看每个建议。
+* 在选择优化设置或配置之前、请确保仔细查看每个建议。对于RSS和MAXDOP设置、我们建议您在更改生产环境之前测试建议的设置以确定性能改进。
 
+
+
+NOTE: 优化过程可能会导致实例停机或服务中断。在选择优化配置之前、请务必查看优化摘要和操作项。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。

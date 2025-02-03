@@ -577,7 +577,6 @@
   <block id="f565eb47bc8c215541fe00205d9b37d3" category="doc">了解通过自定义实现的节省</block>
   <block id="bfbd25ddeba7cedc974f1a5a1d0a295c" category="paragraph">现在、您可以在节省量计算器中使用FSx for Windows File Server和Elelic Block Store存储为Amazon EC2上的Microsoft SQL Server自定义配置设置。根据您的存储要求、您可能会发现FSx for ONTAP存储对于您的数据库工作负载来说最经济高效。</block>
   <block id="f94c119bb7d164adbb1a390a249741e0" category="section-title">从主页导航到节省量计算器</block>
-  <block id="ed63f509875218d0378b5ddba1aecb80" category="summary">通过比较将Amazon Elasic Block Store (EBS)和FSx for Windows File Server存储与FSx for ONTAP存储结合使用的成本、探索为数据库工作负载节省的空间。</block>
   <block id="9c34331abb32017c0949af1d664fefb5" category="section-title">计算器选项</block>
   <block id="58e73141ee65f1324f33ca6b0e47a481" category="paragraph">通过自定义了解节省的空间：您可以为Amazon EC2上使用EBS或FSx for Windows File Server的Microsoft SQL Server提供配置设置、包括区域、部署模式、SQL Server版本、每月数据变更率、快照频率等。</block>
   <block id="c4765968842ae076126d5ea6e55cb9cb" category="paragraph">按照适用于您的存储类型的选项卡下的步骤进行操作。</block>
@@ -642,7 +641,6 @@
   <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">*持续优化*：持续脱机扫描您的Microsoft SQL Server资产，为您提供全面的见解、机会和建议报告，帮助您实现卓越运营。</block>
   <block id="13025ba9f92de77af2aeaf1af07a4aa8" category="doc">优化Microsoft SQL Server部署的配置</block>
   <block id="6f2bcb2f8d4f34c036395a199095be9a" category="paragraph">对于采用工作负载工厂管理的FSx for ONTAP存储的Microsoft SQL Server实例、此评估每天自动持续运行一次。只有在部署后或管理实例后运行每日计划作业时、优化信息板才会显示评估报告。</block>
-  <block id="72e34efcd5e12ef888a19ad8bd33c28b" category="paragraph">工作负载工厂根据FSx for ONTAP存储的最佳实践提供了详细的配置优化建议。</block>
   <block id="246db1206cb640c61b32f7cea2560b8e" category="list-text">扫描的内容</block>
   <block id="af27bafd548aa3e366e582049aeb65f1" category="list-text">工作负载工厂会评估Microsoft SQL Server实例的以下配置的优化状态：</block>
   <block id="04dff47f9a41cfa54b616dd86a4a6043" category="list-text">存储规模估算：包括存储层、文件系统余量、日志驱动器大小和TempDB驱动器大小</block>
@@ -650,7 +648,6 @@
   <block id="8bc38d27c74401312cd5c45bfd8a7d05" category="list-text">存储配置：包括容量管理、精简配置、分层策略、快照和多路径I/O状态、策略和会话等</block>
   <block id="1a0e703f0bdb101f4848a5510dd8ec1c" category="list-text">您必须具有具有读取或自动执行权限的凭据。</block>
   <block id="86bd4600548ee1b734f704338ab13665" category="list-text">要评估Microsoft SQL Server实例的存储、该实例必须由工作负载工厂进行管理、并且存储类型必须为FSx for ONTAP。</block>
-  <block id="40213188bf240529a1293728c4187a56" category="list-text">在选择优化设置或配置之前、请确保仔细查看每个建议。</block>
   <block id="5f4f392649432d3064fdf2a04015472b" category="list-text">选择下拉箭头可查看任何配置的建议。请务必仔细阅读此建议。</block>
   <block id="c9e425055996f71ecfc858708d926276" category="paragraph">此建议说明了未优化配置的最佳实践和潜在陷阱。</block>
   <block id="ea3bf0643d3540c97b9b92a3fb2bbf75" category="list-text">选择此选项可*优化*未优化的配置。</block>
@@ -736,9 +733,6 @@
   <block id="ee7e8786e2029f74d5565c2e6e78c36b" category="inline-link-macro">通过工作负载工厂管理实例</block>
   <block id="64fc7ef1abfec5624461bb34e030bb56" category="paragraph">如果主机实例的存储类型为FSx for ONTAP，则可以 <block ref="ff12e6f62a651f5b7e33780a9c5be656" category="inline-link-macro-rx"></block>。</block>
   <block id="51bdfc0a469b2ea10ef9ab2e5263224e" category="doc">了解BlueXP  工作负载工厂为数据库节省的空间</block>
-  <block id="4237b026a2f2298ebdf4286d1e4746ed" category="paragraph">通过比较将Amazon Elasic Block Store (EBS)和FSx for Windows文件服务器存储与FSx for ONTAP存储结合使用的成本、了解BlueXP  工作负载工厂为数据库工作负载节省的成本。</block>
-  <block id="900c2260545f89be7eb6271a29d450e1" category="paragraph">如果工作负载工厂确定可以通过在FSx for ONTAP文件系统上运行这些工作负载来节省资金、则可以直接从工作负载工厂的计算器中部署基于FSx for ONTAP的Microsoft SQL。如果您在Elanic Block Store或FSx for Windows File Server存储上有多个Microsoft SQL Server实例、我们建议使用一个SQL实例配置FSx for ONTAP。</block>
-  <block id="c0265d0f691fe5773c4ffeb0c523daf8" category="paragraph">探索检测到的主机节省的空间：工作负载出厂链接到现有Microsoft SQL Server、并将详细信息提取到计算器中以进行自动比较。要使用此计算器选项、您需要授予"自动执行"权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。</block>
   <block id="5817c5b26a2a7f4c1334dc3c03403f64" category="paragraph">工作负载出厂时会输入检测到的Elacic Block Store和FSx for Windows File Server主机特征、以便您可以自动探索节省的空间。</block>
   <block id="02cb01a24a3bd2f230f64c9dacb47b9b" category="paragraph">如果工作负载出厂检测到EBS主机、您将重定向到Explore savings选项卡。如果工作负载工厂未检测到EBS主机，则会将您重定向到计算器<block ref="1aa155ccc357a88465786c9c4e421569" category="inline-xref-macro-rx"></block>。</block>
   <block id="410e51fe916df293f504b839d0f57635" category="paragraph">如果工作负载工厂检测到FSx for Windows主机、则会重定向到Explore savings选项卡。如果工作负载工厂未检测到FSx for Windows主机，您将被重定向到计算器<block ref="1aa155ccc357a88465786c9c4e421569" category="inline-xref-macro-rx"></block>。</block>
@@ -874,7 +868,6 @@
   <block id="934fed95fff79f45510cc744c25ff3f4" category="list-text">在数据库磁贴中，单击*转至数据库清单*。</block>
   <block id="6e07e3cf1d291785f594756e71522cfe" category="list-text">单击要删除的沙盒克隆的三点菜单。</block>
   <block id="ff3a68054c116e7f9e9ea8cf123e0963" category="list-text">单击要检测的实例的三点菜单。</block>
-  <block id="5656d5e94b1fd6f866e48df7c3bf45b3" category="paragraph">Workload Factory提供了一个节省计算器、可用于比较在FSx for ONTAP文件系统上为数据库工作负载运行Microsoft SQL Server工作负载(例如存储、计算、SQL许可证、快照和克隆)时的各种成本组件与Elasic Block Store (EBS)和FSx for Windows File Server存储的成本。根据您的存储要求、您可能会发现适用于ONTAP文件系统的FSx对于数据库工作负载来说最经济高效。</block>
   <block id="2c84d2f326a80650e1f5b43257e48421" category="paragraph">计算器将显示如果您使用FSx for ONTAP文件系统、这些Microsoft SQL Server上用于数据库工作负载的存储成本是否会降低。</block>
   <block id="770dee3f954306dca2e369d2ef823c94" category="section-title">SQL Server部署分析</block>
   <block id="1d93f11e5331c46990f076ad4257106e" category="paragraph">计算器将对SQL Server部署进行全面分析、以确保所利用的资源和功能与SQL Server版本正确匹配。下面是在建议降级到Standard Edition之前计算器检查的关键因素和条件：</block>
@@ -908,8 +901,6 @@
   <block id="10f9689e79d67ec4a1651805229939e6" category="list-text">单击作业的三点菜单、然后单击*转到CloudFormation*以在AWS CloudFormation控制台中查看作业日志。</block>
   <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL Server配置、提供洞察力和建议、帮助您实现卓越运营。</block>
   <block id="d156d1de362b4c66bc3effc1835aafe1" category="paragraph">适用于数据库的BlueXP  工作负载工厂会持续扫描和评估在Amazon FSx for NetApp ONTAP上运行的Microsoft SQL Server部署配置。此功能可提供洞察力和建议、并可选择自动优化未经优化的配置、以便数据库工作负载实现卓越运营。</block>
-  <block id="31930d30084ccfe65cbf1bef8898f9a1" category="list-text">计算：包括规模估算和操作系统修补程序</block>
-  <block id="2a998f4a900b2db1c9b1028e9f7ff6f4" category="list-text">应用程序：包括Microsoft SQL Server许可证</block>
   <block id="53c8dd8acbb0f2913fab098279485e71" category="list-text">在*Inventory*选项卡中，选择下拉箭头展开主机行以查看其受管实例。</block>
   <block id="14237fbd8e1fcf850f132ae839f0337b" category="list-text">选择实例的三点菜单，然后选择*Optimize*。</block>
   <block id="162d1fe2bfd40fdaf4d1507dff7ac010" category="list-text">在SQL Server实例的优化实例页面上、查看评估结果。</block>
@@ -931,4 +922,40 @@
   <block id="a61ebf6aa74399e268808d3801b03702" category="section-title">优化计算规模</block>
   <block id="f72f493648b25528319887c50a65f0ce" category="inline-link-macro">Amazon Elel生 计算云文档</block>
   <block id="bd5d7b32e4164faa655582f169744a05" category="paragraph">更改为某些实例类型时、可能会重置网络配置、从而可能导致优化期间节点连接失败并导致作业失败。检查和更新DNS设置和iSCSI会话可能需要手动干预。有关EC2大小调整限制的详细信息、请参见<block ref="b8406a09c509d5c1d937367114bd51b3" category="inline-link-macro-rx"></block>。</block>
+  <block id="efc2466e55cc45101064c2ade9e1ac96" category="doc">内部数据库环境成本分析和迁移规划</block>
+  <block id="b070dbce75db746d44b4965253ae3c9f" category="paragraph">现在、适用于数据库的BlueXP  工作负载工厂可以检测、分析并帮助您规划将内部数据库迁移到Amazon FSx for NetApp ONTAP的过程。您可以使用节省计算器估算在云中运行内部数据库环境的成本、并查看将内部数据库环境迁移到云的建议。</block>
+  <block id="ae5954c9b41b0bfb09043a4117743d2d" category="inline-link-macro">了解内部数据库环境的节省量</block>
+  <block id="9621b726ce4b31f0b7bc139a85ef6f38" category="paragraph"><block ref="9621b726ce4b31f0b7bc139a85ef6f38" category="inline-link-macro-rx"></block></block>
+  <block id="6003a521aa2fb4eca1577921d2f2d6ec" category="section-title">新的数据库优化评估</block>
+  <block id="a66d8cac65b4a62026dda75c54de5093" category="paragraph">现在、BlueXP  工作负载工厂提供了以下数据库评估。这些评估侧重于检测和防范潜在的安全漏洞、以及检测和缓解性能瓶颈。</block>
+  <block id="41e5288ef108e483da5a07bf4a8c654d" category="list-text">*接收端扩展(RSS)配置*：检查RSS配置是否已启用，队列数量是否设置为建议值。此评估还会提供有关优化RSS配置的建议。</block>
+  <block id="20c22843405fd91269ed56974f603ebf" category="list-text">*最大并行度(MAXDOP)服务器配置*：评估检查MAXDOP是否配置正确，并提供优化性能的建议。</block>
+  <block id="288748eac82542205cccb2a59e324600" category="list-text">*Microsoft SQL Server修补程序*：评估检查SQL Server实例上是否安装了最新的修补程序，并提供安装最新修补程序的建议。</block>
+  <block id="7c2632b8df180cfa1528450b19070928" category="paragraph"><block ref="7c2632b8df180cfa1528450b19070928" category="inline-link-macro-rx"></block></block>
+  <block id="5e73d91731c9445e9a0cc34e1969976a" category="summary">比较将Amazon Elasic Block Store (EBS)、FSx for Windows File Server和SQL Server内部数据库存储与FSx for ONTAP存储结合使用的成本。</block>
+  <block id="6bcb23607586342322d4d9d515a81317" category="paragraph">通过比较在Amazon Elasic Block Store (EBS)上使用SQL Server、在FSx for Windows File Server上使用Microsoft SQL Server以及在内部存储与FSx for ONTAP存储上使用Microsoft SQL Server的成本、了解在数据库工作负载的BlueXP  工作负载工厂中节省的成本。</block>
+  <block id="9ea5b9d2d032e12bdcaba22b5a8eef05" category="paragraph">Workload Factory提供了一个节省计算器、可用于比较在FSx for ONTAP文件系统上为数据库工作负载运行Microsoft SQL Server工作负载(例如存储、计算、SQL许可证、快照和克隆)时的各种成本组件与Elasic Block Store (EBS)、FSx for Windows File Server和内部存储进行比较。根据您的存储要求、您可能会发现适用于ONTAP文件系统的FSx对于数据库工作负载来说最经济高效。</block>
+  <block id="37e5334cea4e204a8d5b735d1e9c43e7" category="paragraph">如果工作负载工厂确定可以通过在FSx for ONTAP文件系统上运行这些工作负载来节省资金、则可以直接从工作负载工厂的计算器中部署基于FSx for ONTAP的Microsoft SQL。如果您有多个基于Elanic Block Store、FSx for Windows File Server或内部存储的Microsoft SQL Server实例、我们建议使用一个SQL实例配置FSx for ONTAP。</block>
+  <block id="a4b85dcfebf932701807e8b3c00ca94e" category="paragraph">探索检测到的主机节省的空间：工作负载出厂链接到现有Microsoft SQL Server、并将详细信息提取到计算器中以进行自动比较。要使用此计算器选项、您需要授予"自动执行"权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。</block>
+  <block id="7cf65e2ff3a983e2d864a8b1c64765f1" category="open-title">Microsoft SQL Server内部部署</block>
+  <block id="a2985bc0847d7596067c038e830be18b" category="list-text">在数据库磁贴中，选择*Explore savings *，然后从下拉菜单中选择*Microsoft SQL Server On-Express*。</block>
+  <block id="979b029ad875506edc5721a6a441e313" category="list-text">从"SQL Server内部部署"选项卡中、下载此脚本以评估您的内部SQL Server环境。</block>
+  <block id="db99a3f687ce317a37116a375a2f8e0a" category="list-text">下载评估脚本。该脚本是一款基于PowerShell的数据收集工具。它会收集SQL Server配置和性能数据、然后将其上传到BlueXP  工作负载工厂。迁移顾问将评估数据并为您的SQL Server环境规划FSx for ONTAP部署。</block>
+  <block id="2840f80705232625a2e7a961c5ae7c57" category="inline-image-macro">"SQL Server内部部署"选项卡的屏幕截图显示了用于下载评估脚本的选项。</block>
+  <block id="43b057dd7af35e065506e3e9c40e69b5" category="paragraph"><block ref="43b057dd7af35e065506e3e9c40e69b5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="11bfb2872e63a5ed545dd1a42c50ca27" category="list-text">在SQL Server主机上运行该脚本。</block>
+  <block id="93fc841273934516b5d0c3c8c898594c" category="list-text">在工作负载工厂的"SQL Server内部部署"选项卡中上传脚本输出。</block>
+  <block id="e4784aa5341ea2989d2193e58d7d7f6d" category="inline-image-macro">"SQL Server内部部署"选项卡的屏幕截图显示了用于上传评估脚本的选项。</block>
+  <block id="2b894f40697fe51db0b06a9bf9f9a2a1" category="paragraph"><block ref="2b894f40697fe51db0b06a9bf9f9a2a1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c034eca1def3a7b989b774cd862bad8c" category="list-text">从"SQL Server内部部署"选项卡中、选择*探索节省*、根据FSx for ONTAP对SQL Server内部主机运行成本分析。</block>
+  <block id="48d937e7fd66ff674c2cb93c60660383" category="list-text">在节省量计算器中、选择内部主机所在的区域。</block>
+  <block id="222ef17ae6eab247553156232cd650e1" category="list-text">要获得更准确的结果、请更新计算信息以及存储和性能详细信息。</block>
+  <block id="b0398f49dbe9d04be8ddd17378899545" category="list-text">(可选)提供有关内部数据库环境中的克隆(卷影副本)和快照的以下详细信息、以便更准确地估算成本节省。</block>
+  <block id="7240997fa0d75a11f0b991615772d5d3" category="list-text">*克隆副本数*：输入内部配置中的克隆副本数。</block>
+  <block id="2eb9a2599d85acb350f462d9f474f6c6" category="paragraph">工作负载工厂根据FSx for ONTAP存储的最佳实践提供了详细的配置优化建议。您可以查看这些建议并选择优化未优化的配置。</block>
+  <block id="4597adc0f9f3096964b3b3efbe708588" category="list-text">计算：包括规模估算、操作系统修补程序和网络适配器设置、例如接收端扩展(RSS)和TCP负载分流</block>
+  <block id="af022f8b2257d68b04e48e672c457177" category="list-text">应用程序：包括Microsoft SQL Server许可证、Microsoft SQL Server修补程序和MAXDOP设置</block>
+  <block id="7a4fa85db3c457278cffd34e817477ab" category="list-text">在选择优化设置或配置之前、请确保仔细查看每个建议。对于RSS和MAXDOP设置、我们建议您在更改生产环境之前测试建议的设置以确定性能改进。</block>
+  <block id="926cb4c482170392f69cc268b20f8346" category="admonition">优化过程可能会导致实例停机或服务中断。在选择优化配置之前、请务必查看优化摘要和操作项。</block>
+  <block id="1c8d307950dbef59ce61b6bc729fdb52" category="section-title">2025年2月3日</block>
 </blocks>

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: explore-savings.html 
-keywords: cost, savings, compare costs, EBS, FSx for ONTAP 
-summary: '通过比较将Amazon Elasic Block Store (EBS)和FSx for Windows File Server存储与FSx for ONTAP存储结合使用的成本、探索为数据库工作负载节省的空间。' 
+keywords: cost, savings, compare costs, EBS, FSx for Windows File Server, SQL Server on-premises, on-premises, FSx for ONTAP 
+summary: '比较将Amazon Elasic Block Store (EBS)、FSx for Windows File Server和SQL Server内部数据库存储与FSx for ONTAP存储结合使用的成本。' 
 ---
 = 了解BlueXP  工作负载工厂为数据库节省的空间
 :allow-uri-read: 
@@ -11,19 +11,19 @@ summary: '通过比较将Amazon Elasic Block Store (EBS)和FSx for Windows File 
 
 
 [role="lead"]
-通过比较将Amazon Elasic Block Store (EBS)和FSx for Windows文件服务器存储与FSx for ONTAP存储结合使用的成本、了解BlueXP  工作负载工厂为数据库工作负载节省的成本。
+通过比较在Amazon Elasic Block Store (EBS)上使用SQL Server、在FSx for Windows File Server上使用Microsoft SQL Server以及在内部存储与FSx for ONTAP存储上使用Microsoft SQL Server的成本、了解在数据库工作负载的BlueXP  工作负载工厂中节省的成本。
 
 
 
 == 关于此任务
 
-Workload Factory提供了一个节省计算器、可用于比较在FSx for ONTAP文件系统上为数据库工作负载运行Microsoft SQL Server工作负载(例如存储、计算、SQL许可证、快照和克隆)时的各种成本组件与Elasic Block Store (EBS)和FSx for Windows File Server存储的成本。根据您的存储要求、您可能会发现适用于ONTAP文件系统的FSx对于数据库工作负载来说最经济高效。
+Workload Factory提供了一个节省计算器、可用于比较在FSx for ONTAP文件系统上为数据库工作负载运行Microsoft SQL Server工作负载(例如存储、计算、SQL许可证、快照和克隆)时的各种成本组件与Elasic Block Store (EBS)、FSx for Windows File Server和内部存储进行比较。根据您的存储要求、您可能会发现适用于ONTAP文件系统的FSx对于数据库工作负载来说最经济高效。
 
 计算器将显示如果您使用FSx for ONTAP文件系统、这些Microsoft SQL Server上用于数据库工作负载的存储成本是否会降低。
 
 image:screenshot-ebs-savings-calculator.png["节省量计算器页面的屏幕截图显示了左侧选定的Microsoft SQL Server on Amazon El生 性块存储配置、并提供了用于自定义快照和克隆值的选项。左侧显示的是在FSx for ONTAP上使用Microsoft SQL Server和El生 性块存储节省的成本(以美元和百分比表示)以及每月总成本。"]
 
-如果工作负载工厂确定可以通过在FSx for ONTAP文件系统上运行这些工作负载来节省资金、则可以直接从工作负载工厂的计算器中部署基于FSx for ONTAP的Microsoft SQL。如果您在Elanic Block Store或FSx for Windows File Server存储上有多个Microsoft SQL Server实例、我们建议使用一个SQL实例配置FSx for ONTAP。
+如果工作负载工厂确定可以通过在FSx for ONTAP文件系统上运行这些工作负载来节省资金、则可以直接从工作负载工厂的计算器中部署基于FSx for ONTAP的Microsoft SQL。如果您有多个基于Elanic Block Store、FSx for Windows File Server或内部存储的Microsoft SQL Server实例、我们建议使用一个SQL实例配置FSx for ONTAP。
 
 
 
@@ -204,6 +204,45 @@ image:screenshot-ebs-savings-calculator.png["节省量计算器页面的屏幕�
 
 .. *克隆刷新频率*：从下拉菜单中选择克隆刷新的频率。
 .. *克隆副本数*：在FSx for Windows配置中输入克隆副本数。
+.. *每月变更率*：输入克隆和快照数据每月平均变更的百分比。
+
+
+. 查看页面上提供的计算结果和建议。
++
+此外，向下滚动到页面底部至*导出PDF*或*查看计算*。
+
+
+
+--
+.Microsoft SQL Server内部部署
+--
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在数据库磁贴中，选择*Explore savings *，然后从下拉菜单中选择*Microsoft SQL Server On-Express*。
+. 从"SQL Server内部部署"选项卡中、下载此脚本以评估您的内部SQL Server环境。
++
+.. 下载评估脚本。该脚本是一款基于PowerShell的数据收集工具。它会收集SQL Server配置和性能数据、然后将其上传到BlueXP  工作负载工厂。迁移顾问将评估数据并为您的SQL Server环境规划FSx for ONTAP部署。
++
+image:screenshot-download-script-on-premises.png["\"SQL Server内部部署\"选项卡的屏幕截图显示了用于下载评估脚本的选项。"]
+
+.. 在SQL Server主机上运行该脚本。
+.. 在工作负载工厂的"SQL Server内部部署"选项卡中上传脚本输出。
++
+image:screenshot-upload-script-on-premises.png["\"SQL Server内部部署\"选项卡的屏幕截图显示了用于上传评估脚本的选项。"]
+
+
+
+. 从"SQL Server内部部署"选项卡中、选择*探索节省*、根据FSx for ONTAP对SQL Server内部主机运行成本分析。
+. 在节省量计算器中、选择内部主机所在的区域。
+. 要获得更准确的结果、请更新计算信息以及存储和性能详细信息。
+. (可选)提供有关内部数据库环境中的克隆(卷影副本)和快照的以下详细信息、以便更准确地估算成本节省。
++
+.. *快照频率*：从下拉菜单中选择快照频率。
++
+如果检测到FSx for Windows卷影副本、则默认值为*每日*。如果未检测到卷影副本，则默认值为*无快照频率*。
+
+.. *克隆刷新频率*：从下拉菜单中选择克隆刷新的频率。
+.. *克隆副本数*：输入内部配置中的克隆副本数。
 .. *每月变更率*：输入克隆和快照数据每月平均变更的百分比。
 
 
