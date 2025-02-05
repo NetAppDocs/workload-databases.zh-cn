@@ -958,4 +958,9 @@
   <block id="7a4fa85db3c457278cffd34e817477ab" category="list-text">在选择优化设置或配置之前、请确保仔细查看每个建议。对于RSS和MAXDOP设置、我们建议您在更改生产环境之前测试建议的设置以确定性能改进。</block>
   <block id="926cb4c482170392f69cc268b20f8346" category="admonition">优化过程可能会导致实例停机或服务中断。在选择优化配置之前、请务必查看优化摘要和操作项。</block>
   <block id="1c8d307950dbef59ce61b6bc729fdb52" category="section-title">2025年2月3日</block>
+  <block id="382e51924c0a806fea2a0017322199a5" category="section-title">优化限制</block>
+  <block id="d65e48d2f6a810cde4c31e5a88aecedb" category="section-title">ONTAP和操作系统配置优化</block>
+  <block id="8e29c0a71b0719e3f6ed28d4a7c0b30d" category="paragraph">ONTAP配置和操作系统配置不支持对多个SQL Server实例进行批量优化。</block>
+  <block id="7dd6090f4d4627220763b41db74bb898" category="section-title">内部成本节省计算</block>
+  <block id="9fb10d1d0413bc062aa3f807aa200e53" category="paragraph">Microsoft SQL Server内部存储卷大小的成本节省和节省百分比计算未考虑在内。</block>
 </blocks>

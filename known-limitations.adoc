@@ -100,12 +100,28 @@ Workload Factory不支持为具有多个FSx for ONTAP文件系统的Microsoft SQ
 
 
 
-== 操作系统修补程序评估以实现优化
+== 优化限制
+
+
+
+=== 优化计算规模
+
+更改为某些实例类型时、可能会重置网络配置、从而可能导致优化期间节点连接失败并导致作业失败。检查和更新DNS设置和iSCSI会话可能需要手动干预。有关EC2大小调整限制的详细信息、请参见link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Amazon Elel生 计算云文档"^]。
+
+
+
+=== ONTAP和操作系统配置优化
+
+ONTAP配置和操作系统配置不支持对多个SQL Server实例进行批量优化。
+
+
+
+=== 操作系统修补程序评估以实现优化
 
 为优化目的而进行的操作系统修补程序评估可能无法在专用网络中运行。评估依赖于AWS Patch Manager。要了解如何修补专用网络中的Windows EC2实例，请参阅link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["AWS云运营博客"如何使用AWS Systems Manager修补专用子网中的Windows EC2实例""^]。
 
 
 
-== 优化计算规模
+== 内部成本节省计算
 
-更改为某些实例类型时、可能会重置网络配置、从而可能导致优化期间节点连接失败并导致作业失败。检查和更新DNS设置和iSCSI会话可能需要手动干预。有关EC2大小调整限制的详细信息、请参见link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Amazon Elel生 计算云文档"^]。
+Microsoft SQL Server内部存储卷大小的成本节省和节省百分比计算未考虑在内。
