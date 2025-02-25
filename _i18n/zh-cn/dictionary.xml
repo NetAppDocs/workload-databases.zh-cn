@@ -963,4 +963,9 @@
   <block id="8e29c0a71b0719e3f6ed28d4a7c0b30d" category="paragraph">ONTAP配置和操作系统配置不支持对多个SQL Server实例进行批量优化。</block>
   <block id="7dd6090f4d4627220763b41db74bb898" category="section-title">内部成本节省计算</block>
   <block id="9fb10d1d0413bc062aa3f807aa200e53" category="paragraph">Microsoft SQL Server内部存储卷大小的成本节省和节省百分比计算未考虑在内。</block>
+  <block id="79dda14ccc601407ccb09f0fe3d93259" category="paragraph">如果您使用代理服务器进行EC2实例中的所有出站连接、则必须允许访问以下域、才能使管理操作正常工作：</block>
+  <block id="d9f9431d48e0b55421e9c9376798d722" category="list-text"><block ref="c202a4052bc97ff0191552ea4c2c865c" prefix="" category="inline-code"></block></block>
+  <block id="9aa0a44ed97cfd5357fb393a8de57dc7" category="list-text"><block ref="1f378775539050b7c7b5e1cdfe121e2f" prefix="" category="inline-code"></block></block>
+  <block id="4bd2e14395b83906b0838bbcc78df388" category="list-text"><block ref="3e51061ec4171070ff2ffdabfbd63cc3" prefix="" category="inline-code"></block></block>
+  <block id="9b6e1103f46b83b38494e5b294e2c410" category="list-text"><block ref="c1eaf26c3b755ad5252456a5d3f34a2f" prefix="" category="inline-code"></block></block>
 </blocks>

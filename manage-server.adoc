@@ -43,6 +43,14 @@ Microsoft SQL Server实例管理包括以下任务：
 * `fsx`
 
 
+如果您使用代理服务器进行EC2实例中的所有出站连接、则必须允许访问以下域、才能使管理操作正常工作：
+
+* ``.microsoft.com``
+* ``.powershellgallery.com``
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
+
+
 .开始之前
 开始之前、请满足以下前提条件：
 
