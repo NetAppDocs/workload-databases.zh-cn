@@ -13,12 +13,16 @@ indexpage:
       url: "/quick-start-databases.html"
   - title: 使用数据库
     links:
-    - title: 创建数据库服务器
+    - title: 了解节省量
+      url: "/explore-savings.html"
+    - title: 创建Microsoft SQL Server
       url: "/create-database-server.html"
+    - title: 创建PostgreSQL服务器
+      url: "/create-postgresql-server.html"
     - title: 创建数据库
       url: "/create-database.html"
-    - title: 监控数据库
-      url: "/monitor-databases.html"
+    - title: 优化配置
+      url: "/optimize-configurations.html"
   - title: 知识和支持
     links:
     - title: 注册以获得支持

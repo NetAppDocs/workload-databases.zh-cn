@@ -26,6 +26,7 @@ summary: 适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL 
 * 存储配置：包括容量管理、精简配置、分层策略、快照和多路径I/O状态、策略和会话等
 * 计算：包括规模估算、操作系统修补程序和网络适配器设置、例如接收端扩展(RSS)和TCP负载分流
 * 应用程序：包括Microsoft SQL Server许可证、Microsoft SQL Server修补程序和MAXDOP设置
+* 故障恢复能力：包括本地快照
 
 
 --

@@ -14,9 +14,7 @@ summary: 在BlueXP  工作负载工厂中为数据库创建新的Microsoft SQL 
 在BlueXP  工作负载工厂中为数据库创建新的Microsoft SQL Server或数据库主机需要部署FSx for ONTAP文件系统并为Active Directory提供资源。
 
 .关于此任务
-您需要AWS帐户凭据和_Automate权限。
-
-开始之前、请了解数据库主机配置可用的存储部署类型、Active Directory部署、工作负载出厂操作模式以及完成此操作的要求。
+在从工作负载工厂创建Microsoft SQL Server之前、请了解数据库主机配置的可用存储部署类型、Active Directory部署、工作负载工厂操作模式以及完成此操作的要求。
 
 部署完成后，您需要 <<第2步：在Microsoft SQL Server上启用远程连接,在Microsoft SQL Server上启用远程连接>>。
 

@@ -19,7 +19,6 @@
   <block id="452804eac893658bcf658126b3087551" category="list-text">选择*连接到CI/CD工具*。</block>
   <block id="8191f4b1aee7fafe827afe8814de01a6" category="list-text">在CI/CD对话框中、复制或下载连接到CI/CD工具所需的REST API代码。</block>
   <block id="00a06b08857b60c805bcaf007a9ddc9c" category="list-text">单击 * 关闭 * 。</block>
-  <block id="f60fded57b2858e25ed1e7b7544f0543" category="paragraph">您需要AWS帐户凭据和_Automate权限。</block>
   <block id="4011a937f681a8e908e8f70efba55370" category="inline-xref">在Microsoft SQL Server上启用远程连接</block>
   <block id="cd0ca71df74d472da908105120ebeda6" category="paragraph">部署完成后，您需要 <block ref="818d2f7834c8414926cca53583c2472c" category="inline-xref-macro-rx"></block>。</block>
   <block id="5149e96cf7ba21fb672788deb7e52f4c" category="list-text">FSx for ONTAP文件系统部署</block>
@@ -217,7 +216,6 @@
   <block id="ed8b2920ddc5b14cb6c0ba24c4b6c3af" category="inline-link-macro">授予_Automate权限</block>
   <block id="def9511b261c88922ac5674a45135773" category="inline-link-macro">了解如何检测主机</block>
   <block id="201c4d58b6fa62f021a1865e894234ef" category="list-text">*每月变更率*：输入克隆和快照数据每月平均变更的百分比。</block>
-  <block id="6b08b43202e1e504a7c87375b1a13b76" category="list-text">查看页面上提供的计算结果和建议。</block>
   <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">部署方法</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">获取帮助</block>
   <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">获取FSx for ONTAP支持</block>
@@ -512,7 +510,6 @@
   <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">快速入门</block>
   <block id="68522a08da2b47b97c0f927b7dc471b9" category="sidebar">使用数据库</block>
   <block id="83f5267b900a40e93e73e9ace47d4412" category="sidebar">创建数据库服务器</block>
-  <block id="47f5bdacbf3f064bc2cd6ba54baf7150" category="sidebar">监控数据库</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知识和支持</block>
   <block id="aef814f0c9c4dccfb365b3322172cb51" category="sidebar">数据库工作负载文档</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
@@ -531,11 +528,9 @@
   <block id="3ed62cfc8918e6f101daf8572a05eac8" category="sidebar">拆分沙盒克隆</block>
   <block id="651b8da486ba685aa80d9dd4866d0171" category="sidebar">删除沙盒克隆</block>
   <block id="e7310dc180b25aba87aadafb96fb45f4" category="inline-image-macro">节省量计算器页面的屏幕截图显示了左侧选定的Microsoft SQL Server on Amazon El生 性块存储配置、并提供了用于自定义快照和克隆值的选项。左侧显示的是在FSx for ONTAP上使用Microsoft SQL Server和El生 性块存储节省的成本(以美元和百分比表示)以及每月总成本。</block>
-  <block id="4290546c8ea9a5e870a8b18dc4b0b211" category="paragraph"><block ref="4290546c8ea9a5e870a8b18dc4b0b211" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dfa401fd4fd8841a340bd9f87c0910f8" category="list-text">*快照频率*：从下拉菜单中选择快照频率。</block>
   <block id="b92d49f94f8fe0dff03b4a997452d375" category="list-text">*克隆刷新频率*：从下拉菜单中选择克隆刷新的频率。</block>
   <block id="3a886ba0c11f46f4a69567f2c732a39e" category="list-text">*克隆副本数*：输入EBS配置中的克隆副本数。</block>
-  <block id="91a0e8a3bbcf21e09bbcd3ac7371afb5" category="paragraph">此外，向下滚动到页面底部至*导出PDF*或*查看计算*。</block>
   <block id="6c8bc6142fe7d27949e96c7c1eb44a70" category="list-text">*地区*：从下拉菜单中选择一个地区。</block>
   <block id="4b671e090adbd727a425c2dc7c229735" category="list-text">*部署模式*：从下拉菜单中选择部署模式。</block>
   <block id="fdf29f4b9a5e7550d1d6080071dfd3d6" category="list-text">*每月数据变更率(%)*：输入克隆和快照数据每月平均变更的百分比。</block>
@@ -686,7 +681,6 @@
   <block id="920d5db87e34d780e98c3efabde9041b" category="summary">在BlueXP  工作负载工厂中为数据库创建新的Microsoft SQL Server。</block>
   <block id="0eafa9073db40c1542192aa961e80360" category="doc">在BlueXP  工作负载工厂中为数据库创建数据库服务器</block>
   <block id="c3882e9ef595e2071c5d33931b535f75" category="paragraph">在BlueXP  工作负载工厂中为数据库创建新的Microsoft SQL Server或数据库主机需要部署FSx for ONTAP文件系统并为Active Directory提供资源。</block>
-  <block id="9e5f44a171b81e766e98936b7e31f2bd" category="paragraph">开始之前、请了解数据库主机配置可用的存储部署类型、Active Directory部署、工作负载出厂操作模式以及完成此操作的要求。</block>
   <block id="e688adbe92be47aae67ff0624dc5033a" category="list-text">Microsoft SQL Server部署模式都要求使用iSCSI存储协议创建LUN。在通过FSx for ONTAP为SQL Server配置LUN的过程中、工作负载工厂会配置Microsoft多路径I/O (MPIO)。MPIO根据AWS和NetApp最佳实践进行配置。</block>
   <block id="0d52db4b096880e69c4e146f0ba49f37" category="list-text">工作负载出厂操作模式</block>
   <block id="f9d2517e544fb26af8171abd3daf978c" category="list-text">工作负载工厂提供三种操作模式、具体取决于您在让工作负载工厂管理AWS资源方面的适应程度。</block>
@@ -823,14 +817,10 @@
   <block id="c4f70f11159098cce8873623bffb07aa" category="doc">在BlueXP  工作负载工厂中创建PostgreSQL服务器</block>
   <block id="5f8d928d8901c8b01302b1c3be720b44" category="paragraph">在BlueXP  工作负载工厂中为数据库创建新的PostgreSQL服务器或数据库主机需要部署FSx for ONTAP文件系统并为Active Directory提供资源。</block>
   <block id="7a65409a338637d9c410720ad6eb8500" category="list-text">创建新的PostgreSQL服务器需要FSx for ONTAP文件系统作为存储后端。您可以使用现有FSx for ONTAP文件系统、也可以创建新文件系统。如果您选择一个现有FSx for ONTAP文件系统作为数据库服务器存储后端、我们将为PostgreSQL工作负载创建一个新的Storage VM。</block>
-  <block id="0f691a321e4cb91f0a8529931ba7bd47" category="paragraph">FSx for ONTAP文件系统支持PostgreSQL的_standalone_部署。除了为数据、日志和tempdb文件创建单独的卷和LUN之外、工作负载工厂还会为ONTAP文件系统创建一个单一可用性区域FSx。</block>
-  <block id="dc1a4c3a44cba39fe1ecdcc15fe01cc7" category="list-text">在数据库磁贴中，选择*Deploy database host*，然后从下拉菜单中选择*PostgreSQL。</block>
-  <block id="26bef182e4e84557ce657df6398df5a0" category="list-text">对于*Deployment model*，*独立实例*为默认值。</block>
   <block id="75b39c0795d7295af69b1d13bbf82285" category="list-text">*可用性分区*：选择可用性分区和子网。</block>
   <block id="d576650f664651e9b2569ccb346b6649" category="list-text">在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择可用性分区，并从*子网*下拉菜单中选择子网。</block>
   <block id="720301aea3fac96d94759700c949e15f" category="paragraph">在新服务器部署期间、两个安全组会连接到SQL节点(EC2实例)。</block>
   <block id="f8473adfeac8aca2a2eaa799d6cde778" category="list-text">创建了一个工作负载安全组、用于支持PostgreSQL所需的端口和协议。</block>
-  <block id="a405e08f97e410f1eb5924541a4cb30c" category="list-text">对于现有FSx for ONTAP文件系统、与其关联的安全组会自动添加到PostgreSQL节点中、从而允许与文件系统进行通信。创建新的FSx for ONTAP系统时、将为FSx for ONTAP文件系统创建一个新安全组、并且同一安全组也会连接到SQL节点。</block>
   <block id="5d48b45f2ad58c8e1145b474d95593f9" category="list-text">从下拉菜单中选择*操作系统*。</block>
   <block id="6dd53f240f48678994cf9b0109fa0ec2" category="list-text">从下拉菜单中选择*PostgreSQL版本*。</block>
   <block id="d456e032669379ad4e2388045a89301d" category="list-text">*数据库服务器名称*：输入数据库集群名称。</block>
@@ -842,7 +832,6 @@
   <block id="d35a0f72475ce4ac5dbb2e790338586d" category="sidebar">创建Microsoft SQL Server</block>
   <block id="b7414b1741661cf43c6fb35227e98183" category="sidebar">创建PostgreSQL服务器</block>
   <block id="723e2c2f1ab301b9588bd4fda85b4eae" category="paragraph">您可以使用_Quick cre成_或_Advanced cre成_部署模式在工作负载工厂中以_Automate _模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API、AWS CLI、AWS CloudFormation和Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="21e80f3d16a915bc267e2251c057686f" category="paragraph">您可以使用_Advanced create部署模式在工作负载工厂中以_Automate模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API、AWS命令行界面和AWS CloudFormation。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="81a9b579c806be28ed6e048084a47b52" category="inline-link-macro">了解如何使用CodeBox中的Terraform</block>
   <block id="0ec2c706568900a3077d2c43bb52bde7" category="admonition">使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 和<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 密码。运行代码时、您需要重新输入密码。除了_Autome_模式权限之外，您还需要为用户帐户提供以下权限：<block ref="7f862a4b8fc22b0af5dda5c9ababa346" prefix=" " category="inline-code"></block>和<block ref="319bffed0f518819193d82ffe99b1444" prefix=" " category="inline-code"></block>。<block ref="916d5d5f037ba2ec9358c38001da7d8f" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="037f00cd2eafb994bfbd866e78bb7bc3" category="paragraph">您可以在已部署的PostgreSQL服务器上手动配置用户、远程访问和数据库。</block>
@@ -868,7 +857,6 @@
   <block id="934fed95fff79f45510cc744c25ff3f4" category="list-text">在数据库磁贴中，单击*转至数据库清单*。</block>
   <block id="6e07e3cf1d291785f594756e71522cfe" category="list-text">单击要删除的沙盒克隆的三点菜单。</block>
   <block id="ff3a68054c116e7f9e9ea8cf123e0963" category="list-text">单击要检测的实例的三点菜单。</block>
-  <block id="2c84d2f326a80650e1f5b43257e48421" category="paragraph">计算器将显示如果您使用FSx for ONTAP文件系统、这些Microsoft SQL Server上用于数据库工作负载的存储成本是否会降低。</block>
   <block id="770dee3f954306dca2e369d2ef823c94" category="section-title">SQL Server部署分析</block>
   <block id="1d93f11e5331c46990f076ad4257106e" category="paragraph">计算器将对SQL Server部署进行全面分析、以确保所利用的资源和功能与SQL Server版本正确匹配。下面是在建议降级到Standard Edition之前计算器检查的关键因素和条件：</block>
   <block id="a0e3089d312c100208595d685b4104d2" category="list-text">部署模式</block>
@@ -934,8 +922,6 @@
   <block id="7c2632b8df180cfa1528450b19070928" category="paragraph"><block ref="7c2632b8df180cfa1528450b19070928" category="inline-link-macro-rx"></block></block>
   <block id="5e73d91731c9445e9a0cc34e1969976a" category="summary">比较将Amazon Elasic Block Store (EBS)、FSx for Windows File Server和SQL Server内部数据库存储与FSx for ONTAP存储结合使用的成本。</block>
   <block id="6bcb23607586342322d4d9d515a81317" category="paragraph">通过比较在Amazon Elasic Block Store (EBS)上使用SQL Server、在FSx for Windows File Server上使用Microsoft SQL Server以及在内部存储与FSx for ONTAP存储上使用Microsoft SQL Server的成本、了解在数据库工作负载的BlueXP  工作负载工厂中节省的成本。</block>
-  <block id="9ea5b9d2d032e12bdcaba22b5a8eef05" category="paragraph">Workload Factory提供了一个节省计算器、可用于比较在FSx for ONTAP文件系统上为数据库工作负载运行Microsoft SQL Server工作负载(例如存储、计算、SQL许可证、快照和克隆)时的各种成本组件与Elasic Block Store (EBS)、FSx for Windows File Server和内部存储进行比较。根据您的存储要求、您可能会发现适用于ONTAP文件系统的FSx对于数据库工作负载来说最经济高效。</block>
-  <block id="37e5334cea4e204a8d5b735d1e9c43e7" category="paragraph">如果工作负载工厂确定可以通过在FSx for ONTAP文件系统上运行这些工作负载来节省资金、则可以直接从工作负载工厂的计算器中部署基于FSx for ONTAP的Microsoft SQL。如果您有多个基于Elanic Block Store、FSx for Windows File Server或内部存储的Microsoft SQL Server实例、我们建议使用一个SQL实例配置FSx for ONTAP。</block>
   <block id="a4b85dcfebf932701807e8b3c00ca94e" category="paragraph">探索检测到的主机节省的空间：工作负载出厂链接到现有Microsoft SQL Server、并将详细信息提取到计算器中以进行自动比较。要使用此计算器选项、您需要授予"自动执行"权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。</block>
   <block id="7cf65e2ff3a983e2d864a8b1c64765f1" category="open-title">Microsoft SQL Server内部部署</block>
   <block id="a2985bc0847d7596067c038e830be18b" category="list-text">在数据库磁贴中，选择*Explore savings *，然后从下拉菜单中选择*Microsoft SQL Server On-Express*。</block>
@@ -968,4 +954,55 @@
   <block id="9aa0a44ed97cfd5357fb393a8de57dc7" category="list-text"><block ref="1f378775539050b7c7b5e1cdfe121e2f" prefix="" category="inline-code"></block></block>
   <block id="4bd2e14395b83906b0838bbcc78df388" category="list-text"><block ref="3e51061ec4171070ff2ffdabfbd63cc3" prefix="" category="inline-code"></block></block>
   <block id="9b6e1103f46b83b38494e5b294e2c410" category="list-text"><block ref="c1eaf26c3b755ad5252456a5d3f34a2f" prefix="" category="inline-code"></block></block>
+  <block id="e1e5f5c3c58578921409fc2e6d5eedd8" category="doc">PostgreSQL高可用性配置和快速创建</block>
+  <block id="ed9e60a4e06d1c99d8eb3562ecbf8b63" category="paragraph">BlueXP  工作负载工厂支持数据库的两个新功能区域：</block>
+  <block id="c657a4dd8aa01cb30f32e751a8482131" category="list-text">PostgreSQL高可用性(HA)配置：现在可以为PostgreSQL服务器部署HA配置。</block>
+  <block id="d86f1a99d557ac15f85400fdfbdb8b14" category="list-text">快速创建：您可以使用此快速部署选项创建具有HA配置和嵌入式最佳实践的PostgreSQL服务器。</block>
+  <block id="f57c49a06b4a8a20d9a723cd677b9655" category="inline-link-macro">创建PostgreSQL服务器</block>
+  <block id="d3420539383bb38c88221d86000226d1" category="paragraph"><block ref="d3420539383bb38c88221d86000226d1" category="inline-link-macro-rx"></block></block>
+  <block id="1414de2121340ce91492c56f7800fcc7" category="section-title">为PostgreSQL服务器创建提供Terraform支持</block>
+  <block id="9156ac6cc60e32ed114af1a49af0ffed" category="paragraph">现在、您可以使用CodeBox中的Terraform部署PostgreSQL。</block>
+  <block id="7a5745faeabd31c33609adf25373d8a1" category="inline-link-macro">创建PostgreSQL数据库服务器</block>
+  <block id="61b5b69de9c821f5e486ec9c30a821a4" category="list-text"><block ref="61b5b69de9c821f5e486ec9c30a821a4" category="inline-link-macro-rx"></block></block>
+  <block id="6a7893eb24462b3da7dd0a66586c5738" category="section-title">本地快照计划的故障恢复能力评估</block>
+  <block id="677bceea5ebbea10cf85a91ebf42050e" category="paragraph">为数据库工作负载提供了新的故障恢复能力评估。我们将评估Microsoft SQL Server实例中的卷是否具有有效的计划快照策略。快照是数据的时间点副本、可帮助您的数据库环境在数据丢失时保持弹性。</block>
+  <block id="90814442b7f0694d712f43efffe9c178" category="section-title">数据库工作负载的MAXDOP修复</block>
+  <block id="3231190e9014bf678d835272ec7c9234" category="paragraph">现在、适用于数据库的BlueXP  工作负载工厂支持针对最大并行度(MAXDOP)服务器配置进行修复。如果MAXDOP配置不是最佳配置、则可以让BlueXP  工作负载在出厂时为您优化配置。</block>
+  <block id="4a21bedf189bb26f9f4aeb26c0dc26a2" category="section-title">通过电子邮件发送节省量分析报告</block>
+  <block id="5b89ef008454fd9a61723d3572865363" category="paragraph">与FSx for ONTAP相比、在探索Amazon El生 性块存储和FSx for Windows文件服务器存储环境的节省空间时、您现在可以通过电子邮件将建议报告发送给您自己、团队成员和客户。</block>
+  <block id="11ddb0c16aeebaa5c378a44c0d6300d8" category="paragraph">在从工作负载工厂创建Microsoft SQL Server之前、请了解数据库主机配置的可用存储部署类型、Active Directory部署、工作负载工厂操作模式以及完成此操作的要求。</block>
+  <block id="d165069c83b8bcdcdac74dac0647a6f8" category="paragraph">在从BlueXP  工作负载工厂创建PostgreSQL服务器之前、请了解可用于数据库主机配置的存储部署类型、工作负载工厂操作模式以及完成此操作的要求。</block>
+  <block id="a54a2d2457f861c5ced69c71edee65c9" category="paragraph">FSx for ONTAP文件系统具有两种PostgreSQL服务器部署模式：_High Availability (HA)_或_single instance_。根据您选择的FSx for ONTAP部署模式、系统会为FSx for ONTAP文件系统创建不同的资源。</block>
+  <block id="7081d1beb2d41751a0211b5a5c5f3b56" category="list-text">*高可用性(HA)部署*：在为HA部署选择新的FSx for NetApp ONTAP文件系统时，将部署多可用性区域FSx for ONTAP文件系统。对于HA部署、系统会为数据、日志和tempdb文件创建单独的卷和LUN。系统会为Windows集群的Quorum或见证磁盘创建一个额外的卷和LUN。HA部署可在主PostgreSQL服务器和二级PostgreSQL服务器之间配置流式复制。</block>
+  <block id="30e232f58ccaf796b9d3c66a4c7f3eae" category="list-text">*单实例部署*：创建新的PostgreSQL服务器时、将创建适用于ONTAP文件系统的单可用性区域FSx。此外、还会为数据、日志和tempdb文件创建单独的卷和LUN。</block>
+  <block id="958f5530e9f1db947c4f18b3cc30b2e9" category="admonition">在_Quick creel_中、HA是默认部署模式、Windows 2016是默认Windows版本、SQL 2019 Standard Edition是默认SQL版本。</block>
+  <block id="8afd299f4346ad5e3b322116411294bc" category="list-text">在数据库磁贴中，选择*Deploy database host*，然后从下拉菜单中选择*PostgreSQL Server*。</block>
+  <block id="5ac68d725f8eef71a0523eb1c6cca14f" category="list-text">在*Landing zones*下，提供以下内容：</block>
+  <block id="a18df64f6d327d9f4d8ffd9736b846f6" category="admonition">HA部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。</block>
+  <block id="9a7005e13653f915b8e1367cbdc68e4e" category="list-text">在*部署模式*下，选择*独立实例*或*高可用性(HA)*。</block>
+  <block id="c4ccde85ea5b8e0593caaf8004ff8930" category="list-text">HA部署</block>
+  <block id="d2eadd2943100e3e5ea25460fadf93c2" category="list-text">对于新的FSx for ONTAP文件系统、将创建一个新安全组并将其附加到SQL节点。对于现有FSx for ONTAP文件系统、与其关联的安全组会自动添加到PostgreSQL节点中、从而允许与文件系统进行通信。</block>
+  <block id="74026b51b0207a27d3fd38b62768c254" category="paragraph">Workload Factory提供了多种方法、用于从信息板、清单选项卡和浏览节省量选项卡中探索在Amazon Elasic Block Store (EBS)、FSx for Windows File Server和内部存储上运行的数据库工作负载的节省量。无论何种情况、您都可以使用节省计算器将在适用于ONTAP文件系统的FSx上为数据库工作负载运行Microsoft SQL Server工作负载(例如存储、计算、SQL许可证、快照和克隆)的各种成本组件与Elasic Block Store (EBS)、FSx for Windows File Server和内部存储进行比较。</block>
+  <block id="551d3fb74afeea4ac02ada029e97d26b" category="paragraph">如果工作负载工厂确定可以通过在FSx for ONTAP文件系统上运行这些工作负载来节省资金、则可以直接从工作负载工厂的节省计算器中部署基于FSx for ONTAP的Microsoft SQL。如果您有多个基于Elanic Block Store、FSx for Windows File Server或内部存储的Microsoft SQL Server实例、我们建议使用一个SQL实例配置FSx for ONTAP。</block>
+  <block id="6040bb4a85eec1c3be0e69ac393a4c24" category="paragraph-title">所有数据库工作负载都可能节省空间</block>
+  <block id="21739ec7d2d9e1ee769824ea604e87e4" category="paragraph">从工作负载出厂控制台转到数据库*Dashboard，大致了解在FSx for ONTAP上运行所有数据库工作负载可能节省的成本。在*潜在节省*图块中、您可以查看Elasic Block Store和FSx for Windows File Server上的所有数据库工作负载的数量、潜在的成本节省、节省百分比以及条形图中的可视化表示。</block>
+  <block id="ceb758e79c470fbc2ebba2a5fa8a2c32" category="inline-image-macro">工作负载出厂控制台中数据库信息板中的潜在节省板块的屏幕截图。"潜在节省"图块显示Elasic Block Store和FSx for Windows File Server上的所有数据库工作负载的数量、潜在节省的成本、节省的百分比以及条形图中的可视化表示。</block>
+  <block id="8a197a96889c1350d0921a2744e0dcff" category="paragraph"><block ref="8a197a96889c1350d0921a2744e0dcff" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="14e0ba144c9ea737e00075f15ba92914" category="paragraph-title">节省计算器</block>
+  <block id="b9c1a7494e47e88c73ed9177dac50512" category="paragraph">您可以利用节省计算器将在FSx for ONTAP文件系统上为数据库工作负载运行Microsoft SQL Server工作负载(例如存储、计算、SQL许可证、快照和克隆)的各种成本组件与Elasic Block Store (EBS)、FSx for Windows File Server和内部存储进行比较。根据您的存储要求、您可能会发现适用于ONTAP文件系统的FSx对于数据库工作负载来说最经济高效。</block>
+  <block id="34bd0eb13cbfc5b3e75abc9ef37d28a9" category="inline-xref">了解如何使用计算器。</block>
+  <block id="59bc614ceb0bb98400319eb2b4ed0194" category="paragraph">计算器将显示如果您使用FSx for ONTAP文件系统、这些Microsoft SQL Server上用于数据库工作负载的存储成本是否会降低。<block ref="3b1f4baa69b6d987101aa81b90456625" category="inline-xref-macro-rx"></block></block>
+  <block id="726827e3f779b11768c209a653ef0f0e" category="paragraph"><block ref="726827e3f779b11768c209a653ef0f0e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="388660e21a97a90db2571da848fc61df" category="inline-link-macro">添加AWS凭据</block>
+  <block id="df33a8a514c43741a17399e9c12a0427" category="paragraph">此外、您还可以<block ref="10c34fa86244e9acc4f29a59fb8b09f7" category="inline-link-macro-rx"></block>提高计算器分析的准确性。选择*根据现有资源计算节省量*。您将被重定向到添加凭据页面。添加凭据后、请选择要与FSx for ONTAP进行比较的现有资源、然后选择*探索节省量*。</block>
+  <block id="8e6d0f92b770c4f1bd72e6a5cbf34656" category="paragraph">提供数据库主机配置的详细信息后、请查看页面上提供的计算结果和建议。</block>
+  <block id="914666cc05a2f50a3cbff56ab4c0d87c" category="paragraph">此外、通过选择以下选项之一向下滚动到页面底部以查看报告：</block>
+  <block id="037fbb0239239f2168489bba99e09b67" category="list-text">*导出PDF*</block>
+  <block id="10acfa1cd5e4b3b5f4da60bba2257672" category="list-text">*通过电子邮件发送*</block>
+  <block id="3902a76bb589f831b404ce1ec9865654" category="list-text">*查看计算结果*</block>
+  <block id="68bfcbb9e0f73d04499c64e0bc23d369" category="inline-xref">使用FSx for ONTAP文件系统在AQS EC2上部署Microsoft SQL Server</block>
+  <block id="a8aa5970e795fc6acbc94959e79d385e" category="paragraph">要切换到FSx for ONTAP，请按照中的说明进行操作 <block ref="111c1b12d181a36b3809e884a469d22f" category="inline-xref-macro-rx"></block>。</block>
+  <block id="593a4cc0b797fa5f4354bae99e3fa42d" category="list-text">故障恢复能力：包括本地快照</block>
+  <block id="4fbdcdf3c2d8694d5e358b3175b867da" category="section-title">2025 年 3 月 3 日</block>
+  <block id="5b9ce98e8b3125f8d921be7829ab8a26" category="sidebar">创建Microsoft SQL Server</block>
 </blocks>
