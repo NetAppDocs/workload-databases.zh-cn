@@ -35,8 +35,8 @@ link:https://review.docs.netapp.com/us-en/workload-databases_explore-savings-upd
 
 现在、您可以使用CodeBox中的Terraform部署PostgreSQL。
 
-* link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html["创建PostgreSQL数据库服务器"^]
-* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["使用CodeBox中的Terraform"^]
+* link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html["创建PostgreSQL数据库服务器"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["使用CodeBox中的Terraform"]
 
 
 
@@ -161,8 +161,8 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 现在、您可以从CodeBox中使用Terraform部署Microsoft SQL Server。
 
-* link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html["创建数据库服务器"^]
-* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["使用CodeBox中的Terraform"^]
+* link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html["创建数据库服务器"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["使用CodeBox中的Terraform"]
 
 
 
@@ -175,7 +175,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 现在、您可以在节省量计算器中探索使用FSx for Windows File Server存储在Amazon EC2上检测到的Microsoft SQL Server的节省量。根据您的SQL Server和存储要求、您可能会发现FSx for ONTAP存储是最经济高效的数据库工作负载。
 
-link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["利用FSx for ONTAP为数据库工作负载节省空间"^]
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["利用FSx for ONTAP为数据库工作负载节省空间"]
 
 
 
@@ -187,13 +187,13 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["利�
 
 现在、您可以在节省量计算器中使用FSx for Windows File Server和Elelic Block Store存储为Amazon EC2上的Microsoft SQL Server自定义配置设置。根据您的存储要求、您可能会发现FSx for ONTAP存储对于您的数据库工作负载来说最经济高效。
 
-link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["利用FSx for ONTAP为数据库工作负载节省空间"^]
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["利用FSx for ONTAP为数据库工作负载节省空间"]
 
 
 
 === 从主页导航到节省量计算器
 
-现在、您可以从link:https://console.workloads.netapp.com["工作负载出厂控制台"^]主页导航到节省量计算器。从El生 性块存储和FSx for Windows File Server中进行选择以开始使用。
+现在、您可以从link:https://console.workloads.netapp.com["工作负载出厂控制台"]主页导航到节省量计算器。从El生 性块存储和FSx for Windows File Server中进行选择以开始使用。
 
 image:screenshot-explore-savings-home-small.png["工作负载出厂控制台主页的屏幕截图。图中显示了一个新的\"浏览节省量\"按钮的\"数据库\"图块。单击按钮以打开下拉菜单。下拉菜单有两个选项- Microsoft SQL Server on EBS和Microsoft SQL Server on FSx for Windows File Server。"]
 
@@ -227,7 +227,7 @@ image:screenshot-explore-savings-home-small.png["工作负载出厂控制台主�
 
 
 
-link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["利用FSx for ONTAP为数据库工作负载节省空间"^]
+link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["利用FSx for ONTAP为数据库工作负载节省空间"]
 
 
 
@@ -239,4 +239,4 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["利�
 
 初始版本包括以下功能：使用Amazon FSx for NetApp ONTAP作为数据库工作负载的存储环境来了解节省的空间；检测、管理和部署Microsoft SQL Server；部署和克隆数据库；以及在工作负载工厂内监控这些作业。
 
-link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["了解数据库"^]
+link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["了解数据库"]

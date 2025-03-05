@@ -8,4 +8,4 @@
 
 初始版本包括以下功能：使用Amazon FSx for NetApp ONTAP作为数据库工作负载的存储环境来了解节省的空间；检测、管理和部署Microsoft SQL Server；部署和克隆数据库；以及在工作负载工厂内监控这些作业。
 
-link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["了解数据库"^]
+link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["了解数据库"]

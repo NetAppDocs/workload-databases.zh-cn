@@ -16,6 +16,6 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 现在、您可以从CodeBox中使用Terraform部署Microsoft SQL Server。
 
-* link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html["创建数据库服务器"^]
-* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["使用CodeBox中的Terraform"^]
+* link:https://docs.netapp.com/us-en/workload-databases/create-database-server.html["创建数据库服务器"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["使用CodeBox中的Terraform"]
 
