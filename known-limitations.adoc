@@ -58,12 +58,6 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 
 
 
-== 用户管理的Active Directory安全组
-
-如果在工作负载工厂中部署Microsoft SQL Server期间选择了"用户管理的Active Directory"、则必须提供一个安全组、以允许EC2实例之间的流量传输到目录服务以进行部署。工作负载工厂不会像为AWS托管的Microsoft AD那样自动为用户管理的Active Directory附加安全组。
-
-
-
 == 自定义加密密钥
 
 根据服务适用性、不会列出FSx for ONTAP的自定义加密密钥。您必须选择适当的密钥。AWS托管密钥会根据服务适用性进行筛选。

@@ -42,6 +42,14 @@ Active Directory:: 在部署期间、Active Directory (AD)会发生以下情况�
 
 
 --
+
+
+
+
+== 用户管理的Active Directory安全组
+
+如果在工作负载工厂中部署Microsoft SQL Server期间选择了"用户管理的Active Directory"、则必须提供一个安全组、以允许EC2实例之间的流量传输到目录服务以进行部署。工作负载工厂不会像为AWS托管的Microsoft AD那样自动为用户管理的Active Directory附加安全组。
+
 资源回滚:: 如果您决定回滚域名系统(Domain Name System、DNS)资源、则不会自动删除AD和DNS中的资源记录。您可以按如下所示从DNS服务器和AD中删除记录。
 +
 --
@@ -258,10 +266,7 @@ FCI部署::
 --
 
 
-.. *安全组*：选择现有安全组或创建新安全组。
-+
-在新服务器部署期间、三个安全组会连接到SQL节点(EC2实例)。
-
+.. *安全组*：选择现有安全组或创建新安全组。在新服务器部署期间、三个安全组会连接到SQL节点(EC2实例)。
 +
 ... 此时将创建一个工作负载安全组、以允许在节点上进行Microsoft SQL和Windows集群通信所需的端口和协议。
 ... 如果使用的是AWS管理的Active Directory、则连接到目录服务的安全组会自动添加到Microsoft SQL节点中、以允许与Active Directory进行通信。

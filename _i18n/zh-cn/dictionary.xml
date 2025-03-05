@@ -98,7 +98,6 @@
   <block id="8738f299dd52a2650f23bf1ae30694fa" category="list-text">在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择可用性分区，并从*子网*下拉菜单中选择子网。</block>
   <block id="9c622025b2f6aaf628ede7de56df481b" category="list-text">FCI部署</block>
   <block id="5ac7c1b392927ce429f17a8855e854b5" category="list-text">*安全组*：选择现有安全组或创建新安全组。</block>
-  <block id="a2c08d4b7f2bbde30396036629003448" category="paragraph">在新服务器部署期间、三个安全组会连接到SQL节点(EC2实例)。</block>
   <block id="ba4f09fe932ad91d759a5dd3636acec6" category="list-text">此时将创建一个工作负载安全组、以允许在节点上进行Microsoft SQL和Windows集群通信所需的端口和协议。</block>
   <block id="1f653bdd2a02e3ebdc4f28328a96b00f" category="list-text">如果使用的是AWS管理的Active Directory、则连接到目录服务的安全组会自动添加到Microsoft SQL节点中、以允许与Active Directory进行通信。</block>
   <block id="84c62c2707904a024819612ef450ef1d" category="list-text">对于现有FSx for ONTAP文件系统、与其关联的安全组会自动添加到SQL节点中、从而允许与文件系统进行通信。创建新的FSx for ONTAP系统时、将为FSx for ONTAP文件系统创建一个新安全组、并且同一安全组也会连接到SQL节点。</block>
@@ -1004,4 +1003,5 @@
   <block id="05e1e00bdb39e9c766a6a0f69a222a3b" category="list-text"><block ref="05e1e00bdb39e9c766a6a0f69a222a3b" category="inline-link-macro-rx"></block></block>
   <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
   <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
+  <block id="b344730cd36668c36266c1d50c447eea" category="list-text">*安全组*：选择现有安全组或创建新安全组。在新服务器部署期间、三个安全组会连接到SQL节点(EC2实例)。</block>
 </blocks>
