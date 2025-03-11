@@ -968,10 +968,8 @@
   <block id="a54a2d2457f861c5ced69c71edee65c9" category="paragraph">FSx for ONTAP文件系统具有两种PostgreSQL服务器部署模式：_High Availability (HA)_或_single instance_。根据您选择的FSx for ONTAP部署模式、系统会为FSx for ONTAP文件系统创建不同的资源。</block>
   <block id="7081d1beb2d41751a0211b5a5c5f3b56" category="list-text">*高可用性(HA)部署*：在为HA部署选择新的FSx for NetApp ONTAP文件系统时，将部署多可用性区域FSx for ONTAP文件系统。对于HA部署、系统会为数据、日志和tempdb文件创建单独的卷和LUN。系统会为Windows集群的Quorum或见证磁盘创建一个额外的卷和LUN。HA部署可在主PostgreSQL服务器和二级PostgreSQL服务器之间配置流式复制。</block>
   <block id="30e232f58ccaf796b9d3c66a4c7f3eae" category="list-text">*单实例部署*：创建新的PostgreSQL服务器时、将创建适用于ONTAP文件系统的单可用性区域FSx。此外、还会为数据、日志和tempdb文件创建单独的卷和LUN。</block>
-  <block id="958f5530e9f1db947c4f18b3cc30b2e9" category="admonition">在_Quick creel_中、HA是默认部署模式、Windows 2016是默认Windows版本、SQL 2019 Standard Edition是默认SQL版本。</block>
   <block id="8afd299f4346ad5e3b322116411294bc" category="list-text">在数据库磁贴中，选择*Deploy database host*，然后从下拉菜单中选择*PostgreSQL Server*。</block>
   <block id="5ac68d725f8eef71a0523eb1c6cca14f" category="list-text">在*Landing zones*下，提供以下内容：</block>
-  <block id="a18df64f6d327d9f4d8ffd9736b846f6" category="admonition">HA部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。</block>
   <block id="9a7005e13653f915b8e1367cbdc68e4e" category="list-text">在*部署模式*下，选择*独立实例*或*高可用性(HA)*。</block>
   <block id="c4ccde85ea5b8e0593caaf8004ff8930" category="list-text">HA部署</block>
   <block id="d2eadd2943100e3e5ea25460fadf93c2" category="list-text">对于新的FSx for ONTAP文件系统、将创建一个新安全组并将其附加到SQL节点。对于现有FSx for ONTAP文件系统、与其关联的安全组会自动添加到PostgreSQL节点中、从而允许与文件系统进行通信。</block>
@@ -1004,4 +1002,5 @@
   <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
   <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
   <block id="b344730cd36668c36266c1d50c447eea" category="list-text">*安全组*：选择现有安全组或创建新安全组。在新服务器部署期间、三个安全组会连接到SQL节点(EC2实例)。</block>
+  <block id="372b286436aa00cac0e53fa1f2a9c659" category="paragraph">您可以使用_Advanced create部署模式在工作负载工厂中以_Automate模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API、AWS CLI、AWS CloudFormation和Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
 </blocks>
