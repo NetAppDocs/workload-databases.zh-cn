@@ -989,7 +989,6 @@
   <block id="3902a76bb589f831b404ce1ec9865654" category="list-text">*查看计算结果*</block>
   <block id="68bfcbb9e0f73d04499c64e0bc23d369" category="inline-xref">使用FSx for ONTAP文件系统在AQS EC2上部署Microsoft SQL Server</block>
   <block id="a8aa5970e795fc6acbc94959e79d385e" category="paragraph">要切换到FSx for ONTAP，请按照中的说明进行操作 <block ref="111c1b12d181a36b3809e884a469d22f" category="inline-xref-macro-rx"></block>。</block>
-  <block id="593a4cc0b797fa5f4354bae99e3fa42d" category="list-text">故障恢复能力：包括本地快照</block>
   <block id="4fbdcdf3c2d8694d5e358b3175b867da" category="section-title">2025 年 3 月 3 日</block>
   <block id="5b9ce98e8b3125f8d921be7829ab8a26" category="sidebar">创建Microsoft SQL Server</block>
   <block id="25b3aca23d0668827e396e11779fd3e8" category="paragraph"><block ref="25b3aca23d0668827e396e11779fd3e8" category="inline-link-macro-rx"></block></block>
@@ -998,7 +997,37 @@
   <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
   <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
   <block id="b344730cd36668c36266c1d50c447eea" category="list-text">*安全组*：选择现有安全组或创建新安全组。在新服务器部署期间、三个安全组会连接到SQL节点(EC2实例)。</block>
-  <block id="372b286436aa00cac0e53fa1f2a9c659" category="paragraph">您可以使用_Advanced create部署模式在工作负载工厂中以_Automate模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API、AWS CLI、AWS CloudFormation和Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="292e876f4d1d5af73b815913bd3d9b26" category="doc">PostgreSQL高可用性配置</block>
   <block id="047e8f86b83bb2e8d4c34b1dc560257b" category="paragraph">现在、您可以为PostgreSQL服务器部署高可用性(HA)配置。</block>
+  <block id="8bb788607f31f673e25d0ba34b09a14d" category="doc">优化增强功能</block>
+  <block id="7e9a755c644cbdbaab2927671606cf89" category="paragraph">在优化数据库环境时、可以使用新的优化评估、更新和显示多个资源。</block>
+  <block id="3cde2cfbcdbdd79a3c1d3d6b547ab80d" category="section-title">故障恢复能力评估</block>
+  <block id="218733e992141498b68631094f232446" category="paragraph">这些增强功能包括新的故障恢复能力评估、用于检查是否为数据库环境配置了数据冗余和灾难恢复功能。</block>
+  <block id="a8b36cbcd13facdcd526df9ca0c4aba5" category="list-text">FSx for ONTAP备份：分析为SQL Server实例的卷提供服务的ONTAP文件系统FSx是否为ONTAP备份配置了计划FSx。</block>
+  <block id="3ddd695d01877806196cb9bc8be009da" category="list-text">跨区域复制：评估为Microsoft SQL Server实例提供服务的ONTAP文件系统FSx是否配置了跨区域复制。</block>
+  <block id="233f3c54635152d78b375495cd0b5580" category="section-title">计算修复</block>
+  <block id="c4b982d56748631e5cf80fe05312f901" category="paragraph">接收端扩展(RSS)修复功能可配置RSS、以便在多个处理器之间分布网络处理、并确保高效分布负载。</block>
+  <block id="9ed609dc6760dae060dbad52b3aa2d42" category="section-title">本地快照修复</block>
+  <block id="229b55b063b8208ec58911841f6bad18" category="paragraph">本地快照修复可为Microsoft SQL Server实例的卷设置快照策略、以便在数据丢失时保持数据库环境的弹性。</block>
+  <block id="14684cd0a52a7f7301e2400ff9ce8c16" category="section-title">支持多资源选择</block>
+  <block id="909e5b19987da9dd66e288802ac9729e" category="paragraph">在优化数据库配置时、您现在可以选择特定资源、而不是所有资源。</block>
+  <block id="d36362545a72cd1eef4186ca8a99dca1" category="section-title">改进了清单视图</block>
+  <block id="9f3b67d6f0d3de869a895be1df755a3b" category="paragraph">工作负载出厂控制台中的"清单"选项卡已经过简化、因此它仅包含在Amazon FSx for NetApp ONTAP上运行的SQL Server。现在、您可以在"浏览节省量"选项卡中找到在内部部署且在Amazon Elabic Block Store和Amazon FSx for Windows File Server上运行的SQL Server。</block>
+  <block id="b66e93ffc0672f74db831d8f9d81fdba" category="section-title">快速创建可用于PostgreSQL服务器部署</block>
+  <block id="f7d019f8da84eee0771921896cbb0cd5" category="paragraph">您可以使用此快速部署选项创建具有HA配置和嵌入式最佳实践的PostgreSQL服务器。</block>
+  <block id="5963667f9fe01282fae9030cccbd24a3" category="paragraph"><block ref="5963667f9fe01282fae9030cccbd24a3" category="inline-link-macro-rx"></block></block>
+  <block id="958f5530e9f1db947c4f18b3cc30b2e9" category="admonition">在_Quick creel_中、HA是默认部署模式、Windows 2016是默认Windows版本、SQL 2019 Standard Edition是默认SQL版本。</block>
+  <block id="a18df64f6d327d9f4d8ffd9736b846f6" category="admonition">HA部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。</block>
+  <block id="b06b1cc67628f13db38ca890693627fb" category="section-title">跨区域复制评估</block>
+  <block id="425a11288e6c089ecf9966b89b9be4eb" category="list-text">如果目标FSx for ONTAP文件系统位于其他AWS帐户中、则优化评估无法确定是否正在使用跨区域复制(CRR)。</block>
+  <block id="a73971e47314d5a9302d6e0e452948e6" category="list-text">工作负载出厂时仅评估源FSx for ONTAP文件系统的CRR配置。</block>
+  <block id="af64c2575cf7c41d9a388382dfd2aef2" category="section-title">SQL Server实例中的数据库数量</block>
+  <block id="b4f10df58cb8c1f0e0b30bd6fc637ddd" category="paragraph">在清单选项卡和信息板上、Workload Factory最多支持SQL Server实例中的850个数据库。</block>
+  <block id="fb090b715eaceea73761a137a2eb45c0" category="list-text">故障恢复能力：包括本地快照、FSx for ONTAP备份和跨区域复制(CRR)</block>
+  <block id="765282496f8377d23a4dec7887b9cea8" category="paragraph">*全选*为默认设置，但您可以选择要优化的特定资源。</block>
+  <block id="c69c68bea63a58faad0233887cb8a9aa" category="section-title">2025年4月4日</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">博客和社区</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 社区</block>
+  <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">BlueXP博客</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
 </blocks>

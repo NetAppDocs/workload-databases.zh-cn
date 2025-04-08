@@ -119,3 +119,17 @@ ONTAP配置和操作系统配置不支持对多个SQL Server实例进行批量�
 == 内部成本节省计算
 
 Microsoft SQL Server内部存储卷大小的成本节省和节省百分比计算未考虑在内。
+
+
+
+== 跨区域复制评估
+
+* 如果目标FSx for ONTAP文件系统位于其他AWS帐户中、则优化评估无法确定是否正在使用跨区域复制(CRR)。
+* 工作负载出厂时仅评估源FSx for ONTAP文件系统的CRR配置。
+
+
+
+
+== SQL Server实例中的数据库数量
+
+在清单选项卡和信息板上、Workload Factory最多支持SQL Server实例中的850个数据库。

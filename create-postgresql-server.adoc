@@ -48,11 +48,107 @@ FSx for ONTAP文件系统具有两种PostgreSQL服务器部署模式：_High Ava
 
 == 创建数据库服务器
 
-您可以使用_Advanced create部署模式在工作负载工厂中以_Automate模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API、AWS CLI、AWS CloudFormation和Terraform。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["了解如何使用CodeBox实现自动化"^](英文)
+您可以使用_Quick cre成_或_Advanced cre成_部署模式在工作负载工厂中以_Automate _模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API、AWS CLI、AWS CloudFormation和Terraform。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["了解如何使用CodeBox实现自动化"^](英文)
 
 
 NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 `fsxadmin` 和 `vsadmin` 密码。运行代码时、您需要重新输入密码。除了_Autome_模式权限之外，您还需要为用户帐户提供以下权限： `iam:TagRole`和 `iam:TagInstanceProfile`。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["了解如何使用CodeBox中的Terraform"^](英文)
 
+[role="tabbed-block"]
+====
+.快速创建
+--
+
+NOTE: 在_Quick creel_中、HA是默认部署模式、Windows 2016是默认Windows版本、SQL 2019 Standard Edition是默认SQL版本。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在数据库磁贴中，选择*Deploy database host*，然后从下拉菜单中选择*PostgreSQL Server*。
+. 选择*快速创建*。
+. 在*Landing zones*下，提供以下内容：
++
+.. *AWS凭据*：选择具有自动化权限的AWS凭据以部署新数据库主机。
++
+通过具有_Automate权限的AWS凭据、Workload Factory可以在工作负载工厂中使用您的AWS帐户部署和管理新的数据库主机。
+
++
+通过具有_read_权限的AWS凭据、Workload Factory可以生成CloudFormation模板、以供您在AWS CloudFormation控制台中使用。
+
++
+如果您在工作负载工厂中没有关联的AWS凭据、而您希望在工作负载工厂中创建新服务器、请按照*选项1*转到凭据页面。为数据库工作负载的_Automate_mode手动添加所需的凭据和权限。
+
++
+如果要在工作负载工厂中完成创建新服务器表单、以便下载完整的YAML文件模板以在AWS CloudFormation中部署、请按照*选项2*操作、确保您具有在AWS CloudFormation中创建新服务器所需的权限。为数据库工作负载的_Read_模式手动添加所需的凭据和权限。
+
++
+或者、您也可以从Codebox下载部分完成的YAML文件模板、以便在工作负载出厂时创建堆栈、而无需任何凭据或权限。从“代码”框的下拉列表中选择*CloudFormation*以下载YAML文件。
+
+.. *区域和VPC*：选择区域和VPC网络。
++
+确保现有接口端点的安全组允许对选定子网访问HTTPS (443)协议。
+
++
+AWS服务接口端点(SQS、FSx、EC2、CloudWatch、CloudFormation、 SSM)和S3网关端点会在部署期间创建(如果未找到)。
+
++
+如果尚未将VPC DNS属性 `EnableDnsSupport` 和 `EnableDnsHostnames` 设置为，则会对其进行修改以启用端点地址解析 `true`。
+
+.. *可用性分区*：选择可用性分区和子网。
++
+
+NOTE: HA部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。
+
++
+为实现高可用性、子网不应共享同一路由表。
+
++
+... 在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择MAZ FSx for ONTAP配置的主要可用性分区，并从*子网*下拉菜单中选择主要可用性分区中的子网。
+... 在*集群配置-节点2*字段中，从*可用性分区*下拉菜单中选择MAZ FSx for ONTAP配置的二级可用性分区，并从*子网*下拉菜单中选择一个子网。
+
+
+
+
+. 在*应用程序设置*下，输入*数据库凭据*的用户名和密码。
+. 在*Connectity*下，选择要安全连接到实例的密钥对。
+. 在*Infrastructure settings (基础架构设置)*下，提供以下内容：
++
+.. *FSx for ONTAP system*：创建新的FSx for ONTAP文件系统或使用现有FSx for ONTAP文件系统。
++
+... *创建新的FSx for FS* ONTAP：输入用户名和密码。
++
+新的FSx for ONTAP文件系统可能会增加30分钟或更长时间的安装时间。
+
+... *选择现有FSx for FS* ONTAP：从下拉菜单中选择FSx for ONTAP name，然后输入文件系统的用户名和密码。
++
+对于现有FSx for ONTAP文件系统、请确保满足以下要求：
+
++
+**** 连接到FSx for ONTAP的路由组允许使用到子网的路由进行部署。
+**** 此安全组允许来自用于部署的子网的流量、尤其是HTTPS (443)和iSCSI (3260) TCP端口。
+
+
+
+
+.. *数据驱动器大小*：输入数据驱动器容量并选择容量单位。
+
+
+. 摘要：
++
+.. *预览默认值*：查看Quick create设置的默认配置。
+.. *估计成本*：提供部署所示资源时可能产生的费用估计值。
+
+
+. 单击 * 创建 * 。
++
+或者、如果您现在要更改其中任何默认设置、请使用Advanced create创建数据库服务器。
+
++
+您也可以选择*保存配置*以在以后部署主机。
+
+
+
+--
+.高级创建
+--
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*Deploy database host*，然后从下拉菜单中选择*PostgreSQL Server*。
@@ -189,5 +285,7 @@ AWS管理的密钥会根据服务适用性进行筛选。
 
 
 
+--
+====
 .下一步行动
 您可以在已部署的PostgreSQL服务器上手动配置用户、远程访问和数据库。
