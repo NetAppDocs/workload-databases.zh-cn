@@ -72,7 +72,7 @@ image:screenshot-ebs-savings-calculator-update.png["节省量计算器页面的�
 
 通过自定义了解节省的空间：您可以为Amazon EC2上使用EBS或FSx for Windows File Server的Microsoft SQL Server提供配置设置、包括区域、部署模式、SQL Server版本、每月数据变更率、快照频率等。
 
-探索检测到的主机节省的空间：工作负载出厂链接到现有Microsoft SQL Server、并将详细信息提取到计算器中以进行自动比较。要使用此计算器选项、您需要授予"自动执行"权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。
+探索检测到的主机节省的空间：工作负载出厂链接到现有Microsoft SQL Server、并将详细信息提取到计算器中以进行自动比较。要使用此计算器选项、您需要授予_read-only或_read/write_权限。您可以更改使用情形、但所有其他详细信息都会在计算中自动确定。
 
 此外、您还可以link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["添加AWS凭据"^]提高计算器分析的准确性。选择*根据现有资源计算节省量*。您将被重定向到添加凭据页面。添加凭据后、请选择要与FSx for ONTAP进行比较的现有资源、然后选择*探索节省量*。
 
@@ -168,7 +168,7 @@ image:screenshot-ebs-savings-calculator-update.png["节省量计算器页面的�
 .开始之前
 开始之前、请满足以下前提条件：
 
-* 确保link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_Automate权限"^]在AWS帐户中检测数据库清单中的Elasic Block Store (EBS)和FSx for Windows系统。
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_read-only或_read/write_权限"^]在AWS帐户中、在*浏览节省量*选项卡下检测Elasic Block Store (EBS)和FSx for Windows系统、并在节省量计算器中显示节省量计算结果。
 * 在数据库清单中检测EBS和FSx for Windows存储中的主机。link:detect-host.html["了解如何检测主机"](英文)
 
 

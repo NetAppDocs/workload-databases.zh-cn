@@ -58,14 +58,45 @@ Microsoft SQL Server实例管理包括以下任务：
 * 要管理数据库实例、需要使用PowerShell7。请参阅手动安装PowerShell7 link:https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.4["适用于Windows的Microsoft PowerShell文档"^]。
 * 所有管理操作均由AWS System Manager Agent使用用户权限运行 `NT Authority\SYSTEM` 。为数据库服务器中的用户提供以下权限 `NT Authority\SYSTEM` ：
 +
-** `“ALTER SETTINGS”`
-** `“CONTROL SERVER”`
-** `“ALTER ANY DATABASE”`
-** `“VIEW ANY DEFINITION”`
-** `“CONNECT ANY DATABASE”`
-** `“CREATE ANY DATABASE”`
+[cols="2,2a"]
+|===
+| 登录安全 | 需要时？ 
 
 
+| `VIEW ANY DEFINITION`  a| 
+清单、评估、修复、创建数据库、创建沙盒克隆、探索节省
+
+
+
+| `CONNECT ANY DATABASE`  a| 
+清单、评估、修复、创建数据库、创建沙盒克隆
+
+
+
+| `VIEW SERVER STATE`  a| 
+清单、评估、修复、创建数据库、创建沙盒克隆
+
+
+
+| `CREATE ANY DATABASE`  a| 
+创建数据库、创建沙盒克隆
+
+
+
+| `CONTROL SERVER`  a| 
+创建沙盒克隆
+
+
+
+| `ALTER ANY DATABASE`  a| 
+创建沙盒克隆
+
+
+
+| `ALTER SETTINGS`  a| 
+创建沙盒克隆、修复MAXDOP
+
+|===
 
 
 .步骤
