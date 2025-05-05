@@ -74,6 +74,8 @@ sidebar:
         url: "/optimize-overview.html"
       - title: 优化配置
         url: "/optimize-configurations.html"
+      - title: 延迟配置分析
+        url: "/postpone-analysis.html"
   - title: 知识和支持
     entries:
     - title: 注册以获得支持

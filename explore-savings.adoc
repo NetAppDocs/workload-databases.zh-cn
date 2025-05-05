@@ -266,6 +266,9 @@ image:screenshot-upload-script-on-premises.png["\"SQL Server内部部署\"选项
 
 要切换到FSx for ONTAP，请按照中的说明进行操作 <<使用FSx for ONTAP在AWS EC2上部署Microsoft SQL Server,使用FSx for ONTAP文件系统在AQS EC2上部署Microsoft SQL Server>>。
 
+内部主机删除:: 在探讨了Microsoft SQL Server内部主机的节省之后、您可以选择从BlueXP  工作负载出厂时删除内部主机记录。选择Microsoft SQL Server内部部署主机的三点菜单，然后选择*Delete*。
+
+
 
 
 == 使用FSx for ONTAP在AWS EC2上部署Microsoft SQL Server

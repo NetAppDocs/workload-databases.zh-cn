@@ -633,7 +633,6 @@
   <block id="5f4f392649432d3064fdf2a04015472b" category="list-text">选择下拉箭头可查看任何配置的建议。请务必仔细阅读此建议。</block>
   <block id="c9e425055996f71ecfc858708d926276" category="paragraph">此建议说明了未优化配置的最佳实践和潜在陷阱。</block>
   <block id="ea3bf0643d3540c97b9b92a3fb2bbf75" category="list-text">选择此选项可*优化*未优化的配置。</block>
-  <block id="fa01f4b57079f7ca82b8d852cbf4ed43" category="list-text">查看优化对话框中显示的优化摘要和操作项、了解选择优化后会发生什么情况。某些优化操作可能会导致实例停机或服务中断。</block>
   <block id="78a5af6b8a486797f81f9b0dff06821e" category="list-text">选择*继续*以优化配置。</block>
   <block id="c6ff3995f3c633f2808f96020f887fd9" category="paragraph">此时将启动优化过程。选择*作业监控*选项卡以查看操作状态。</block>
   <block id="0c47496112bcf6ed0b29fe1fe1d65d62" category="summary">适用于数据库的BlueXP  工作负载工厂可为基于Amazon FSx for NetApp ONTAP存储的Microsoft SQL Server部署提供持续优化。</block>
@@ -875,8 +874,6 @@
   <block id="10f9689e79d67ec4a1651805229939e6" category="list-text">单击作业的三点菜单、然后单击*转到CloudFormation*以在AWS CloudFormation控制台中查看作业日志。</block>
   <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL Server配置、提供洞察力和建议、帮助您实现卓越运营。</block>
   <block id="d156d1de362b4c66bc3effc1835aafe1" category="paragraph">适用于数据库的BlueXP  工作负载工厂会持续扫描和评估在Amazon FSx for NetApp ONTAP上运行的Microsoft SQL Server部署配置。此功能可提供洞察力和建议、并可选择自动优化未经优化的配置、以便数据库工作负载实现卓越运营。</block>
-  <block id="53c8dd8acbb0f2913fab098279485e71" category="list-text">在*Inventory*选项卡中，选择下拉箭头展开主机行以查看其受管实例。</block>
-  <block id="14237fbd8e1fcf850f132ae839f0337b" category="list-text">选择实例的三点菜单，然后选择*Optimize*。</block>
   <block id="162d1fe2bfd40fdaf4d1507dff7ac010" category="list-text">在SQL Server实例的优化实例页面上、查看评估结果。</block>
   <block id="1d40c1f145e4257a51df779ce509811e" category="paragraph">您可以按类别、子类别、状态、严重性和标记进行筛选。</block>
   <block id="2c43db36710e9c59ec3e8117665a6dd6" category="paragraph">您也可以通过选择*导出PDF*来下载评估结果报告。</block>
@@ -1038,4 +1035,51 @@
   <block id="3f21b90f61021d5dd0aefe08d40a11a9" category="cell"><block ref="83a834b3af30dbb7c2007ab7f9bc913b" prefix="" category="inline-code"></block></block>
   <block id="eb0cdf74b605d67e1444197ac2f77c91" category="cell"><block ref="8fdca9c0332e9935139d7384c2a814df" prefix="" category="inline-code"></block></block>
   <block id="538b18c6800ad42458e0bf0bc8a311b6" category="paragraph">创建沙盒克隆、修复MAXDOP</block>
+  <block id="25696569671071b8bd3db9a4c5f6613e" category="doc">信息板增强功能</block>
+  <block id="04f9acced28b52e064ba8ccb957a615c" category="list-text">在BlueXP  工作负载出厂控制台中的选项卡之间导航时、可以使用跨帐户和跨区域视图。新视图可改进资源管理、监控和优化。</block>
+  <block id="6e21267988cadc818dd398393c695465" category="list-text">在信息板的*潜在节省*图块中、您将能够从Amazon El生 磁块存储切换到FSx for ONTAP或Amazon FSx for Windows File Server、从而快速查看可能节省的空间。</block>
+  <block id="255a96bb0a74416846fbad7e40f8ddf4" category="section-title">可对数据库配置进行临时扫描</block>
+  <block id="2b1a16b6cd72c9555872ec61d3334af5" category="paragraph">适用于数据库的BlueXP  工作负载工厂会自动扫描使用FSx for ONTAP存储的托管Microsoft SQL Server实例、以确定是否存在潜在的配置问题。现在、除了每日扫描之外、您还可以随时进行扫描。</block>
+  <block id="365d8fe4130e8c12f4a3defc920178dd" category="section-title">删除内部评估记录</block>
+  <block id="c4fd25bd6650f0eaedfd01e29fbecddd" category="paragraph">在探讨了Microsoft SQL Server内部主机的节省之后、您可以选择从BlueXP  工作负载出厂时删除内部主机记录。</block>
+  <block id="ae548505379d0043460d8c15540cb546" category="section-title">克隆清理</block>
+  <block id="0d003b1e16a8cf8a4b6c0774ee3a0f41" category="paragraph">克隆清理评估和修复可识别和管理成本高昂的旧克隆。可以从BlueXP  工作负载出厂控制台中刷新或删除60天以上的克隆。</block>
+  <block id="6da89f0beda0fbec41b06125b0b7ad32" category="section-title">延迟和取消配置分析</block>
+  <block id="4a9a50cea48d9e2ded3becc284af4e41" category="paragraph">某些配置可能不适用于您的数据库环境。现在、您可以选择将特定配置分析推迟30天或取消分析。</block>
+  <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">更新了权限术语</block>
+  <block id="a7b97ab7d88b015e92ed51ef4bee9c25" category="paragraph">现在、工作负载出厂用户界面和文档使用"只读"来表示读取权限、使用"读写"来表示自动执行权限。</block>
+  <block id="2d07fc9146d02690dffeffa52fbd2ec4" category="list-text">内部主机删除</block>
+  <block id="1c28fa92b25f4914c091b667402466d3" category="list-text">在探讨了Microsoft SQL Server内部主机的节省之后、您可以选择从BlueXP  工作负载出厂时删除内部主机记录。选择Microsoft SQL Server内部部署主机的三点菜单，然后选择*Delete*。</block>
+  <block id="d824014300a5fc7a6853a9182b4be5ef" category="list-text">clones：可用于刷新和删除超过60天的克隆(沙盒)</block>
+  <block id="04467e563313dfe5a1da17bd70a4de75" category="list-text">在*Inventory*选项卡中，选择*Instances *选项卡。</block>
+  <block id="8e3db49aef4ba359c0140eea33f2459c" category="list-text">选择要优化的实例的三点菜单，然后选择*Optimize*。</block>
+  <block id="77b2be525ee3461ec499242fca3978f8" category="list-text">对于除克隆清理之外的所有配置、请查看优化对话框中的优化详细信息、了解选择优化时会发生什么情况。某些优化操作可能会导致实例停机或服务中断。</block>
+  <block id="c5d0b906e655aeb0e712fdc99742d179" category="list-text">对于克隆清理、请选择要刷新或删除的克隆数据库(沙盒)。</block>
+  <block id="64b911fb444d2ba4347dbcba8d839d9c" category="list-text">刷新克隆会将其与其源数据库同步。刷新仅适用于在工作负载出厂时创建的克隆。</block>
+  <block id="b11d77d1a514a3b0bdf01908bc4826e9" category="list-text">删除克隆将永久删除该克隆、释放存储空间并降低成本。您可以删除在工作负载出厂时和出厂时创建的克隆。</block>
+  <block id="cf00508631c0415d4089fb10cbe0511d" category="summary">延迟或取消不适用于数据库环境的特定数据库配置分析、以避免不必要的警报和不准确的优化结果。</block>
+  <block id="0cdf26a09e8e4cde6653e44f4abd73fb" category="doc">延迟或取消数据库配置分析</block>
+  <block id="77df5d7dfd76cd0e6a1a7a837c509672" category="paragraph">延迟或取消不适用于数据库环境的特定数据库配置分析、以避免不必要的警报和不准确的优化结果。您可以随时重新激活延迟或取消的配置分析。</block>
+  <block id="54498ab3155b38b14174ab9dd5caef5a" category="paragraph">数据库配置的应用程序要求会有所不同。Workload Factory提供了两个选项、用于跳过对特定数据库配置的分析、以便您只监控相关问题并准确查看相关配置的运行状况。如果推迟或取消特定配置分析、则该配置不会计入优化总分。</block>
+  <block id="47112685bf756c67c8ac297ef60e48dc" category="paragraph">您可以在配置级别和SQL Server实例级别推迟、取消和重新激活配置分析。</block>
+  <block id="8a219fba8bbd202ad1f7a47267ff5a2d" category="list-text">*推迟30天*：推迟分析将停止分析30天。30天后、分析将自动重新启动。</block>
+  <block id="71e07950d625dfcf829cac7019fb6f26" category="list-text">*取消*：取消分析会无限期推迟分析。如果需要、您可以重新启动分析。</block>
+  <block id="cd5a81e0d9eeff49759cb9a6eaa2e1e2" category="paragraph">您可以推迟或取消Microsoft SQL Server实例的以下配置：</block>
+  <block id="999cc42b236c7aee1157ff02d6f1bcd5" category="list-text">克隆</block>
+  <block id="75d9a01908e416c932fa5ee3fa0c77a3" category="paragraph">以下说明介绍如何在配置级别延迟、取消或重新激活分析。要为特定SQL Server实例完成以下任务，请从*"Dard板*"选项卡开始。</block>
+  <block id="43d86b2167e8a3464a552ee706d46d88" category="paragraph-title">延迟</block>
+  <block id="38d07dc1916e6ca30a9f936368828d18" category="paragraph">延迟以停止配置分析30天。30天后、分析将自动重新启动。</block>
+  <block id="b8bad4787f04ab4d4933464f551ed74c" category="list-text">在*Inventory*选项卡中，向下滚动到要延迟的配置，选择三点菜单，然后选择*Postpone for 30 days*。</block>
+  <block id="136dc09835924029e4299fa28f17233d" category="list-text">选择 * 继续 * 。</block>
+  <block id="8dca288df860b62f4b631d87b4320f91" category="paragraph">配置分析将停止30天。</block>
+  <block id="c8a59e7135a20b362f9c768b09454fdb" category="paragraph-title">取消</block>
+  <block id="26765b6cc82b68114c879d49f83b0e5a" category="paragraph">取消以无限期停止配置分析。您可以根据需要重新启动分析。</block>
+  <block id="fd9eed8a1f28cfe92f0d2d738455682b" category="list-text">在*Inventory*选项卡中，向下滚动到要取消的配置，选择三点菜单，然后选择*Dismiss*。</block>
+  <block id="bfc2ef5a56455cfacfde13cf1612e36b" category="paragraph">配置分析将停止。</block>
+  <block id="8e88e8d3ce1694ab82d525e91ae7c572" category="paragraph-title">重新激活</block>
+  <block id="54a679b97854ca1a358ef23dc83cfce6" category="paragraph">可随时重新激活延迟或取消的配置分析。</block>
+  <block id="58e2f7c25b65ba2e36fc6778b985ab34" category="list-text">在*Inventory*选项卡中，向下滚动到要重新激活的配置，选择三点菜单，然后选择*Re再 激活*。</block>
+  <block id="f01282bfdabc9c97224d922f36d898b8" category="paragraph">此时将重新激活配置分析、并每天继续执行此分析。</block>
+  <block id="822748e99c70e9162ce5432b2e1eff5c" category="section-title">2025年5月4日</block>
+  <block id="f865802ec5f0fe104a096589d51b39a4" category="sidebar">延迟配置分析</block>
 </blocks>
