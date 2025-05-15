@@ -38,9 +38,9 @@ summary: 延迟或取消不适用于数据库环境的特定数据库配置分�
 [role="tabbed-block"]
 ====
 .延迟
+--
 延迟以停止配置分析30天。30天后、分析将自动重新启动。
 
---
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
@@ -53,9 +53,9 @@ summary: 延迟或取消不适用于数据库环境的特定数据库配置分�
 
 --
 .取消
+--
 取消以无限期停止配置分析。您可以根据需要重新启动分析。
 
---
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
@@ -68,9 +68,9 @@ summary: 延迟或取消不适用于数据库环境的特定数据库配置分�
 
 --
 .重新激活
+--
 可随时重新激活延迟或取消的配置分析。
 
---
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
