@@ -132,4 +132,4 @@ Microsoft SQL Server内部存储卷大小的成本节省和节省百分比计算
 
 == SQL Server实例中的数据库数量
 
-在清单选项卡和信息板上、Workload Factory最多支持SQL Server实例中的850个数据库。
+在清单选项卡和信息板上、Workload Factory最多支持SQL Server实例中的1,500个数据库。

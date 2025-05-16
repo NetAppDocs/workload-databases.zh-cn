@@ -1002,7 +1002,6 @@
   <block id="425a11288e6c089ecf9966b89b9be4eb" category="list-text">如果目标FSx for ONTAP文件系统位于其他AWS帐户中、则优化评估无法确定是否正在使用跨区域复制(CRR)。</block>
   <block id="a73971e47314d5a9302d6e0e452948e6" category="list-text">工作负载出厂时仅评估源FSx for ONTAP文件系统的CRR配置。</block>
   <block id="af64c2575cf7c41d9a388382dfd2aef2" category="section-title">SQL Server实例中的数据库数量</block>
-  <block id="b4f10df58cb8c1f0e0b30bd6fc637ddd" category="paragraph">在清单选项卡和信息板上、Workload Factory最多支持SQL Server实例中的850个数据库。</block>
   <block id="fb090b715eaceea73761a137a2eb45c0" category="list-text">故障恢复能力：包括本地快照、FSx for ONTAP备份和跨区域复制(CRR)</block>
   <block id="765282496f8377d23a4dec7887b9cea8" category="paragraph">*全选*为默认设置，但您可以选择要优化的特定资源。</block>
   <block id="c69c68bea63a58faad0233887cb8a9aa" category="section-title">2025年4月4日</block>
@@ -1081,4 +1080,5 @@
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*REST API*：使用工作负载工厂REST API部署和管理适用于ONTAP文件系统和其他AWS资源的FSx。</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation*：使用AWS CloudFormation代码执行您在工作负载出厂控制台中定义的操作、以便在您的AWS帐户中对CloudFormation堆栈中的AWS和第三方资源进行建模、配置和管理。</block>
   <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">*Terraform BlueXP  工作负载工厂提供程序*：使用Terraform构建和管理在工作负载工厂控制台中生成的基础架构工作流。</block>
+  <block id="5614519834733a69bfb8911eae5d33b8" category="paragraph">在清单选项卡和信息板上、Workload Factory最多支持SQL Server实例中的1,500个数据库。</block>
 </blocks>
