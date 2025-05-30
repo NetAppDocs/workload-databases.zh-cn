@@ -169,7 +169,56 @@ image:screenshot-ebs-savings-calculator-update.png["节省量计算器页面的�
 开始之前、请满足以下前提条件：
 
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_read-only或_read/write_权限"^]在AWS帐户中、在*浏览节省量*选项卡下检测Elasic Block Store (EBS)和FSx for Windows系统、并在节省量计算器中显示节省量计算结果。
-* 在数据库清单中检测EBS和FSx for Windows存储中的主机。link:detect-host.html["了解如何检测主机"](英文)
+* 要获取实例类型建议并提高成本准确性，请执行以下操作：
++
+.. 授予 Amazon CloudWatch 和 AWS Compute Optimizer 权限。
++
+... 登录AWS管理控制台并打开IAM服务。
+... 编辑 IAM 角色的策略。复制并添加以下 Amazon CloudWatch 和 AWS Compute Optimizer 权限。
++
+[source, json]
+----
+{
+"Version": "2012-10-17",
+"Statement": [
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:GetEnrollmentStatus",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:PutRecommendationPreferences",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:GetEffectiveRecommendationPreferences",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "compute-optimizer:GetEC2InstanceRecommendations",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "autoscaling:DescribeAutoScalingGroups",
+   "Resource": "*"
+  },
+  {
+   "Effect": "Allow",
+   "Action": "autoscaling:DescribeAutoScalingInstances",
+   "Resource": "*"
+  }
+]
+}
+----
+
+
+.. 选择将可计费 AWS 账户加入 AWS Compute Optimizer。
+
+
 
 
 按照适用于您的存储类型的选项卡下的步骤进行操作。

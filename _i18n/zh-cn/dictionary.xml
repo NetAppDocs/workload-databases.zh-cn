@@ -212,7 +212,6 @@
   <block id="1fed0bc2c72e36c6e777e5a1e7def8f8" category="list-text">选择*是，通过工作负载工厂管理实例*或*否*。</block>
   <block id="e13a15252a4dbf9779c44afe477e3343" category="list-text">单击 * 完成 * 。</block>
   <block id="bfe3baeb9acd99f2f2bce618befc4139" category="paragraph">开始之前、请满足以下前提条件：</block>
-  <block id="def9511b261c88922ac5674a45135773" category="inline-link-macro">了解如何检测主机</block>
   <block id="201c4d58b6fa62f021a1865e894234ef" category="list-text">*每月变更率*：输入克隆和快照数据每月平均变更的百分比。</block>
   <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">部署方法</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">获取帮助</block>
@@ -595,7 +594,6 @@
   <block id="0df73578de7c34ef150c1f37953113f5" category="paragraph">现在、您可以在节省量计算器中探索使用FSx for Windows File Server存储在Amazon EC2上检测到的Microsoft SQL Server的节省量。根据您的SQL Server和存储要求、您可能会发现FSx for ONTAP存储是最经济高效的数据库工作负载。</block>
   <block id="b68e42fa600661a13849ea15c997cea3" category="paragraph">您可以使用两个计算器选项来比较系统与FSx for ONTAP之间的成本—自定义和检测。</block>
   <block id="0e98c2470a9fecd3035980d6c9bd5dfe" category="section-title">了解检测到的主机的节省量</block>
-  <block id="70cd361d4d146e35701d6144f1c0ab2b" category="list-text">在数据库清单中检测EBS和FSx for Windows存储中的主机。<block ref="c3d02703f332265b4bfd19fd03e6dd21" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="8f334cc9204ebef849d5d29b3d23b485" category="list-text">在“数据库”磁贴中，从下拉菜单中选择*Explore savings *，然后选择*Microsoft SQL Server on FSx for Windows*。</block>
   <block id="bd0005565e08b9807da651535d09e628" category="inline-xref">了解通过自定义实现的节省</block>
   <block id="b2b254b73e406acc574452e9f29f5d9a" category="list-text">在Explore savings选项卡中，单击*Explore savings * of the database server using EBS storage。</block>
@@ -1079,6 +1077,11 @@
   <block id="e234d079cc2fccaeed8041a81e1e8122" category="list-text">*CloudShell命令行界面*：工作负载工厂包括一个CloudShell命令行界面、用于通过一个基于浏览器的命令行界面跨帐户管理和操作AWS和NetApp环境。从工作负载出厂控制台的顶部栏访问CloudShell。</block>
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*REST API*：使用工作负载工厂REST API部署和管理适用于ONTAP文件系统和其他AWS资源的FSx。</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation*：使用AWS CloudFormation代码执行您在工作负载出厂控制台中定义的操作、以便在您的AWS帐户中对CloudFormation堆栈中的AWS和第三方资源进行建模、配置和管理。</block>
-  <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">*Terraform BlueXP  工作负载工厂提供程序*：使用Terraform构建和管理在工作负载工厂控制台中生成的基础架构工作流。</block>
   <block id="5614519834733a69bfb8911eae5d33b8" category="paragraph">在清单选项卡和信息板上、Workload Factory最多支持SQL Server实例中的1,500个数据库。</block>
+  <block id="905bc3578e603008d83976307778ddcc" category="list-text">要获取实例类型建议并提高成本准确性，请执行以下操作：</block>
+  <block id="10d9194778791c152af2c0be1806e0b1" category="list-text">授予 Amazon CloudWatch 和 AWS Compute Optimizer 权限。</block>
+  <block id="1dffe1578c264cd074d1fbf2823deeca" category="list-text">登录AWS管理控制台并打开IAM服务。</block>
+  <block id="429fc992484e56fc5119b7b343df8bab" category="list-text">编辑 IAM 角色的策略。复制并添加以下 Amazon CloudWatch 和 AWS Compute Optimizer 权限。</block>
+  <block id="948ce9adc60f5781dbfbd99d2c9d74d5" category="list-text">选择将可计费 AWS 账户加入 AWS Compute Optimizer。</block>
+  <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Terraform BlueXP  工作负载工厂提供程序*：使用Terraform构建和管理在工作负载工厂控制台中生成的基础架构工作流。</block>
 </blocks>
