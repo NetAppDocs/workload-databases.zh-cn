@@ -145,7 +145,6 @@
   <block id="6d7b2a50e46356cb2ecf2805e3b5bb59" category="paragraph">如果要隔离数据库的存储、可以使用_virtual mount point_来执行此操作。通过虚拟挂载点、您可以将数据库整合到主机上的几个公用驱动器中。</block>
   <block id="92e04fe5d2a269f38993f394f5b1eb9b" category="admonition">使用SMB协议的Microsoft SQL Server不支持创建数据库。</block>
   <block id="7dd1095f5b5a654fc784015352d1066d" category="paragraph">在创建新数据库之前、请确保满足以下前提条件。</block>
-  <block id="5c42fb317128e01d6e1476bcde042be1" category="inline-link-macro">AWS帐户凭据和_Read_或_Automate _模式权限</block>
   <block id="0b059e758179ae9106a6228fd71a42cb" category="list-text">Windows 主机</block>
   <block id="db205765ba81a6c0d96687e971328059" category="list-text">如果使用_Quick creen_模式、则Microsoft SQL Server上必须有足够的可用驱动器号才能为新数据库创建新驱动器。</block>
   <block id="78898e52fcbdc5337204a384f2456d4f" category="list-text">Microsoft SQL Server</block>
@@ -590,8 +589,6 @@
   <block id="920d5db87e34d780e98c3efabde9041b" category="summary">在BlueXP  工作负载工厂中为数据库创建新的Microsoft SQL Server。</block>
   <block id="e688adbe92be47aae67ff0624dc5033a" category="list-text">Microsoft SQL Server部署模式都要求使用iSCSI存储协议创建LUN。在通过FSx for ONTAP为SQL Server配置LUN的过程中、工作负载工厂会配置Microsoft多路径I/O (MPIO)。MPIO根据AWS和NetApp最佳实践进行配置。</block>
   <block id="cef4156e4fa9e5869d4dee02c1b39d6e" category="paragraph">通过具有_Automate权限的AWS凭据、Workload Factory可以在工作负载工厂中使用您的AWS帐户部署和管理新的数据库主机。</block>
-  <block id="cc04c98a943715d655ef7f99796aae2a" category="paragraph">通过具有_read_权限的AWS凭据、Workload Factory可以生成CloudFormation模板、以供您在AWS CloudFormation控制台中使用。</block>
-  <block id="b4db11619512665a02befd7699ec1538" category="paragraph">如果您在工作负载工厂中没有关联的AWS凭据、而您希望在工作负载工厂中创建新服务器、请按照*选项1*转到凭据页面。为数据库工作负载的_Automate_mode手动添加所需的凭据和权限。</block>
   <block id="fea8f5f977933d9473ff7671b078a975" category="paragraph">如果要在工作负载工厂中完成创建新服务器表单、以便下载完整的YAML文件模板以在AWS CloudFormation中部署、请按照*选项2*操作、确保您具有在AWS CloudFormation中创建新服务器所需的权限。为数据库工作负载的_Read_模式手动添加所需的凭据和权限。</block>
   <block id="d6631cc039c798bd233c70bae3023936" category="paragraph">或者、您也可以从Codebox下载部分完成的YAML文件模板、以便在工作负载出厂时创建堆栈、而无需任何凭据或权限。从“代码”框的下拉列表中选择*CloudFormation*以下载YAML文件。</block>
   <block id="6705f898558de9ace7f76d4dba3f6b46" category="paragraph">服务器部署完成后、工作负载工厂不会在Microsoft SQL Server上启用远程连接。要启用远程连接、请完成以下步骤。</block>
@@ -602,14 +599,11 @@
   <block id="d824723631e1f8de1b8bcee4a1de9c1e" category="paragraph">通过创建新的Microsoft SQL数据库、您可以在BlueXP  工作负载工厂中管理数据库的资源。</block>
   <block id="86b0140bb79dd7663425ee50a4e68361" category="inline-link-macro">了解工作负载工厂中的操作模式</block>
   <block id="3a0419549547987e965186c31b3610eb" category="paragraph">在工作负载工厂中创建数据库需要自动模式权限。或者、在基本模式下、您可以复制或下载部分完成的代码模板、以便在工作负载出厂时完成此操作。<block ref="5968ff3deed2bc48d2bc3a731c0f115b" category="inline-link-macro-rx"></block> 以确定要使用的模式。</block>
-  <block id="ee1084f844db356e13c4fc5d627f91d0" category="list-text">您必须<block ref="2d1718ee7160678739db1128b08d1c1f" category="inline-link-macro-rx"></block>在工作负载出厂时创建新数据库。</block>
   <block id="3bfb7d9388422f644c389daf1ad5c953" category="paragraph">或者、您也可以使用代码框复制模板、以便使用REST API在工作负载出厂时部署数据库。<block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="4df748154a165347722755bf184e6bf0" category="list-text">您必须在工作负载出厂时拥有托管的Microsoft SQL Server、数据库才能托管新数据库。</block>
-  <block id="abbd61357a5610bb8f50c7948c4b04df" category="paragraph">您可以使用_Quick cre成_或_Advanced cre成_部署模式在工作负载工厂中完成此任务、并具有_read_或_Automate _模式权限。</block>
   <block id="c6416602b6423e2ef924b15ae4981503" category="summary">在BlueXP  工作负载工厂中为数据库创建沙盒克隆。</block>
   <block id="8227770ecb65ecb8937d56c6f259900e" category="doc">在BlueXP  工作负载工厂中为数据库创建沙盒克隆</block>
   <block id="86fe540236465ca4e3d667ed76acb230" category="paragraph">通过在BlueXP  Workload Factory中为数据库创建沙盒克隆、您可以使用该克隆进行开发、测试、集成、分析、培训、QA等操作、而无需更改源数据库。</block>
-  <block id="799cecdb1e7c1ee1725fa70f3b9556e5" category="list-text">您必须<block ref="2d1718ee7160678739db1128b08d1c1f" category="inline-link-macro-rx"></block>在工作负载出厂时创建沙盒克隆。</block>
   <block id="977ef254da68f1a51ae8a6edf3a4791f" category="paragraph">或者、您也可以使用代码框复制部分完成的模板或创建已完成的模板、以便可以使用REST API在工作负载出厂时创建沙盒克隆。<block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="36acb14683eb2b002c873c33647cbdba" category="list-text">您必须在工作负载出厂时拥有受管Microsoft SQL Server、数据库才能托管新的沙盒克隆。</block>
   <block id="23fb636062a19e5367fc7e960e315c4c" category="list-text">*挂载*：克隆包含多个数据和/或日志文件的SQL数据库时、工作负载出厂时会克隆自动分配或定义的驱动器盘符下的所有文件。</block>
@@ -905,7 +899,6 @@
   <block id="6da89f0beda0fbec41b06125b0b7ad32" category="section-title">延迟和取消配置分析</block>
   <block id="4a9a50cea48d9e2ded3becc284af4e41" category="paragraph">某些配置可能不适用于您的数据库环境。现在、您可以选择将特定配置分析推迟30天或取消分析。</block>
   <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">更新了权限术语</block>
-  <block id="a7b97ab7d88b015e92ed51ef4bee9c25" category="paragraph">现在、工作负载出厂用户界面和文档使用"只读"来表示读取权限、使用"读写"来表示自动执行权限。</block>
   <block id="2d07fc9146d02690dffeffa52fbd2ec4" category="list-text">内部主机删除</block>
   <block id="1c28fa92b25f4914c091b667402466d3" category="list-text">在探讨了Microsoft SQL Server内部主机的节省之后、您可以选择从BlueXP  工作负载出厂时删除内部主机记录。选择Microsoft SQL Server内部部署主机的三点菜单，然后选择*Delete*。</block>
   <block id="04467e563313dfe5a1da17bd70a4de75" category="list-text">在*Inventory*选项卡中，选择*Instances *选项卡。</block>
@@ -1058,8 +1051,6 @@
   <block id="2a627091d8c05a05162dae18a0e3dc31" category="admonition">工作负载工厂仅支持 Microsoft SQL Server 主机实例的注册和管理。根据您在工作负载工厂中选择的 AWS 账户凭证，PostgreSQL 和 Oracle 主机可能会出现在清单中。目前，工作负载工厂仅支持在 Amazon Linux 操作系统上运行的未注册 PostgreSQL 实例，以及仅在 Red Hat Enterprise Linux 上运行的 Oracle 实例。</block>
   <block id="5e6ee18c02f118771f0e10235d44bd14" category="section-title">在私有网络中注册主机实例</block>
   <block id="0af95213cc557c61a7ba3ca92d68f09e" category="paragraph">要在没有外部连接的私有网络中注册主机实例，以下端点需要在与 SQL 服务器所在子网关联的 VPC 中可用。确保接口端点允许连接的安全组中的端口443。</block>
-  <block id="d38541ea862d6762d01f5f9d42fbd683" category="inline-link-macro">您必须添加 AWS 账户凭证和 _read_ 或 _automate_ 模式权限</block>
-  <block id="36bfb43c49e597b3bb45a5bb2997033b" category="paragraph">实例的主机必须显示在“清单”选项卡中。要使主机显示在清单中， <block ref="dd302a73ba9dc99cb46da731db0bf41c" category="inline-link-macro-rx"></block> 。</block>
   <block id="6a408aaa659cc5010ab5ed464d20688c" category="section-title">注册主机实例</block>
   <block id="75cd4168051c5052e88a17b464261a1b" category="paragraph">注册主机实例包括实例身份验证和准备。</block>
   <block id="573898775af774ec571967393eb2000b" category="list-text">在“库存”选项卡中，选择“*实例*”选项卡。</block>
@@ -1091,4 +1082,15 @@
   <block id="c38254582571637e4bded341a22ff035" category="sidebar">管理实例</block>
   <block id="414fc89f66239e288860442b939928c9" category="sidebar">实施配置最佳实践</block>
   <block id="a78c9036bfa9cb64272150072bb64123" category="sidebar">数据库配置分析</block>
+  <block id="4ead5e435cb4f2c7cf627b1d1e84c333" category="paragraph">工作负载工厂用户界面和文档现在使用“只读”来指代读取权限，使用“读/写”来指代自动化权限。</block>
+  <block id="e38fc2fc30201bd6a5c959baea91e5cf" category="paragraph">具有读/写权限的 AWS 凭证允许工作负载工厂从您的 AWS 账户在工作负载工厂内部署和管理新的数据库主机。</block>
+  <block id="9d3d55473abbb7eec4a1df3a6fd8ac50" category="paragraph">具有“只读”权限的 AWS 凭证允许工作负载工厂生成 CloudFormation 模板，供您在 AWS CloudFormation 控制台中使用。</block>
+  <block id="1a6183e6bc3067f41e368cb8ae65eee0" category="paragraph">如果您在工作负载工厂中没有关联的AWS凭据、而您希望在工作负载工厂中创建新服务器、请按照*选项1*转到凭据页面。手动添加数据库工作负载的读/写模式所需的凭据和权限。</block>
+  <block id="b686945750b38d40d97b18356ad0a4c6" category="paragraph">如果要在工作负载工厂中完成创建新服务器表单、以便下载完整的YAML文件模板以在AWS CloudFormation中部署、请按照*选项2*操作、确保您具有在AWS CloudFormation中创建新服务器所需的权限。手动添加数据库工作负载的_只读_模式所需的凭据和权限。</block>
+  <block id="a8ff9ed21e668d7299478bf75b16abd9" category="inline-link-macro">AWS 账户凭证和“只读”或“读/写”模式权限</block>
+  <block id="f62c0d8d53ecd7695a50c95462ff39bc" category="list-text">您必须<block ref="9c62e895201e97f6c74e26e0f3de2d15" category="inline-link-macro-rx"></block>在工作负载出厂时创建新数据库。</block>
+  <block id="970fa5fe1f85bede58eadf785f5bb30d" category="paragraph">您可以使用_快速创建_或_高级创建_部署模式在工作负载工厂中以_只读_或_读/写_模式权限完成此任务。</block>
+  <block id="1ecac8592ecd595bc4f53507e476fc53" category="list-text">您必须<block ref="9c62e895201e97f6c74e26e0f3de2d15" category="inline-link-macro-rx"></block>在工作负载出厂时创建沙盒克隆。</block>
+  <block id="b2a6b8ac31e0bf9968f6f80649cc61cd" category="inline-link-macro">您必须添加 AWS 账户凭证和“只读”或“读/写”模式权限</block>
+  <block id="b6693184dc0e8cc975fb8e936b04d129" category="paragraph">实例的主机必须显示在“清单”选项卡中。要使主机显示在清单中， <block ref="99382ab95f660f372dfed7d2289ac38a" category="inline-link-macro-rx"></block> 。</block>
 </blocks>

@@ -58,16 +58,16 @@ NOTE: 在_Quick creel_中、HA是默认部署模式、Windows 2016是默认Windo
 +
 .. *AWS凭据*：选择具有自动化权限的AWS凭据以部署新数据库主机。
 +
-通过具有_Automate权限的AWS凭据、Workload Factory可以在工作负载工厂中使用您的AWS帐户部署和管理新的数据库主机。
+具有读/写权限的 AWS 凭证允许工作负载工厂从您的 AWS 账户在工作负载工厂内部署和管理新的数据库主机。
 
 +
-通过具有_read_权限的AWS凭据、Workload Factory可以生成CloudFormation模板、以供您在AWS CloudFormation控制台中使用。
+具有“只读”权限的 AWS 凭证允许工作负载工厂生成 CloudFormation 模板，供您在 AWS CloudFormation 控制台中使用。
 
 +
-如果您在工作负载工厂中没有关联的AWS凭据、而您希望在工作负载工厂中创建新服务器、请按照*选项1*转到凭据页面。为数据库工作负载的_Automate_mode手动添加所需的凭据和权限。
+如果您在工作负载工厂中没有关联的AWS凭据、而您希望在工作负载工厂中创建新服务器、请按照*选项1*转到凭据页面。手动添加数据库工作负载的读/写模式所需的凭据和权限。
 
 +
-如果要在工作负载工厂中完成创建新服务器表单、以便下载完整的YAML文件模板以在AWS CloudFormation中部署、请按照*选项2*操作、确保您具有在AWS CloudFormation中创建新服务器所需的权限。为数据库工作负载的_Read_模式手动添加所需的凭据和权限。
+如果要在工作负载工厂中完成创建新服务器表单、以便下载完整的YAML文件模板以在AWS CloudFormation中部署、请按照*选项2*操作、确保您具有在AWS CloudFormation中创建新服务器所需的权限。手动添加数据库工作负载的_只读_模式所需的凭据和权限。
 
 +
 或者、您也可以从Codebox下载部分完成的YAML文件模板、以便在工作负载出厂时创建堆栈、而无需任何凭据或权限。从“代码”框的下拉列表中选择*CloudFormation*以下载YAML文件。
@@ -151,13 +151,13 @@ NOTE: HA部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。
 通过具有_Automate权限的AWS凭据、Workload Factory可以在工作负载工厂中使用您的AWS帐户部署和管理新的数据库主机。
 
 +
-通过具有_read_权限的AWS凭据、Workload Factory可以生成CloudFormation模板、以供您在AWS CloudFormation控制台中使用。
+具有“只读”权限的 AWS 凭证允许工作负载工厂生成 CloudFormation 模板，供您在 AWS CloudFormation 控制台中使用。
 
 +
-如果您在工作负载工厂中没有关联的AWS凭据、而您希望在工作负载工厂中创建新服务器、请按照*选项1*转到凭据页面。为数据库工作负载的_Automate_mode手动添加所需的凭据和权限。
+如果您在工作负载工厂中没有关联的AWS凭据、而您希望在工作负载工厂中创建新服务器、请按照*选项1*转到凭据页面。手动添加数据库工作负载的读/写模式所需的凭据和权限。
 
 +
-如果要在工作负载工厂中完成创建新服务器表单、以便下载完整的YAML文件模板以在AWS CloudFormation中部署、请按照*选项2*操作、确保您具有在AWS CloudFormation中创建新服务器所需的权限。为数据库工作负载的_Read_模式手动添加所需的凭据和权限。
+如果要在工作负载工厂中完成创建新服务器表单、以便下载完整的YAML文件模板以在AWS CloudFormation中部署、请按照*选项2*操作、确保您具有在AWS CloudFormation中创建新服务器所需的权限。手动添加数据库工作负载的_只读_模式所需的凭据和权限。
 
 +
 或者、您也可以从Codebox下载部分完成的YAML文件模板、以便在工作负载出厂时创建堆栈、而无需任何凭据或权限。从“代码”框的下拉列表中选择*CloudFormation*以下载YAML文件。

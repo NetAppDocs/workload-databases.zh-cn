@@ -26,7 +26,7 @@ NOTE: 使用SMB协议的Microsoft SQL Server不支持创建数据库。
 .开始之前
 在创建新数据库之前、请确保满足以下前提条件。
 
-凭据和权限:: 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS帐户凭据和_Read_或_Automate _模式权限"^]在工作负载出厂时创建新数据库。
+凭据和权限:: 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS 账户凭证和“只读”或“读/写”模式权限"^]在工作负载出厂时创建新数据库。
 +
 --
 或者、您也可以使用代码框复制模板、以便使用REST API在工作负载出厂时部署数据库。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["了解有关CodeBox自动化的更多信息"^](英文)
@@ -41,7 +41,7 @@ AWS Systems Manager:: 确保已通过AWS System Manager在Microsoft SQL主机中
 
 == 创建数据库
 
-您可以使用_Quick cre成_或_Advanced cre成_部署模式在工作负载工厂中完成此任务、并具有_read_或_Automate _模式权限。
+您可以使用_快速创建_或_高级创建_部署模式在工作负载工厂中以_只读_或_读/写_模式权限完成此任务。
 
 [role="tabbed-block"]
 ====
