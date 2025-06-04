@@ -4,17 +4,17 @@ permalink: create-database-server.html
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
 summary: 在BlueXP  工作负载工厂中为数据库创建新的Microsoft SQL Server。 
 ---
-= 在BlueXP  工作负载工厂中为数据库创建数据库服务器
+= 在数据库工作负载工厂中创建 Microsoft SQL Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在BlueXP  工作负载工厂中为数据库创建新的Microsoft SQL Server或数据库主机需要部署FSx for ONTAP文件系统并为Active Directory提供资源。
+在数据库工作负载工厂中创建新的 Microsoft SQL Server 或数据库主机需要 FSx for ONTAP 文件系统部署和 Active Directory 资源。
 
 .关于此任务
-在从工作负载工厂创建Microsoft SQL Server之前、请了解数据库主机配置的可用存储部署类型、Active Directory部署、工作负载工厂操作模式以及完成此操作的要求。
+在从工作负载工厂创建 Microsoft SQL Server 之前，请了解数据库主机配置的可用存储部署类型、Microsoft 多路径 I/O 配置、Active Directory 部署、网络详细信息以及完成此操作的要求。
 
 部署完成后，您需要 <<第2步：在Microsoft SQL Server上启用远程连接,在Microsoft SQL Server上启用远程连接>>。
 
@@ -58,19 +58,12 @@ Active Directory:: 在部署期间、Active Directory (AD)会发生以下情况�
 
 
 --
-工作负载出厂操作模式:: 工作负载工厂提供三种操作模式、具体取决于您在让工作负载工厂管理AWS资源方面的适应程度。
 
-
-*_Basic_ mode*：在此操作模式下、您无需在工作负载工厂关联任何AWS帐户凭据。您可以从CodeBox复制或下载部分填充的YAML模板、以便在工作负载出厂时完成。
-
-*_读取_模式*：在此操作模式下、您需要提供具有读取权限的AWS帐户凭据、以便填写_Quick cree_或_Advanced cree_表单、然后复制或下载该表单。您也可以使用填写好的表单详细信息从工作负载工厂重定向到CloudFormation。您将能够在工作负载工厂管理已部署的数据库服务器。
-
-*_Automation_mode*：在此操作模式下、您可以提供具有自动化权限的AWS帐户凭据、以便在工作负载工厂中创建和管理AWS资源。
 
 .开始之前
 在创建新数据库主机之前、请确保满足以下前提条件。
 
-凭据和权限:: 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS帐户凭据和自动模式权限"^]在工作负载出厂时创建新的数据库主机。
+凭据和权限:: 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS 账户凭证和读/写模式权限"^]在工作负载出厂时创建新的数据库主机。
 Active Directory:: 连接到Active Directory时、您必须具有具有执行以下操作的管理访问权限：
 +
 --
@@ -125,13 +118,16 @@ NOTE: 在_Quick creel_中、FCI是默认部署模式、Windows 2016是默认Wind
 
 .. *区域和VPC*：选择区域和VPC网络。
 +
-确保现有接口端点的安全组允许对选定子网访问HTTPS (443)协议。
+确保部署子网与现有接口端点相关联，并且安全组允许通过 HTTPS (443) 协议访问所选子网。
 
 +
 AWS服务接口端点(SQS、FSx、EC2、CloudWatch、CloudFormation、 SSM)和S3网关端点会在部署期间创建(如果未找到)。
 
 +
 如果尚未将VPC DNS属性 `EnableDnsSupport` 和 `EnableDnsHostnames` 设置为，则会对其进行修改以启用端点地址解析 `true`。
+
++
+使用跨 VPC DNS 时，DNS 所在的另一个 VPC 上的终端节点的安全组应允许端口 443 访问部署子网。否则，您应该在加入跨 VPC Active Directory 时提供本地 VPC 的 DNS 解析器。在多复制域控制器环境中，如果某些域控制器无法从子网访问，您可以“重定向到 CloudFormation”并输入 `Preferred domain controller`连接到 Active Directory。
 
 .. *可用性分区*：根据故障转移集群实例(FCI)部署模式选择可用性分区和子网。
 +

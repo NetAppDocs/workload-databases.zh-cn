@@ -38,20 +38,36 @@ sidebar:
         url: "/create-database-server.html"
       - title: 创建PostgreSQL服务器
         url: "/create-postgresql-server.html"
-    - title: 检测数据库服务器
-      url: "/detect-host.html"
-    - title: 创建数据库
-      url: "/create-database.html"
+    - title: 管理实例
+      entries:
+      - title: 实例管理
+        url: manage-instance.html
+      - title: 注册实例
+        url: "/register-instance.html"
+      - title: 查看数据库
+        url: "/view-databases.html"
+      - title: 创建数据库
+        url: "/create-database.html"
+      - title: 创建沙盒克隆
+        url: "/create-sandbox-clone.html"
     - title: 使用CodeBox实现自动化
       url: "/automate-codebox.html"
   - title: 管理和监控
     entries:
+    - title: 监控数据库
+      url: "/monitor-databases.html"
+    - title: 实施配置最佳实践
+      entries:
+      - title: 数据库配置分析
+        url: "/optimize-overview.html"
+      - title: 实施结构良好的数据库配置
+        url: "/optimize-configurations.html"
+      - title: 延迟配置分析
+        url: "/postpone-analysis.html"
     - title: 管理Microsoft SQL Server
       url: "/manage-server.html"
     - title: 管理克隆
       entries:
-      - title: 创建沙盒克隆
-        url: "/create-sandbox-clone.html"
       - title: 检查沙盒克隆的完整性
         url: "/check-clone-integrity.html"
       - title: 还原沙盒克隆
@@ -66,16 +82,6 @@ sidebar:
         url: "/split-clone.html"
       - title: 删除沙盒克隆
         url: "/delete-clone.html"
-    - title: 监控数据库
-      url: "/monitor-databases.html"
-    - title: 优化SQL Server
-      entries:
-      - title: 持续优化概述
-        url: "/optimize-overview.html"
-      - title: 优化配置
-        url: "/optimize-configurations.html"
-      - title: 延迟配置分析
-        url: "/postpone-analysis.html"
   - title: 知识和支持
     entries:
     - title: 注册以获得支持

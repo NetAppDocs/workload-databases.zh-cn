@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: view-databases.html 
+keywords:  
+summary: 要获取工作负载工厂中数据库资源的摘要，请查看数据库清单中的所有数据库。您还可以查看单个注册实例的数据库。 
+---
+= 在数据库的工作负载工厂中查看数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+要获取工作负载工厂中数据库资源的摘要，请查看数据库清单中的所有数据库。您还可以查看单个注册实例的数据库。
+
+.开始之前
+* 包含数据库资源的主机实例必须具有 FSx for ONTAP 文件系统存储。
+* 主机实例必须在工作负载工厂中注册。了解如何link:register-instance.html["注册主机实例"]。
+
+
+.步骤
+[role="tabbed-block"]
+====
+.查看单个实例的数据库
+--
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在数据库磁贴中，选择*转至数据库清单*。
+. 在数据库中，选择*Inventory*选项卡。
+. 单击下拉箭头展开主机所在的行以查看其数据库。
++
+此时、主机将展开并显示主机实例。
+
+. 单击包含要查看的数据库的实例的三点菜单。
+. 选择*查看数据库*。
+
+
+--
+.查看所有实例的数据库
+--
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在数据库磁贴中，选择*转至数据库清单*。
+. 在数据库中，选择*Inventory*选项卡。
+. 单击下拉箭头展开主机所在的行以查看其数据库。
++
+此时、主机将展开并显示主机实例。
+
+. 单击包含要查看的数据库的实例的三点菜单。
+. 选择*查看数据库*。
+
+
+--
+====
+.结果
+您已查看工作负载工厂内的数据库资源。

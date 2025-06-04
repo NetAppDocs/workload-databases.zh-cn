@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: deregister-instance.html 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, deregister instance, unregister instance, remove instance 
+summary: 如果您不再想要部署或监控实例资源，请取消注册主机实例。 
+---
+= 在工作负载工厂中注销主机实例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您不再需要部署或监控实例资源，请取消注册主机实例。取消注册实例还会删除主机实例使用的存储容量。
+
+您可以稍后重新注册该实例。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在数据库磁贴中，选择*转至数据库清单*。
+. 在数据库中，选择*Inventory*选项卡。
+. 单击下拉箭头展开要取消注册的主机实例的行。
++
+此时、主机将展开并显示主机实例。
+
+. 单击实例的三点菜单即可取消注册。
+. 选择*注销*。
+
+
+.结果
+主机实例现已取消注册。您可以稍后重新注册该实例。

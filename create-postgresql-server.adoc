@@ -26,22 +26,12 @@ FSx for ONTAP文件系统具有两种PostgreSQL服务器部署模式：_High Ava
 
 
 --
-工作负载出厂操作模式:: 工作负载工厂提供三种操作模式、具体取决于您在让工作负载工厂管理AWS资源方面的适应程度。
-+
---
-*_Basic_ mode*：在此操作模式下、您无需在工作负载工厂关联任何AWS帐户凭据。您可以从CodeBox复制或下载部分填充的YAML模板、以便在工作负载出厂时完成。
-
-*_读取_模式*：在此操作模式下、您需要提供具有读取权限的AWS帐户凭据、以便填写_Quick cree_或_Advanced cree_表单、然后复制或下载该表单。您也可以使用填写好的表单详细信息从工作负载工厂重定向到CloudFormation。您将能够在工作负载工厂管理已部署的数据库服务器。
-
-*_Automation_mode*：在此操作模式下、您可以提供具有自动化权限的AWS帐户凭据、以便在工作负载工厂中创建和管理AWS资源。
-
---
 
 
 .开始之前
 在创建新数据库主机之前、请确保满足以下前提条件。
 
-凭据和权限:: 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS帐户凭据和自动模式权限"^]在工作负载出厂时创建新的数据库主机。
+凭据和权限:: 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS 账户凭证和读/写模式权限"^]在工作负载出厂时创建新的数据库主机。
 
 
 

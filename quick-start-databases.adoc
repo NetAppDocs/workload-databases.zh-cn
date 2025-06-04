@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: quick-start-databases.html 
-keywords: requirements, basic mode, read mode, automate mode 
-summary: 数据库有三种不同的模式、它们具有不同的要求。 
+keywords: requirements, basic mode, read-only mode, read/write mode 
+summary: 开始使用数据库工作负载工厂来使用基础设施即代码片段、发现主机、管理资源等。 
 ---
-= 快速入门—适用于数据库的BlueXP  工作负载工厂
+= 数据库工作负载工厂快速启动
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-借助适用于数据库的BlueXP  工作负载工厂、您可以立即在_BASIC模式下开始使用。如果您希望使用工作负载工厂来发现主机、管理资源等、可以通过几个步骤开始操作。
+使用数据库工作负载工厂，您可以立即以_基本_模式开始。如果您希望使用工作负载工厂来发现主机、管理资源等、可以通过几个步骤开始操作。
 
 要使用数据库、您必须拥有AWS帐户。
 
@@ -23,19 +23,19 @@ summary: 数据库有三种不同的模式、它们具有不同的要求。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 添加凭据和权限
 [role="quick-margin-para"]
-选择 link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["_BASIC _、_Read_和_Automate _操作模式"^]。
+选择 link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["_基本_、_只读_和_读/写_操作模式"^]。
 
 [role="quick-margin-para"]
 如果您在_BASIC模式下运行、则无需再继续操作。您可以开始使用数据库复制部分完成的代码示例。在数据库磁贴中，单击*Deploy database host*。link:create-database-server.html["了解如何部署数据库服务器"](英文)
 
 [role="quick-margin-para"]
-如果您在_Read_或_Automate _模式下运行、则需要执行以下操作：选择工作负载功能(如数据库和GenAI)、创建IAM策略以确保您拥有在_Read_或_Automate _模式下运行所需link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手动向帐户添加凭据"^]的正确权限。
+如果您在“只读”或“读/写”模式下操作，则需要link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手动向帐户添加凭据"^]其中包括选择工作负载功能（例如数据库和 GenAI）以及创建 IAM 策略以确保您拥有以_只读_或_读/写_模式操作的正确权限。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 部署数据库服务器
 [role="quick-margin-para"]
-最后、如果选择在_Automate模式下运行、则必须 link:create-database-server.html["部署"] 在添加用户数据库之前使用或 link:detect-host.html["检测数据库服务器"] 管理主机资源和。
+最后，如果您选择以读/写模式操作，则必须link:create-database-server.html["部署主机服务器"]或者link:register-instance.html["注册实例"]管理您的主机资源并添加用户数据库之前。
 
 .下一步行动
-如果数据库清单中有FSx for ONTAP受管主机，则可以 link:create-database.html["创建用户数据库"] 或 link:create-sandbox-clone.html["克隆主机以创建沙盒"]。
+当您在数据库清单中向 FSx for ONTAP 文件系统存储注册主机实例后，您可以link:create-database.html["创建用户数据库"]或者link:create-sandbox-clone.html["克隆主机以创建沙盒"] 。
 
 如果数据库清单中包含Elasic Block Store或FSx for Windows File Server主机，则可以link:explore-savings.html["使用节省量计算器了解节省量"]。

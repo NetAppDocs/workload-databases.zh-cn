@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: learn-databases.html 
 keywords: Databases 
-summary: 适用于数据库的BlueXP  工作负载工厂是一种端到端数据库部署和维护服务、具有内置的最佳实践、可用于优化、自动精简克隆以及监控和解决问题。 
+summary: 数据库工作负载工厂是一种端到端数据库部署和维护服务，具有内置的优化、自动精简克隆以及监控和解决功能的最佳实践。 
 ---
-= 了解适用于数据库的BlueXP  工作负载工厂
+= 了解数据库工作负载工厂
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-适用于数据库的BlueXP  工作负载工厂是一种端到端数据库部署和维护服务、具有内置的最佳实践、可用于优化、自动精简克隆以及监控和解决问题。
+数据库工作负载工厂是一种端到端数据库部署和维护服务，具有内置的优化、自动精简克隆以及监控和解决功能的最佳实践。
 
 
 
-== 什么是适用于数据库的BlueXP  工作负载工厂？
+== 数据库的工作负载工厂是什么？
 
-适用于数据库的BlueXP  工作负载工厂可检测、评估、规划、配置Microsoft SQL Server数据并将其迁移到Amazon FSx for NetApp ONTAP (FSx for ONTAP)部署中、该部署经过优化、可满足您对性能和成本的预期、同时遵循行业最佳实践。在整个生命周期内、工作负载工厂为FSx for ONTAP上的数据库提供持续优化和管理。
+数据库工作负载工厂可检测、评估、规划、配置并将 Microsoft SQL Server 数据移动到 Amazon FSx for NetApp ONTAP（FSx for ONTAP）部署，并针对满足您的性能和成本预期进行优化，同时遵循行业最佳实践。在整个生命周期内、工作负载工厂为FSx for ONTAP上的数据库提供持续优化和管理。
 
 有关工作负载工厂的详细信息，请参见link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["工作负载出厂概述"^]。
 
@@ -81,7 +81,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["了�
 
 === 工作负载出厂时的操作模式
 
-三种不同的操作模式-_BASIC、_Read_和_Automate、为工作负载工厂内外的部署提供了灵活的选项。在_BASIC模式下、通过代码段以零信任获得即时价值、以便在工作负载出厂时使用。在_read_和_Automate _模式下、通过增量信任获得增量价值。
+三种不同的操作模式 - 基本模式、只读模式和读/写模式 - 为工作负载工厂内外的部署提供了灵活的选项。在_BASIC模式下、通过代码段以零信任获得即时价值、以便在工作负载出厂时使用。在只读模式和读/写模式下，通过增量信任获得增量价值。
 
 详细了解 link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["工作负载出厂时的操作模式"^]。
 

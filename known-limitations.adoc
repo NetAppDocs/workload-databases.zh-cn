@@ -15,6 +15,12 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 
 
 
+== 主机实例检测支持
+
+工作负载工厂支持检测仅在 Amazon Linux 操作系统上运行的 PostgreSQL 实例和仅在 Red Hat Enterprise Linux 上运行的 Oracle 实例。
+
+
+
 == AMI映像版本支持
 
 对于每个SQL版本、我们最多只会显示四个最新版本或修订版的AMI映像。我们不允许从早于最新四个版本的AMI映像进行安装。
@@ -127,9 +133,3 @@ Microsoft SQL Server内部存储卷大小的成本节省和节省百分比计算
 * 如果目标FSx for ONTAP文件系统位于其他AWS帐户中、则优化评估无法确定是否正在使用跨区域复制(CRR)。
 * 工作负载出厂时仅评估源FSx for ONTAP文件系统的CRR配置。
 
-
-
-
-== SQL Server实例中的数据库数量
-
-在清单选项卡和信息板上、Workload Factory最多支持SQL Server实例中的1,500个数据库。

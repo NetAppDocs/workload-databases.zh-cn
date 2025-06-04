@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: register-instance.html 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, manage host, view host, database host, database instance, manage, unregister 
+summary: 在BlueXP  工作负载工厂中管理数据库的Microsoft SQL Server实例。 
+---
+= 在数据库工作负载工厂中注册实例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+注册主机实例，以便您可以在数据库工作负载工厂中监控实例和数据库状态、资源利用率、保护和存储性能。
+
+数据库只能向 FSx for ONTAP 文件系统存储注册实例。
+
+
+
+== 关于任务
+
+注册主机实例包括两个步骤 - 对实例进行身份验证和准备实例，确保所有 AWS、NetApp 和 PowerShell 模块都安装在实例上。
+
+您可以使用 SQL Server 凭据或 Windows 凭据验证链接。
+
+
+NOTE: 工作负载工厂仅支持 Microsoft SQL Server 主机实例的注册和管理。根据您在工作负载工厂中选择的 AWS 账户凭证，PostgreSQL 和 Oracle 主机可能会出现在清单中。目前，工作负载工厂仅支持在 Amazon Linux 操作系统上运行的未注册 PostgreSQL 实例，以及仅在 Red Hat Enterprise Linux 上运行的 Oracle 实例。
+
+
+
+== 在私有网络中注册主机实例
+
+要在没有外部连接的私有网络中注册主机实例，以下端点需要在与 SQL 服务器所在子网关联的 VPC 中可用。确保接口端点允许连接的安全组中的端口443。
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
+
+
+如果您使用代理服务器进行EC2实例中的所有出站连接、则必须允许访问以下域、才能使管理操作正常工作：
+
+* ``.microsoft.com``
+* ``.powershellgallery.com``
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
+
+
+
+
+== 开始之前
+
+实例的主机必须显示在“清单”选项卡中。要使主机显示在清单中， link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["您必须添加 AWS 账户凭证和 _read_ 或 _automate_ 模式权限"^] 。
+
+
+
+== 注册主机实例
+
+注册主机实例包括实例身份验证和准备。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在数据库磁贴中，选择*转至数据库清单*。
+. 在数据库中，选择*Inventory*选项卡。
+. 在“库存”选项卡中，选择“*实例*”选项卡。
+. 导航到要管理的实例并选择*注册实例*。
+. 在注册实例页面上，输入 SQL Server 用户名和密码，以及 FSx for ONTAP 文件系统用户名和密码。
+. 选择 * 下一步 * 。
+. 准备实例，确保实例满足所需的先决条件。如果所有必需模块均已安装且先决条件均已满足，请选择“下一步”以注册实例。如果您需要采取行动，请按照以下步骤操作。
++
+.. 如果缺失，请选择工作负载工厂来*安装缺失的 AWS 和 NetApp PowerShell 模块*。
+.. 如果缺失，请选择“工作负载工厂”来“安装缺失的 PowerShell 7”。安装缺失的 PowerShell 模块 7 需要重启系统。
+.. 查看以下功能的先决条件列表。必须满足一个先决条件才能注册实例。
++
+*** *审查精心设计的问题和建议*
+*** *修复架构问题*
+*** 创建数据库
+*** 创建数据库副本（沙盒）
++
+完成先决条件包括更新您的 AWS IAM 策略权限、EC2 IAM 实例配置文件权限、SQL Server 权限和 PowerShell 模块。
+
+
+
+.. 完成至少一个缺失的先决条件才能继续。
+.. 当一个或多个先决条件完成并且检查*准备就绪*时，您可以选择*注册*该实例。
+
+
+
+
+.结果
+实例注册请求已发起。选择“作业监控”选项卡以跟踪进度。
