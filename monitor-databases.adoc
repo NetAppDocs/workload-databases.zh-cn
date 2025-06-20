@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: 在BlueXP  工作负载工厂中跟踪数据库作业并监控数据库、以查找数据库。 
+summary: 跟踪数据库作业并监控数据库工作负载工厂内的数据库。 
 ---
-= 在BlueXP  工作负载工厂中监控数据库
+= 监视工作负载工厂中的数据库作业
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在BlueXP  工作负载工厂中跟踪数据库作业并监控数据库、以查找数据库。
+跟踪数据库作业并监控数据库工作负载工厂内的数据库。
 
 .关于此任务
 数据库提供作业监控功能、以便您可以跟踪作业进度、并在发生任何故障时进行诊断和故障排除。您可以按类型和状态筛选作业、使用搜索功能查找作业以及下载作业表。

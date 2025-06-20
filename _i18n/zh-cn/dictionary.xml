@@ -361,7 +361,6 @@
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">结果</block>
   <block id="ca6b20c311193d70fa95150e9aadfeff" category="list-text">单击下拉箭头展开主机所在的行以查看其数据库。</block>
   <block id="bab47e98a40b74089a0df1373390d048" category="list-text">选择*查看数据库*。</block>
-  <block id="252215232d636a7c096b2327e9a20b42" category="doc">监控数据库</block>
   <block id="67b0a66954400448325457f930e0f82b" category="paragraph">作业监控支持多达三个级别的监控、具体取决于作业。例如、对于新数据库和沙盒克隆创建、作业监控会跟踪父作业和子作业。</block>
   <block id="b830a8f027299af6d1d8ffbb130bcc58" category="list-text">作业监控级别</block>
   <block id="f52bf93027629736a089ef7f590091e0" category="list-text">1级(父作业)：跟踪主机部署作业。</block>
@@ -453,7 +452,6 @@
   <block id="991fc877b6135bcda7435016745ae066" category="sidebar">使用数据库工作负载</block>
   <block id="fbe27670bf06b7e38d268c77e7f002f0" category="sidebar">创建新的数据库服务器</block>
   <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">管理和监控</block>
-  <block id="077bbf8da979e97e9f7ec7239eb76073" category="sidebar">管理Microsoft SQL Server</block>
   <block id="6ea5d3d06add60328b6497a58edc5878" category="sidebar">管理克隆</block>
   <block id="7375873088079584bbffaf102f0fdae4" category="sidebar">创建沙盒克隆</block>
   <block id="566d7361c862d8d2bd63be4cb3f852cd" category="sidebar">检查沙盒克隆的完整性</block>
@@ -645,8 +643,6 @@
   <block id="37c0391f707d07b4c1d64a02e6944c56" category="paragraph">根据AWS、NetApp ONTAP和SQL Server最佳实践、适用于Microsoft SQL Server的工作负载工厂既支持高可用性(无中断故障转移集群实例)、也支持单实例部署。</block>
   <block id="b9aff8d3c5ff2dd2a4ce0963f381f957" category="paragraph">有关工作负载工厂或工作负载工厂应用程序和服务的一般问题，请参见<block ref="b9da93c3ce08d7fb81177157f233c056" category="inline-link-macro-rx"></block>。</block>
   <block id="71e2f5eacc9fc09317bbe70e053aeb1e" category="summary">在BlueXP  工作负载工厂中管理数据库的Microsoft SQL Server实例。</block>
-  <block id="72f7ef1037108c5eeefad1bcee23a0a8" category="summary">在BlueXP  工作负载工厂中跟踪数据库作业并监控数据库、以查找数据库。</block>
-  <block id="671ef5b67f2b7cbf660faa04c3d4622a" category="doc">在BlueXP  工作负载工厂中监控数据库</block>
   <block id="eb7ed5d3b1a2ff72006245ad37f9817b" category="paragraph">要使用数据库、您必须拥有AWS帐户。</block>
   <block id="c37e590e9c50960a15f3292676cc0c18" category="paragraph">请按照以下步骤开始操作。</block>
   <block id="3e7340039619cc08d8c1c5a3cd4bfb43" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>登录到BlueXP  工作负载工厂</block>
@@ -986,8 +982,6 @@
   <block id="fd8a54c517020c653ae1776e8e00d343" category="list-text"><block ref="fd8a54c517020c653ae1776e8e00d343" category="inline-link-macro-rx"></block></block>
   <block id="050cc3957bb212dc2758e7dd27f7faf8" category="inline-link-macro">查看数据库</block>
   <block id="7a403e4f1f2e0af187fa5a95116054cc" category="list-text"><block ref="7a403e4f1f2e0af187fa5a95116054cc" category="inline-link-macro-rx"></block></block>
-  <block id="f4a7fa0c2cfabd3c771238fbdb6c7ae5" category="inline-link-macro">监控数据库操作</block>
-  <block id="b92726505ce75a5aa80c8086ae979c25" category="list-text"><block ref="b92726505ce75a5aa80c8086ae979c25" category="inline-link-macro-rx"></block></block>
   <block id="2f2280ee27b03fc450cd69afae071e39" category="inline-link-macro">实施架构良好的数据库配置</block>
   <block id="d3379f7eb15b947ec99d4daad00317b3" category="list-text"><block ref="d3379f7eb15b947ec99d4daad00317b3" category="inline-link-macro-rx"></block></block>
   <block id="c4363ade7c2d208d79dee9b60bc51922" category="doc">在工作负载工厂中实现架构良好的数据库配置</block>
@@ -1093,4 +1087,7 @@
   <block id="1ecac8592ecd595bc4f53507e476fc53" category="list-text">您必须<block ref="9c62e895201e97f6c74e26e0f3de2d15" category="inline-link-macro-rx"></block>在工作负载出厂时创建沙盒克隆。</block>
   <block id="b2a6b8ac31e0bf9968f6f80649cc61cd" category="inline-link-macro">您必须添加 AWS 账户凭证和“只读”或“读/写”模式权限</block>
   <block id="b6693184dc0e8cc975fb8e936b04d129" category="paragraph">实例的主机必须显示在“清单”选项卡中。要使主机显示在清单中， <block ref="99382ab95f660f372dfed7d2289ac38a" category="inline-link-macro-rx"></block> 。</block>
+  <block id="a38d5cfb962091710b5c8c4cae183d64" category="summary">跟踪数据库作业并监控数据库工作负载工厂内的数据库。</block>
+  <block id="bcdf66d04230e723b2fc5152ae10a7ef" category="doc">监视工作负载工厂中的数据库作业</block>
+  <block id="9ae4e4b9fdc398feb3be344b26cbf99f" category="sidebar">监视数据库作业</block>
 </blocks>

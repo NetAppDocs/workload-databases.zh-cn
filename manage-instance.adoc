@@ -20,6 +20,5 @@ summary: 了解数据库工作负载工厂中的实例管理。
 * link:create-database.html["创建数据库"]
 * link:create-sandbox-clone.html["创建数据库克隆（沙盒）"]
 * link:view-databases.html["查看数据库"]
-* link:monitor-databases.html["监控数据库操作"]
 * link:optimize-configurations.html["实施架构良好的数据库配置"]
 
