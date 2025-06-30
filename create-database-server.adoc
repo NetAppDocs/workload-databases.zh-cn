@@ -87,6 +87,8 @@ Active Directory:: 连接到Active Directory时、您必须具有具有执行以
 
 NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 `fsxadmin` 和 `vsadmin` 密码。运行代码时、您需要重新输入密码。除了_Autome_模式权限之外，您还需要为用户帐户提供以下权限： `iam:TagRole`和 `iam:TagInstanceProfile`。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["了解如何使用CodeBox中的Terraform"^](英文)
 
+在部署期间，工作负载工厂会启用 CredSSP，以便将凭据委托给用于预配 SQL 的脚本。当所有域计算机的组策略阻止 CredSSP 委托时，部署将失败。部署后，工作负载工厂会禁用 CredSSP。
+
 [role="tabbed-block"]
 ====
 .快速创建

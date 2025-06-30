@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-configurations.html 
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
-summary: 适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL Server配置、提供洞察力和建议、帮助您实现卓越运营。 
+summary: 数据库工作负载工厂扫描 Microsoft SQL Server 配置，提供见解和建议，帮助您实现卓越运营。 
 ---
 = 在工作负载工厂中实现架构良好的数据库配置
 :allow-uri-read: 
@@ -23,7 +23,7 @@ summary: 适用于数据库的BlueXP  工作负载工厂会扫描Microsoft SQL 
 --
 * 存储规模估算：包括存储层、文件系统余量、日志驱动器大小和TempDB驱动器大小
 * 存储布局：包括用户数据文件放置、日志文件放置和TempDB放置
-* 存储配置：包括容量管理、精简配置、分层策略、快照和多路径I/O状态、策略和会话等
+* 存储配置：包括容量管理、精简配置、分层策略、快照、Microsoft 多路径 I/O (MPIO) 状态和 MPIO 超时设置
 * 计算：包括规模估算、操作系统修补程序和网络适配器设置、例如接收端扩展(RSS)和TCP负载分流
 * 应用程序：包括Microsoft SQL Server许可证、Microsoft SQL Server修补程序和MAXDOP设置
 * 故障恢复能力：包括本地快照、FSx for ONTAP备份和跨区域复制(CRR)
@@ -57,10 +57,10 @@ NOTE: 修复过程可能会导致实例停机或服务中断。在选择修复�
 . 选择下拉箭头可查看任何配置的建议。建议包括最佳实践、未优化配置的潜在缺陷以及重要注意事项。请务必仔细阅读此建议。
 . 当选项可用时，选择“查看并修复”配置问题。
 +
-*全选*为默认设置，但您可以选择要优化的特定资源。
+*全选*是默认设置，但您可以选择特定资源进行修复。
 
 +
-.. 对于除克隆清理之外的所有配置，请查看建议详情，了解选择优化后会发生什么情况。某些修复操作可能会导致实例停机或服务中断。
+.. 对于除克隆清理之外的所有配置，请查看建议详细信息以了解如果选择修复问题会发生什么。某些修复操作可能会导致实例停机或服务中断。
 .. 对于克隆清理、请选择要刷新或删除的克隆数据库(沙盒)。
 +
 *** 刷新克隆会将其与其源数据库同步。刷新仅适用于在工作负载出厂时创建的克隆。
@@ -73,4 +73,4 @@ NOTE: 修复过程可能会导致实例停机或服务中断。在选择修复�
 
 
 .结果
-补救过程开始。选择*作业监控*选项卡以查看操作状态。
+工作负载工厂开始修复问题。选择*作业监控*选项卡以查看操作状态。
