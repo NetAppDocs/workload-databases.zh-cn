@@ -15,7 +15,7 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 
 
 
-== 主机实例检测支持
+== 实例检测支持
 
 工作负载工厂支持检测仅在 Amazon Linux 操作系统上运行的 PostgreSQL 实例和仅在 Red Hat Enterprise Linux 上运行的 Oracle 实例。
 

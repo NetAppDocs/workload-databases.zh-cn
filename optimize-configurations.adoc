@@ -35,7 +35,7 @@ summary: 数据库工作负载工厂扫描 Microsoft SQL Server 配置，提供�
 
 .开始之前
 * 你必须有link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS 账户凭证和读/写权限"^]分析您的数据库配置。
-* 要评估 Microsoft SQL Server 实例的存储，必须在工作负载工厂中注册该实例，并且存储类型必须是 FSx for ONTAP。 link:register-instance.html["了解如何注册主机实例。"]
+* 要评估 Microsoft SQL Server 实例的存储，必须在工作负载工厂中注册该实例，并且存储类型必须是 FSx for ONTAP。 link:register-instance.html["了解如何注册实例。"]
 * 在选择修复设置或配置之前、请确保仔细查看每个建议。对于RSS和MAXDOP设置、我们建议您在更改生产环境之前测试建议的设置以确定性能改进。
 
 
@@ -47,7 +47,7 @@ NOTE: 修复过程可能会导致实例停机或服务中断。在选择修复�
 . 在数据库磁贴中，选择*转至数据库清单*。
 . 在*Inventory*选项卡中，选择*Instances *选项卡。
 . 选择“修复问题”以查看实例的配置问题。
-. 在主机实例的“良好架构状态”页面上，查看分析结果。
+. 在实例的“良好架构状态”页面上，查看分析结果。
 +
 您可以按类别、子类别、状态、严重性和标签过滤配置问题。
 

@@ -357,7 +357,6 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
   <block id="948d113c0ab3cb85650dda6912a734c5" category="list-text">查看数据库</block>
-  <block id="7a85061671bf8d085efe2cb8dfd1c79e" category="paragraph">此时、主机将展开并显示主机实例。</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">结果</block>
   <block id="ca6b20c311193d70fa95150e9aadfeff" category="list-text">单击下拉箭头展开主机所在的行以查看其数据库。</block>
   <block id="bab47e98a40b74089a0df1373390d048" category="list-text">选择*查看数据库*。</block>
@@ -955,7 +954,6 @@
   <block id="db8588c095bdb42680df1d8ae6e6c242" category="paragraph">您可以稍后重新注册该实例。</block>
   <block id="6e58f833a8c88963786858e4cd0820f1" category="list-text">单击实例的三点菜单即可取消注册。</block>
   <block id="a20e9b47d2ae2e8dcad4b38296aada53" category="list-text">选择*注销*。</block>
-  <block id="57b8b12d92efb891c61703846230423a" category="section-title">主机实例检测支持</block>
   <block id="7d02c7321e50b7c2fa346dd9edc083f2" category="paragraph">工作负载工厂支持检测仅在 Amazon Linux 操作系统上运行的 PostgreSQL 实例和仅在 Red Hat Enterprise Linux 上运行的 Oracle 实例。</block>
   <block id="6923ba19fe8a091f76827ff8c86785de" category="summary">数据库工作负载工厂是一种端到端数据库部署和维护服务，具有内置的优化、自动精简克隆以及监控和解决功能的最佳实践。</block>
   <block id="bb3a81d6ea3e61933815d8c7984727a3" category="section-title">数据库的工作负载工厂是什么？</block>
@@ -981,12 +979,9 @@
   <block id="eb39e8dfd54bf78043b2372b30f7b2b6" category="list-text">克隆：包括刷新和删除在工作负载工厂内部或外部创建的超过 60 天的克隆（沙盒）的选项</block>
   <block id="05733d6679707441838e3ca92fcb1e85" category="inline-link-macro">AWS 账户凭证和读/写权限</block>
   <block id="e6ff59cff1eb616f7a9d6b770313807a" category="list-text">你必须有<block ref="6428f71963510d960d64cd03bb6513ae" category="inline-link-macro-rx"></block>分析您的数据库配置。</block>
-  <block id="bb4dc454356e65051d8e22516b60a260" category="inline-link-macro">了解如何注册主机实例。</block>
-  <block id="606bc152b33b9976e88d57b374a1d46f" category="list-text">要评估 Microsoft SQL Server 实例的存储，必须在工作负载工厂中注册该实例，并且存储类型必须是 FSx for ONTAP。 <block ref="f22f9817b1d52aa896a88fe9442f70ef" category="inline-link-macro-rx"></block></block>
   <block id="663c686f4608ad8e700ed1cd99a57fcc" category="list-text">在选择修复设置或配置之前、请确保仔细查看每个建议。对于RSS和MAXDOP设置、我们建议您在更改生产环境之前测试建议的设置以确定性能改进。</block>
   <block id="55900adb296775523b32b30486b0de17" category="admonition">修复过程可能会导致实例停机或服务中断。在选择修复配置之前，请务必仔细查看建议。</block>
   <block id="da0f3dbe0b914fb78e47ff54702db3df" category="list-text">选择“修复问题”以查看实例的配置问题。</block>
-  <block id="a85bf70a610b181df621eea76d0068e4" category="list-text">在主机实例的“良好架构状态”页面上，查看分析结果。</block>
   <block id="8cdf23f9dd4f98a6b709a0a9d53ecd88" category="paragraph">您可以按类别、子类别、状态、严重性和标签过滤配置问题。</block>
   <block id="dd78deb6ef5fa791112d358b2eccdf97" category="paragraph">您还可以通过选择“导出 PDF”下载调查结果报告。</block>
   <block id="f73028254f9c4297e3f60654068105e0" category="list-text">选择下拉箭头可查看任何配置的建议。建议包括最佳实践、未优化配置的潜在缺陷以及重要注意事项。请务必仔细阅读此建议。</block>
@@ -1008,8 +1003,6 @@
   <block id="49c47aadfeff1e01313108c157d381b4" category="list-text">_Performance效率_：侧重于高效利用资源来满足系统要求、并在需求变化时保持最佳性能。</block>
   <block id="8b75b787538a5ee0eb97dc541694c82a" category="list-text">分析范围</block>
   <block id="3f6f8b4e204fd3aa39cac35661de164d" category="section-title">分析要求</block>
-  <block id="389751c9d4b8ea76783de1b291cac92f" category="paragraph">为了进行完整的数据库环境分析，主机实例必须注册并在线。</block>
-  <block id="f22f9817b1d52aa896a88fe9442f70ef" category="paragraph"><block ref="f22f9817b1d52aa896a88fe9442f70ef" category="inline-link-macro-rx"></block></block>
   <block id="4eadd345921a1f4292d9b98892d3b84e" category="inline-link-macro">实施结构良好的数据库配置</block>
   <block id="9f79767d5e4eb4d13f2a6d925ed59d0f" category="paragraph"><block ref="9f79767d5e4eb4d13f2a6d925ed59d0f" category="inline-link-macro-rx"></block></block>
   <block id="27cb094655bbfaa4d3b2c3b34d1c1557" category="summary">开始使用数据库工作负载工厂来使用基础设施即代码片段、发现主机、管理资源等。</block>
@@ -1021,7 +1014,6 @@
   <block id="32077805607c935c0ac59dd7b4a3fdc6" category="inline-link-macro">部署主机服务器</block>
   <block id="d53bce2cf4a36ab74378d06b70255899" category="inline-link-macro">注册实例</block>
   <block id="d4e3cc6f64d77dfb90b8f3a54369d97f" category="paragraph">最后，如果您选择以读/写模式操作，则必须<block ref="086045f9b9433534ba0bc16ba8744718" category="inline-link-macro-rx"></block>或者<block ref="70dc6f6bba18b4f574a867d694f53a80" category="inline-link-macro-rx"></block>管理您的主机资源并添加用户数据库之前。</block>
-  <block id="db04547f806a50b5e3c5bbceb867c6c9" category="paragraph">当您在数据库清单中向 FSx for ONTAP 文件系统存储注册主机实例后，您可以<block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block>或者<block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block> 。</block>
   <block id="8373481dd509f9b495f59748db1aa76d" category="doc">在数据库工作负载工厂中注册实例</block>
   <block id="42c8e35152475231ef5a183766c9bebc" category="paragraph">数据库只能向 FSx for ONTAP 文件系统存储注册实例。</block>
   <block id="91a3069301b0dd7ee29890c4b610ba27" category="section-title">关于任务</block>
@@ -1040,9 +1032,6 @@
   <block id="a037e794bf828053866493b8452ab9c7" category="paragraph">实例注册请求已发起。选择“作业监控”选项卡以跟踪进度。</block>
   <block id="5dfcf5a53e6a3c94eb359647b453a807" category="summary">要获取工作负载工厂中数据库资源的摘要，请查看数据库清单中的所有数据库。您还可以查看单个注册实例的数据库。</block>
   <block id="34f8798aab35970d27e00ecdf2a9f526" category="doc">在数据库的工作负载工厂中查看数据库</block>
-  <block id="0ab190804913b1145bf64c21befa3286" category="list-text">包含数据库资源的主机实例必须具有 FSx for ONTAP 文件系统存储。</block>
-  <block id="682d1e77482e7088c166b62c34287660" category="inline-link-macro">注册主机实例</block>
-  <block id="13e6dec9f19066e3153eb07ec978ea2b" category="list-text">主机实例必须在工作负载工厂中注册。了解如何<block ref="2dbc08dda5209ee806e4433f973c765a" category="inline-link-macro-rx"></block>。</block>
   <block id="87301bee2c9587d1e63d873a81c4e6fa" category="open-title">查看单个实例的数据库</block>
   <block id="25734f9761801ac27c5c548d5c1829ca" category="open-title">查看所有实例的数据库</block>
   <block id="91063ca7fb76f05148ae179b2f84b160" category="paragraph">您已查看工作负载工厂内的数据库资源。</block>
@@ -1074,19 +1063,10 @@
   <block id="c836d737c77c0dbce2c99a2b01c719fd" category="paragraph">工作负载工厂为数据库提供以下通知：</block>
   <block id="33e3371223dba19c723617802e06af8d" category="list-text">结构完善的报告</block>
   <block id="d415d128365eca1587931ed756de7819" category="list-text">主机部署</block>
-  <block id="83f1d9ca1a0c4c2fc51a371c0d773f76" category="list-text">保护</block>
   <block id="8306ce5f84163ec6839ec7518f30183a" category="section-title">用于注册实例的入门增强功能</block>
-  <block id="0a969bb4f7ed7e29d7225c0409a1750b" category="paragraph">数据库工作负载工厂改进了在 Amazon FSx for NetApp ONTAP 存储上运行的实例的注册流程。现在，您可以批量选择实例进行注册。实例注册完成后，您可以在工作负载工厂控制台中创建和管理数据库主机资源。</block>
   <block id="2e91c32877a8bf4a56c1853f92a414ba" category="section-title">Microsoft Multipath I/O 超时设置的分析与修复</block>
-  <block id="221618cb9e519d5c3dd0fcbb1e4f1205" category="paragraph">数据库主机实例的架构完善状态现在包含对 Microsoft 多路径 I/O (MPIO) 超时设置的分析和修复。将 MPIO 超时设置为 60 秒可确保 FSx for ONTAP 存储故障转移期间的连接性和稳定性。如果 MPIO 设置未正确设置，工作负载工厂将提供修复程序，将 MPIO 超时值设置为 60 秒。</block>
   <block id="a05724b342c36062e480732f660ae9d4" category="paragraph"><block ref="a05724b342c36062e480732f660ae9d4" category="inline-link-macro-rx"></block></block>
-  <block id="2bf19cd7fefccda37a9e51c8d6ae9ef1" category="section-title">主机库存中的图形增强功能</block>
-  <block id="29a6225f1f6846093fcfd562090e8654" category="paragraph">在主机清单屏幕中，各种资源利用率图表（例如吞吐量和 IOPS）现在显示 7 天的数据，以便您可以更高效地从工作负载工厂控制台监控 SQL 节点的性能。从 SQL 节点收集的性能指标将保存在 Amazon CloudWatch 中，可用于 Logs Insights 或与您环境中的其他分析服务集成。</block>
-  <block id="02212e54266ecdf641215b97bf4ab24e" category="paragraph">从主机清单中的实例和数据库选项卡中，我们增强了主机保护的描述和可视化。</block>
   <block id="4698c78219bd6bc2a4fb47e8f4149213" category="section-title">工作负载工厂中对 Windows 身份验证的支持</block>
-  <block id="b3a0e7d1a5170a15143af7a7f86f02b8" category="paragraph">现在，工作负载工厂支持使用 Windows 身份验证用户的 SQL Server 身份验证来注册主机实例并受益于主机管理功能。</block>
-  <block id="47668721b89b4afabeb23e27f6ac9b38" category="inline-link-macro">在数据库的工作负载工厂中注册主机实例</block>
-  <block id="4f178ea0296d3da0481606b8e3df7542" category="paragraph"><block ref="4f178ea0296d3da0481606b8e3df7542" category="inline-link-macro-rx"></block></block>
   <block id="f7b79998a8d6049aa7838e93bde48d38" category="paragraph">在部署期间，工作负载工厂会启用 CredSSP，以便将凭据委托给用于预配 SQL 的脚本。当所有域计算机的组策略阻止 CredSSP 委托时，部署将失败。部署后，工作负载工厂会禁用 CredSSP。</block>
   <block id="b6705e62a5d2c7330d2d39782b5e5ea5" category="summary">如果您不再想要部署或监控实例资源，请取消注册该实例。</block>
   <block id="aa76a1c51b277c90780c0553dba1e6a6" category="doc">在工作负载工厂中注销实例</block>
@@ -1121,4 +1101,20 @@
   <block id="1e72ee2b188273bc05d5a58836ef28ea" category="list-text">*Windows 身份验证*：输入 Windows 用户名和密码，以及 FSx for ONTAP 文件系统用户名和密码。</block>
   <block id="3325d27939065e1573633813a5123834" category="list-text">在步骤 3 中，通过确保实例满足所需的先决条件来准备实例。如果所有必需模块均已安装且先决条件均已满足，请选择“下一步”以注册实例。如果您需要采取行动，请按照以下步骤操作。</block>
   <block id="b77e8ec0a3425747f32b3dbc303adecb" category="section-title">2025年6月30日</block>
+  <block id="d2240cc857b28c2cc0c761811ebb0e4d" category="paragraph">数据库工作负载工厂改进了在 Amazon FSx for NetApp ONTAP 存储上运行的实例的注册流程。现在，您可以批量选择实例进行注册。一旦实例注册，您就可以在工作负载工厂控制台内创建和管理数据库资源。</block>
+  <block id="55dedf6eed5a2ce8c260a3944723e099" category="paragraph">数据库实例的良好架构状态现在包括对 Microsoft 多路径 I/O (MPIO) 超时设置的分析和修复。将 MPIO 超时设置为 60 秒可确保 FSx for ONTAP 存储故障转移期间的连接性和稳定性。如果 MPIO 设置未正确设置，工作负载工厂将提供修复程序，将 MPIO 超时值设置为 60 秒。</block>
+  <block id="0f6f8a7d2c62793903fd07b4a68f2192" category="section-title">实例清单中的图形增强功能</block>
+  <block id="6bb06f6a313d1245a77bdcc02f151dcd" category="paragraph">从实例库存屏幕，各种资源利用率图表（如吞吐量和 IOPS）现在显示 7 天的数据，以便您可以更有效地从工作负载工厂控制台监控 SQL 节点的性能。从 SQL 节点收集的性能指标将保存在 Amazon CloudWatch 中，可用于 Logs Insights 或与您环境中的其他分析服务集成。</block>
+  <block id="8984f42ceef01f063ea7a1078e620318" category="paragraph">从库存中的实例和数据库选项卡中，我们增强了保护的描述和可视化。</block>
+  <block id="e6884d3b77d68ac903da5836a6c33345" category="paragraph">现在，工作负载工厂支持使用 Windows 身份验证的用户来注册实例并从管理功能中受益的 SQL Server 身份验证。</block>
+  <block id="b8419cf58039d1a67d2046abd157e28b" category="paragraph"><block ref="b8419cf58039d1a67d2046abd157e28b" category="inline-link-macro-rx"></block></block>
+  <block id="2e1bd7e9b2f7897e3fbd2f64db19746c" category="section-title">实例检测支持</block>
+  <block id="e5872a50d5d45d5b9d394ddc65dfee1f" category="inline-link-macro">了解如何注册实例。</block>
+  <block id="09ea6435a2780f6e0f876796133da036" category="list-text">要评估 Microsoft SQL Server 实例的存储，必须在工作负载工厂中注册该实例，并且存储类型必须是 FSx for ONTAP。 <block ref="4dede94da0834ecd430bec6189bab6cc" category="inline-link-macro-rx"></block></block>
+  <block id="e6b1ed7d667d6b75280f0be1619fde20" category="list-text">在实例的“良好架构状态”页面上，查看分析结果。</block>
+  <block id="a26f09029b7e444a21db17eb62e9d2d5" category="paragraph">为了进行完整的数据库环境分析，实例必须注册并在线。</block>
+  <block id="4dede94da0834ecd430bec6189bab6cc" category="paragraph"><block ref="4dede94da0834ecd430bec6189bab6cc" category="inline-link-macro-rx"></block></block>
+  <block id="897c69f19b2f39fbf3080a555a679d8e" category="paragraph">当您在数据库清单中注册了 FSx for ONTAP 文件系统存储的实例后，您可以<block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block>或者<block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block> 。</block>
+  <block id="621bb50103e94b947974d2656fb451ec" category="list-text">包含数据库资源的实例必须具有 FSx for ONTAP 文件系统存储。</block>
+  <block id="dd36ed4d606eb4686fae0a7232af1eac" category="list-text">实例必须在工作负载工厂中注册。了解如何<block ref="e24144bf29586c3fb748c1e1cf493cb5" category="inline-link-macro-rx"></block>。</block>
 </blocks>

@@ -48,9 +48,9 @@ summary: 数据库工作负载工厂定期分析 Microsoft SQL Server 配置以�
 
 == 分析要求
 
-为了进行完整的数据库环境分析，主机实例必须注册并在线。
+为了进行完整的数据库环境分析，实例必须注册并在线。
 
-link:register-instance.html["了解如何注册主机实例。"]
+link:register-instance.html["了解如何注册实例。"]
 
 .下一步行动
 link:optimize-configurations.html["实施结构良好的数据库配置"]
