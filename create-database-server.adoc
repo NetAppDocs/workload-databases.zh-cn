@@ -13,7 +13,10 @@ summary: 在BlueXP  工作负载工厂中为数据库创建新的Microsoft SQL 
 [role="lead"]
 在数据库工作负载工厂中创建新的 Microsoft SQL Server 或数据库主机需要 FSx for ONTAP 文件系统部署和 Active Directory 资源。
 
-.关于此任务
+
+
+== 关于此任务
+
 在从工作负载工厂创建 Microsoft SQL Server 之前，请了解数据库主机配置的可用存储部署类型、Microsoft 多路径 I/O 配置、Active Directory 部署、网络详细信息以及完成此操作的要求。
 
 部署完成后，您需要 <<第2步：在Microsoft SQL Server上启用远程连接,在Microsoft SQL Server上启用远程连接>>。
@@ -42,14 +45,7 @@ Active Directory:: 在部署期间、Active Directory (AD)会发生以下情况�
 
 
 --
-
-
-
-
-== 用户管理的Active Directory安全组
-
-如果在工作负载工厂中部署Microsoft SQL Server期间选择了"用户管理的Active Directory"、则必须提供一个安全组、以允许EC2实例之间的流量传输到目录服务以进行部署。工作负载工厂不会像为AWS托管的Microsoft AD那样自动为用户管理的Active Directory附加安全组。
-
+用户管理的Active Directory安全组:: 如果在工作负载工厂中部署Microsoft SQL Server期间选择了"用户管理的Active Directory"、则必须提供一个安全组、以允许EC2实例之间的流量传输到目录服务以进行部署。工作负载工厂不会像为AWS托管的Microsoft AD那样自动为用户管理的Active Directory附加安全组。
 资源回滚:: 如果您决定回滚域名系统(Domain Name System、DNS)资源、则不会自动删除AD和DNS中的资源记录。您可以按如下所示从DNS服务器和AD中删除记录。
 +
 --
@@ -60,7 +56,10 @@ Active Directory:: 在部署期间、Active Directory (AD)会发生以下情况�
 --
 
 
-.开始之前
+
+
+== 开始之前
+
 在创建新数据库主机之前、请确保满足以下前提条件。
 
 凭据和权限:: 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS 账户凭证和读/写模式权限"^]在工作负载出厂时创建新的数据库主机。

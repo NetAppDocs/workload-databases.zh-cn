@@ -26,24 +26,23 @@ summary: 在BlueXP  工作负载工厂中管理数据库的Microsoft SQL Server
 
 NOTE: 工作负载工厂仅支持 Microsoft SQL Server 实例注册和管理。根据您在工作负载工厂中选择的 AWS 账户凭证，PostgreSQL 和 Oracle 主机可能会出现在清单中。目前，工作负载工厂仅支持在 Amazon Linux 操作系统上运行的未注册 PostgreSQL 实例，以及仅在 Red Hat Enterprise Linux 上运行的 Oracle 实例。
 
-
-
-== 在私有网络中注册实例
-
-要在没有外部连接的私有网络中注册实例，以下端点需要在与 SQL 服务器所在子网关联的 VPC 中可用。确保接口端点允许连接的安全组中的端口443。
-
+在私有网络中注册实例:: 要在没有外部连接的私有网络中注册实例，以下端点需要在与 SQL 服务器所在子网关联的 VPC 中可用。确保接口端点允许连接的安全组中的端口443。
++
+--
 * `S3 Gateway/endpoint`
 * `ssm`
 * `ssmmessages`
 * `fsx`
-
-
++
 如果您使用代理服务器进行EC2实例中的所有出站连接、则必须允许访问以下域、才能使管理操作正常工作：
 
 * ``.microsoft.com``
 * ``.powershellgallery.com``
 * ``.aws.amazon.com``
 * ``.amazonaws.com``
+
+
+--
 
 
 
