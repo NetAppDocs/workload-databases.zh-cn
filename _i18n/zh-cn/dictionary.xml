@@ -971,8 +971,6 @@
   <block id="2f2280ee27b03fc450cd69afae071e39" category="inline-link-macro">实施架构良好的数据库配置</block>
   <block id="d3379f7eb15b947ec99d4daad00317b3" category="list-text"><block ref="d3379f7eb15b947ec99d4daad00317b3" category="inline-link-macro-rx"></block></block>
   <block id="c4363ade7c2d208d79dee9b60bc51922" category="doc">在工作负载工厂中实现架构良好的数据库配置</block>
-  <block id="0006f418861a6fb47d59a74b3db28869" category="paragraph">利用配置分析洞察和建议，利用工作负载工厂为您的数据库配置实施最佳实践。您可以轻松发现问题，并采取措施改进任何未针对可靠性、安全性、效率、性能和成本进行优化的配置架构。</block>
-  <block id="bffcd6aaeac8e97cf82007491fd97512" category="paragraph">工作负载工厂每日分析数据库配置。每日分析提供洞察和建议，并包含自动修复配置问题的选项，以确保您的配置符合最佳实践。</block>
   <block id="622529f53e43499d3ab7bec3ddade638" category="paragraph">您可以选择查看配置问题的建议并从工作负载工厂控制台内的数据库清单中修复这些问题。</block>
   <block id="681f8e0d48f8a5609d29d038dfdb7354" category="list-text">分析的内容</block>
   <block id="f6e75af7aefeb95ed6d70c67eae48cbc" category="list-text">工作负载工厂分析 Microsoft SQL Server 实例的以下配置的良好架构状态：</block>
@@ -1117,4 +1115,9 @@
   <block id="897c69f19b2f39fbf3080a555a679d8e" category="paragraph">当您在数据库清单中注册了 FSx for ONTAP 文件系统存储的实例后，您可以<block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block>或者<block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block> 。</block>
   <block id="621bb50103e94b947974d2656fb451ec" category="list-text">包含数据库资源的实例必须具有 FSx for ONTAP 文件系统存储。</block>
   <block id="dd36ed4d606eb4686fae0a7232af1eac" category="list-text">实例必须在工作负载工厂中注册。了解如何<block ref="e24144bf29586c3fb748c1e1cf493cb5" category="inline-link-macro-rx"></block>。</block>
+  <block id="2eb8fe4398b92e5c2222314cd13b7749" category="paragraph">利用配置分析洞察和建议，利用工作负载工厂为您的数据库配置实施最佳实践。您可以轻松查看架构良好的状态，了解数据库配置的问题，并采取措施改进任何未针对可靠性、安全性、效率、性能和成本进行优化的配置。</block>
+  <block id="2bab4675fc931e32d65c62820186d2e3" category="inline-link-macro">了解工作负载工厂中的配置分析和良好架构状态。</block>
+  <block id="00d1bba61e4e880f08c0a9d89d53205b" category="paragraph"><block ref="00d1bba61e4e880f08c0a9d89d53205b" category="inline-link-macro-rx"></block></block>
+  <block id="8b2297ce6c1f7ab63874a40b0ca4a48f" category="paragraph">工作负载工厂每日分析数据库配置。每日分析提供精心设计的状态、见解和建议，以及自动修复配置问题的选项，以便您的配置符合最佳实践。</block>
+  <block id="08957eb86dbd3276e4875a3910d67420" category="sidebar">查看实例的架构完善状态</block>
 </blocks>
