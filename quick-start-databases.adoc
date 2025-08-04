@@ -26,16 +26,22 @@ summary: 开始使用数据库工作负载工厂来使用基础设施即代码�
 选择 link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["_基本_、_只读_和_读/写_操作模式"^]。
 
 [role="quick-margin-para"]
-如果您在_BASIC模式下运行、则无需再继续操作。您可以开始使用数据库复制部分完成的代码示例。在数据库磁贴中，单击*Deploy database host*。link:create-database-server.html["了解如何部署数据库服务器"](英文)
+如果您在“只读”或“读/写”模式下操作，则需要link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手动向帐户添加凭据"^]选择工作负载功能，例如数据库和 GenAI，并为所需的权限创建 IAM 策略。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]发现或部署资源
+[role="quick-margin-para"]
+使用凭证和 IAM 策略，您可以发现清单中的现有数据库资源或link:create-database-server.html["部署主机服务器"]。库存提供了统一的界面来管理资源。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]探索节省成本的机会
+[role="quick-margin-para"]
+当您的数据库在本地或 AWS 上运行，并且存储在 Amazon Elastic Block Store (EBS) 或 FSx for Windows File Server 上时，您可以link:explore-savings.html["使用探索储蓄计算器"]分析成本并有效地规划迁移。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"]实施结构良好的数据库配置
+[role="quick-margin-para"]
+数据库工作负载工厂会定期从 Well-architected 仪表板分析Amazon FSx for NetApp ONTAP存储上的 Microsoft SQL Server 部署。要从结构良好的数据库资源仪表板解决问题，首先需要link:register-instance.html["注册实例"]。
 
 [role="quick-margin-para"]
-如果您在“只读”或“读/写”模式下操作，则需要link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手动向帐户添加凭据"^]其中包括选择工作负载功能（例如数据库和 GenAI）以及创建 IAM 策略以确保您拥有以_只读_或_读/写_模式操作的正确权限。
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 部署数据库服务器
-[role="quick-margin-para"]
-最后，如果您选择以读/写模式操作，则必须link:create-database-server.html["部署主机服务器"]或者link:register-instance.html["注册实例"]管理您的主机资源并添加用户数据库之前。
+注册实例后，您可以查看架构良好的状态并采取行动link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["实施结构良好的数据库配置"]在工作量工厂中。
 
 .下一步行动
 当您在数据库清单中注册了 FSx for ONTAP 文件系统存储的实例后，您可以link:create-database.html["创建用户数据库"]或者link:create-sandbox-clone.html["克隆主机以创建沙盒"] 。
-
-如果数据库清单中包含Elasic Block Store或FSx for Windows File Server主机，则可以link:explore-savings.html["使用节省量计算器了解节省量"]。

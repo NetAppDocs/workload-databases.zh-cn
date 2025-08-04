@@ -28,7 +28,7 @@ link:optimize-overview.html["了解工作负载工厂中的配置分析和良好
 * 存储配置：包括容量管理、精简配置、分层策略、快照、Microsoft 多路径 I/O (MPIO) 状态和 MPIO 超时设置
 * 计算：包括规模估算、操作系统修补程序和网络适配器设置、例如接收端扩展(RSS)和TCP负载分流
 * 应用程序：包括Microsoft SQL Server许可证、Microsoft SQL Server修补程序和MAXDOP设置
-* 故障恢复能力：包括本地快照、FSx for ONTAP备份和跨区域复制(CRR)
+* 弹性：包括本地快照、FSx for ONTAP备份、跨区域复制 (CRR) 和 Microsoft SQL 高可用性。
 * 克隆：包括刷新和删除在工作负载工厂内部或外部创建的超过 60 天的克隆（沙盒）的选项
 
 

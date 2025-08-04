@@ -234,10 +234,14 @@ image:screenshot-ebs-savings-calculator-update.png["节省量计算器页面的�
 如果工作负载出厂检测到EBS主机、您将重定向到Explore savings选项卡。如果工作负载工厂未检测到EBS主机，则会将您重定向到计算器<<了解通过自定义实现的节省,了解通过自定义实现的节省>>。
 
 . 在Explore savings选项卡中，单击*Explore savings * of the database server using EBS storage。
+. 如果需要，请使用 SQL Server 凭据、Windows 凭据或添加缺少的 SQL Server 权限来验证数据库主机。
++
+如果身份验证成功后“探索节省”页面未加载数据，请选择“*库存*”选项卡重新加载数据，然后再次选择“探索节省”选项卡。
+
 . 在节省量计算器中(可选)提供有关EBS存储中的克隆和快照的以下详细信息、以便更准确地估算节省的成本。
 +
-.. *快照频率*：从下拉菜单中选择快照频率。
-.. *克隆刷新频率*：从下拉菜单中选择克隆刷新的频率。
+.. *快照频率*：从菜单中选择快照频率。
+.. *克隆刷新频率*：从菜单中选择克隆刷新的频率。
 .. *克隆副本数*：输入EBS配置中的克隆副本数。
 .. *每月变更率*：输入克隆和快照数据每月平均变更的百分比。
 
@@ -249,18 +253,22 @@ image:screenshot-ebs-savings-calculator-update.png["节省量计算器页面的�
 --
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在“数据库”磁贴中，从下拉菜单中选择*Explore savings *，然后选择*Microsoft SQL Server on FSx for Windows*。
+. 在数据库磁贴中，从菜单中选择 *探索节省*，然后选择 *FSx for Windows 上的 Microsoft SQL Server*。
 +
 如果工作负载工厂检测到FSx for Windows主机、则会重定向到Explore savings选项卡。如果工作负载工厂未检测到FSx for Windows主机，您将被重定向到计算器<<了解通过自定义实现的节省,了解通过自定义实现的节省>>。
 
-. 在Explore savings选项卡中、单击*浏览使用FSx for Windows File Server存储的数据库服务器的节省*。
+. 在“探索节省”选项卡中，选择使用 FSx for Windows File Server 存储的数据库主机的“探索节省”*。
+. 如果需要，请使用 SQL Server 凭据、Windows 凭据或添加缺少的 SQL Server 权限来验证数据库主机。
++
+如果身份验证成功后“探索节省”页面未加载数据，请选择“*库存*”选项卡重新加载数据，然后再次选择“探索节省”选项卡。
+
 . (可选)在节省量计算器中、提供以下有关FSx for Windows存储中的克隆(卷影副本)和快照的详细信息、以便更准确地估算节省的成本。
 +
-.. *快照频率*：从下拉菜单中选择快照频率。
+.. *快照频率*：从菜单中选择快照频率。
 +
 如果检测到FSx for Windows卷影副本、则默认值为*每日*。如果未检测到卷影副本，则默认值为*无快照频率*。
 
-.. *克隆刷新频率*：从下拉菜单中选择克隆刷新的频率。
+.. *克隆刷新频率*：从菜单中选择克隆刷新的频率。
 .. *克隆副本数*：在FSx for Windows配置中输入克隆副本数。
 .. *每月变更率*：输入克隆和快照数据每月平均变更的百分比。
 
@@ -272,7 +280,7 @@ image:screenshot-ebs-savings-calculator-update.png["节省量计算器页面的�
 --
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*Explore savings *，然后从下拉菜单中选择*Microsoft SQL Server On-Express*。
+. 在数据库磁贴中，从菜单中选择 *探索节省*，然后选择 *本地 Microsoft SQL Server*。
 . 从"SQL Server内部部署"选项卡中、下载此脚本以评估您的内部SQL Server环境。
 +
 .. 下载评估脚本。该脚本是一款基于PowerShell的数据收集工具。它会收集SQL Server配置和性能数据、然后将其上传到BlueXP  工作负载工厂。迁移顾问将评估数据并为您的SQL Server环境规划FSx for ONTAP部署。
@@ -291,11 +299,11 @@ image:screenshot-upload-script-on-premises.png["\"SQL Server内部部署\"选项
 . 要获得更准确的结果、请更新计算信息以及存储和性能详细信息。
 . (可选)提供有关内部数据库环境中的克隆(卷影副本)和快照的以下详细信息、以便更准确地估算成本节省。
 +
-.. *快照频率*：从下拉菜单中选择快照频率。
+.. *快照频率*：从菜单中选择快照频率。
 +
 如果检测到FSx for Windows卷影副本、则默认值为*每日*。如果未检测到卷影副本，则默认值为*无快照频率*。
 
-.. *克隆刷新频率*：从下拉菜单中选择克隆刷新的频率。
+.. *克隆刷新频率*：从菜单中选择克隆刷新的频率。
 .. *克隆副本数*：输入内部配置中的克隆副本数。
 .. *每月变更率*：输入克隆和快照数据每月平均变更的百分比。
 
