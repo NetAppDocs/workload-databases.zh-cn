@@ -139,3 +139,9 @@ Microsoft SQL Server内部存储卷大小的成本节省和节省百分比计算
 == Explore 节省中的数据库主机身份验证
 
 在某些权限有限的情况下，身份验证成功后，探索储蓄页面不会加载数据。
+
+
+
+== 与BlueXP backup and recovery集成
+
+将主机添加到BlueXP备份和恢复以进行保护后，数据库发现有时会失败。
