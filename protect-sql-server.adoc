@@ -11,11 +11,13 @@ summary: 保护 Microsoft SQL Server 实例和数据库。
 
 
 [role="lead"]
-使用来自工作负载工厂控制台的BlueXP backup and recovery保护您的 Microsoft SQL Server 应用程序数据。根据您创建的策略，备份会自动生成并存储在您的公共或私有云帐户的对象存储中。
+使用来自工作负载工厂控制台的BlueXP backup and recovery保护您的 Microsoft SQL Server 应用程序数据。通过此集成，您可以实现以下保护目标：使用本地快照在本地主Amazon FSx for NetApp ONTAP （FSx for ONTAP）存储上备份工作负载，并将工作负载复制到辅助 FSx for ONTAP存储。
 
 
 
 == 关于此任务
+
+工作负载工厂有助于自动化发现实例和数据库资源、验证先决条件以及配置和安装 Microsoft SQL Server 插件的过程，所有这些都是使用BlueXP backup and recovery保护 Microsoft SQL Server 工作负载的准备过程的一部分。该插件是NetApp软件的主机端组件，可让您保护 Microsoft SQL Server 工作负载。
 
 BlueXP backup and recovery利用NetApp SnapMirror数据复制技术，通过创建快照副本并将其传输到备份位置来确保所有备份完全同步。
 
@@ -46,9 +48,9 @@ link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.htm
 
 
 
-== 保护 Microsoft SQL Server 实例和数据库
+== 使用BlueXP backup and recovery做好保护准备
 
-保护 Microsoft SQL Server 实例和数据库涉及资源发现、先决条件验证以及 Microsoft SQL Server 插件的配置和安装。该插件是NetApp软件的主机端组件，可让您保护 Microsoft SQL Server 工作负载。
+完成准备过程，以使用BlueXP backup and recovery保护您的 Microsoft SQL Server 资源。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
