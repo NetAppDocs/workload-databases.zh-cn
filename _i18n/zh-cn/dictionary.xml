@@ -1153,22 +1153,13 @@
   <block id="3d5a9cd83b30ec6ec9f0802593907f05" category="doc">保护 Microsoft SQL Server 工作负载</block>
   <block id="b488e89ecf7de1a4b1b2b7c08eaf5ec7" category="paragraph">BlueXP backup and recovery利用NetApp SnapMirror数据复制技术，通过创建快照副本并将其传输到备份位置来确保所有备份完全同步。</block>
   <block id="84e16205176c2d47e586e6b70d30c355" category="paragraph">有关使用BlueXP backup and recovery进行保护的详细信息，请参阅<block ref="b3db6ed8425306b30d05a9028a6a4afe" category="inline-link-macro-rx"></block>。</block>
-  <block id="e82861995008f0e567492658d395dd98" category="paragraph">以下是使用BlueXP backup and recovery保护 Microsoft SQL Server 工作负载的要求：</block>
-  <block id="1814746c026b2253f1fd4e1ea066cea1" category="list-text">BlueXP连接器</block>
-  <block id="2859350d666beccb5f7f3adcb55da72a" category="inline-link-macro">了解如何配置BlueXP连接器</block>
-  <block id="26bb95e43b859cab3de780adc1ebf126" category="inline-link-macro">标准BlueXP要求</block>
-  <block id="4376a505059ca3d2e6efba73d67688bc" category="paragraph">参考<block ref="5d1caba14d7a0ff88bfb954ba5745b50" category="inline-link-macro-rx"></block>和<block ref="683fab7823a8328c1541ba926b06d34c" category="inline-link-macro-rx"></block>。</block>
-  <block id="ea8eb433c4a49f8121f2ca469cb35c5e" category="paragraph">连接器需要 Ubuntu 22.04 LTS 操作系统。</block>
-  <block id="725ed7e687eb2753438380c183239505" category="list-text">BlueXP backup and recovery许可证</block>
   <block id="f4b04af639ebf32754e26b928989f33f" category="inline-link-macro">设置BlueXP backup and recovery的许可</block>
   <block id="3c075e9819b05a2e34af9858d549a406" category="paragraph"><block ref="3c075e9819b05a2e34af9858d549a406" category="inline-link-macro-rx"></block></block>
-  <block id="0c5a60b84e9bed78e59d37200b950d45" category="list-text">在连接器上设置主机解析</block>
   <block id="2a664f2dff1a4229f6bce49f7fdfe6f2" category="paragraph">要发现数据库，您必须在连接器上设置主机解析。在托管设备上，在<block ref="ad942c725cd0cae65ca4c63717ec464c" prefix=" " category="inline-code"></block>文件。</block>
   <block id="c8e8c4da5256c1c745e327697c0ab942" category="list-text">将*引擎类型*过滤为*Microsoft SQL Server*。</block>
   <block id="60cf19833f9c8f41398952fc003ec02d" category="list-text">从菜单中选择要保护的实例的*保护*。</block>
   <block id="f44b851c9ab8fcb80a6dd8db43a90f89" category="list-text">选择您想要注册和保护工作负载的*连接器*。</block>
   <block id="4aaf55799008f1b65a60e1b728d3e48c" category="list-text">为了准备数据保护，工作负载工厂会自动在BlueXP backup and recovery中注册您的 SQL Server 资源，配置并安装 Microsoft SQL Server 插件，并发现满足保护 SQL Server 实例的先决条件的资源。选择“*开始*”来启动该过程。</block>
-  <block id="bd1487d8bf14df1c9cdd38034c0c4915" category="list-text">满足先决条件后，选择“*重定向*”以重定向到BlueXP backup and recovery。</block>
   <block id="670bdffbda0cf3a120000d78ea9fef94" category="paragraph">从BlueXP backup and recovery中，创建策略来保护您的 Microsoft SQL Server 实例和数据库。</block>
   <block id="9a4d384d3169400fc10e8236540a38e4" category="inline-link-macro">了解如何创建策略来保护您的 Microsoft SQL Server 实例和数据库</block>
   <block id="ad2885286b9ea46a9ef4e984cc15fd97" category="paragraph"><block ref="5d8b861adb73a9004c15944cd0df7095" category="inline-link-macro-rx"></block> 。</block>
@@ -1178,7 +1169,17 @@
   <block id="82776afd94423c79dbb6478467a55ee1" category="paragraph"><block ref="01ada1ee9ae7e42f0ced5cd933931e08" category="inline-link-macro-rx"></block> 。</block>
   <block id="1d7888e9a7739b1a3282310704484ae5" category="doc">BlueXP backup and recovery现在支持 Microsoft SQL Server 工作负载</block>
   <block id="89f47c3c1994a3db38e0daf9dd673194" category="paragraph">使用来自工作负载工厂控制台的BlueXP backup and recovery保护您的 Microsoft SQL Server 应用程序数据。通过此集成，您可以实现以下保护目标：使用本地快照在本地主Amazon FSx for NetApp ONTAP （FSx for ONTAP）存储上备份工作负载，并将工作负载复制到辅助 FSx for ONTAP存储。</block>
-  <block id="e6de5e622a1f84159a72b6b36d0457bd" category="paragraph">工作负载工厂有助于自动化发现实例和数据库资源、验证先决条件以及配置和安装 Microsoft SQL Server 插件的过程，所有这些都是使用BlueXP backup and recovery保护 Microsoft SQL Server 工作负载的准备过程的一部分。该插件是NetApp软件的主机端组件，可让您保护 Microsoft SQL Server 工作负载。</block>
   <block id="151fbaa196a40c93d8a7ab6cdfe564fe" category="section-title">使用BlueXP backup and recovery做好保护准备</block>
   <block id="0560cb07d58d813bf36ae0c3bcdcec57" category="paragraph">完成准备过程，以使用BlueXP backup and recovery保护您的 Microsoft SQL Server 资源。</block>
+  <block id="b3aa6571a8796bf368f93709826c5cca" category="paragraph">工作负载工厂自动发现资源、验证先决条件以及配置和安装 Microsoft SQL Server 插件，为使用BlueXP backup and recovery保护您的工作负载做好准备。该插件是NetApp软件的主机端组件，可让您保护 Microsoft SQL Server 工作负载。</block>
+  <block id="2e236abf3c6b1def80ac2b6884c1b5ab" category="paragraph">要使用BlueXP backup and recovery保护 Microsoft SQL Server 工作负载，必须满足以下要求。</block>
+  <block id="3d7cbbcb00b12dcb8b1ac2f24bf3ea56" category="inline-link-macro">BlueXP backup and recoverySQL Server 的要求</block>
+  <block id="ba3196b3748bf69daba9160040c84853" category="list-text">确保您的环境满足<block ref="db876250b10693778272e32877c79f1e" category="inline-link-macro-rx"></block>。</block>
+  <block id="4499b1faa84c7528a77910b47c230bfb" category="inline-link-macro">完成BlueXP要求</block>
+  <block id="36cb54a50029122a2701724926881723" category="list-text"><block ref="820c789cd0a515d3f846ace99ca806ea" category="inline-link-macro-rx"></block>包括设置BlueXP、IAM 角色和BlueXP连接器。</block>
+  <block id="27044efdd79fcbe78a3f6c73f94ff8ab" category="inline-xref">使用BlueXP backup and recovery进行保护准备</block>
+  <block id="ad9f1468b7af086344a7c9d7f3cfe5e6" category="paragraph">如果您拥有BlueXP帐户的组织管理员访问权限，则<block ref="d431b2247c053b79ca08cc138d1dc11a" prefix=" " category="inline-code"></block>当您<block ref="fdfea7d26047cfb871b3d198f9393eab" category="inline-xref-macro-rx"></block>。</block>
+  <block id="b101f17cf16b7701e98ff3ad94847a38" category="list-text">在连接器上设置主机分辨率</block>
+  <block id="c2f8fe7ac0efafdc8fba2f5f885bc816" category="list-text">在数据库的工作负载工厂中，确保使用 Windows 凭据注册实例。要提供 Windows 凭据，请从清单转到实例选项卡。识别实例，选择*管理实例*，然后选择*实例仪表板*。从实例仪表板中，选择三点菜单，然后选择*更新 Microsoft SQL Server 密码*。使用 Windows 身份验证更新密码。</block>
+  <block id="aa660deb360d337c08e7ddce4aada0d6" category="list-text">满足先决条件后，选择*重定向*以访问BlueXP backup and recovery。</block>
 </blocks>
