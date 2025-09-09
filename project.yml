@@ -61,8 +61,6 @@ sidebar:
         url: "/optimize-overview.html"
       - title: 实施结构良好的数据库配置
         url: "/optimize-configurations.html"
-      - title: 延迟配置分析
-        url: "/postpone-analysis.html"
     - title: 分析错误日志
       url: "/analyze-error-logs.html"
     - title: 管理克隆
