@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-overview.html 
 keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance 
-summary: 数据库工作负载工厂定期分析 Microsoft SQL Server 配置以确定是否存在任何问题。 
+summary: 数据库工作负载工厂定期分析 Microsoft SQL Server 和 Oracle 配置以确定是否存在任何问题。 
 ---
 = 工作负载工厂中的数据库环境配置分析
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 数据库工作负载工厂定期分析 Microsoft SQL Server 配置以�
 
 
 [role="lead"]
-数据库工作负载工厂会定期分析数据库配置，以确定在 Amazon FSx for NetApp ONTAP 存储上部署的 Microsoft SQL Server 是否存在任何问题。一旦发现问题，工作负载工厂就会向您展示问题所在，并解释需要进行哪些更改，以确保您的数据库配置达到最佳性能、成本效益并符合最佳实践。
+数据库工作负载工厂定期分析数据库配置，以确定Amazon FSx for NetApp ONTAP存储上的 Microsoft SQL Server 和 Oracle 部署是否存在任何问题。当发现问题时，工作负载工厂会向您展示问题所在，并解释需要进行哪些更改以确保您的数据库配置达到最佳性能、成本效益并符合最佳实践。
 
 主要功能包括：
 
@@ -29,10 +29,18 @@ summary: 数据库工作负载工厂定期分析 Microsoft SQL Server 配置以�
 
 在文件系统级别的工作负载出厂控制台中、列出了所有FSx for ONTAP文件系统的设计良好状态。架构良好的状态分为"问题"、"未分析"或"架构良好"三类。选择精心设计的状态会将您重定向到文件系统中的"精心设计的状态"选项卡、您可以在其中找到文件系统的精心设计的得分、配置类别和所有配置。
 
-精心设计的得分:: 得分包括当前分析的所有配置、并以百分比形式显示。25%的分数表示25%的文件系统配置设计良好。
-配置类别:: 文件系统配置会根据AWS精心设计的框架的以下五大支柱按类别进行组织。
-+
---
+
+
+== 精心设计的得分
+
+得分包括当前分析的所有配置、并以百分比形式显示。25%的分数表示25%的文件系统配置设计良好。
+
+
+
+== 配置类别
+
+文件系统配置会根据AWS精心设计的框架的以下五大支柱按类别进行组织。
+
 * _Reliability _：确保工作负载正确一致地执行其预期功能、即使发生中断也是如此。例如、FSx for ONTAP备份就是一个配置示例。
 * _Security_：强调通过风险评估和缓解策略保护数据、系统和资产。
 * _卓越运营_：专注于提供最优架构和业务价值。
@@ -40,17 +48,19 @@ summary: 数据库工作负载工厂定期分析 Microsoft SQL Server 配置以�
 * _Performance效率_：侧重于高效利用资源来满足系统要求、并在需求变化时保持最佳性能。
 
 
---
-分析范围:: 优化范围因评估的组件而异。例如、存储优化在SQL实例级别进行、而计算优化在主机级别进行。
 
+
+== 分析范围
+
+优化范围因评估的组件而异。例如、存储优化在SQL实例级别进行、而计算优化在主机级别进行。
 
 
 
 == 分析要求
 
-为了进行完整的数据库环境分析，实例必须注册并在线。
+为了进行完整的数据库环境分析，资源必须注册并在线。
 
-link:register-instance.html["了解如何注册实例。"]
+link:register-instance.html["了解如何注册资源。"]
 
 .下一步行动
 link:optimize-configurations.html["实施结构良好的数据库配置"]

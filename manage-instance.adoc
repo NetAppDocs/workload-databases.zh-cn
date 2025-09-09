@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: manage-instance.html 
 keywords: instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
-summary: 了解数据库工作负载工厂中的实例管理。 
+summary: 了解数据库工作负载工厂中的实例和数据库管理。 
 ---
-= 数据库工作负载工厂中的实例管理
+= 数据库工作负载工厂中的资源管理
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-管理工作负载工厂中注册的实例包括为您的实例部署资源，如创建数据库和数据库克隆，以及监控实例和数据库状态、资源利用率、保护和存储性能。此外，您还可以分析数据库配置的架构状态，并实施配置最佳实践，以提高性能并降低运营成本。实例管理仅适用于使用 FSx for ONTAP 文件系统存储的实例
+管理工作负载工厂中的资源允许您使用高级功能，包括数据库和克隆创建、资源利用和监控。此外，您可以分析数据库配置的良好架构状态并实施配置最佳实践以提高性能并降低运营成本。资源管理仅适用于在 FSx for ONTAP文件系统存储上运行的 Microsoft SQL Server 和 Oracle 环境。
 
-你必须link:register-instance.html["注册实例"]执行以下任何一项管理任务。
+你必须link:register-instance.html["注册资源"]执行以下任何一项管理任务。
 
 管理任务包括：
 
+* 从清单中查看数据库
 * link:create-database.html["创建数据库"]
 * link:create-sandbox-clone.html["创建数据库克隆（沙盒）"]
-* link:view-databases.html["查看数据库"]
 * link:optimize-configurations.html["实施架构良好的数据库配置"]
 

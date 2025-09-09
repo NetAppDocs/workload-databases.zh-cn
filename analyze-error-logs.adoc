@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: analyze-error-logs.html 
+keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, smart analysis, Agentic AI 
+summary: 分析数据库工作负载工厂内的错误日志。 
+---
+= 分析工作负载工厂中的错误日志
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用智能错误日志分析器自动解释 Microsoft SQL Server 错误日志，以便您可以快速识别和解决问题。  Agentic AI 为基础的分析需要 Amazon Bedrock 集成。
+
+.关于此任务
+错误日志分析和补救有助于维护 SQL Server 实例的健康和性能。有效地解释 SQL Server 错误日志需要仔细的分析和专业知识。手动监控、错误检测和根本原因分析非常耗时，而且容易出错。这些挑战可能会延迟问题解决、增加停机时间并导致运营效率低下。智能错误日志分析器通过以下主要优势解决了这些挑战：
+
+* 智能分组：根据唯一性、严重性和类别智能地合并错误，并简化故障排除过程，以便更快、更有效地解决问题。
+* 人工智能驱动的调查：利用人工智能主动分析错误，提供清晰、可操作的见解，以加速问题识别，而无需深厚的专业知识。
+* 错误丰富：通过外部引用增强错误日志，提供清晰的上下文以提高理解和决策。
+* 最佳实践补救：为在 FSx for ONTAP上运行的 SQL Server 工作负载提供定制的补救建议，使各种技能水平的用户都能自信地解决问题。
+
+
+无论何时使用智能错误日志分析器，您都可以完全控制您的环境，同时受益于先进的 AI 分析。
+
+要使用智能错误日志分析器，您需要激活 Amazon Bedrock、选择模型工作负载工厂使用的模型、创建私有终端节点以连接到 Amazon Bedrock、添加权限并创建企业许可证。
+
+link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定价"^]
+
+.开始之前
+要使用智能错误日志分析器，您必须满足以下先决条件：
+
+* 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS 账户凭证和读/写模式权限"^]在工作负载出厂时创建新的数据库主机。
+* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["注册 SQL Server 实例"^]在工作量工厂中。*
+
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在数据库磁贴中，选择*转至数据库清单*。
+. 在数据库中，选择*Inventory*选项卡。
+. 选择*SQL Server*作为数据库引擎。
+. 从“实例”选项卡中，找到要分析的特定 SQL Server 实例，然后从菜单中选择“调查错误”。
+. 从“错误调查”选项卡中，按照控制台中的说明完成以下先决条件：
++
+** 亚马逊基岩
+** 网络：Amazon Bedrock 的私有终端节点
+** EC2 实例配置文件角色的权限
+** 与工作负载数据库管理 (wlmdb) 相关的凭证
+
+
+. 满足先决条件后，选择“立即调查”以使用智能错误日志分析器深入了解 SQL Server 错误日志。
++
+扫描完成后，错误会显示在控制台中，提供智能错误日志分析器检测到的问题的全面视图。
+
+. 使用过滤器根据严重性、时间范围和错误代码等标准来优化显示的错误。
+. 查看详细的错误信息，包括原始错误消息、基于 AI 的解释以及解决错误的建议补救步骤。
+

@@ -42,7 +42,6 @@ BlueXP backup and recovery利用NetApp SnapMirror数据复制技术，通过创�
 
 
 * link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html["设置BlueXP backup and recovery的许可"^]
-* 在数据库的工作负载工厂中，确保使用 Windows 凭据注册实例。要提供 Windows 凭据，请从清单转到实例选项卡。识别实例，选择*管理实例*，然后选择*实例仪表板*。从实例仪表板中，选择三点菜单，然后选择*更新 Microsoft SQL Server 密码*。使用 Windows 身份验证更新密码。
 
 
 
@@ -57,7 +56,11 @@ BlueXP backup and recovery利用NetApp SnapMirror数据复制技术，通过创�
 . 在数据库中，选择*Inventory*选项卡。
 . 将*引擎类型*过滤为*Microsoft SQL Server*。
 . 从菜单中选择要保护的实例的*保护*。
-. 选择您想要注册和保护工作负载的*连接器*。
+. 如果出现提示，请提供具有管理访问权限的 Windows 凭据。
++
+要使用BlueXP backup and recovery进行保护，必须使用 Windows 凭据在工作负载工厂中注册 SQL Server 实例。
+
+. 如果有多个连接器处于活动状态且可用，请选择要注册和保护工作负载的*连接器*。
 . 为了准备数据保护，工作负载工厂会自动在BlueXP backup and recovery中注册您的 SQL Server 资源，配置并安装 Microsoft SQL Server 插件，并发现满足保护 SQL Server 实例的先决条件的资源。选择“*开始*”来启动该过程。
 . 满足先决条件后，选择*重定向*以访问BlueXP backup and recovery。
 
