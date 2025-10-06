@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: deregister-instance.html 
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle database, deregister instance, unregister instance, remove instance 
-summary: 如果您不再想从工作负载工厂控制台部署或监控资源，请取消注册该资源。 
+summary: 如果您不再想从 Workload Factory 控制台部署或监控资源，请取消注册该资源。 
 ---
-= 在工作负载工厂中注销资源
+= 在NetApp Workload Factory 中取消注册资源
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-如果您不再想从工作负载工厂控制台部署或监控资源，请取消注册资源，例如 Microsoft SQL Server 实例或 Oracle 数据库。取消注册资源还会删除实例使用的 FSx for ONTAP存储容量。
+如果您不再想从NetApp Workload Factory 控制台部署或监控资源，请取消注册资源，例如 Microsoft SQL Server 实例或 Oracle 数据库。取消注册资源还会删除实例使用的 FSx for ONTAP存储容量。
 
 您可以重新注册该资源。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
-. 在数据库中，选择*Inventory*选项卡。
-. 在清单中，选择引擎类型：Microsoft SQL Server、Oracle 或 PostgreSQL。
-. 找到您想要注销的资源，选择三点菜单，然后选择*注销*。
+. 从数据库菜单中，选择*Inventory*。
+. 在清单中，选择引擎类型：*Microsoft SQL Server*、*Oracle* 或 *PostgreSQL*。
+. 找到您要取消注册的资源，选择操作菜单，然后选择*取消注册*。
 

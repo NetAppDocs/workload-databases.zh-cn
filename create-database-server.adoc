@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-database-server.html 
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
-summary: 在BlueXP  工作负载工厂中为数据库创建新的Microsoft SQL Server。 
+summary: 在NetApp Workload Factory for Databases 中创建一个新的 Microsoft SQL Server。 
 ---
 = 在数据库工作负载工厂中创建 Microsoft SQL Server
 :allow-uri-read: 
@@ -11,49 +11,46 @@ summary: 在BlueXP  工作负载工厂中为数据库创建新的Microsoft SQL 
 
 
 [role="lead"]
-在数据库工作负载工厂中创建新的 Microsoft SQL Server 或数据库主机需要 FSx for ONTAP 文件系统部署和 Active Directory 资源。
+在 Workload Factory for Databases 中创建新的 Microsoft SQL Server 或数据库主机需要 FSx for ONTAP文件系统部署和 Active Directory 资源。
 
 
 
 == 关于此任务
 
-在从工作负载工厂创建 Microsoft SQL Server 之前，请了解数据库主机配置的可用存储部署类型、Microsoft 多路径 I/O 配置、Active Directory 部署、网络详细信息以及完成此操作的要求。
+在从 Workload Factory 创建 Microsoft SQL Server 之前，请了解数据库主机配置的可用存储部署类型、Microsoft 多路径 I/O 配置、Active Directory 部署、网络详细信息以及完成此操作的要求。
 
 部署完成后，您需要 <<第2步：在Microsoft SQL Server上启用远程连接,在Microsoft SQL Server上启用远程连接>>。
 
-FSx for ONTAP文件系统部署:: 创建新的Microsoft SQL Server需要FSx for ONTAP文件系统作为存储后端。您可以使用现有FSx for ONTAP文件系统、也可以创建新文件系统。如果您选择现有FSx for ONTAP文件系统作为数据库服务器存储后端、我们将为Microsoft SQL工作负载创建一个新的Storage VM。
-+
---
+.FSx for ONTAP文件系统部署
+创建新的Microsoft SQL Server需要FSx for ONTAP文件系统作为存储后端。您可以使用现有FSx for ONTAP文件系统、也可以创建新文件系统。如果您选择现有FSx for ONTAP文件系统作为数据库服务器存储后端、我们将为Microsoft SQL工作负载创建一个新的Storage VM。
+
 FSx for ONTAP文件系统具有两种Microsoft SQL Server部署模式：_故障转移集群实例(FCI)_或_独立_。根据您选择的FSx for ONTAP部署模式、系统会为FSx for ONTAP文件系统创建不同的资源。
 
 * *故障转移集群实例(FCI) Microsoft SQL部署*：为NetApp ONTAP部署选择新的FSx for ONTAP文件系统时，将部署适用于FCI的多可用性区域FSx文件系统。对于FCI部署、系统会为数据、日志和tempdb文件创建单独的卷和LUN。系统会为Windows集群的Quorum或见证磁盘创建一个额外的卷和LUN。
 * *独立的Microsoft SQL部署*：创建新的Microsoft SQL Server时、将创建适用于ONTAP的单可用性区域FSx文件系统。此外、还会为数据、日志和tempdb文件创建单独的卷和LUN。
 
 
---
-Microsoft多路径I/O配置:: Microsoft SQL Server部署模式都要求使用iSCSI存储协议创建LUN。在通过FSx for ONTAP为SQL Server配置LUN的过程中、工作负载工厂会配置Microsoft多路径I/O (MPIO)。MPIO根据AWS和NetApp最佳实践进行配置。
+.Microsoft多路径I/O配置
+Microsoft SQL Server 部署模型都需要使用 iSCSI 存储协议创建 LUN。  Workload Factory 将 Microsoft 多路径 I/O (MPIO) 配置为通过 FSx for ONTAP配置 SQL Server 的 LUN 的一部分。  MPIO 是根据 AWS 和NetApp最佳实践配置的。
 
+有关详细信息，请参阅link:https://aws.amazon.com/blogs/modernizing-with-aws/sql-server-high-availability-amazon-fsx-for-netapp-ontap/["使用Amazon FSx for NetApp ONTAP进行 SQL Server 高可用性部署"^] 。
 
-有关详细信息，请参阅 link:https://aws.amazon.com/blogs/modernizing-with-aws/sql-server-high-availability-amazon-fsx-for-netapp-ontap/["使用Amazon FSx for NetApp ONTAP进行SQL Server高可用性部署"^]。
+.Active Directory
+在部署期间、Active Directory (AD)会发生以下情况：
 
-Active Directory:: 在部署期间、Active Directory (AD)会发生以下情况：
-+
---
 * 如果不提供现有的SQL服务帐户、则会在域中创建一个新的Microsoft SQL服务帐户。
 * Windows集群、节点主机名和Microsoft SQL FCI名称会作为受管计算机添加到Microsoft SQL服务帐户中。
 * Windows集群条目被分配了向域中添加计算机的权限。
 
 
---
-用户管理的Active Directory安全组:: 如果在工作负载工厂中部署Microsoft SQL Server期间选择了"用户管理的Active Directory"、则必须提供一个安全组、以允许EC2实例之间的流量传输到目录服务以进行部署。工作负载工厂不会像为AWS托管的Microsoft AD那样自动为用户管理的Active Directory附加安全组。
-资源回滚:: 如果您决定回滚域名系统(Domain Name System、DNS)资源、则不会自动删除AD和DNS中的资源记录。您可以按如下所示从DNS服务器和AD中删除记录。
-+
---
+.用户管理的Active Directory安全组
+如果您在 Workload Factory 中的 Microsoft SQL Server 部署期间选择“用户管理的 Active Directory”，则必须提供一个安全组，以允许 EC2 实例之间的流量到目录服务进行部署。  Workload Factory 不会像 AWS Managed Microsoft AD 那样自动附加用户管理的 Active Directory 的安全组。
+
+.资源回滚
+如果您决定回滚域名系统(Domain Name System、DNS)资源、则不会自动删除AD和DNS中的资源记录。您可以按如下所示从DNS服务器和AD中删除记录。
+
 * 对于用户管理的AD，请首先 link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps["卸下AD计算机"^]。然后，从DNS管理器和连接到DNS服务器 link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records["删除DNS资源记录"^]。
 * 对于AWS Managed Microsoft AD， link:https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_install_ad_tools.html["安装AD管理工具"^]。下一步， link:https://learn.microsoft.com/en-us/powershell/module/activedirectory/remove-adcomputer?view=windowsserver2022-ps["卸下AD计算机"^]。最后，从DNS管理器和连接到DNS服务器 link:https://learn.microsoft.com/en-us/windows-server/networking/technologies/ipam/delete-dns-resource-records["删除DNS资源记录"^]。
-
-
---
 
 
 
@@ -62,10 +59,12 @@ Active Directory:: 在部署期间、Active Directory (AD)会发生以下情况�
 
 在创建新数据库主机之前、请确保满足以下前提条件。
 
-凭据和权限:: 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS 账户凭证和读/写模式权限"^]在工作负载出厂时创建新的数据库主机。
-Active Directory:: 连接到Active Directory时、您必须具有具有执行以下操作的管理访问权限：
-+
---
+.凭据和权限
+你必须有link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS 账户凭证和读/写模式权限"^]在 Workload Factory 中创建一个新的数据库主机。
+
+.Active Directory
+连接到Active Directory时、您必须具有具有执行以下操作的管理访问权限：
+
 * 加入域
 * 创建计算机对象
 * 在默认组织单位(OU)中创建对象
@@ -74,19 +73,16 @@ Active Directory:: 连接到Active Directory时、您必须具有具有执行以
 * 在AD中创建Microsoft SQL Server服务用户(如果尚不存在)
 
 
---
-
-
 
 
 == 第1步：创建数据库服务器
 
-您可以使用_Quick cre成_或_Advanced cre成_部署模式在工作负载工厂中以_Automate _模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API、AWS CLI、AWS CloudFormation和Terraform。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["了解如何使用CodeBox实现自动化"^](英文)
+您可以使用_快速创建_或_高级创建_部署模式在具有_自动化_模式权限的工作负载工厂中完成此任务。您还可以使用 Codebox 中提供的以下工具：REST API、AWS CLI、AWS CloudFormation 和 Terraform。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["了解如何使用CodeBox实现自动化"^] 。
 
 
 NOTE: 使用来自CodeBox的Terraform时、您复制或下载的代码会隐藏 `fsxadmin` 和 `vsadmin` 密码。运行代码时、您需要重新输入密码。除了_Autome_模式权限之外，您还需要为用户帐户提供以下权限： `iam:TagRole`和 `iam:TagInstanceProfile`。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["了解如何使用CodeBox中的Terraform"^](英文)
 
-在部署期间，工作负载工厂会启用 CredSSP，以便将凭据委托给用于预配 SQL 的脚本。当所有域计算机的组策略阻止 CredSSP 委托时，部署将失败。部署后，工作负载工厂会禁用 CredSSP。
+在部署期间，Workload Factory 启用 CredSSP 将凭据委托给用于配置 SQL 的脚本。当使用组策略阻止所有域计算机的 CredSSP 委派时，部署将失败。部署后，Workload Factory 会禁用 CredSSP。
 
 [role="tabbed-block"]
 ====
@@ -97,25 +93,25 @@ NOTE: 在_Quick creel_中、FCI是默认部署模式、Windows 2016是默认Wind
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*Deploy database host*，然后从下拉菜单中选择*Microsoft SQL Server*。
+. 在数据库图块中，选择*部署主机*，然后从菜单中选择*Microsoft SQL Server*。
 . 选择*快速创建*。
 . 在*AWS设置*下，提供以下内容：
 +
 .. *AWS凭据*：选择具有自动化权限的AWS凭据以部署新数据库主机。
 +
-具有读/写权限的 AWS 凭证允许工作负载工厂从您的 AWS 账户在工作负载工厂内部署和管理新的数据库主机。
+具有读/写权限的 AWS 凭证允许 Workload Factory 从 Workload Factory 内的 AWS 账户部署和管理新的数据库主机。
 
 +
-具有“只读”权限的 AWS 凭证允许工作负载工厂生成 CloudFormation 模板，供您在 AWS CloudFormation 控制台中使用。
+具有“只读”权限的 AWS 凭证允许 Workload Factory 生成 CloudFormation 模板，供您在 AWS CloudFormation 控制台中使用。
 
 +
-如果您在工作负载工厂中没有关联的AWS凭据、而您希望在工作负载工厂中创建新服务器、请按照*选项1*转到凭据页面。手动添加数据库工作负载的读/写模式所需的凭据和权限。
+如果您没有在 Workload Factory 中关联的 AWS 凭证，并且想要在 Workload Factory 中创建新服务器，请按照 *选项 1* 转到凭证页面。手动添加数据库工作负载的读/写模式所需的凭据和权限。
 
 +
-如果要在工作负载工厂中完成创建新服务器表单、以便下载完整的YAML文件模板以在AWS CloudFormation中部署、请按照*选项2*操作、确保您具有在AWS CloudFormation中创建新服务器所需的权限。为数据库工作负载的_Read_模式手动添加所需的凭据和权限。
+如果您想完成 Workload Factory 中的创建新服务器表单，以便可以下载完整的 YAML 文件模板以在 AWS CloudFormation 中进行部署，请按照 *选项 2* 操作以确保您拥有在 AWS CloudFormation 中创建新服务器所需的权限。手动添加数据库工作负载的读取模式所需的凭据和权限。
 
 +
-或者、您也可以从Codebox下载部分完成的YAML文件模板、以便在工作负载出厂时创建堆栈、而无需任何凭据或权限。从“代码”框的下拉列表中选择*CloudFormation*以下载YAML文件。
+或者，您可以从 Codebox 下载部分完成的 YAML 文件模板，以在 Workload Factory 之外创建堆栈，而无需任何凭据或权限。从 Codebox 的下拉菜单中选择 *CloudFormation* 来下载 YAML 文件。
 
 .. *区域和VPC*：选择区域和VPC网络。
 +
@@ -205,27 +201,26 @@ NOTE: FCI部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。
 .高级创建
 --
 .步骤
-. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*Deploy database host*，然后从下拉菜单中选择*Microsoft SQL Server*。
+. 使用以下任一方式登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。在数据库图块中，选择*部署主机*，然后从菜单中选择*Microsoft SQL Server*。
 . 选择*高级创建*。
 . 对于*Deployment model*，请选择*Failover Cluster Instance*或*Single Instance*。
 . 在*AWS设置*下，提供以下内容：
 +
 .. *AWS凭据*：选择具有自动化权限的AWS凭据以部署新数据库主机。
 +
-具有读/写权限的 AWS 凭证允许工作负载工厂从您的 AWS 账户在工作负载工厂内部署和管理新的数据库主机。
+具有读/写权限的 AWS 凭证允许 Workload Factory 从 Workload Factory 内的 AWS 账户部署和管理新的数据库主机。
 
 +
-具有“只读”权限的 AWS 凭证允许工作负载工厂生成 CloudFormation 模板，供您在 AWS CloudFormation 控制台中使用。
+具有“只读”权限的 AWS 凭证允许 Workload Factory 生成 CloudFormation 模板，供您在 AWS CloudFormation 控制台中使用。
 
 +
-如果您在工作负载工厂中没有关联的AWS凭据、而您希望在工作负载工厂中创建新服务器、请按照*选项1*转到凭据页面。手动添加数据库工作负载的读/写模式所需的凭据和权限。
+如果您没有在 Workload Factory 中关联的 AWS 凭证，并且想要在 Workload Factory 中创建新服务器，请按照 *选项 1* 转到凭证页面。手动添加数据库工作负载的读/写模式所需的凭据和权限。
 
 +
-如果要在工作负载工厂中完成创建新服务器表单、以便下载完整的YAML文件模板以在AWS CloudFormation中部署、请按照*选项2*操作、确保您具有在AWS CloudFormation中创建新服务器所需的权限。手动添加数据库工作负载的_只读_模式所需的凭据和权限。
+如果您想完成 Workload Factory 中的创建新服务器表单，以便可以下载完整的 YAML 文件模板以在 AWS CloudFormation 中进行部署，请按照 *选项 2* 操作以确保您拥有在 AWS CloudFormation 中创建新服务器所需的权限。手动添加数据库工作负载的_只读_模式所需的凭据和权限。
 
 +
-或者、您也可以从Codebox下载部分完成的YAML文件模板、以便在工作负载出厂时创建堆栈、而无需任何凭据或权限。从“代码”框的下拉列表中选择*CloudFormation*以下载YAML文件。
+或者，您可以从 Codebox 下载部分完成的 YAML 文件模板，以在 Workload Factory 之外创建堆栈，而无需任何凭据或权限。从 Codebox 的下拉菜单中选择 *CloudFormation* 来下载 YAML 文件。
 
 .. *区域和VPC*：选择区域和VPC网络。
 +
@@ -237,30 +232,23 @@ AWS服务接口端点(SQS、FSx、EC2、CloudWatch、Cloud Formation、 SSM)和S
 +
 修改了VPC DNS属性 `EnableDnsSupport` 和 `EnableDnsHostnames` ，以便在尚未设置为时启用解析端点地址解析 `true`。
 
-.. *可用性分区*：根据您选择的部署模式选择可用性分区和子网。
+.. *可用区域*：根据您选择的部署模型选择可用区域和子网。为了实现高可用性，子网不应共享相同的路由表。
 +
 
 NOTE: FCI部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。
 
 +
-为实现高可用性、子网不应共享同一路由表。
-
+*** 对于单实例部署：
 +
-适用于单实例部署::
+**** 在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择可用性分区，并从*子网*下拉菜单中选择子网。
+
+
+*** 对于 FCI 部署：
 +
---
-... 在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择可用性分区，并从*子网*下拉菜单中选择子网。
+**** 在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择MAZ FSx for ONTAP配置的主要可用性分区，并从*子网*下拉菜单中选择主要可用性分区中的子网。
+**** 在*集群配置-节点2*字段中，从*可用性分区*下拉菜单中选择MAZ FSx for ONTAP配置的二级可用性分区，并从*子网*下拉菜单中选择一个子网。
 
 
---
-FCI部署::
-+
---
-... 在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择MAZ FSx for ONTAP配置的主要可用性分区，并从*子网*下拉菜单中选择主要可用性分区中的子网。
-... 在*集群配置-节点2*字段中，从*可用性分区*下拉菜单中选择MAZ FSx for ONTAP配置的二级可用性分区，并从*子网*下拉菜单中选择一个子网。
-
-
---
 
 
 .. *安全组*：选择现有安全组或创建新安全组。在新服务器部署期间、三个安全组会连接到SQL节点(EC2实例)。
@@ -391,7 +379,7 @@ AWS管理的密钥会根据服务适用性进行筛选。
 
 == 第2步：在Microsoft SQL Server上启用远程连接
 
-服务器部署完成后、工作负载工厂不会在Microsoft SQL Server上启用远程连接。要启用远程连接、请完成以下步骤。
+服务器部署后，Workload Factory 不会在 Microsoft SQL Server 上启用远程连接。要启用远程连接，请完成以下步骤。
 
 .步骤
 . 请参阅Microsoft文档中的、使用计算机身份进行NTLM link:https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-allow-local-system-to-use-computer-identity-for-ntlm["网络安全：允许本地系统对NTLM使用计算机身份"^] 。
@@ -400,4 +388,4 @@ AWS管理的密钥会根据服务适用性进行筛选。
 
 
 .下一步行动
-现在您可以 link:create-database.html["在BlueXP  工作负载工厂中为数据库创建数据库"]。
+现在你可以link:create-database.html["在 Workload Factory for Databases 中创建数据库"]。

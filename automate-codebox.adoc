@@ -4,13 +4,13 @@ permalink: automate-codebox.html
 keywords: automation, code automation, automate 
 summary: 您可以使用CodeBox自动执行主机部署、数据库创建等操作。 
 ---
-= 在BlueXP  数据库工作负载工厂中使用CodeBox实现自动化
+= 使用NetApp Workload Factory 中的 Codebox 实现数据库自动化
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-您可以在BlueXP  数据库工作负载工厂中使用Codebox自动执行主机部署、数据库创建等操作。CodeBox是一种基础架构即代码(Infrastructure as Code、IAC)联合试点、可帮助您生成代码以执行工作负载工厂支持的任何操作。
+您可以使用NetApp Workload Factory for Databases 中的 Codebox 自动执行主机部署、数据库创建等操作。Codebox 是一个基础设施即代码 (IaC) 副驾驶，可帮助您生成代码来执行 Workload Factory 支持的任何操作。
 
 详细了解 link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["CodeBox自动化"^] 以及如何使用它。

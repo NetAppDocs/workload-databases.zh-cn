@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: split-clone.html 
 keywords: split, clone, source, new database 
-summary: 从源数据库中拆分沙盒克隆、以便在BlueXP  工作负载工厂中为数据库创建新数据库。 
+summary: 从源数据库中拆分数据库克隆以在NetApp Workload Factory for Databases 中创建新数据库。 
 ---
-= 从源数据库中拆分沙盒克隆
+= 从源数据库中拆分数据库克隆
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在BlueXP  数据库工作负载工厂中、将沙盒克隆从其源数据库拆分会创建一个新数据库、该数据库将占用一定的存储容量。拆分完成后、克隆将被删除、新数据库将显示在清单中。
+在NetApp Workload Factory for Databases 中，将数据库克隆从其源数据库中拆分出来会创建一个新的数据库，这将消耗一定量的存储容量。当拆分完成并且新数据库出现在库存中时，克隆将被删除。
 
 .开始之前
 考虑新数据库需要多少存储容量。如果需要、 link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html["增加文件系统容量"^] 请在开始之前对FSx for ONTAP文件系统执行此操作。
@@ -19,8 +19,8 @@ summary: 从源数据库中拆分沙盒克隆、以便在BlueXP  工作负载�
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
-. 在数据库中，选择*沙盒*选项卡。
-. 在沙盒选项卡中、单击要拆分的沙盒克隆的三点菜单。
+. 从数据库菜单中，选择*沙盒*。
+. 在沙盒中，选择要拆分的数据库克隆的操作菜单。
 . 选择*S之 分*。
-. 在“拆分”对话框中，单击*Split。
+. 在拆分对话框中，选择*拆分*。
 

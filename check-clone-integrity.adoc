@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: check-clone-integrity.html 
 keywords: integrity check, data corruption 
-summary: 运行完整性检查、以确定在BlueXP  工作负载工厂中数据库的沙盒克隆数据是完好无损还是已损坏。 
+summary: 运行完整性检查以确定NetApp Workload Factory for Databases 中的沙盒克隆数据是否完整或损坏。 
 ---
 = 检查沙盒克隆中数据的完整性
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 运行完整性检查、以确定在BlueXP  工作负载工厂中数�
 
 
 [role="lead"]
-运行完整性检查、以确定在BlueXP  工作负载工厂中数据库的沙盒克隆数据是完好无损还是已损坏。
+运行完整性检查以确定NetApp Workload Factory for Databases 中的沙盒克隆数据是否完整或损坏。
 
 .关于此任务
 如果在源数据库繁忙时从该数据库创建沙盒克隆、则该克隆的数据可能与源数据库的最新快照不同步。此操作会检查沙盒克隆中所有对象的完整性、以确定沙盒克隆数据是否为最新数据。
@@ -19,8 +19,8 @@ summary: 运行完整性检查、以确定在BlueXP  工作负载工厂中数�
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
-. 在数据库中，选择*沙盒*选项卡。
-. 在沙盒选项卡中、单击要检查完整性的沙盒克隆的三点菜单。
+. 从数据库菜单中，选择*沙盒*。
+. 在沙盒中，选择要检查完整性的沙盒克隆的操作菜单。
 . 选择*运行完整性检查*。
 . 在完整性检查对话框中，单击*Integrity check*。
 . 在沙盒或作业监控中检查完整性检查的状态。

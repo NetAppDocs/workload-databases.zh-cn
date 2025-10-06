@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: refresh-clone.html 
 keywords: refresh clone, sync, update, database, Microsoft SQL 
-summary: 在BlueXP  工作负载工厂中刷新数据库的沙盒克隆。 
+summary: 刷新NetApp Workload Factory for Databases 中的数据库克隆，使其等同于当前时刻或之前某个时间点的源数据库。 
 ---
-= 在BlueXP  工作负载工厂中刷新数据库的沙盒克隆
+= 在NetApp Workload Factory for Databases 中刷新数据库克隆
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在BlueXP  工作负载出厂时刷新数据库的数据库克隆、使其相当于当前时刻或上一时间点的源数据库。
+刷新NetApp Workload Factory for Databases 中的数据库（沙盒）克隆，使其等同于当前时刻或之前时间点的源数据库。
 
 .关于此任务
 刷新克隆会将克隆更新到当前的源数据库或前一个时间点创建的源数据库快照。对沙盒克隆所做的任何更改都将被删除。
@@ -24,8 +24,8 @@ summary: 在BlueXP  工作负载工厂中刷新数据库的沙盒克隆。
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
-. 在数据库中，选择*沙盒*选项卡。
-. 在沙盒选项卡中、单击要刷新的沙盒克隆的三点菜单。
+. 从数据库菜单中，选择*沙盒*。
+. 在沙盒中，选择要刷新的沙盒克隆的操作菜单。
 . 选择*刷新*。
 . 在刷新对话框中、选择以下选项之一：
 +

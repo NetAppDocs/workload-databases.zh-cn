@@ -2,24 +2,24 @@
 sidebar: sidebar 
 permalink: quick-start-databases.html 
 keywords: requirements, basic mode, read-only mode, read/write mode 
-summary: 开始使用数据库工作负载工厂来使用基础设施即代码片段、发现主机、管理资源等。 
+summary: 开始使用NetApp Workload Factory for Databases 来使用基础设施即代码片段、发现主机、管理资源等。 
 ---
-= 数据库工作负载工厂快速启动
+= NetApp Workload Factory for Databases 快速入门
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-使用数据库工作负载工厂，您可以立即以_基本_模式开始。如果您希望使用工作负载工厂来发现主机、管理资源等、可以通过几个步骤开始操作。
+借助NetApp Workload Factory for Databases，您可以立即以_基本_模式开始使用。如果您想使用 Workload Factory 来发现主机、管理资源等，您可以通过几个步骤开始。
 
 要使用数据库、您必须拥有AWS帐户。
 
 请按照以下步骤开始操作。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]登录到BlueXP  工作负载工厂
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]登录NetApp Workload Factory
 [role="quick-margin-para"]
-您需要link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["在Workload Factory中设置一个帐户"^]使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+你需要link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["在NetApp Workload Factory 上建立帐户"^]并使用以下任一方式登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 添加凭据和权限
 [role="quick-margin-para"]
@@ -38,10 +38,10 @@ summary: 开始使用数据库工作负载工厂来使用基础设施即代码�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"]实施结构良好的数据库配置
 [role="quick-margin-para"]
-数据库工作负载工厂会定期从 Well-architected 仪表板分析Amazon FSx for NetApp ONTAP存储上的 Microsoft SQL Server 部署。要从结构良好的数据库资源仪表板解决问题，首先需要link:register-instance.html["注册实例"]。
+数据库工作负载工厂会定期通过 Well-architected 仪表板分析Amazon FSx for NetApp ONTAP存储上的 Microsoft SQL Server 和 Oracle 部署。要从结构良好的数据库资源仪表板解决问题，首先需要link:register-instance.html["注册实例"]。
 
 [role="quick-margin-para"]
-注册实例后，您可以查看架构良好的状态并采取行动link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["实施结构良好的数据库配置"]在工作量工厂中。
+注册实例后，您可以查看架构良好的状态并采取行动link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["实施结构良好的数据库配置"]在工作负载工厂中。
 
 .下一步行动
-当您在数据库清单中注册了 FSx for ONTAP 文件系统存储的实例后，您可以link:create-database.html["创建用户数据库"]或者link:create-sandbox-clone.html["克隆主机以创建沙盒"] 。
+当您在数据库清单中注册了 FSx for ONTAP文件系统存储资源后，您可以link:create-database.html["创建用户数据库"]或者link:create-sandbox-clone.html["克隆主机以创建沙盒"]。

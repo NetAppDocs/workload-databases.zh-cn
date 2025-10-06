@@ -4,20 +4,20 @@ permalink: known-limitations.html
 keywords: limitations, databases 
 summary: 已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。仔细审查这些限制。 
 ---
-= 数据库的BlueXP  工作负载工厂的已知限制
+= NetApp Workload Factory for Databases 的已知限制
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-已知限制确定了本产品版本不支持的平台、设备或功能、或者这些平台、设备或功能无法与产品正确交互操作。仔细审查这些限制。
+已知限制标识了NetApp Workload Factory for Databases 不支持或无法与其正确互操作的平台、设备或功能。仔细审查这些限制。
 
 
 
 == 实例检测支持
 
-工作负载工厂支持检测仅在 Amazon Linux 操作系统上运行的 PostgreSQL 实例和仅在 Red Hat Enterprise Linux 上运行的 Oracle 实例。
+Workload Factory 支持检测仅在 Amazon Linux 操作系统上运行的 PostgreSQL 实例和仅在 Red Hat Enterprise Linux 上运行的 Oracle 实例。
 
 
 
@@ -35,13 +35,13 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 * 在独立部署映像中选择除整理集之外的其他整理
 
 
-在部署过程中、工作负载工厂不会为多个Microsoft SQL Server实例安装自定义AMI。在部署过程中、仅会选择并配置默认的Microsoft SQL Server实例。
+作为部署的一部分，Workload Factory 不会安装具有多个 Microsoft SQL Server 实例的自定义 AMI。作为部署的一部分，仅选择并配置默认的 Microsoft SQL Server 实例。
 
 
 
 == 对于失败的部署、请回滚并重试
 
-工作负载工厂不支持对失败的部署执行回滚和重试。您可以从AWS中的CloudFormation控制台回滚或重试故障堆栈。
+Workload Factory 不支持回滚和重试失败的部署。您可以从 AWS 中的 CloudFormation 控制台回滚或重试失败的堆栈。
 
 
 
@@ -60,7 +60,7 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 
 == 始终可用性组配置支持
 
-工作负载出厂时不支持管理无中断可用性组配置。
+工作负载工厂不支持管理 Always On 可用性组配置。
 
 
 
@@ -84,7 +84,7 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 
 == Microsoft SQL Server检测和管理
 
-未保存Microsoft SQL Server检测。每次访问工作负载工厂中的数据库时、Microsoft SQL Server检测都会再次运行、以确定该区域中的SQL安装。
+Microsoft SQL Server 检测未保存。每次访问 Workload Factory 中的数据库时，Microsoft SQL Server 检测都会再次运行以识别该区域中的 SQL 安装。
 
 
 
@@ -118,7 +118,7 @@ ONTAP配置和操作系统配置不支持对多个SQL Server实例进行批量�
 
 === 操作系统修补程序评估以实现优化
 
-为优化目的而进行的操作系统修补程序评估可能无法在专用网络中运行。评估依赖于AWS Patch Manager。要了解如何修补专用网络中的Windows EC2实例，请参阅link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["AWS云运营博客"如何使用AWS Systems Manager修补专用子网中的Windows EC2实例""^]。
+为优化目的而进行的操作系统补丁评估可能无法在专用网络中发挥作用。评估依赖于 AWS Patch Manager。要了解如何修补私有网络中的 Windows EC2 实例，请参阅 AWS 云操作博客link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["如何使用 AWS Systems Manager 修补私有子网中的 Windows EC2 实例"^]。
 
 
 
@@ -131,17 +131,35 @@ Microsoft SQL Server内部存储卷大小的成本节省和节省百分比计算
 == 跨区域复制评估
 
 * 如果目标FSx for ONTAP文件系统位于其他AWS帐户中、则优化评估无法确定是否正在使用跨区域复制(CRR)。
-* 工作负载出厂时仅评估源FSx for ONTAP文件系统的CRR配置。
+* Workload Factory 仅评估源 FSx for ONTAP文件系统的 CRR 配置。
 
 
 
 
-== Explore 节省中的数据库主机身份验证
+== 探索节省时进行数据库主机身份验证
 
 在某些权限有限的情况下，身份验证成功后，探索储蓄页面不会加载数据。
 
 
 
-== 与BlueXP backup and recovery集成
+== 与NetApp备份和恢复集成
 
-将主机添加到BlueXP备份和恢复以进行保护后，数据库发现有时会失败。
+将主机添加到NetApp Backup and Recovery 进行保护后，数据库发现有时会失败。
+
+
+
+== 区域支持
+
+不支持以下AWS区域：
+
+* 中国地区
+* GovCloud (美国)地区
+* 机密云
+* 最高机密
+
+
+
+
+== 在 SUSE Linux Enterprise Server 12 上注册 Oracle
+
+在 SUSE Linux Enterprise Server 12 上注册 Oracle 数据库时，Workload Factory 不会安装 Python 依赖项。您必须手动配置所需的 Python 版本。  Workload Factory 要求最低版本为 3.6；但是，我们推荐版本 3.11。

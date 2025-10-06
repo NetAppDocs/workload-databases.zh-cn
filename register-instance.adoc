@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: register-instance.html 
 keywords: manage, register, Microsoft SQL Server instance, Oracle database, manage database, manage instance 
-summary: 注册资源，以便您可以监控数据库工作负载工厂中的资源状态、资源利用率、保护和存储性能。 
+summary: 注册资源，以便您可以监控NetApp Workload Factory for Databases 中的资源状态、资源利用率、保护和存储性能。 
 ---
-= 在数据库工作负载工厂中注册资源
+= 在NetApp Workload Factory for Databases 中注册资源
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-注册 Microsoft SQL Server 的实例和 Oracle 的数据库，以便您可以在数据库的工作负载工厂中监控实例和数据库状态、资源利用率、保护和存储性能。
+注册 Microsoft SQL Server 实例和 Oracle 数据库，以便您可以在NetApp Workload Factory for Databases 中监控实例和数据库状态、资源利用率、保护和存储性能。
 
 仅在 FSx for ONTAP文件系统存储上运行的数据库引擎才可以注册。
 
@@ -24,7 +24,7 @@ summary: 注册资源，以便您可以监控数据库工作负载工厂中的�
 您可以使用 SQL Server 凭据或 Windows 凭据进行身份验证。
 
 
-NOTE: 工作负载工厂仅支持Microsoft SQL Server实例和Oracle数据库的注册和管理。根据您在工作负载工厂中选择的 AWS 帐户凭证，PostgreSQL 主机可能会出现在清单中。目前，工作负载工厂仅支持在 Amazon Linux 操作系统上运行的未注册的 PostgreSQL 实例。
+NOTE: Workload Factory 仅支持 Microsoft SQL Server 实例和 Oracle 数据库的注册和管理。根据您在 Workload Factory 中选择的 AWS 帐户凭证，PostgreSQL 主机可能会出现在清单中。目前，Workload Factory 仅支持在 Amazon Linux 操作系统上运行的未注册的 PostgreSQL 实例。
 
 
 
@@ -32,7 +32,7 @@ NOTE: 工作负载工厂仅支持Microsoft SQL Server实例和Oracle数据库的
 
 注册实例之前请考虑以下事项：
 
-实例或数据库的主机必须出现在“清单”选项卡中。要使主机出现在清单中，link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["您必须添加 AWS 账户凭证和“只读”或“读/写”模式权限"^] 。
+实例或数据库的主机必须出现在清单中。要使主机出现在清单中，link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["您必须添加 AWS 账户凭证和“只读”或“读/写”模式权限"^] 。
 
 
 
@@ -62,8 +62,8 @@ NOTE: 工作负载工厂仅支持Microsoft SQL Server实例和Oracle数据库的
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
-. 在数据库中，选择*Inventory*选项卡。
-. 选择*Microsoft SQL Server*作为引擎类型。
+. 从数据库菜单中，选择*Inventory*。
+. 在清单中，选择 *Microsoft SQL Server* 作为引擎类型。
 . 选择“*实例*”选项卡。
 . 选择注册单个实例或多个实例。
 +
@@ -117,8 +117,8 @@ NOTE: 工作负载工厂仅支持Microsoft SQL Server实例和Oracle数据库的
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
-. 在数据库中，选择*Inventory*选项卡。
-. 在“库存”选项卡中，选择“*Oracle*”作为数据库引擎。
+. 从数据库菜单中，选择*Inventory*。
+. 在清单中，选择 *Oracle* 作为数据库引擎。
 . 选择“*数据库*”选项卡。
 . 选择注册单个数据库或多个数据库。
 +

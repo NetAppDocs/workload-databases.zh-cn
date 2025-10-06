@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-database.html 
 keywords: create, database, creation, Microsoft SQL 
-summary: 使用BlueXP  Workload Factory为数据库创建Microsoft SQL数据库。 
+summary: 使用NetApp Workload Factory for Databases 创建 Microsoft SQL 数据库。 
 ---
-= 在BlueXP  工作负载工厂中为数据库创建Microsoft SQL数据库
+= 在NetApp Workload Factory for Databases 中创建 Microsoft SQL 数据库
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-通过创建新的Microsoft SQL数据库、您可以在BlueXP  工作负载工厂中管理数据库的资源。
+创建新的 Microsoft SQL 数据库使您能够管理NetApp Workload Factory for Databases 中的资源。
 
 .关于此任务
 创建数据库时、会在FSx for ONTAP文件系统中创建两个新卷、其中包含用于托管数据库数据和日志文件的独立LUN。新数据库中的数据库文件采用精简配置、只占用为新数据库分配的总大小的几MB。
@@ -26,15 +26,13 @@ NOTE: 使用SMB协议的Microsoft SQL Server不支持创建数据库。
 .开始之前
 在创建新数据库之前、请确保满足以下前提条件。
 
-凭据和权限:: 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS 账户凭证和“只读”或“读/写”模式权限"^]在工作负载出厂时创建新数据库。
+* *凭证和权限*：您必须拥有link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS 账户凭证和“只读”或“读/写”模式权限"^]在工作负载工厂中创建一个新的数据库。
 +
---
 或者、您也可以使用代码框复制模板、以便使用REST API在工作负载出厂时部署数据库。link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["了解有关CodeBox自动化的更多信息"^](英文)
 
---
-Windows 主机:: 如果使用_Quick creen_模式、则Microsoft SQL Server上必须有足够的可用驱动器号才能为新数据库创建新驱动器。
-Microsoft SQL Server:: 您必须在工作负载出厂时拥有托管的Microsoft SQL Server、数据库才能托管新数据库。
-AWS Systems Manager:: 确保已通过AWS System Manager在Microsoft SQL主机中启用此 `NT Authority\SYSTEM user` 权限。
+* *Windows 主机*：如果您使用_快速创建_模式，则 Microsoft SQL Server 上必须有足够的驱动器号来为新数据库创建新驱动器。
+* *Microsoft SQL Server*：您必须在工作负载工厂中拥有一个托管的 Microsoft SQL Server，以便数据库托管新的数据库。
+* *AWS Systems Manager*：确保 `NT Authority\SYSTEM`通过 AWS Systems Manager 在 Microsoft SQL 主机中启用用户权限。
 
 
 
@@ -50,9 +48,10 @@ AWS Systems Manager:: 确保已通过AWS System Manager在Microsoft SQL主机中
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
-. 在数据库中，选择*Inventory*选项卡。
-. 在清单选项卡中、选择具有托管SQL Server实例的数据库服务器以在其中创建数据库。
-. 单击托管实例的三点菜单，然后选择*创建用户数据库*。
+. 从数据库菜单中，选择*Inventory*。
+. 在清单中，选择 *Microsoft SQL Server* 作为数据库引擎类型。
+. 选择具有托管 SQL 服务器实例的数据库服务器来创建数据库。
+. 单击托管实例的操作菜单，然后选择*创建用户数据库*。
 . 在创建用户数据库页面上的数据库信息下、提供以下内容：
 +
 .. *数据库名称*：输入数据库的名称。
@@ -83,9 +82,10 @@ AWS Systems Manager:: 确保已通过AWS System Manager在Microsoft SQL主机中
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
-. 在数据库中，选择*Inventory*选项卡。
-. 在清单选项卡中、选择具有托管SQL Server实例的数据库服务器以在其中创建数据库。
-. 单击受管实例的三点菜单，然后选择*创建用户数据库*。
+. 从数据库菜单中，选择*Inventory*。
+. 在清单中，选择 *Microsoft SQL Server* 作为数据库引擎类型。
+. 选择具有托管 SQL 服务器实例的数据库服务器来创建数据库。
+. 单击托管实例的操作菜单，然后选择*创建用户数据库*。
 . 选择*创建用户数据库*。
 . 在创建用户数据库页面上的数据库信息下、提供以下内容：
 +

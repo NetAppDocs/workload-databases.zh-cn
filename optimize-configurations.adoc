@@ -2,31 +2,31 @@
 sidebar: sidebar 
 permalink: optimize-configurations.html 
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
-summary: 数据库工作负载工厂扫描 Microsoft SQL Server 配置，提供见解和建议，帮助您实现卓越运营。 
+summary: NetApp Workload Factory for Databases 扫描 Microsoft SQL Server 配置，提供见解和建议，帮助您实现卓越运营。 
 ---
-= 在工作负载工厂中实现架构良好的数据库配置
+= 在 Workload Factory 中实施架构良好的数据库配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-使用配置分析见解和建议，利用工作负载工厂使用 Microsoft SQL Server 和 Oracle 为您的数据库配置实施最佳实践。您可以轻松查看架构良好的状态，了解数据库配置的问题，并采取措施改进任何未针对可靠性、安全性、效率、性能和成本进行优化的配置。
+使用配置分析见解和建议，利用NetApp Workload Factory 为使用 Microsoft SQL Server 和 Oracle 的数据库配置实施最佳实践。您可以轻松查看架构良好的状态，了解数据库配置的问题，并采取措施改进任何未针对可靠性、安全性、效率、性能和成本进行优化的配置。
 
 您还可以忽略不适用于您的环境的特定配置的分析，以避免不必要的警报和不准确的优化结果。
 
-link:optimize-overview.html["了解工作负载工厂中的配置分析和良好架构状态。"]
+link:optimize-overview.html["了解 Workload Factory 中的配置分析和良好架构状态。"]
 
 
 
 == 关于此任务
 
-工作负载工厂每日分析数据库配置。每日分析提供精心设计的状态、见解和建议，以及自动修复配置问题的选项，以便您的配置符合最佳实践。
+Workload Factory 每天分析数据库配置。每日分析提供精心设计的状态、见解和建议，以及自动修复配置问题的选项，以便您的配置符合最佳实践。
 
-您可以选择查看配置问题的建议并从工作负载工厂控制台内的数据库清单中修复这些问题。
+您可以选择查看配置问题的建议并从 Workload Factory 控制台内的数据库清单中修复这些问题。
 
 .分析的内容
-工作负载工厂分析以下配置的良好架构状态：
+Workload Factory 分析以下配置的良好架构状态：
 
 对于 Microsoft SQL Server 实例：
 
@@ -36,12 +36,13 @@ link:optimize-overview.html["了解工作负载工厂中的配置分析和良好
 * 计算：包括调整大小、操作系统补丁和网络适配器设置，如接收方缩放 (RSS)、TCP 卸载和 MTU 对齐
 * 应用程序：包括Microsoft SQL Server许可证、Microsoft SQL Server修补程序和MAXDOP设置
 * 弹性：包括本地快照、FSx for ONTAP备份、跨区域复制 (CRR) 和 Microsoft SQL 高可用性。
-* 克隆：包括刷新和删除在工作负载工厂内部或外部创建的超过 60 天的克隆（沙盒）的选项
+* 克隆：包括刷新和删除在 Workload Factory 内部或外部创建的超过 60 天的克隆（沙盒）的选项
 
 
 对于 Oracle 数据库：
 
-* 存储配置：包括容量管理、精简配置、分层策略、快照和存储效率
+* 存储配置：包括容量管理、精简配置、分层策略、快照、存储效率以及使用 iSCSI 部署的操作系统配置（带或不带自动存储管理 (ASM)），包括 Microsoft 多路径 I/O (MPIO) 状态和设置
+* 存储布局：包括重做日志放置、临时表空间放置、数据文件放置、存档日志放置、控制文件放置和二进制文件放置、ASM 磁盘组 LUN 数量
 
 
 
@@ -49,7 +50,7 @@ link:optimize-overview.html["了解工作负载工厂中的配置分析和良好
 == 开始之前
 
 * 你必须有link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS 账户凭证和读/写权限"^]分析您的数据库配置。
-* 要评估 Microsoft SQL Server 实例或 Oracle 数据库的存储，必须在工作负载工厂中注册资源，并且存储类型必须是 FSx for ONTAP。link:register-instance.html["了解如何注册资源。"]
+* 要评估 Microsoft SQL Server 实例或 Oracle 数据库的存储，必须在 Workload Factory 中注册资源，并且存储类型必须是 FSx for ONTAP。link:register-instance.html["了解如何注册资源。"]
 * 在选择修复设置或配置之前、请确保仔细查看每个建议。对于RSS和MAXDOP设置、我们建议您在更改生产环境之前测试建议的设置以确定性能改进。
 
 
@@ -68,8 +69,14 @@ NOTE: 修复过程可能会导致实例停机或服务中断。在选择修复�
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
-. 在*Inventory*选项卡中，选择*Instances *选项卡。
-. 选择“修复问题”以查看实例的配置问题。
+. 在*库存*中，选择引擎类型：Microsoft SQL Server 或 Oracle。
+. 选择要修复特定配置的资源。
++
+** 如果选择了 Microsoft SQL Server，请选择“*实例*”选项卡。
+** 如果您选择了 Oracle，请选择“*数据库*”选项卡。
+
+
+. 选择“查看并修复”以查看实例的配置问题。
 . 在实例的“良好架构状态”页面上，查看分析结果。
 +
 您可以按类别、子类别、状态、严重性和标签过滤配置问题。
@@ -86,8 +93,8 @@ NOTE: 修复过程可能会导致实例停机或服务中断。在选择修复�
 .. 对于除克隆清理之外的所有配置，请查看建议详细信息以了解如果选择修复问题会发生什么。某些修复操作可能会导致实例停机或服务中断。
 .. 对于克隆清理、请选择要刷新或删除的克隆数据库(沙盒)。
 +
-*** 刷新克隆会将其与其源数据库同步。刷新仅适用于在工作负载出厂时创建的克隆。
-*** 删除克隆将永久删除该克隆、释放存储空间并降低成本。您可以删除在工作负载出厂时和出厂时创建的克隆。
+*** 刷新克隆会使其与源数据库同步。刷新仅适用于在 Workload Factory 中创建的克隆。
+*** 删除克隆会将其永久删除，释放存储空间并降低成本。您可以删除在 Workload Factory 内部和外部创建的克隆。
 
 
 
@@ -96,7 +103,7 @@ NOTE: 修复过程可能会导致实例停机或服务中断。在选择修复�
 
 
 .结果
-工作负载工厂开始修复问题。选择*作业监控*选项卡以查看操作状态。
+Workload Factory 开始修复问题。选择“作业监控”选项卡来查看操作的状态。
 
 
 
@@ -104,7 +111,7 @@ NOTE: 修复过程可能会导致实例停机或服务中断。在选择修复�
 
 延迟或取消不适用于数据库环境的特定数据库配置分析、以避免不必要的警报和不准确的优化结果。您可以随时重新激活延迟或取消的配置分析。
 
-数据库配置的应用程序要求会有所不同。Workload Factory提供了两个选项、用于跳过对特定数据库配置的分析、以便您只监控相关问题并准确查看相关配置的运行状况。如果推迟或取消特定配置分析、则该配置不会计入优化总分。
+应用程序对数据库配置的要求各不相同。 Workload Factory 为您提供了两个跳过特定数据库配置分析的选项，以便您可以只监控相关问题并准确了解相关配置的健康状况。当特定配置分析被推迟或取消时，该配置将不包含在总优化分数中。
 
 您可以在配置级别、SQL Server 实例或 Oracle 数据库级别推迟、解除和重新激活配置分析。
 
@@ -123,8 +130,11 @@ NOTE: 修复过程可能会导致实例停机或服务中断。在选择修复�
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
-. 在*Inventory*选项卡中，向下滚动到要延迟的配置，选择三点菜单，然后选择*Postpone for 30 days*。
-. 选择 * 继续 * 。
+. 从数据库菜单中，选择*Inventory*。
+. 在清单中，选择数据库引擎类型：*Microsoft SQL Server* 或 *Oracle*。
+. 导航到要推迟配置的 SQL Server 实例或 Oracle 数据库，选择操作菜单，然后选择 *Well-architected*。
+. 在 Well-architected 分析页面上，向下滚动到要推迟的配置，选择操作菜单，然后选择 *Dismiss*。
+. 在“解除”配置对话框中，选择“推迟 30 天”，然后选择“解除”。
 
 
 .结果
@@ -138,8 +148,11 @@ NOTE: 修复过程可能会导致实例停机或服务中断。在选择修复�
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
-. 在*Inventory*选项卡中，向下滚动到要取消的配置，选择三点菜单，然后选择*Dismiss*。
-. 选择 * 继续 * 。
+. 从数据库菜单中，选择*Inventory*。
+. 在清单中，选择数据库引擎类型：*Microsoft SQL Server* 或 *Oracle*。
+. 导航到要推迟配置的 SQL Server 实例或 Oracle 数据库，选择操作菜单，然后选择 *Well-architected*。
+. 在 Well-architected 分析页面上，向下滚动到要推迟的配置，选择操作菜单，然后选择 *Dismiss*。
+. 在 Dismiss 配置对话框中，选择 *Dismiss* 选项，然后选择 *Dismiss* 确认关闭。
 
 
 .结果
@@ -153,8 +166,11 @@ NOTE: 修复过程可能会导致实例停机或服务中断。在选择修复�
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
-. 在*Inventory*选项卡中，向下滚动到要重新激活的配置，选择三点菜单，然后选择*Re再 激活*。
-. 选择 * 继续 * 。
+. 从数据库菜单中，选择*Inventory*。
+. 在清单中，选择数据库引擎类型：*Microsoft SQL Server* 或 *Oracle*。
+. 导航到要推迟配置的 SQL Server 实例或 Oracle 数据库，选择操作菜单，然后选择 *Well-architected*。
+. 在 Well-architected 分析页面上，选择 *Dismissed configuration* 以仅显示已解除的配置。
+. 选择*重新激活*以重新启动已推迟或已取消的配置的配置分析。
 
 
 .结果

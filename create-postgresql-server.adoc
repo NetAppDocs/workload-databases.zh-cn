@@ -2,41 +2,41 @@
 sidebar: sidebar 
 permalink: create-postgresql-server.html 
 keywords: create, server, PostgreSQL, deploy, host, deploy a database host, database host 
-summary: 在BlueXP  工作负载工厂中为数据库创建新的PostgreSQL SQL服务器。 
+summary: 在NetApp Workload Factory for Databases 中创建一个新的 PostgreSQL SQL 服务器。 
 ---
-= 在BlueXP  工作负载工厂中创建PostgreSQL服务器
+= 在NetApp Workload Factory 中创建 PostgreSQL 服务器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在BlueXP  工作负载工厂中为数据库创建新的PostgreSQL服务器或数据库主机需要部署FSx for ONTAP文件系统并为Active Directory提供资源。
+在NetApp Workload Factory for Databases 中创建新的 PostgreSQL 服务器或数据库主机需要 FSx for ONTAP文件系统部署和 Active Directory 资源。
 
-.关于此任务
-在从BlueXP  工作负载工厂创建PostgreSQL服务器之前、请了解可用于数据库主机配置的存储部署类型、工作负载工厂操作模式以及完成此操作的要求。
 
-FSx for ONTAP文件系统部署:: 创建新的PostgreSQL服务器需要FSx for ONTAP文件系统作为存储后端。您可以使用现有FSx for ONTAP文件系统、也可以创建新文件系统。如果您选择一个现有FSx for ONTAP文件系统作为数据库服务器存储后端、我们将为PostgreSQL工作负载创建一个新的Storage VM。
-+
---
-FSx for ONTAP文件系统具有两种PostgreSQL服务器部署模式：_High Availability (HA)_或_single instance_。根据您选择的FSx for ONTAP部署模式、系统会为FSx for ONTAP文件系统创建不同的资源。
+
+== 关于此任务
+
+在从 Workload Factory 创建 PostgreSQL 服务器之前，请了解数据库主机配置的可用存储部署类型、工作负载工厂操作模式以及完成此操作的要求。
+
+.FSx for ONTAP文件系统部署
+创建新的PostgreSQL服务器需要FSx for ONTAP文件系统作为存储后端。您可以使用现有FSx for ONTAP文件系统、也可以创建新文件系统。如果您选择一个现有FSx for ONTAP文件系统作为数据库服务器存储后端、我们将为PostgreSQL工作负载创建一个新的Storage VM。
+
++ FSx for ONTAP文件系统有两种 PostgreSQL 服务器部署模型：_高可用性 (HA)_ 或_单实例_。根据您选择的 FSx for ONTAP部署模型，为 FSx for ONTAP文件系统创建不同的资源。
 
 * *高可用性(HA)部署*：在为HA部署选择新的FSx for NetApp ONTAP文件系统时，将部署多可用性区域FSx for ONTAP文件系统。对于HA部署、系统会为数据、日志和tempdb文件创建单独的卷和LUN。系统会为Windows集群的Quorum或见证磁盘创建一个额外的卷和LUN。HA部署可在主PostgreSQL服务器和二级PostgreSQL服务器之间配置流式复制。
 * *单实例部署*：创建新的PostgreSQL服务器时、将创建适用于ONTAP文件系统的单可用性区域FSx。此外、还会为数据、日志和tempdb文件创建单独的卷和LUN。
 
 
---
 
 
-.开始之前
-在创建新数据库主机之前、请确保满足以下前提条件。
+== 开始之前
 
-凭据和权限:: 您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS 账户凭证和读/写模式权限"^]在工作负载出厂时创建新的数据库主机。
-
+您必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS 账户凭证和读/写模式权限"^]在工作负载出厂时创建新的数据库主机。
 
 
 
-== 创建数据库服务器
+== 创建PostgreSQL服务器
 
 您可以使用_Quick cre成_或_Advanced cre成_部署模式在工作负载工厂中以_Automate _模式权限完成此任务。您还可以使用CodeBox中提供的以下工具：REST API、AWS CLI、AWS CloudFormation和Terraform。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["了解如何使用CodeBox实现自动化"^](英文)
 
@@ -52,7 +52,7 @@ NOTE: 在_Quick creel_中、HA是默认部署模式、Windows 2016是默认Windo
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*Deploy database host*，然后从下拉菜单中选择*PostgreSQL Server*。
+. 在数据库图块中，选择*部署主机*，然后从菜单中选择*PostgreSQL 服务器*。
 . 选择*快速创建*。
 . 在*Landing zones*下，提供以下内容：
 +
@@ -141,7 +141,7 @@ NOTE: HA部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。
 --
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*Deploy database host*，然后从下拉菜单中选择*PostgreSQL Server*。
+. 在数据库图块中，选择*部署主机*，然后从菜单中选择*PostgreSQL 服务器*。
 . 选择*高级创建*。
 . 在*部署模式*下，选择*独立实例*或*高可用性(HA)*。
 . 在*Landing zones*下，提供以下内容：
@@ -174,20 +174,17 @@ AWS服务接口端点(SQS、FSx、EC2、CloudWatch、Cloud Formation、 SSM)和S
 
 .. *可用性分区*：选择可用性分区和子网。
 +
-适用于单实例部署::
+*对于单实例部署*
+
 +
---
 在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择可用性分区，并从*子网*下拉菜单中选择子网。
 
---
-HA部署::
 +
---
+*适用于 HA 部署*
+
++
 ... 在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择MAZ FSx for ONTAP配置的主要可用性分区，并从*子网*下拉菜单中选择主要可用性分区中的子网。
 ... 在*集群配置-节点2*字段中，从*可用性分区*下拉菜单中选择MAZ FSx for ONTAP配置的二级可用性分区，并从*子网*下拉菜单中选择一个子网。
-
-
---
 
 
 .. *安全组*：选择现有安全组或创建新安全组。
