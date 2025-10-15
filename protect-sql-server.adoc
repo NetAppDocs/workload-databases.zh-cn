@@ -21,7 +21,7 @@ Workload Factory 可自动发现资源、验证先决条件以及配置和安装
 
 NetApp Backup and Recovery 利用NetApp SnapMirror数据复制技术，通过创建快照副本并将其传输到备份位置来确保所有备份完全同步。
 
-有关使用备份和恢复进行保护的详细信息，请参阅link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html["使用备份和恢复保护 Microsoft SQL 工作负载概述"^]。
+有关使用备份和恢复进行保护的详细信息，请参阅 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["使用备份和恢复保护 Microsoft SQL 工作负载概述"^]。
 
 
 
@@ -29,8 +29,8 @@ NetApp Backup and Recovery 利用NetApp SnapMirror数据复制技术，通过创
 
 必须满足以下要求才能使用备份和恢复保护 Microsoft SQL Server 工作负载。
 
-* 确保您的环境满足link:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["备份和恢复 SQL Server 要求"^]。
-* link:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#in-netapp-console["完成NetApp控制台要求"^]包括设置、分配 IAM 角色和安装控制台代理。
+* 确保您的环境满足 link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["备份和恢复 SQL Server 要求"^]。
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#in-netapp-console["完成NetApp控制台要求"^] 包括设置、分配 IAM 角色和安装控制台代理。
 
 
 如果您拥有NetApp帐户的组织管理员访问权限，则 `backup and recovery super admin`当您<<使用NetApp Backup and Recovery 做好保护准备,使用NetApp Backup and Recovery 做好保护准备>>。
@@ -40,7 +40,7 @@ NetApp Backup and Recovery 利用NetApp SnapMirror数据复制技术，通过创
 要发现数据库，您必须在连接器上设置主机解析。在托管设备上，在 `/etc/hosts`文件。
 
 +
-** link:https://docs.netapp.com/us-en/console-backup-recovery/br-start-licensing.html["设置NetApp Backup and Recovery 的许可"^]
+** link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html["设置NetApp Backup and Recovery 的许可"^]
 
 
 
@@ -69,6 +69,6 @@ NetApp Backup and Recovery 利用NetApp SnapMirror数据复制技术，通过创
 .下一步行动
 从备份和恢复中，创建一个策略来保护您的 Microsoft SQL Server 实例和数据库。
 
-link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-policies-create.html["了解如何创建策略来保护您的 Microsoft SQL Server 实例和数据库"^] 。
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["了解如何创建策略来保护您的 Microsoft SQL Server 实例和数据库"^]。
 
-相关信息，请参阅link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html["备份和恢复文档"^]用于管理 Microsoft SQL Server 工作负载。
+相关信息，请参阅 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["备份和恢复文档"^] 用于管理 Microsoft SQL Server 工作负载。
