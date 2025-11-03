@@ -749,14 +749,7 @@
   <block id="ebc3bf5de769bc75ad8e36a90a0ed695" category="list-text">每日配置分析</block>
   <block id="fc34f37e0124ad3486b3476b4c3bf8ba" category="section-title">架构良好的状态</block>
   <block id="a64cfe5c8ae4b3445ff288e9acf4b12e" category="list-text">精心设计的得分</block>
-  <block id="3ae4c18410c2fa4fdf19fa3a943ef362" category="list-text">得分包括当前分析的所有配置、并以百分比形式显示。25%的分数表示25%的文件系统配置设计良好。</block>
   <block id="a4394e01049a42d14bd6258585de98b7" category="list-text">配置类别</block>
-  <block id="d24dfe9869a3af3c94d86b476bc18a3d" category="list-text">文件系统配置会根据AWS精心设计的框架的以下五大支柱按类别进行组织。</block>
-  <block id="b88f659b2eb7813471f331b19c9d7f02" category="list-text">_Reliability _：确保工作负载正确一致地执行其预期功能、即使发生中断也是如此。例如、FSx for ONTAP备份就是一个配置示例。</block>
-  <block id="6a940b53f011e22baccafe058e7df66e" category="list-text">_Security_：强调通过风险评估和缓解策略保护数据、系统和资产。</block>
-  <block id="d5f464c28ed994054fe98db4934a7da1" category="list-text">_卓越运营_：专注于提供最优架构和业务价值。</block>
-  <block id="03be89b5f488a61c9b35832aa58745c1" category="list-text">_成本优化_：旨在提供业务价值、同时最大程度地降低成本。</block>
-  <block id="49c47aadfeff1e01313108c157d381b4" category="list-text">_Performance效率_：侧重于高效利用资源来满足系统要求、并在需求变化时保持最佳性能。</block>
   <block id="8b75b787538a5ee0eb97dc541694c82a" category="list-text">分析范围</block>
   <block id="3f6f8b4e204fd3aa39cac35661de164d" category="section-title">分析要求</block>
   <block id="4eadd345921a1f4292d9b98892d3b84e" category="inline-link-macro">实施结构良好的数据库配置</block>
@@ -896,7 +889,6 @@
   <block id="e13a1019f98bb51abab8e23f9bf0c5c2" category="list-text">EC2 实例配置文件角色的权限</block>
   <block id="51338cb33c95537fe95c754fca16bf96" category="list-text">与工作负载数据库管理 (wlmdb) 相关的凭证</block>
   <block id="88c29fe90401d537c3fb507300ab6c20" category="paragraph">扫描完成后，错误会显示在控制台中，提供智能错误日志分析器检测到的问题的全面视图。</block>
-  <block id="1bdd4c6f4051ac693645d05ee75e84ec" category="list-text">使用过滤器根据严重性、时间范围和错误代码等标准来优化显示的错误。</block>
   <block id="d57a30f2af1e68603bcbf4d88ae44c7f" category="list-text">查看详细的错误信息，包括原始错误消息、基于 AI 的解释以及解决错误的建议补救步骤。</block>
   <block id="ada60b484b7d2e3edafc98754146c7c3" category="paragraph">您可以重新注册该资源。</block>
   <block id="605deef06e1372beea22ad9cd2be1a6a" category="inline-link-macro">注册资源</block>
@@ -969,7 +961,6 @@
   <block id="24373c35884bc6090ef23efe0b026c1e" category="paragraph"><block ref="24373c35884bc6090ef23efe0b026c1e" category="inline-link-macro-rx"></block></block>
   <block id="d90600b832876e9302411cfab905b9bc" category="section-title">数据库清单增强功能</block>
   <block id="3772c3dfbcdf91deef3f77333da3ced1" category="paragraph">在数据库清单中的实例屏幕中，对于 Microsoft SQL Server 的单个或多个实例，或者对于 Oracle 的单个或多个数据库，可以使用修复、推迟和消除配置问题的选项。</block>
-  <block id="945d9800b1b25a8b224232b57dabb8a6" category="section-title">优化 Amazon Elastic Block Store (EBS) 存储计算器中的节省</block>
   <block id="b051b129322b1fa228bb46d5704f8ad2" category="paragraph">Workload Factory 可以分析您的 EBS 性能使用情况，然后建议最佳且最具成本效益的 FSx for ONTAP配置，以便您可以通过切换到 FSx for ONTAP来节省更多。</block>
   <block id="75851f48043c7a3877391f5330fb19c1" category="inline-link-macro">在 Workload Factory 控制台中探索检测到的存储环境的节省情况</block>
   <block id="a0766b901d28d8d972d369d556ae3e10" category="paragraph"><block ref="a0766b901d28d8d972d369d556ae3e10" category="inline-link-macro-rx"></block></block>
@@ -1197,7 +1188,6 @@
   <block id="15ff0edfa22106f59b2d6897f5c93ff7" category="paragraph">您可以选择查看配置问题的建议并从 Workload Factory 控制台内的数据库清单中修复这些问题。</block>
   <block id="61ee1dd5e668df870f53e81aa15e3813" category="paragraph">Workload Factory 分析以下配置的良好架构状态：</block>
   <block id="b8995cc72a69581d30a1bda023cdd963" category="list-text">克隆：包括刷新和删除在 Workload Factory 内部或外部创建的超过 60 天的克隆（沙盒）的选项</block>
-  <block id="aaab95005352513769753dbb1a879086" category="list-text">存储配置：包括容量管理、精简配置、分层策略、快照、存储效率以及使用 iSCSI 部署的操作系统配置（带或不带自动存储管理 (ASM)），包括 Microsoft 多路径 I/O (MPIO) 状态和设置</block>
   <block id="7ad2228e24b645ace87b19a4d0e1ea84" category="list-text">存储布局：包括重做日志放置、临时表空间放置、数据文件放置、存档日志放置、控制文件放置和二进制文件放置、ASM 磁盘组 LUN 数量</block>
   <block id="d8e924feff88175a3a6e329d7a242ef9" category="list-text">要评估 Microsoft SQL Server 实例或 Oracle 数据库的存储，必须在 Workload Factory 中注册资源，并且存储类型必须是 FSx for ONTAP。<block ref="aed8a618f1e8a1dc325945b821521d6c" category="inline-link-macro-rx"></block></block>
   <block id="bf2b2769ceeef90639022670d2ded3af" category="list-text">在*库存*中，选择引擎类型：Microsoft SQL Server 或 Oracle。</block>
@@ -1219,7 +1209,6 @@
   <block id="7c6a7786a083c7d074bada76f0bcd33b" category="summary">数据库工作负载工厂定期分析 Microsoft SQL Server 和 Oracle 配置以确定是否存在任何问题。</block>
   <block id="8317ffd1a53e5d269aaac07d321b8dd0" category="doc">Workload Factory 中的数据库环境配置分析</block>
   <block id="1725276922bab9d023ef938d5fce0d7c" category="paragraph">数据库工作负载工厂会定期分析数据库配置，以确定Amazon FSx for NetApp ONTAP存储上的 Microsoft SQL Server 和 Oracle 部署是否存在任何问题。当发现问题时，Workload Factory 会向您展示问题所在，并解释需要进行哪些更改以确保您的数据库配置达到最佳性能、成本效益并符合最佳实践。</block>
-  <block id="b0a0826c5a9c2b2e6c919de33e89dbfe" category="paragraph">在文件系统级别的 Workload Factory 控制台中，列出了所有 FSx for ONTAP文件系统的良好架构状态。架构良好的状态分为“问题”、“未分析”或“架构良好”。选择良好架构状态会将您重定向到文件系统内的良好架构状态选项卡，您可以在其中找到良好架构分数、配置类别以及文件系统的所有配置。</block>
   <block id="84ee3cc4e2a4f169585c115121112580" category="paragraph">使用 Workload Factory 控制台中的NetApp Backup and Recovery 保护您的 Microsoft SQL Server 应用程序数据。通过此集成，您可以实现以下保护目标：使用本地快照在本地主Amazon FSx for NetApp ONTAP （FSx for ONTAP）存储上备份工作负载，并将工作负载复制到辅助 FSx for ONTAP存储。</block>
   <block id="bb1b704677e0a9ac00a2bda88f85fe27" category="paragraph">Workload Factory 可自动发现资源、验证先决条件以及配置和安装 Microsoft SQL Server 插件，为使用NetApp Backup and Recovery 保护您的工作负载做好准备。该插件是NetApp软件的主机端组件，可让您保护 Microsoft SQL Server 工作负载。</block>
   <block id="e9575ae90b7ec054c43a9797544d0103" category="paragraph">NetApp Backup and Recovery 利用NetApp SnapMirror数据复制技术，通过创建快照副本并将其传输到备份位置来确保所有备份完全同步。</block>
@@ -1299,4 +1288,37 @@
   <block id="1cad8c414706b5bcb0b45db25ebf8cb8" category="list-text"><block ref="1cad8c414706b5bcb0b45db25ebf8cb8" category="inline-link-macro-rx"></block></block>
   <block id="8cddfd1e7d348910ccb9f33f1875227b" category="paragraph"><block ref="f04d9a72ed4e336f6d3f26aa1ae4191f" category="inline-link-macro-rx"></block>。</block>
   <block id="99a41b50ffc589da72247d73d9ef02ed" category="paragraph">相关信息，请参阅 <block ref="dc3edb02c7b9b729d8ce33699dc1f607" category="inline-link-macro-rx"></block> 用于管理 Microsoft SQL Server 工作负载。</block>
+  <block id="58abe9f5fbda29b547f9ab2de50f2332" category="section-title">根据 Amazon Elastic Block Store (EBS) 的使用情况优化节省</block>
+  <block id="3cab156afe8725e62725f4973a3c9949" category="doc">仪表盘改进</block>
+  <block id="18657a21385444f338b37f8f0116ffc3" category="paragraph">新的仪表板经过简化和更好地组织，可以在一个屏幕上更清晰地概览数据库资源和工作负载工厂的关键功能；一张卡片突出显示数据库资源，一张卡片提供有关架构良好评分和分析的信息，一张卡片显示错误分析，两张卡片显示每月成本和潜在节省，一张卡片显示有关沙盒的信息。</block>
+  <block id="52d93a06ea30bbc0d2d568569c6686f5" category="paragraph">精心设计的分析包括对 Oracle 配置的以下评估和修复：</block>
+  <block id="4667bb7539009ed136b942febb5737ba" category="list-text">使用 NFS 协议的存储配置操作系统：评估并修复现有 Oracle 数据库部署的 NFS 配置问题。</block>
+  <block id="679f71c6d98f7a5f25e9535eb16a19b5" category="list-text">使用 iSCSI 协议的存储配置操作系统：评估并修复现有 Oracle 数据库部署的 iSCSI 配置问题。</block>
+  <block id="7548e2cbb02ea769fa6f01e70f1d34ee" category="list-text">使用自动存储管理 (ASM) 的存储配置操作系统：评估现有 Oracle 数据库部署的 ASM 配置问题。</block>
+  <block id="bff5f6ac72c7a46da345751a22e8e0a1" category="section-title">数据库工作负载工厂的权限变更</block>
+  <block id="c3cf114e732250ac6b24d30e117ab24b" category="paragraph">Workload Factory for Databases 更新了权限策略，以便更清晰地说明特定操作所需的权限，并允许您更精细地选择所需的权限。添加凭据时，您将有三个权限选项可供选择，而不是之前的权限模型（_只读_和_读/写_）。新的权限模型将权限策略分解如下：</block>
+  <block id="d9fff61478503c71474a780705c79af6" category="list-text">查看、规划和分析：查看数据库资源清单，了解资源运行状况，审查数据库配置的架构分析，获取错误日志分析，并探索节省成本的方案。</block>
+  <block id="9ef8eb2bc51c8c6f6ba459302a542484" category="list-text">操作和修复：对数据库资源执行操作任务，并修复数据库配置和底层 FSx for ONTAP文件系统存储的问题。</block>
+  <block id="3f285f24375531d34b8b7d73726b69bc" category="list-text">数据库主机创建：根据最佳实践部署数据库主机和底层用于ONTAP文件系统存储的 FSx。</block>
+  <block id="6ca55df595e9339b20f869e49eb0d710" category="paragraph">添加凭据时，您可以根据要授予 Workload Factory for Databases 的访问级别，选择一个或多个权限策略。</block>
+  <block id="b20b01e02162a68002ca1747d1bd3c10" category="inline-link-macro">Workload Factory 权限参考</block>
+  <block id="444b052e3d1349e221d4ceb42e6c1cf7" category="paragraph"><block ref="444b052e3d1349e221d4ceb42e6c1cf7" category="inline-link-macro-rx"></block></block>
+  <block id="034b7227f8903ae8faac7359c9b3d064" category="section-title">新增了设计精良的仪表盘界面。</block>
+  <block id="7a524d371f7a263dae481eea0bc3de88" category="paragraph">数据库菜单中新增了一个名为“架构完善的仪表盘”的屏幕。通过此屏幕，您可以获得整个数据库环境配置状态的汇总视图。</block>
+  <block id="54543cd5b64fb08ea26d865ed21c8691" category="section-title">NetApp Backup and Recovery中数据库部署的编辑保护</block>
+  <block id="c7c9b75c76356b2b8aa328068cd75a1c" category="paragraph">在 Workload Factory 控制台中，您可以选择编辑受保护资源的保护，然后您将被重定向到NetApp Console中的备份和恢复，在那里您可以修改保护策略或计划。</block>
+  <block id="f3a2b46dc542d840ca95ad3799ace39b" category="inline-link-macro">数据库部署的编辑保护</block>
+  <block id="2a601eb3188e615c20b76da1a5734646" category="paragraph"><block ref="2a601eb3188e615c20b76da1a5734646" category="inline-link-macro-rx"></block></block>
+  <block id="cf6dca9fc5d1f30c46f70906ef3152ce" category="section-title">错误分析功能支持按标签进行错误筛选</block>
+  <block id="b79d711ddf4eb26397c99031692c7a26" category="paragraph">使用 Workload Factory 中的错误分析功能时，您可以按面向基础架构的标签筛选和查看 Microsoft SQL Server 错误日志。这项增强功能可帮助您快速对问题进行分类、排查和解决问题。</block>
+  <block id="c9c975f5587642db7fde90312ee94825" category="inline-link-macro">使用标签筛选分析错误日志</block>
+  <block id="99d2df171fdf12824fa9334fd19cf105" category="paragraph"><block ref="99d2df171fdf12824fa9334fd19cf105" category="inline-link-macro-rx"></block></block>
+  <block id="2598ae987a85e3352d674a4bfade0940" category="list-text">使用过滤器，根据严重性、时间范围和错误代码等标准，或根据面向基础架构的标签（例如计算、存储、网络和安全）来筛选显示的错误。</block>
+  <block id="f24e1b415d71fa7221e6c4409d9ddcb9" category="list-text">存储配置：包括容量管理、精简配置、分层策略、快照、存储效率以及使用 NFS 或 iSCSI 部署（无论是否启用自动存储管理 (ASM)）的操作系统配置，包括 Microsoft 多路径 I/O (MPIO) 的状态和设置</block>
+  <block id="cb7f9c10896377bc079174e74f841859" category="section-title">配置分析的组成部分</block>
+  <block id="6ef2457afc865f25d3bed5cf0e06ad81" category="paragraph">配置分析包括以下几个组成部分：</block>
+  <block id="1fa0a7ab43424d65902e6734a2c7cc84" category="list-text">架构良好状态指的是数据库配置的整体健康状况；配置分为“已优化”、“未优化”或“过度配置”三类。在 Workload Factory 控制台中，可以从 Microsoft SQL Server 实例或 Oracle 数据库中查看配置的良好架构状态。</block>
+  <block id="5c947d6fa21e25852d9b8fc4ae1d52fb" category="list-text">得分包括所有当前已分析的配置，并以百分比形式显示。25% 的得分意味着 25% 的数据库部署架构良好。架构良好评分可从“架构良好”屏幕以及 Workload Factory 控制台中的 Microsoft SQL Server 实例或 Oracle 数据库中获取。</block>
+  <block id="b63a27b7b1942197825500589350fdb1" category="list-text">配置分为以下几类：存储、计算、应用程序、弹性、克隆。每个类别都包含特定的配置评估，这些评估会定期进行分析。配置类别可以从“架构完善”屏幕以及工作负载工厂控制台中的 Microsoft SQL Server 实例或 Oracle 数据库中进行引用。</block>
+  <block id="2afa479317acb4455a0a649aab2944d1" category="section-title">2025年11月2日</block>
 </blocks>
