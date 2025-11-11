@@ -32,7 +32,7 @@ NOTE: Workload Factory 仅支持 Microsoft SQL Server 实例和 Oracle 数据库
 
 注册实例之前请考虑以下事项：
 
-实例或数据库的主机必须出现在清单中。要使主机出现在清单中，link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["您必须添加 AWS 账户凭证和“只读”或“读/写”模式权限"^] 。
+实例或数据库的主机必须出现在清单中。要使主机出现在库存中，您必须 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、规划和分析_权限"^] 在您的 AWS 账户中。
 
 
 

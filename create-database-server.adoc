@@ -60,7 +60,7 @@ Microsoft SQL Server 部署模型都需要使用 iSCSI 存储协议创建 LUN。
 在创建新数据库主机之前、请确保满足以下前提条件。
 
 .凭据和权限
-你必须有link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS 账户凭证和读/写模式权限"^]在 Workload Factory 中创建一个新的数据库主机。
+你必须 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _database 主机创建_ 权限"^] 在您的 AWS 账户中，在 Workload Factory 中创建一个新的数据库主机。
 
 .Active Directory
 连接到Active Directory时、您必须具有具有执行以下操作的管理访问权限：

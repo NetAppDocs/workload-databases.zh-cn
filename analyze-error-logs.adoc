@@ -49,7 +49,7 @@ link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定价"^]
 
 要使用错误日志分析器，您必须满足以下先决条件：
 
-* 你必须有link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["AWS 账户凭证和读/写模式权限"^]在 Workload Factory 中创建一个新的数据库主机。
+* 你必须 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、规划和分析_权限"^] 在您的 AWS 账户中，在 Workload Factory 中创建一个新的数据库主机。
 * link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["注册 SQL Server 实例"^]在工作负载工厂中。
 * 还必须满足以下先决条件。作为分析日志错误的步骤的一部分，系统将提示您完成这些先决条件。
 +

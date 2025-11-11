@@ -62,7 +62,7 @@ image:screenshot-ebs-savings-calculator-update.png["节省量计算器页面的�
 
 通过自定义了解节省的空间：您可以为Amazon EC2上使用EBS或FSx for Windows File Server的Microsoft SQL Server提供配置设置、包括区域、部署模式、SQL Server版本、每月数据变更率、快照频率等。
 
-探索检测到的主机的节省：Workload Factory 链接到您现有的 Microsoft SQL 服务器并将详细信息拉入计算器进行自动比较。您需要授予_只读_或_读/写_权限才能使用此计算器选项。您可以更改用例，但所有其他细节都会在计算中自动确定。
+探索已检测到的主机的节省：工作负载工厂连接到您现有的 Microsoft SQL 服务器，并将详细信息提取到计算器中进行自动比较。您需要授予 _查看、规划和分析_ 权限才能使用此计算器选项。您可以更改使用场景，但所有其他细节都会在计算中自动确定。
 
 此外、您还可以link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["添加AWS凭据"^]提高计算器分析的准确性。选择*根据现有资源计算节省量*。您将被重定向到添加凭据页面。添加凭据后、请选择要与FSx for ONTAP进行比较的现有资源、然后选择*探索节省量*。
 
@@ -158,7 +158,7 @@ Workload Factory 输入检测到的 Elastic Block Store 和 FSx for Windows File
 .开始之前
 开始之前、请满足以下前提条件：
 
-* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_read-only或_read/write_权限"^]在AWS帐户中、在*浏览节省量*选项卡下检测Elasic Block Store (EBS)和FSx for Windows系统、并在节省量计算器中显示节省量计算结果。
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予查看、规划和分析权限"^] 在您的 AWS 账户中，在“探索节省”选项卡下检测 Elastic Block Store (EBS) 和 FSx for Windows 系统，并在节省计算器中显示节省计算结果。
 * 要获取实例类型建议并提高成本准确性，请执行以下操作：
 +
 .. 授予 Amazon CloudWatch 和 AWS Compute Optimizer 权限。
@@ -326,6 +326,9 @@ image:screenshot-upload-script-on-premises.png["\"SQL Server内部部署\"选项
 NOTE: Workload Factory 不支持保存或创建多个 FSx for ONTAP文件系统。
 
 .部署方法
-在读/写模式下，您可以直接从 Workload Factory 使用 FSx for ONTAP在 AWS EC2 上部署新的 Microsoft SQL 服务器。您还可以从 Codebox 窗口复制内容，并使用其中一种 Codebox 方法部署推荐的配置。
+拥有_数据库主机创建权限_后，您可以直接从 Workload Factory 使用 FSx for ONTAP在 AWS EC2 上部署新的 Microsoft SQL 服务器。您还可以从代码框窗口复制内容，并使用代码框方法之一部署推荐的配置。
 
-+ 在基本模式下，您可以从 Codebox 窗口复制内容，并使用其中一种 Codebox 方法部署推荐的配置。
+即使没有权限，您也可以从 Codebox 窗口复制内容，并使用 Codebox 方法之一部署推荐的配置。
+
+.相关信息
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Workload Factory 权限参考"^]

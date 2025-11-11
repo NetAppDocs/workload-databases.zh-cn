@@ -72,3 +72,20 @@ NetApp Backup and Recovery 利用NetApp SnapMirror数据复制技术，通过创
 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["了解如何创建策略来保护您的 Microsoft SQL Server 实例和数据库"^]。
 
 相关信息，请参阅 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["备份和恢复文档"^] 用于管理 Microsoft SQL Server 工作负载。
+
+
+
+== Microsoft SQL Server 资源的编辑保护
+
+您可以编辑NetApp Backup and Recovery中已受保护的 Microsoft SQL Server 实例和数据库的保护设置。编辑保护功能允许您修改受保护 SQL Server 实例的保护策略或计划。
+
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 在数据库磁贴中，选择*转至数据库清单*。
+. 从数据库菜单中，选择*Inventory*。
+. 在清单中，选择 *Microsoft SQL Server* 作为引擎类型。
+. 选择“*数据库*”选项卡。
+. 找到要编辑保护的数据库，然后从菜单中选择“编辑保护”。
++
+您将被重定向到NetApp Console中的“备份和恢复”页面，您可以在其中修改保护策略或计划。
+
+
