@@ -219,11 +219,11 @@ Workload Factory 输入检测到的 Elastic Block Store 和 FSx for Windows File
 --
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在“数据库”磁贴中，从下拉菜单中选择*Explore savings *，然后选择*Microsoft SQL Server on FSx for Windows*。
+. 在数据库磁贴中，从菜单中选择 *探索节省*，然后选择 *FSx for Windows 上的 Microsoft SQL Server*。
 +
 如果 Workload Factory 检测到 EBS 主机，您将被重定向到“探索节省”选项卡。如果 Workload Factory 未检测到 EBS 主机，您将被重定向到计算器<<了解通过自定义实现的节省,了解通过自定义实现的节省>>。
 
-. 在Explore savings选项卡中，单击*Explore savings * of the database server using EBS storage。
+. 从“探索节省”中，选择一个或多个在 EBS 上运行的数据库主机，然后选择“探索节省”。
 . 如果需要，请使用 SQL Server 凭据、Windows 凭据或添加缺少的 SQL Server 权限来验证数据库主机。
 +
 如果身份验证成功后“探索节省”页面未加载数据，请选择“*库存*”选项卡重新加载数据，然后再次选择“探索节省”选项卡。
@@ -234,6 +234,10 @@ Workload Factory 输入检测到的 Elastic Block Store 和 FSx for Windows File
 .. *克隆刷新频率*：从菜单中选择克隆刷新的频率。
 .. *克隆副本数*：输入EBS配置中的克隆副本数。
 .. *每月变更率*：输入克隆和快照数据每月平均变更的百分比。
+.. *添加主机*：您可以选择最多五个检测到的 EBS 主机，将其包含在节省计算中。
++
+Workload Factory 将多个 SQL Server 主机合并到单个 FSx for ONTAP配置建议中，以优化成本节约，除非所选 EBS 主机超过单个 FSx for ONTAP文件系统的吞吐量、容量或 IOPS 限制。
+
 
 
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: analyze-error-logs.html 
-keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, smart analysis, Agentic AI 
+keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, Oracle database error logs, smart analysis, Agentic AI 
 summary: 分析数据库工作负载工厂中的错误日志。 
 ---
 = 分析工作负载工厂中的错误日志
@@ -11,13 +11,13 @@ summary: 分析数据库工作负载工厂中的错误日志。
 
 
 [role="lead"]
-使用智能错误日志分析器自动解释 Microsoft SQL Server 错误日志，以便您可以快速识别和解决问题。Agentic AI 为基础的分析需要 Amazon Bedrock 集成。
+使用智能错误日志分析器自动解释 Microsoft SQL Server 和 Oracle 数据库错误日志，以便您可以快速识别和解决问题。Agentic AI 为基础的分析需要 Amazon Bedrock 集成。
 
 
 
 == 关于此任务
 
-错误日志分析和补救有助于维护 SQL Server 实例的健康和性能。有效地解释 SQL Server 错误日志需要仔细的分析和专业知识。手动监控、错误检测和根本原因分析非常耗时，而且容易出错。这些挑战可能会延迟问题解决、增加停机时间并导致运营效率低下。智能错误日志分析器通过以下主要优势解决了这些挑战：
+错误日志分析和修复有助于维护 SQL Server 实例和 Oracle 数据库的健康状况和性能。有效解读错误日志需要仔细分析和专业知识。手动监控、错误检测和根本原因分析非常耗时，而且容易出错。这些挑战可能会延迟问题解决、增加停机时间并导致运营效率低下。智能错误日志分析器通过以下主要优势应对了这些挑战：
 
 * 智能分组：根据唯一性、严重性和类别智能地合并错误，并简化故障排除过程，以便更快、更有效地解决问题。
 * 人工智能驱动的调查：利用人工智能主动分析错误，提供清晰、可操作的见解，以加速问题识别，而无需深厚的专业知识。
@@ -50,31 +50,35 @@ link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定价"^]
 要使用错误日志分析器，您必须满足以下先决条件：
 
 * 你必须 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、规划和分析_权限"^] 在您的 AWS 账户中，在 Workload Factory 中创建一个新的数据库主机。
-* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["注册 SQL Server 实例"^]在工作负载工厂中。
+* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["注册资源"^]在工作负载工厂中。
 * 还必须满足以下先决条件。作为分析日志错误的步骤的一部分，系统将提示您完成这些先决条件。
 +
 ** *Amazon Bedrock 激活*
 +
-需要 Amazon Bedrock，以便 Workload Factory 的 SQL 节点上运行的 AI 代理可以无缝连接 Bedrock 并为已识别的错误日志获取基于 AI 的见解。
+要使 Workload Factory 中运行在 SQL Server 或 Oracle 主机上的 AI 代理能够无缝连接到 Bedrock 并获取已识别错误日志的 AI 见解，就需要 Amazon Bedrock。
 
 ** *联网*
 +
-Amazon Bedrock VPC 端点可确保您的 SQL 节点与 Amazon Bedrock API 进行私密通信，并消除公共互联网暴露。确保 Amazon Bedrock VPC 端点与 SQL Server 节点的子网相关联（例如：vpce-050cb2f33a1380ffd）。
+Amazon Bedrock VPC 端点可确保您的 SQL Server 或 Oracle 主机与 Amazon Bedrock API 进行私密通信，并消除公共互联网暴露。确保 Amazon Bedrock VPC 端点与 SQL Server 或 Oracle 主机的子网关联（例如：vpce-050cb2f33a1380ffd）。
 
 ** AWS IAM 权限
 +
-与 SQL 节点关联的 EC2 实例配置文件角色以及与 Workload Factory 关联的 AWS 凭证需要以下权限。
+以下权限是与 SQL Server 或 Oracle 主机关联的 EC2 实例配置文件角色以及与 Workload Factory 关联的 AWS 凭证所必需的。
 
 +
 *** 具有“bedrock:InvokeModel”权限的 EC2 实例配置文件角色
 +
-此权限使相应 SQL 节点上的 EC2 实例能够调用 Bedrock 模型进行主动错误调查和补救指导。该配置文件还可确保安全的 AI 访问以获得定制的见解。
+此权限允许相应的 SQL Server 或 Oracle 主机上的 EC2 实例调用 Bedrock 模型，以便主动进行错误调查和补救指导。该配置文件还能确保安全地访问人工智能，从而提供定制化的洞察。
 
 *** 与 Workload Factory 关联的 AWS 凭证：“bedrock:GetFoundationModelAvailability”和“bedrock:ListInferenceProfiles”权限
 +
-这些权限验证 SQL 节点区域中的模型可用性和配置，并确保可靠的、特定于区域的性能。
+这些权限验证 SQL Server 或 Oracle 主机所在区域的模型可用性和配置，并确保可靠的、特定于区域的性能。
 
 
+
+** *Oracle 用户权限*
++
+以下权限授予对扩展诊断警报的读取访问权限，从而可以从日志中提取错误/跟踪详细信息，以进行 AI 驱动的模式检测和修复： `V$DIAG_ALERT_EXT` 。此权限仅适用于 Oracle 数据库。
 
 
 
@@ -90,8 +94,8 @@ Amazon Bedrock VPC 端点可确保您的 SQL 节点与 Amazon Bedrock API 进行
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
 . 在数据库磁贴中，选择*转至数据库清单*。
 . 从数据库菜单中，选择*Inventory*。
-. 在清单中，选择 *Microsoft SQL Server* 作为数据库引擎类型。
-. 从“实例”选项卡中，找到要分析的特定 SQL Server 实例，然后从菜单中选择“调查错误”。
+. 在“清单”中，选择“Microsoft SQL Server”或“Oracle”作为数据库引擎类型。
+. 在“实例”选项卡中，找到要分析的特定 SQL Server 实例或 Oracle 数据库，然后从菜单中选择“调查错误”。
 . 从“错误调查”选项卡中，按照控制台中的说明完成以下先决条件：
 +
 ** 亚马逊基岩
