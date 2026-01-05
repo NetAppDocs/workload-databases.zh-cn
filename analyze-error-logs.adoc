@@ -92,7 +92,7 @@ Amazon Bedrock VPC 端点可确保您的 SQL Server 或 Oracle 主机与 Amazon 
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库清单*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择*数据库*。
 . 从数据库菜单中，选择*Inventory*。
 . 在“清单”中，选择“Microsoft SQL Server”或“Oracle”作为数据库引擎类型。
 . 在“实例”选项卡中，找到要分析的特定 SQL Server 实例或 Oracle 数据库，然后从菜单中选择“调查错误”。

@@ -561,7 +561,6 @@
   <block id="5c89f4f6af1a71c2ed6cfac605e94c16" category="paragraph"><block ref="5c89f4f6af1a71c2ed6cfac605e94c16" category="inline-link-macro-rx"></block></block>
   <block id="fd3039d7fbe9d24b3141aca3c62383a2" category="section-title">评估和优化过度配置的Microsoft SQL Server许可证</block>
   <block id="f90a806c02db45741274868bc065ab90" category="paragraph">现在、节省量计算器将评估您的Microsoft SQL Server部署是否需要Enterprise Edition。如果许可证配置过度、计算器建议降级。通过优化应用程序、您将能够自动降级数据库中的许可证。</block>
-  <block id="f319ba887c03b66fa6a83807c78f65e9" category="list-text">在数据库磁贴中，选择*转至数据库清单*。</block>
   <block id="770dee3f954306dca2e369d2ef823c94" category="section-title">SQL Server部署分析</block>
   <block id="1d93f11e5331c46990f076ad4257106e" category="paragraph">计算器将对SQL Server部署进行全面分析、以确保所利用的资源和功能与SQL Server版本正确匹配。下面是在建议降级到Standard Edition之前计算器检查的关键因素和条件：</block>
   <block id="a0e3089d312c100208595d685b4104d2" category="list-text">部署模式</block>
@@ -1354,4 +1353,7 @@
   <block id="5e3b7f958129022f75fe2931c55615b2" category="doc">问我关于人工智能助手首页集成的问题</block>
   <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">Workload Factory 控制台主页嵌入了 Ask me AI 助手，使您可以询问有关您自己的存储环境的问题，直接从您的环境中获取个性化见解，并参考以前的对话。您可以与“问我”进行交互，以了解您的工作负载、解决问题并了解更多关于工作负载工厂的信息——所有这些都无需离开控制台。</block>
   <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">2026年1月4日</block>
+  <block id="342a19841e494c61bf9c06a5879eaffa" category="inline-image-macro">汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。</block>
+  <block id="1d59c9bea900e36e3d5b9ca53cd55587" category="list-text">选择菜单 <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> 然后选择*数据库*。</block>
+  <block id="757a7ffb20a279d7239febb013141ad5" category="list-text">选择菜单 <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> 然后选择“存储”。</block>
 </blocks>

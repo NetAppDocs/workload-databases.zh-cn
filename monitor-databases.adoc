@@ -41,7 +41,7 @@ summary: 在NetApp Workload Factory for Databases 中跟踪数据库作业并监
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库清单*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择*数据库*。
 . 从数据库菜单中，选择*作业监控*。
 . 在“作业监控”中，使用过滤器或搜索来缩小作业结果范围。您还可以下载工作报告。
 . 或者，选择作业的操作菜单，然后单击“转到 CloudFormation”以在 AWS CloudFormation 控制台中查看作业日志。

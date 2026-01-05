@@ -30,7 +30,7 @@ summary: 在NetApp Workload Factory for Databases 中创建沙盒克隆。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库清单*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择*数据库*。
 . 在数据库中，选择*沙盒*选项卡。
 . 在沙盒选项卡中，选择*创建新沙盒*。
 . 在"Create new sandbox"页面上的"Database sourcing"下、提供以下内容：

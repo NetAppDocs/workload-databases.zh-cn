@@ -23,7 +23,7 @@ summary: 刷新NetApp Workload Factory for Databases 中的数据库克隆，使
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库清单*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择*数据库*。
 . 从数据库菜单中，选择*沙盒*。
 . 在沙盒中，选择要刷新的沙盒克隆的操作菜单。
 . 选择*刷新*。

@@ -53,7 +53,7 @@ NetApp Backup and Recovery 利用NetApp SnapMirror数据复制技术，通过创
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库清单*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择*数据库*。
 . 从数据库菜单中，选择*Inventory*。
 . 在清单中，选择 *Microsoft SQL Server* 作为引擎类型。
 . 找到您想要保护的实例，然后从菜单中选择*保护*。
@@ -80,7 +80,7 @@ link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies
 您可以编辑NetApp Backup and Recovery中已受保护的 Microsoft SQL Server 实例和数据库的保护设置。编辑保护功能允许您修改受保护 SQL Server 实例的保护策略或计划。
 
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 在数据库磁贴中，选择*转至数据库清单*。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择*数据库*。
 . 从数据库菜单中，选择*Inventory*。
 . 在清单中，选择 *Microsoft SQL Server* 作为引擎类型。
 . 选择“*数据库*”选项卡。
