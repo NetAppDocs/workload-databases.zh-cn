@@ -15,7 +15,7 @@ indexpage:
     links:
     - title: 了解节省量
       url: "/explore-savings.html"
-    - title: 注册实例
+    - title: 注册资源
       url: "/register-instance.html"
     - title: 查看实例的架构完善状态
       url: "/optimize-configurations.html"
