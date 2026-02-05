@@ -1340,11 +1340,8 @@
   <block id="a26f5beb654e47a87608f8a28b573758" category="list-text">输入 FSx for ONTAP 文件系统用户名和密码，然后选择*下一步*。</block>
   <block id="34b2f9d708b57fa0ab164ac81a844832" category="paragraph">如果 FSx for ONTAP 文件系统已通过身份验证，请选择*下一步*。</block>
   <block id="9ed181f71730a4b981c04369e2f1719e" category="list-text">要准备（步骤 3），请确保实例满足最低要求。</block>
-  <block id="6b5a6b5bbb8db715d3ff675c1200264b" category="paragraph">为了满足最低要求，实例必须安装 AWS 和 NetApp PowerShell 模块以及 PowerShell 7 模块，并且您必须完成先决条件检查中列出的至少一项功能的先决条件。..在*先决条件检查视图*中查看先决条件。</block>
-  <block id="a50f4670050c58a2a08ccc2babd2d5b2" category="paragraph">+ 您必须完成单个功能的所有先决条件，例如 *Review well-architected issues and recommendations* 才能注册实例。</block>
   <block id="4aa1b1ff22a8dfe18a969e9e18594ab0" category="list-text">为每个功能选择 *Setup details* 以了解功能先决条件，并按照屏幕上的说明完成任何缺少的功能先决条件。</block>
   <block id="d521398ad1462fd891ea513e4855ce5b" category="inline-link-macro">审核并修复架构完善的问题</block>
-  <block id="de1cc997e7f69a895e3fb53fb41d279d" category="paragraph">要让 Workload Factory <block ref="78fb719485add27049471292c9f9720d" category="inline-link-macro-rx"></block> 为您的实例提供服务，请完成*审核架构良好的问题和建议*和*修复架构良好的问题*功能下列出的所有先决条件。</block>
   <block id="f035f450e95801f1197ab2843b43b16a" category="list-text">完成先决条件后，*注册* 实例。</block>
   <block id="9d96bcc0867ec5be17a78fc127af4785" category="paragraph">实例注册启动。选择 *Job monitoring* 选项卡以跟踪进度。</block>
   <block id="efd81ed9168d148e7b33debfd48f5bbe" category="paragraph">注册实例有三个步骤 - 数据库身份验证、FSx for ONTAP 身份验证以及完成缺失先决条件的准备。您可以注册单个或多个数据库。</block>
@@ -1357,9 +1354,12 @@
   <block id="aea7afc9754b2383c56fbbaee6c6009d" category="list-text">要准备（步骤 3），请确保数据库满足所需的先决条件。如果安装了所有必需的模块并满足先决条件，请选择*下一步*注册数据库。否则，请按照以下步骤操作。</block>
   <block id="1717c98238cd6bd4091f92979d40a891" category="list-text">在*先决条件检查视图*中查看先决条件。</block>
   <block id="3f4c61df91a8ed4b5fc7622369d6e56d" category="paragraph">您必须完成单个功能的所有先决条件，例如 *Review well-architected issues and recommendations* 才能注册数据库。</block>
-  <block id="7a38e7578edd4ba664ee05634d9ac39e" category="paragraph">要让 Workload Factory <block ref="78fb719485add27049471292c9f9720d" category="inline-link-macro-rx"></block>为您的数据库提供服务，请完成*审核架构良好的问题和建议*和*修复架构良好的问题*功能下列出的所有先决条件。</block>
   <block id="9e7001c2bb163521a51de7186846104e" category="list-text">完成先决条件后，*注册* 数据库。</block>
   <block id="aece37c900cf74271d49a4aec3628d66" category="paragraph">数据库注册启动。选择 *Job monitoring* 选项卡以跟踪进度。</block>
   <block id="e6437d0fab94a9cc41e9fc0354b23716" category="section-title">2026 年 2 月 02 日</block>
   <block id="ecd36d02576c4fe28ab61b5c14fa69c4" category="sidebar">管理资源</block>
+  <block id="5dd712766e41aed3df90d60e36279568" category="paragraph">为了满足最低要求，实例必须安装 AWS 和 NetApp PowerShell 模块以及 PowerShell 7 模块，并且您必须完成先决条件检查中列出的至少一项功能的先决条件。</block>
+  <block id="4f04ccc3925b5039da28842c277cda6c" category="paragraph">您必须完成单个功能的所有先决条件，例如 *Review well-architected issues and recommendations* 才能注册实例。</block>
+  <block id="747eccfe479b7957e243e10257e40143" category="paragraph">要为您的实例使用 Workload Factory <block ref="78fb719485add27049471292c9f9720d" category="inline-link-macro-rx"></block>，请完成*查看精心设计的问题和建议*和*修复精心设计的问题*功能下列出的所有先决条件。</block>
+  <block id="7fa2af2634cfeecc9f90ce75c17fad3f" category="paragraph">要为您的数据库使用 Workload Factory <block ref="78fb719485add27049471292c9f9720d" category="inline-link-macro-rx"></block>，请完成*查看精心设计的问题和建议*和*修复精心设计的问题*功能下列出的所有先决条件。</block>
 </blocks>
