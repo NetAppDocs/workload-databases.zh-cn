@@ -475,9 +475,7 @@
   <block id="b68e42fa600661a13849ea15c997cea3" category="paragraph">您可以使用两个计算器选项来比较系统与FSx for ONTAP之间的成本—自定义和检测。</block>
   <block id="0e98c2470a9fecd3035980d6c9bd5dfe" category="section-title">了解检测到的主机的节省量</block>
   <block id="bd0005565e08b9807da651535d09e628" category="inline-xref">了解通过自定义实现的节省</block>
-  <block id="3f1c1b5d06b7f8c588cd928fa1ac5e90" category="list-text">在节省量计算器中(可选)提供有关EBS存储中的克隆和快照的以下详细信息、以便更准确地估算节省的成本。</block>
   <block id="60d184cc6fb4054879723de86764a020" category="list-text">(可选)在节省量计算器中、提供以下有关FSx for Windows存储中的克隆(卷影副本)和快照的详细信息、以便更准确地估算节省的成本。</block>
-  <block id="c552646e3717f4144059bd229d9b3c96" category="paragraph">如果检测到FSx for Windows卷影副本、则默认值为*每日*。如果未检测到卷影副本，则默认值为*无快照频率*。</block>
   <block id="724d4c3a0255dd97a61657dd67fdf48f" category="list-text">*克隆副本数*：在FSx for Windows配置中输入克隆副本数。</block>
   <block id="021cd7b44c92e0977eee47344e7f4a7b" category="list-text"><block ref="d2c8dc6d0833da0998d37357f2d65fca" prefix="" category="inline-code"></block></block>
   <block id="afe3dddd43fed2e0f76617fa08ab254a" category="list-text"><block ref="078aab7ae8c1a0df339ac8525790d5e1" prefix="" category="inline-code"></block></block>
@@ -562,14 +560,12 @@
   <block id="fd3039d7fbe9d24b3141aca3c62383a2" category="section-title">评估和优化过度配置的Microsoft SQL Server许可证</block>
   <block id="f90a806c02db45741274868bc065ab90" category="paragraph">现在、节省量计算器将评估您的Microsoft SQL Server部署是否需要Enterprise Edition。如果许可证配置过度、计算器建议降级。通过优化应用程序、您将能够自动降级数据库中的许可证。</block>
   <block id="770dee3f954306dca2e369d2ef823c94" category="section-title">SQL Server部署分析</block>
-  <block id="1d93f11e5331c46990f076ad4257106e" category="paragraph">计算器将对SQL Server部署进行全面分析、以确保所利用的资源和功能与SQL Server版本正确匹配。下面是在建议降级到Standard Edition之前计算器检查的关键因素和条件：</block>
   <block id="a0e3089d312c100208595d685b4104d2" category="list-text">部署模式</block>
   <block id="9c67ec91896556f3bd46fddd92093d04" category="list-text">计算器将评估部署模式以及是否需要Enterprise Edition。</block>
   <block id="1ca7013158d8416bb0a3239a9a7e8910" category="list-text">已分配资源</block>
   <block id="9812aa4803326e6a5401134b4e94a3d3" category="list-text">计算器将评估以下因许可证而分配的资源的条件：</block>
   <block id="509a14e7eed7c8c8d42162d9af93a1ec" category="list-text">企业功能使用情况</block>
   <block id="4fdb074e0b83810d198c8cb5f3b2752e" category="list-text">计算器将验证是否正在使用以下任何企业功能：</block>
-  <block id="931f2fcd53e5a10ccfc806cb89a2b27c" category="paragraph">如果评估的SQL Server实例未使用上述任何Enterprise功能并满足资源限制、计算器将建议将许可证降级到Standard Edition。此建议旨在帮助您在不影响性能或功能的情况下优化SQL Server许可成本。</block>
   <block id="5f08a8bbfa89b18958e70a8c6cbc44c3" category="paragraph">数据库提供作业监控功能、以便您可以跟踪作业进度、并在发生任何故障时进行诊断和故障排除。您可以按类型和状态筛选作业、使用搜索功能查找作业以及下载作业表。</block>
   <block id="5ade2a57e46cf328c900013574754aa9" category="list-text">作业监控功能会每天、每周、每两周和每月跟踪_进行中_、_已完成_、_已完成但出现问题_和_失败_作业。</block>
   <block id="13ac5039f81a1aa4ae7419bf17b5b6a0" category="section-title">2025年1月6日</block>
@@ -578,8 +574,6 @@
   <block id="a61ebf6aa74399e268808d3801b03702" category="section-title">优化计算规模</block>
   <block id="f72f493648b25528319887c50a65f0ce" category="inline-link-macro">Amazon Elel生 计算云文档</block>
   <block id="bd5d7b32e4164faa655582f169744a05" category="paragraph">更改为某些实例类型时、可能会重置网络配置、从而可能导致优化期间节点连接失败并导致作业失败。检查和更新DNS设置和iSCSI会话可能需要手动干预。有关EC2大小调整限制的详细信息、请参见<block ref="b8406a09c509d5c1d937367114bd51b3" category="inline-link-macro-rx"></block>。</block>
-  <block id="efc2466e55cc45101064c2ade9e1ac96" category="doc">内部数据库环境成本分析和迁移规划</block>
-  <block id="b070dbce75db746d44b4965253ae3c9f" category="paragraph">现在、适用于数据库的BlueXP  工作负载工厂可以检测、分析并帮助您规划将内部数据库迁移到Amazon FSx for NetApp ONTAP的过程。您可以使用节省计算器估算在云中运行内部数据库环境的成本、并查看将内部数据库环境迁移到云的建议。</block>
   <block id="ae5954c9b41b0bfb09043a4117743d2d" category="inline-link-macro">了解内部数据库环境的节省量</block>
   <block id="9621b726ce4b31f0b7bc139a85ef6f38" category="paragraph"><block ref="9621b726ce4b31f0b7bc139a85ef6f38" category="inline-link-macro-rx"></block></block>
   <block id="6003a521aa2fb4eca1577921d2f2d6ec" category="section-title">新的数据库优化评估</block>
@@ -590,12 +584,6 @@
   <block id="7c2632b8df180cfa1528450b19070928" category="paragraph"><block ref="7c2632b8df180cfa1528450b19070928" category="inline-link-macro-rx"></block></block>
   <block id="5e73d91731c9445e9a0cc34e1969976a" category="summary">比较将Amazon Elasic Block Store (EBS)、FSx for Windows File Server和SQL Server内部数据库存储与FSx for ONTAP存储结合使用的成本。</block>
   <block id="7cf65e2ff3a983e2d864a8b1c64765f1" category="open-title">Microsoft SQL Server内部部署</block>
-  <block id="979b029ad875506edc5721a6a441e313" category="list-text">从"SQL Server内部部署"选项卡中、下载此脚本以评估您的内部SQL Server环境。</block>
-  <block id="2840f80705232625a2e7a961c5ae7c57" category="inline-image-macro">"SQL Server内部部署"选项卡的屏幕截图显示了用于下载评估脚本的选项。</block>
-  <block id="43b057dd7af35e065506e3e9c40e69b5" category="paragraph"><block ref="43b057dd7af35e065506e3e9c40e69b5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="11bfb2872e63a5ed545dd1a42c50ca27" category="list-text">在SQL Server主机上运行该脚本。</block>
-  <block id="e4784aa5341ea2989d2193e58d7d7f6d" category="inline-image-macro">"SQL Server内部部署"选项卡的屏幕截图显示了用于上传评估脚本的选项。</block>
-  <block id="2b894f40697fe51db0b06a9bf9f9a2a1" category="paragraph"><block ref="2b894f40697fe51db0b06a9bf9f9a2a1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="48d937e7fd66ff674c2cb93c60660383" category="list-text">在节省量计算器中、选择内部主机所在的区域。</block>
   <block id="222ef17ae6eab247553156232cd650e1" category="list-text">要获得更准确的结果、请更新计算信息以及存储和性能详细信息。</block>
   <block id="b0398f49dbe9d04be8ddd17378899545" category="list-text">(可选)提供有关内部数据库环境中的克隆(卷影副本)和快照的以下详细信息、以便更准确地估算成本节省。</block>
@@ -607,7 +595,6 @@
   <block id="8e29c0a71b0719e3f6ed28d4a7c0b30d" category="paragraph">ONTAP配置和操作系统配置不支持对多个SQL Server实例进行批量优化。</block>
   <block id="7dd6090f4d4627220763b41db74bb898" category="section-title">内部成本节省计算</block>
   <block id="9fb10d1d0413bc062aa3f807aa200e53" category="paragraph">Microsoft SQL Server内部存储卷大小的成本节省和节省百分比计算未考虑在内。</block>
-  <block id="79dda14ccc601407ccb09f0fe3d93259" category="paragraph">如果您使用代理服务器进行EC2实例中的所有出站连接、则必须允许访问以下域、才能使管理操作正常工作：</block>
   <block id="4bd2e14395b83906b0838bbcc78df388" category="list-text"><block ref="3e51061ec4171070ff2ffdabfbd63cc3" prefix="" category="inline-code"></block></block>
   <block id="9b6e1103f46b83b38494e5b294e2c410" category="list-text"><block ref="c1eaf26c3b755ad5252456a5d3f34a2f" prefix="" category="inline-code"></block></block>
   <block id="f57c49a06b4a8a20d9a723cd677b9655" category="inline-link-macro">创建PostgreSQL服务器</block>
@@ -628,7 +615,6 @@
   <block id="d2eadd2943100e3e5ea25460fadf93c2" category="list-text">对于新的FSx for ONTAP文件系统、将创建一个新安全组并将其附加到SQL节点。对于现有FSx for ONTAP文件系统、与其关联的安全组会自动添加到PostgreSQL节点中、从而允许与文件系统进行通信。</block>
   <block id="6040bb4a85eec1c3be0e69ac393a4c24" category="paragraph-title">所有数据库工作负载都可能节省空间</block>
   <block id="14e0ba144c9ea737e00075f15ba92914" category="paragraph-title">节省计算器</block>
-  <block id="b9c1a7494e47e88c73ed9177dac50512" category="paragraph">您可以利用节省计算器将在FSx for ONTAP文件系统上为数据库工作负载运行Microsoft SQL Server工作负载(例如存储、计算、SQL许可证、快照和克隆)的各种成本组件与Elasic Block Store (EBS)、FSx for Windows File Server和内部存储进行比较。根据您的存储要求、您可能会发现适用于ONTAP文件系统的FSx对于数据库工作负载来说最经济高效。</block>
   <block id="34bd0eb13cbfc5b3e75abc9ef37d28a9" category="inline-xref">了解如何使用计算器。</block>
   <block id="59bc614ceb0bb98400319eb2b4ed0194" category="paragraph">计算器将显示如果您使用FSx for ONTAP文件系统、这些Microsoft SQL Server上用于数据库工作负载的存储成本是否会降低。<block ref="3b1f4baa69b6d987101aa81b90456625" category="inline-xref-macro-rx"></block></block>
   <block id="726827e3f779b11768c209a653ef0f0e" category="paragraph"><block ref="726827e3f779b11768c209a653ef0f0e" category="inline-image-macro-rx" type="image"></block></block>
@@ -689,19 +675,7 @@
   <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">更新了权限术语</block>
   <block id="2d07fc9146d02690dffeffa52fbd2ec4" category="list-text">内部主机删除</block>
   <block id="c5d0b906e655aeb0e712fdc99742d179" category="list-text">对于克隆清理、请选择要刷新或删除的克隆数据库(沙盒)。</block>
-  <block id="0cdf26a09e8e4cde6653e44f4abd73fb" category="doc">延迟或取消数据库配置分析</block>
-  <block id="77df5d7dfd76cd0e6a1a7a837c509672" category="paragraph">延迟或取消不适用于数据库环境的特定数据库配置分析、以避免不必要的警报和不准确的优化结果。您可以随时重新激活延迟或取消的配置分析。</block>
-  <block id="8a219fba8bbd202ad1f7a47267ff5a2d" category="list-text">*推迟30天*：推迟分析将停止分析30天。30天后、分析将自动重新启动。</block>
-  <block id="71e07950d625dfcf829cac7019fb6f26" category="list-text">*取消*：取消分析会无限期推迟分析。如果需要、您可以重新启动分析。</block>
-  <block id="43d86b2167e8a3464a552ee706d46d88" category="paragraph-title">延迟</block>
-  <block id="38d07dc1916e6ca30a9f936368828d18" category="paragraph">延迟以停止配置分析30天。30天后、分析将自动重新启动。</block>
-  <block id="8dca288df860b62f4b631d87b4320f91" category="paragraph">配置分析将停止30天。</block>
-  <block id="c8a59e7135a20b362f9c768b09454fdb" category="paragraph-title">取消</block>
-  <block id="26765b6cc82b68114c879d49f83b0e5a" category="paragraph">取消以无限期停止配置分析。您可以根据需要重新启动分析。</block>
   <block id="bfc2ef5a56455cfacfde13cf1612e36b" category="paragraph">配置分析将停止。</block>
-  <block id="8e88e8d3ce1694ab82d525e91ae7c572" category="paragraph-title">重新激活</block>
-  <block id="54a679b97854ca1a358ef23dc83cfce6" category="paragraph">可随时重新激活延迟或取消的配置分析。</block>
-  <block id="f01282bfdabc9c97224d922f36d898b8" category="paragraph">此时将重新激活配置分析、并每天继续执行此分析。</block>
   <block id="822748e99c70e9162ce5432b2e1eff5c" category="section-title">2025年5月4日</block>
   <block id="905bc3578e603008d83976307778ddcc" category="list-text">要获取实例类型建议并提高成本准确性，请执行以下操作：</block>
   <block id="10d9194778791c152af2c0be1806e0b1" category="list-text">授予 Amazon CloudWatch 和 AWS Compute Optimizer 权限。</block>
@@ -727,10 +701,7 @@
   <block id="d3379f7eb15b947ec99d4daad00317b3" category="list-text"><block ref="d3379f7eb15b947ec99d4daad00317b3" category="inline-link-macro-rx"></block></block>
   <block id="c4363ade7c2d208d79dee9b60bc51922" category="doc">在工作负载工厂中实现架构良好的数据库配置</block>
   <block id="681f8e0d48f8a5609d29d038dfdb7354" category="list-text">分析的内容</block>
-  <block id="663c686f4608ad8e700ed1cd99a57fcc" category="list-text">在选择修复设置或配置之前、请确保仔细查看每个建议。对于RSS和MAXDOP设置、我们建议您在更改生产环境之前测试建议的设置以确定性能改进。</block>
-  <block id="55900adb296775523b32b30486b0de17" category="admonition">修复过程可能会导致实例停机或服务中断。在选择修复配置之前，请务必仔细查看建议。</block>
   <block id="8cdf23f9dd4f98a6b709a0a9d53ecd88" category="paragraph">您可以按类别、子类别、状态、严重性和标签过滤配置问题。</block>
-  <block id="dd78deb6ef5fa791112d358b2eccdf97" category="paragraph">您还可以通过选择“导出 PDF”下载调查结果报告。</block>
   <block id="f73028254f9c4297e3f60654068105e0" category="list-text">选择下拉箭头可查看任何配置的建议。建议包括最佳实践、未优化配置的潜在缺陷以及重要注意事项。请务必仔细阅读此建议。</block>
   <block id="dae891145ffbf1b1653fc3da2a87faac" category="list-text">当选项可用时，选择“查看并修复”配置问题。</block>
   <block id="45b5dce37159255d07342e3102124571" category="list-text">选择*继续*以修复配置问题。</block>
@@ -859,19 +830,15 @@
   <block id="74bdd3d51d7fef35f3c1e1829b2c63fe" category="section-title">修复配置问题</block>
   <block id="1c6128cdb2d10cb97e9f36f037cb4ceb" category="paragraph">修复在 FSx for ONTAP存储上运行的 SQL Server 或 Oracle 环境的配置问题。</block>
   <block id="47df3bf0f7ade58852082d72bcde28c6" category="admonition">修复过程可能会导致实例停机或服务中断。在选择修复配置问题之前，请务必仔细查看建议。</block>
-  <block id="bfa392944d88404ace768c77a2975abf" category="paragraph">您可以在配置级别、SQL Server 实例或 Oracle 数据库级别推迟、解除和重新激活配置分析。</block>
-  <block id="450fabb8226fa1a89909f2bc792a37e5" category="paragraph">以下说明描述了如何在配置级别推迟、解除或重新激活分析。要针对特定 SQL Server 实例或 Oracle 数据库完成以下任务，请从 *仪表板* 选项卡开始。</block>
   <block id="4c7f98dd35929abb47ec47b5961e9ca4" category="paragraph">为了进行完整的数据库环境分析，资源必须注册并在线。</block>
   <block id="aed8a618f1e8a1dc325945b821521d6c" category="paragraph"><block ref="aed8a618f1e8a1dc325945b821521d6c" category="inline-link-macro-rx"></block></block>
   <block id="15e4986095a476a300a86c98e005c03f" category="list-text">如果出现提示，请提供具有管理访问权限的 Windows 凭据。</block>
-  <block id="6e3efb52bfff9a14482d677371391920" category="paragraph">要在没有外部连接的私有网络中注册实例（SQL Server）或数据库（Oracle），需要在 VPC 中提供以下终端节点，并与 SQL Server 所在的子网关联。确保接口端点允许附加的安全组中的端口 443。</block>
   <block id="0670483b9d94213fd07ca4df3baae2eb" category="list-text"><block ref="c202a4052bc97ff0191552ea4c2c865c" prefix="" category="inline-code"></block>（SQL 服务器）</block>
   <block id="6da87aebc1358666c2653e7d0852ee63" category="list-text"><block ref="1f378775539050b7c7b5e1cdfe121e2f" prefix="" category="inline-code"></block>（SQL 服务器）</block>
   <block id="968e1e1e0d9bdbc5d123e7fe52928ccf" category="list-text">选择“*实例*”选项卡。</block>
   <block id="574cb46655ea85708805d607e35d7b2e" category="list-text">选择注册单个实例或多个实例。</block>
   <block id="2be3766a7781349eb1b5afffac277a87" category="section-title">注册 Oracle 数据库</block>
   <block id="b1260d7204d7a54ec6aa4f9cebcb5433" category="list-text">选择注册单个数据库或多个数据库。</block>
-  <block id="20adcf70350935fa6bdc7751bbf6442d" category="paragraph">资源注册后，您可以执行以下操作。</block>
   <block id="c2b1e7ce1a2b40c91ad25a11bc6b9258" category="list-text">从清单中查看数据库</block>
   <block id="07071ae7b2f725f2cea50ff565939a5e" category="list-text"><block ref="07071ae7b2f725f2cea50ff565939a5e" category="inline-link-macro-rx"></block></block>
   <block id="acf0646ef57dc0492b63959fc34cdc91" category="inline-link-macro">创建数据库克隆（沙盒）</block>
@@ -985,15 +952,9 @@
   <block id="e91df2086570d35902c167d64feb1a17" category="list-text">找到您要取消注册的资源，选择操作菜单，然后选择*取消注册*。</block>
   <block id="ed3b0a0e4302f7b2d136fab3b16aa821" category="doc">探索NetApp Workload Factory for Databases 的节省</block>
   <block id="da04ea76e1caee6b818a505ce02fa93b" category="paragraph">通过比较在 Amazon Elastic Block Store (EBS) 上使用 Microsoft SQL Server、FSx for Windows File Server 和本地存储与 FSx for ONTAP存储的成本，探索NetApp Workload Factory for Databases 为您的数据库工作负载节省的成本。</block>
-  <block id="b0dc0ddc3b447df040e0e8762a14c68c" category="paragraph">Workload Factory 有多种方法可供您探索在 Amazon Elastic Block Store (EBS)、FSx for Windows File Server 和本地存储上运行的数据库工作负载的节省情况 - 从仪表板、库存选项卡和探索节省选项卡。在所有情况下，您都可以使用节省计算器来比较在 FSx for ONTAP文件系统上运行 Microsoft SQL Server 工作负载的各种成本组成部分，例如存储、计算、SQL 许可证、快照和克隆，以及弹性块存储 (EBS)、FSx for Windows File Server 和本地存储。</block>
-  <block id="a4e51d52bc464b022375b8780b342f79" category="paragraph">如果 Workload Factory 确定您可以通过在 FSx for ONTAP文件系统上运行这些工作负载来节省资金，则可以直接从 Workload Factory 控制台中的节省计算器通过 FSx for ONTAP部署 Microsoft SQL。当您在 Elastic Block Store、FSx for Windows File Server 或本地存储上拥有多个 Microsoft SQL Server 实例时，我们建议使用具有单个 SQL 实例的 FSx for ONTAP配置。</block>
-  <block id="9c987d520f60a3366527c3f40f808979" category="paragraph">访问 Workload Factory 控制台中的数据库*仪表板*，以概览在 FSx for ONTAP上运行所有数据库工作负载的潜在成本节省。在“潜在节省”图块中，您可以查看 Elastic Block Store 和 FSx for Windows File Server 上的所有数据库工作负载的数量、潜在的成本节省、节省百分比以及条形图中的直观表示。</block>
   <block id="e123e8395730b190f146babf1b2d52a4" category="inline-image-macro">工作负载工厂控制台中数据库仪表板的潜在节省图块的屏幕截图。潜在节省图块显示您在 Elastic Block Store 和 FSx for Windows File Server 上的所有数据库工作负载的数量、潜在的成本节省、节省百分比以及条形图中的直观表示。</block>
   <block id="092e04ebb92f098a8d23a32d9a42e747" category="paragraph"><block ref="092e04ebb92f098a8d23a32d9a42e747" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e5af3e73361e966fe2adc79aadc34d57" category="paragraph">Workload Factory 输入检测到的 Elastic Block Store 和 FSx for Windows File Server 主机特性，以便您可以自动探索节省。</block>
-  <block id="8792c25f641e40dfbd968350e410bed0" category="paragraph">如果 Workload Factory 检测到 EBS 主机，您将被重定向到“探索节省”选项卡。如果 Workload Factory 未检测到 EBS 主机，您将被重定向到计算器<block ref="1aa155ccc357a88465786c9c4e421569" category="inline-xref-macro-rx"></block>。</block>
-  <block id="7ca6391eb61738d8b33e189705bb5857" category="paragraph">如果 Workload Factory 检测到适用于 Windows 主机的 FSx，您将被重定向到“探索节省”选项卡。如果 Workload Factory 未检测到 FSx for Windows 主机，您将被重定向到计算器<block ref="1aa155ccc357a88465786c9c4e421569" category="inline-xref-macro-rx"></block>。</block>
-  <block id="b5745d8b2f6a0cf9cddb7bbb1fed3157" category="list-text">在 Workload Factory 中的 SQL Server 本地选项卡中上传脚本输出。</block>
   <block id="b9382a492febc168d96a9e8228ee319f" category="paragraph">在您了解了 Microsoft SQL 服务器本地主机的节省情况后，您可以选择从 Workload Factory 中删除本地主机记录。选择 Microsoft SQL Server 本地主机的操作菜单，然后选择*删除*。</block>
   <block id="1dbb11b39a311ecc5e8a64d372008d84" category="admonition">Workload Factory 不支持保存或创建多个 FSx for ONTAP文件系统。</block>
   <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="summary">NetApp通过多种方式为 Workload Factory 及其云服务提供支持。全天候提供广泛的免费自助支持选项，例如知识库 (KB) 文章和社区论坛。您的支持注册包含通过网络工单获取的远程技术支持。</block>
@@ -1092,12 +1053,9 @@
   <block id="58ee6063aaed57090a82d5cfa901a882" category="summary">NetApp Workload Factory for Databases 扫描 Microsoft SQL Server 配置，提供见解和建议，帮助您实现卓越运营。</block>
   <block id="04b3e1206245453c778ab6cffd793ea7" category="inline-link-macro">了解 Workload Factory 中的配置分析和良好架构状态。</block>
   <block id="9198e3a1fac406d0bf2e8a31d569e09c" category="paragraph"><block ref="9198e3a1fac406d0bf2e8a31d569e09c" category="inline-link-macro-rx"></block></block>
-  <block id="1d8f9be49aaafb6902357ae957cf2900" category="paragraph">Workload Factory 每天分析数据库配置。每日分析提供精心设计的状态、见解和建议，以及自动修复配置问题的选项，以便您的配置符合最佳实践。</block>
-  <block id="15ff0edfa22106f59b2d6897f5c93ff7" category="paragraph">您可以选择查看配置问题的建议并从 Workload Factory 控制台内的数据库清单中修复这些问题。</block>
   <block id="61ee1dd5e668df870f53e81aa15e3813" category="paragraph">Workload Factory 分析以下配置的良好架构状态：</block>
   <block id="b8995cc72a69581d30a1bda023cdd963" category="list-text">克隆：包括刷新和删除在 Workload Factory 内部或外部创建的超过 60 天的克隆（沙盒）的选项</block>
   <block id="7ad2228e24b645ace87b19a4d0e1ea84" category="list-text">存储布局：包括重做日志放置、临时表空间放置、数据文件放置、存档日志放置、控制文件放置和二进制文件放置、ASM 磁盘组 LUN 数量</block>
-  <block id="d8e924feff88175a3a6e329d7a242ef9" category="list-text">要评估 Microsoft SQL Server 实例或 Oracle 数据库的存储，必须在 Workload Factory 中注册资源，并且存储类型必须是 FSx for ONTAP。<block ref="aed8a618f1e8a1dc325945b821521d6c" category="inline-link-macro-rx"></block></block>
   <block id="bf2b2769ceeef90639022670d2ded3af" category="list-text">在*库存*中，选择引擎类型：Microsoft SQL Server 或 Oracle。</block>
   <block id="97dc4b0ba577b7da6dfbf77719b88d70" category="list-text">选择要修复特定配置的资源。</block>
   <block id="0c173783cbcf5f1b41a4b4c810a55a8a" category="list-text">如果选择了 Microsoft SQL Server，请选择“*实例*”选项卡。</block>
@@ -1106,11 +1064,9 @@
   <block id="0a54f15a678a47b48d82268f86efdc99" category="list-text">刷新克隆会使其与源数据库同步。刷新仅适用于在 Workload Factory 中创建的克隆。</block>
   <block id="f842fe7ac3d7da41d936288b414e6598" category="list-text">删除克隆会将其永久删除，释放存储空间并降低成本。您可以删除在 Workload Factory 内部和外部创建的克隆。</block>
   <block id="74d409755480cc932aeaf23b6f09b823" category="paragraph">Workload Factory 开始修复问题。选择“作业监控”选项卡来查看操作的状态。</block>
-  <block id="8e2ad9a1989936828c220859a77a615f" category="paragraph">应用程序对数据库配置的要求各不相同。 Workload Factory 为您提供了两个跳过特定数据库配置分析的选项，以便您可以只监控相关问题并准确了解相关配置的健康状况。当特定配置分析被推迟或取消时，该配置将不包含在总优化分数中。</block>
   <block id="6aaef09cae74be9963dbe52f3f3d7ac1" category="list-text">在清单中，选择数据库引擎类型：*Microsoft SQL Server* 或 *Oracle*。</block>
   <block id="3171f14b71a4811069dc6e060c1f9f7a" category="list-text">导航到要推迟配置的 SQL Server 实例或 Oracle 数据库，选择操作菜单，然后选择 *Well-architected*。</block>
   <block id="ca7509f05b7eb996cdb457d74197634c" category="list-text">在 Well-architected 分析页面上，向下滚动到要推迟的配置，选择操作菜单，然后选择 *Dismiss*。</block>
-  <block id="ac4005750f183c3470bff91188e0ceb5" category="list-text">在“解除”配置对话框中，选择“推迟 30 天”，然后选择“解除”。</block>
   <block id="a1d71d2f9c80113890561cab6b64ffa1" category="list-text">在 Dismiss 配置对话框中，选择 *Dismiss* 选项，然后选择 *Dismiss* 确认关闭。</block>
   <block id="51bbd388cda4367b34d6dc50a5e134a5" category="list-text">在 Well-architected 分析页面上，选择 *Dismissed configuration* 以仅显示已解除的配置。</block>
   <block id="bc4a349f7f95e73490c3e2f8aaabe892" category="list-text">选择*重新激活*以重新启动已推迟或已取消的配置的配置分析。</block>
@@ -1153,7 +1109,6 @@
   <block id="5c312d6e56cb086ef38ed7860931fe1c" category="summary">注册资源，以便您可以监控NetApp Workload Factory for Databases 中的资源状态、资源利用率、保护和存储性能。</block>
   <block id="ec1098eb54d9b05cc1e929562eb8d30d" category="doc">在NetApp Workload Factory for Databases 中注册资源</block>
   <block id="0bc907adb7562b30973df586f142f009" category="paragraph">注册 Microsoft SQL Server 实例和 Oracle 数据库，以便您可以在NetApp Workload Factory for Databases 中监控实例和数据库状态、资源利用率、保护和存储性能。</block>
-  <block id="3774c3fd6b6e5830079da1f94d3f1872" category="admonition">Workload Factory 仅支持 Microsoft SQL Server 实例和 Oracle 数据库的注册和管理。根据您在 Workload Factory 中选择的 AWS 帐户凭证，PostgreSQL 主机可能会出现在清单中。目前，Workload Factory 仅支持在 Amazon Linux 操作系统上运行的未注册的 PostgreSQL 实例。</block>
   <block id="1d72541b2e1a224311e8b78af73bab83" category="summary">将数据库（沙盒）克隆恢复为在NetApp Workload Factory for Databases 中创建时的原始版本。</block>
   <block id="ecf8d68388a40ca09bc6475e0cb33a92" category="doc">在NetApp Workload Factory for Databases 中恢复数据库克隆</block>
   <block id="b006ea3a9fc3f700c7ea6c3fc404a855" category="paragraph">当您克隆数据库时，创建时的克隆是_baseline_克隆。克隆的数据库中的数据与创建时的源数据库相同。由于数据库克隆中的数据会随着时间而发生变化，您可能希望将数据恢复到首次创建克隆时的基线。此操作称为重新基线克隆。重新基准化克隆而不是创建新的克隆可以节省空间；但是，对数据库克隆所做的任何更改都将被删除。</block>
@@ -1295,8 +1250,6 @@
   <block id="ae41853f33cf42c1d6ea60e021ce20b3" category="list-text">*首选组织单元路径*：（可选）在 Active Directory 中输入要加入的首选组织单元 (OU)。</block>
   <block id="5da5a84735de60ec35b817899791d509" category="list-text">*目标 Active Directory 组*：可选，输入要将计算机添加到的目标 Active Directory 组。</block>
   <block id="bfcc9fa5a3178fd803540af87a6b6ab7" category="section-title">2025年12月18日</block>
-  <block id="5e3b7f958129022f75fe2931c55615b2" category="doc">问我关于人工智能助手首页集成的问题</block>
-  <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">Workload Factory 控制台主页嵌入了 Ask me AI 助手，使您可以询问有关您自己的存储环境的问题，直接从您的环境中获取个性化见解，并参考以前的对话。您可以与“问我”进行交互，以了解您的工作负载、解决问题并了解更多关于工作负载工厂的信息——所有这些都无需离开控制台。</block>
   <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">2026年1月4日</block>
   <block id="342a19841e494c61bf9c06a5879eaffa" category="inline-image-macro">汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。</block>
   <block id="1d59c9bea900e36e3d5b9ca53cd55587" category="list-text">选择菜单 <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> 然后选择*数据库*。</block>
@@ -1317,8 +1270,6 @@
   <block id="62513284927014959d72209d516f5de0" category="list-text">从数据库菜单中，选择 *探索节省*。</block>
   <block id="fc5d667e56107ceb5ef42e12c10ca5d7" category="list-text">在浏览节省中，选择 *Elastic Block Store (EBS) 上的 SQL Server* 选项卡。</block>
   <block id="03c5728ca31aa7858c337d700d809a4b" category="list-text">在浏览节省中，选择 *SQL Server on FSx for Windows* 选项卡。</block>
-  <block id="95ad763c3d649fcb7d3f890682ae2e41" category="list-text">在浏览节省中，选择 *SQL Server on-premises* 选项卡。</block>
-  <block id="cffbf3f16e677dd5e894b7e108845552" category="list-text">下载评估脚本。该脚本是基于 PowerShell 的数据收集工具。它收集 SQL Server 配置和性能数据，然后将其上传到 Workload Factory。迁移顾问评估数据并为您的 SQL Server 环境规划 FSx for ONTAP 部署。</block>
   <block id="a125bdcfa4481b5703ae9331e90da567" category="list-text">从 SQL Server 本地选项卡中，最多选择五个数据库主机，然后选择 *探索节约* 以针对 FSx for ONTAP 运行 SQL Server 本地主机的成本分析。</block>
   <block id="a1c8ed705aea3935dc8713a705d8c885" category="paragraph">Workload Factory 将多个 SQL Server 本地主机整合到单个 FSx for ONTAP 配置建议中，以优化成本节约，除非所选的本地主机超过了单个 FSx for ONTAP 文件系统的吞吐量、容量或 IOPS 限制。</block>
   <block id="ed83a5691e7d487ebb17fc63bd4577a4" category="cell">FCI，独立</block>
@@ -1326,8 +1277,6 @@
   <block id="09a225d62dc8856d4aa05f1d013d64fb" category="list-text">存储配置：包括容量管理、精简配置、分层策略、快照、存储效率和使用 NFS 或 iSCSI 进行部署的操作系统配置，包括或不包括 Automatic Storage Management (ASM)，包括 Microsoft Multipath I/O (MPIO) 状态和设置，以及以下 dNFS 设置：dNFS 启用、dNFS 一致 IP 解析、dNFS 配置文件和 dNFS<block ref="4740c034d97ca90a96b8050082816605" prefix=" " category="inline-code"></block></block>
   <block id="8a91764939fe812c81b542206d9d0af7" category="paragraph">仅当资源在 FSx for ONTAP 文件系统存储上运行时，您才能注册资源。</block>
   <block id="905518fc8d8d1e03b6625a1429570b1f" category="inline-link-macro">错误日志分析</block>
-  <block id="d0b9001fbcd773720f36bdaa72f9e80c" category="inline-link-macro">架构完善的审查</block>
-  <block id="cdde0c1e8ee71f76520f0a66301e17bf" category="paragraph">注册实例（SQL Server）或数据库（Oracle）有三个步骤 - 实例或数据库身份验证、FSx for ONTAP 身份验证和准备。准备工作包括确保所有 AWS、NetApp 和 PowerShell 模块都安装在实例或数据库上，并且满足 Workload Factory for Databases 功能（如 <block ref="b3b44214924ae2c9e9d272ea31fcb428" category="inline-link-macro-rx"></block> 或 <block ref="14e4d6df7f3769a1a791ddbfa16b30d7" category="inline-link-macro-rx"></block>）的最低要求。</block>
   <block id="ad93849f6190198b574a03052debf9ee" category="section-title">注册 Microsoft SQL Server 实例</block>
   <block id="92d119793835b54b4d7e2c5bcf09d96d" category="paragraph">注册实例有三个步骤：实例身份验证、FSx for ONTAP 身份验证以及完成缺失先决条件的准备。您可以注册单个实例或多个实例。</block>
   <block id="1e353ab5fd8467e0928740d5976845d6" category="paragraph">Workload Factory 支持 SQL Server 的故障转移群集实例 (FCI) 和独立部署的注册。</block>
@@ -1342,7 +1291,6 @@
   <block id="9ed181f71730a4b981c04369e2f1719e" category="list-text">要准备（步骤 3），请确保实例满足最低要求。</block>
   <block id="4aa1b1ff22a8dfe18a969e9e18594ab0" category="list-text">为每个功能选择 *Setup details* 以了解功能先决条件，并按照屏幕上的说明完成任何缺少的功能先决条件。</block>
   <block id="d521398ad1462fd891ea513e4855ce5b" category="inline-link-macro">审核并修复架构完善的问题</block>
-  <block id="f035f450e95801f1197ab2843b43b16a" category="list-text">完成先决条件后，*注册* 实例。</block>
   <block id="9d96bcc0867ec5be17a78fc127af4785" category="paragraph">实例注册启动。选择 *Job monitoring* 选项卡以跟踪进度。</block>
   <block id="efd81ed9168d148e7b33debfd48f5bbe" category="paragraph">注册实例有三个步骤 - 数据库身份验证、FSx for ONTAP 身份验证以及完成缺失先决条件的准备。您可以注册单个或多个数据库。</block>
   <block id="67b60232330635a005ec1fd48b8378f5" category="list-text">在库存中，选择 *Oracle* 作为引擎类型。</block>
@@ -1354,12 +1302,96 @@
   <block id="aea7afc9754b2383c56fbbaee6c6009d" category="list-text">要准备（步骤 3），请确保数据库满足所需的先决条件。如果安装了所有必需的模块并满足先决条件，请选择*下一步*注册数据库。否则，请按照以下步骤操作。</block>
   <block id="1717c98238cd6bd4091f92979d40a891" category="list-text">在*先决条件检查视图*中查看先决条件。</block>
   <block id="3f4c61df91a8ed4b5fc7622369d6e56d" category="paragraph">您必须完成单个功能的所有先决条件，例如 *Review well-architected issues and recommendations* 才能注册数据库。</block>
-  <block id="9e7001c2bb163521a51de7186846104e" category="list-text">完成先决条件后，*注册* 数据库。</block>
   <block id="aece37c900cf74271d49a4aec3628d66" category="paragraph">数据库注册启动。选择 *Job monitoring* 选项卡以跟踪进度。</block>
   <block id="e6437d0fab94a9cc41e9fc0354b23716" category="section-title">2026 年 2 月 02 日</block>
   <block id="ecd36d02576c4fe28ab61b5c14fa69c4" category="sidebar">管理资源</block>
   <block id="5dd712766e41aed3df90d60e36279568" category="paragraph">为了满足最低要求，实例必须安装 AWS 和 NetApp PowerShell 模块以及 PowerShell 7 模块，并且您必须完成先决条件检查中列出的至少一项功能的先决条件。</block>
   <block id="4f04ccc3925b5039da28842c277cda6c" category="paragraph">您必须完成单个功能的所有先决条件，例如 *Review well-architected issues and recommendations* 才能注册实例。</block>
-  <block id="747eccfe479b7957e243e10257e40143" category="paragraph">要为您的实例使用 Workload Factory <block ref="78fb719485add27049471292c9f9720d" category="inline-link-macro-rx"></block>，请完成*查看精心设计的问题和建议*和*修复精心设计的问题*功能下列出的所有先决条件。</block>
   <block id="7fa2af2634cfeecc9f90ce75c17fad3f" category="paragraph">要为您的数据库使用 Workload Factory <block ref="78fb719485add27049471292c9f9720d" category="inline-link-macro-rx"></block>，请完成*查看精心设计的问题和建议*和*修复精心设计的问题*功能下列出的所有先决条件。</block>
+  <block id="b3aa99c5cc9ef827951e68e398c5af2e" category="doc">Microsoft SQL Server 本地数据库环境成本分析和迁移规划</block>
+  <block id="56b090f7afa365cc9265c8fc7c52c73c" category="paragraph">BlueXP workload factory for Databases 现在检测、分析并帮助您规划 SQL Server 本地数据库迁移到 Amazon FSx for NetApp ONTAP。您可以使用节省计算器估算在云中运行 SQL Server 本地数据库环境的成本，并查看将本地数据库环境迁移到云的建议。</block>
+  <block id="8d73c4037df134a624f4a3cc9d442a9e" category="doc">Ask Me AI 助手主页集成</block>
+  <block id="a00917b130263595d00c3587c0e66a4f" category="paragraph">Workload Factory 控制台主页嵌入了 Ask Me AI 助手，使您可以询问有关您自己的存储空间的问题，直接从您的环境中获取个性化见解，并参考以前的对话。您可以与 Ask Me 交互，了解您的工作负载，解决问题并了解有关 Workload Factory 的更多信息，而无需离开控制台。</block>
+  <block id="4b51d568a03393cf563624fcbba9143f" category="doc">一次性评估</block>
+  <block id="c87bb3ba3f920d90c329acddc2fe7385" category="paragraph">Workload Factory 现在提供一次性评估，以便在需要时分析数据库部署的配置 - 新部署、迁移后、故障排除等。您将获得建议，以帮助您优化部署配置并遵守最佳实践。这是您在不完全致力于设置过程的情况下使用精心设计的功能的机会。您可以评估数据库，而无需在 Workload Factory 中存储凭据、注册数据库资源或设置外部连接。</block>
+  <block id="e0b323aef6004097ab97ed7d77d06388" category="inline-link-macro">对数据库部署执行一次性评估</block>
+  <block id="fa29998d7ba5fe0bb430a106a7dd86bc" category="paragraph"><block ref="fa29998d7ba5fe0bb430a106a7dd86bc" category="inline-link-macro-rx"></block></block>
+  <block id="db82eade40cb0d84a1267b72a439d756" category="section-title">Microsoft SQL Server 上 Always On 可用性组和 Oracle 上 Data Guard 的注册支持</block>
+  <block id="9074af594544775f8103abf495f3e489" category="paragraph">现在，您可以在 NetApp Workload Factory 的数据库工作负载中，使用 Always On 可用性组 (AOAG) 部署模型发现和注册 Microsoft SQL Server 实例，并使用 Data Guard 部署模型注册 Oracle 数据库。此增强功能允许在 Workload Factory 控制台中更好地管理 SQL Server 和 Oracle 资源。</block>
+  <block id="f7b5008af0a2a63908c672bf116eb9cd" category="paragraph">注册 AOAG 实例和 Data Guard 数据库后，您可以利用 Workload Factory for Databases 中的各种功能，例如查看资源详细信息和分析错误日志。</block>
+  <block id="b670d12d9dbeacc2f76bcbbabb59b072" category="paragraph">Workload Factory for Databases 还支持使用 AOAG 部署模型对 Microsoft SQL Server 实例进行精心设计的分析。您可以分析可用性组中 SQL Server 实例的配置，并接收优化部署配置和遵守最佳实践的建议。注册您的 AOAG 实例以启用此功能。</block>
+  <block id="fd16a8943ae80384234824f7a04cb2eb" category="inline-link-macro">在 Workload Factory for Databases 中注册资源</block>
+  <block id="e2da1373bb80f776ff6f57fbbe534851" category="paragraph"><block ref="e2da1373bb80f776ff6f57fbbe534851" category="inline-link-macro-rx"></block></block>
+  <block id="acc6acf63c7f7148c690b518cbbc53ca" category="paragraph">精心设计的分析包括 Oracle 的*操作系统补丁*，用于检查您是否在操作系统上安装了最新的补丁，并告诉您如何安装它们。</block>
+  <block id="10c0be29accc7dc47a6524aa470214cb" category="paragraph">此外，当存储布局等配置依赖于其他配置时，Oracle 的精心设计的分析会通知您。该通知告诉您要优化链接配置的操作，以便我们提供的所有建议都是最佳的。</block>
+  <block id="c02b138b3ded0ad5c64dc6ef4350f29e" category="section-title">Oracle 本地数据库环境成本分析和迁移规划</block>
+  <block id="c419699e9c7d19ed5944ddf6b8598cfe" category="paragraph">Workload Factory for Databases 现在可以分析并帮助您规划 Oracle 本地数据库迁移到 Amazon FSx for NetApp ONTAP。您可以使用节省计算器估算在云中运行 Oracle 本地数据库环境的成本，并查看将本地数据库环境迁移到云的建议。</block>
+  <block id="129560e32411be4dc94c9cfeada8ea67" category="section-title">Workload Factory 中提供了新的 Ask Me 书签</block>
+  <block id="4ea89e975474ebd5bba8d32ced2e95cc" category="paragraph">我们在 Workload Factory 控制台的每个屏幕上都添加了一个新的 Ask Me 书签。这项改进使您在需要帮助时可以更轻松、更快地访问 Ask Me。Ask Me 是我们的人工智能助手，使您可以询问有关您自己的工作负载环境的问题，直接从您的环境中获取个性化见解，并参考以前的对话。</block>
+  <block id="b365ed726bb3010ba5b4a6a1479128f9" category="paragraph">您可以通过单击新书签从任何页面打开 Ask Me。它在不中断您当前工作的情况下在侧面板中启动 Ask Me，并提供与您当前操作相关的快速解释和建议。</block>
+  <block id="80dcbdee31e7f18a301f863f8b73dc64" category="inline-link-macro">详细了解 Ask Me</block>
+  <block id="df84e5c661ad9c55d4921f236021aac2" category="paragraph"><block ref="df84e5c661ad9c55d4921f236021aac2" category="inline-link-macro-rx"></block></block>
+  <block id="72219d6b90a43e85186a57163993d521" category="paragraph">您可以使用仪表板、库存选项卡或浏览节省选项卡来探索数据库工作负载在 EBS、FSx for Windows File Server 和本地存储上的节省。在所有情况下，您可以使用节省计算器来比较在 FSx for ONTAP 文件系统上运行 Microsoft SQL Server 工作负载与 Elastic Block Store (EBS)、FSx for Windows File Server 和本地存储相比的各种成本组件，如存储、计算、SQL 许可证、快照和克隆。</block>
+  <block id="6166c6c7be48cb17428de715fa305517" category="paragraph">如果 Workload Factory 发现 FSx for ONTAP 节省了成本，则可以直接从 Workload Factory 控制台中的节省计算器部署 Microsoft SQL over FSx for ONTAP。当 Elastic Block Store、FSx for Windows File Server 或本地存储上有多个 Microsoft SQL Server 实例时，我们建议使用单个 SQL 实例的 FSx for ONTAP 配置。</block>
+  <block id="4eae00719f6d18a728f20c8e08ceee75" category="paragraph">访问 Workload Factory 控制台中的数据库*仪表板*，了解在 FSx for ONTAP 上运行所有数据库工作负载的潜在成本节省概览。*潜在节省*图块显示了 EBS 和 FSx for Windows File Server 上的数据库工作负载、潜在成本节省、节省百分比和条形图。</block>
+  <block id="5fdcccba8663e4f92a14f1ee0e4d7962" category="paragraph">您可以使用节省计算器，以便将运行 Microsoft SQL Server 工作负载（如存储、计算、SQL 许可证、快照和克隆）在 FSx for ONTAP 文件系统上的数据库工作负载的各种成本成分与 Elastic Block Store (EBS)、FSx for Windows File Server 和本地存储进行比较。FSx for ONTAP 文件系统可能是数据库工作负载的最具成本效益的选择。</block>
+  <block id="2fea5a198a028f6581bc28995e4910b9" category="paragraph">计算器会检查 SQL Server 部署，以确保使用的资源和功能与 SQL Server 版本相匹配。以下是计算器在建议降级到标准版之前检查的关键因素和条件：</block>
+  <block id="31e5bf576cc19bb2bc811ae96e41e957" category="paragraph">如果评估的 SQL Server 实例未使用上述任何 Enterprise 功能并满足资源限制，则计算器将建议将许可证降级到 Standard Edition。计算器可帮助您在不降低性能或功能的情况下优化 SQL Server 许可成本。</block>
+  <block id="56ca4d069f6721eb0a196ce2285e3159" category="paragraph">如果 Workload Factory 检测到 EBS 主机，它会将您重定向到 Explore savings 选项卡。如果未检测到 EBS 主机，它会将您重定向到计算器以 <block ref="1aa155ccc357a88465786c9c4e421569" category="inline-xref-macro-rx"></block>。</block>
+  <block id="fb05c33e1057a3d9c7b41d4d59cdc2ff" category="list-text">在节省计算器中，您可以提供有关 EBS 存储中的克隆和快照的以下详细信息，以更准确地估计成本节省。</block>
+  <block id="9d8c1f1405c74f9711b726b843ae1436" category="paragraph">如果 Workload Factory 检测到 FSx for Windows 主机，它会将您重定向到"浏览节省"选项卡。如果未检测到 FSx for Windows 主机，则会将您重定向到计算器以<block ref="1aa155ccc357a88465786c9c4e421569" category="inline-xref-macro-rx"></block>。</block>
+  <block id="4ea2c0ba28d2208ed50f97ad362a12b2" category="paragraph">如果 Workload Factory 检测到 FSx for Windows 卷影副本，它会将默认值设置为 *Daily*。如果未检测到卷影副本，则将默认值设置为 *No snapshot frequency*。</block>
+  <block id="c3f277f5c1a3e311c0864b3d0e14f8a6" category="list-text">在浏览优惠中，选择引擎类型 *Microsoft SQL Server*。</block>
+  <block id="8e4019409c31aba926586d6cb97dac58" category="list-text">接下来，选择 *SQL Server on-premises* 选项卡。</block>
+  <block id="0d51cb5ce976496c739cc33ba7dfc350" category="list-text">从 SQL Server 本地选项卡中，选择 *评估脚本* &gt; *评估脚本信息* 并查看提供的信息。</block>
+  <block id="2a0eb44ec1b969b9594506eb2a56b2d8" category="list-text">选择 *Download assessment script*。</block>
+  <block id="5333d528a428cfa931e74c829fe44b34" category="paragraph">该脚本是基于 PowerShell 的数据收集工具。它收集 SQL Server 配置和性能数据，然后将其上传到 Workload Factory。迁移顾问评估数据并为您的 SQL Server 环境规划 FSx for ONTAP 部署。</block>
+  <block id="603c093b6806b6b6ffd91ff7d1f9a440" category="list-text">使用具有足够权限的用户在 SQL Server 主机上运行脚本。</block>
+  <block id="b88e72fee1ac88a0555931722cf6b637" category="list-text">在 Workload Factory 的 SQL Server 本地选项卡中选择 *Upload script results*。</block>
+  <block id="c8f5692d3e3a403d3759c4bcc99495e3" category="open-title">Oracle Server 本地</block>
+  <block id="7efcb90c512b9314c3208918a1a22fcb" category="list-text">接下来，选择 *Oracle Server 本地* 选项卡。</block>
+  <block id="74016a033d6133ddd6b4b43bf277d15b" category="list-text">从 Oracle Server 本地选项卡中，选择 *评估脚本* &gt; *评估脚本信息* 并查看提供的信息。</block>
+  <block id="73983c38e5c950d76509b0e2bd7ae41a" category="paragraph">该脚本是基于 PowerShell 的数据收集工具。它收集 Oracle Server 配置和性能数据。</block>
+  <block id="5ab613454acb1a2c5b6852c4d357429e" category="list-text">使用具有足够权限的用户在 Oracle 主机上运行脚本。</block>
+  <block id="ded8e8ba5b4a2e07025a34f48a6023e4" category="list-text">选择 *上传脚本结果* ，然后将脚本输出文件上传到 Workload Factory 控制台。迁移顾问评估数据并计划针对您的 Oracle Server 环境的 FSx for ONTAP 部署。</block>
+  <block id="66998e3518ee5045b211ee6e878c16a4" category="list-text">从 Oracle Server 本地选项卡中，选择本地 Oracle Server，然后选择*探索节约*以针对 FSx for ONTAP 运行成本分析。</block>
+  <block id="4511f32d33e21257085df585e8c9dc3a" category="cell">Always On 可用性组</block>
+  <block id="650870d240bc8043d6977b1a1c975ce0" category="cell">19c，21c</block>
+  <block id="edd8af7eaa131179cb70a5db89636876" category="cell">Data Guard</block>
+  <block id="5a493bafe2fb35c6f5339a3ced4adce7" category="paragraph">Workload Factory 每天分析数据库配置。每日分析提供精心设计的状态、见解和建议。您可以自动修复配置问题以满足最佳实践要求。</block>
+  <block id="4ec20b6d44158ae33673aec51794c09b" category="paragraph">您可以查看配置问题的建议，并从 Workload Factory 控制台中的数据库清单中修复这些问题。</block>
+  <block id="4a798c756347a1f9f34d59ee0f8fb34d" category="paragraph">对于 SQL Server 资源，可以执行一次性评估以查看数据库配置的最佳实践。您无需注册资源或存储凭据即可执行一次性评估。</block>
+  <block id="cac9df85ec3dc71ff56914f00db69c7a" category="list-text">计算：包括操作系统补丁</block>
+  <block id="2ad033703ef0dac4d52edf323faa1918" category="paragraph">当配置依赖于其他配置时，Oracle 的架构完善分析会通知您，并列出优化链接配置的操作。</block>
+  <block id="89e18dfb2f73d9aea558dfa37e146a3d" category="section-title">对 SQL Server 数据库配置执行一次性评估</block>
+  <block id="fc1edbd0f2b3738c54d8f2398b9945a0" category="paragraph">执行一次性评估以找出 Microsoft SQL Server 实例的良好架构状态，而无需存储凭据或注册实例。</block>
+  <block id="f64b3cb5f5729ca0945015067499622a" category="paragraph">您可以根据需要多次运行脚本并上传结果。每次上传时，系统都会根据最新结果更新 well-architected 状态和见解。</block>
+  <block id="a790f6e28b649137870b00ccf3589944" category="list-text">选择菜单 <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> 然后选择 *Databases*。</block>
+  <block id="6095483bc20af74df0bca991f69f87dd" category="list-text">在 *Inventory* 中，选择 *One-time assessment* &gt; *Learn about assessment*。查看有关一次性评估的信息。</block>
+  <block id="be87867043f3a6e9ec43771084901ca7" category="list-text">选择 *Download script*。</block>
+  <block id="79473441dd5f2ed36fd986a90db7c9cf" category="list-text">将脚本复制到 Microsoft SQL Server 主机。</block>
+  <block id="cea7ad7075430d1bd0be98ca92701bcb" category="list-text">在 PowerShell 中运行脚本。一个脚本从所有实例收集元数据。</block>
+  <block id="b33feb370f35879eddcd9293135b1df1" category="list-text">选择 *One-time assessment* &gt; *Upload*。找到文件并将其上传到 Workload Factory 控制台。</block>
+  <block id="3065c918b2ac31893b241184a7b01959" category="list-text">查看任何配置的建议。建议包括最佳实践和配置未优化时可能遇到的问题。</block>
+  <block id="c70615017296ffdedf34ebb8730eaa77" category="section-title">在开始修复、关闭和重新激活配置之前</block>
+  <block id="50bac09b5a353b5521f0ff914fff6808" category="list-text">资源必须在 Workload Factory 中注册，存储类型必须是 FSx for ONTAP。<block ref="aed8a618f1e8a1dc325945b821521d6c" category="inline-link-macro-rx"></block></block>
+  <block id="85d21d13c3f58b49f129dacfb4cab3a1" category="list-text">在修复设置或配置之前，请查看每个建议。对于 RSS 和 MAXDOP，请在更改生产环境之前测试建议的设置以检查性能。</block>
+  <block id="550a46672ef778ca098c025d166cdd66" category="admonition">修复配置可能会导致实例停机或服务中断。在选择修复配置之前，请务必仔细阅读建议。</block>
+  <block id="88228ff74222d41a7b32f7f73b628495" category="paragraph">选择 *Export PDF* 以下载调查结果报告。</block>
+  <block id="370419de045637c04622917ea040cd16" category="section-title">忽略对数据库配置的分析</block>
+  <block id="b3af08a651def642c2a5741d36be8f65" category="paragraph">忽略不适用于数据库环境的特定数据库配置的分析，以避免不必要的警报和不准确的优化结果。您可以随时重新激活已忽略的配置分析。</block>
+  <block id="d6b510061438391f590afb73a62f098c" category="paragraph">您可以随时重新激活分析。配置不再包含在总优化分数中。</block>
+  <block id="61ab3b6f044b76185565a9f1d6db2113" category="section-title">重新激活已解除的配置分析</block>
+  <block id="99206ff00921c00b5d887375a108d167" category="paragraph">随时重新激活已关闭的配置分析。您可以选择一个或多个要重新激活的配置。</block>
+  <block id="a25cb7311bf319b68bd7bff7ddd66451" category="paragraph">配置分析将重新激活，并从现在开始每天运行。</block>
+  <block id="1a0cee014540e049f4d08b2ca15c2447" category="inline-link-macro">精心策划的评估</block>
+  <block id="27cfb14157482da47350bb4484f7e792" category="paragraph">注册实例（SQL Server）或数据库（Oracle）涉及三个步骤：实例或数据库身份验证、FSx for ONTAP 身份验证以及准备。要准备，请在实例或数据库上安装 AWS、NetApp 和 PowerShell 模块，并满足 Workload Factory for Databases 功能（如 <block ref="b3b44214924ae2c9e9d272ea31fcb428" category="inline-link-macro-rx"></block> 或 <block ref="d21897e75c312daacd024fa4c48cd6a7" category="inline-link-macro-rx"></block>）的最低要求。</block>
+  <block id="672da44d295a636d22c64c52022ddf81" category="paragraph">Workload Factory 仅支持 Microsoft SQL Server 实例和 Oracle 数据库注册和管理。根据您在 Workload Factory 中选择的 AWS 账户凭据，PostgreSQL 主机将显示在清单中。目前，Workload Factory 支持仅在 Amazon Linux 操作系统上运行的未注册 PostgreSQL 实例。</block>
+  <block id="7651418602ee7e0d7035d3f2eed1ac58" category="paragraph">要在没有外部连接的专用网络中注册实例或数据库，请在 VPC 中提供所需的端点，并将其与相关子网关联。允许接口端点的 Security Group 中的端口 443。</block>
+  <block id="aa880a36f751894aa3fd6f4bc9d30355" category="paragraph">如果使用代理服务器进行出站 EC2 连接，请允许访问以下域进行管理操作：</block>
+  <block id="e11b622d7aca9ce195d133de33a0810c" category="paragraph">要使 Workload Factory 能够<block ref="78fb719485add27049471292c9f9720d" category="inline-link-macro-rx"></block>，请完成*审核架构良好的问题和建议*和*修复架构良好的问题*下的所有先决条件。</block>
+  <block id="e0d8c69e59771c6aec0a81c72d078833" category="list-text">完成所有先决条件后，*注册*实例。</block>
+  <block id="485a40f8631dfca236f2084899a28a0c" category="list-text">完成先决条件后，*注册*数据库。</block>
+  <block id="2b1eb132ebb67244be9fd5e374964f2e" category="paragraph">注册后，您可以执行这些任务。</block>
+  <block id="6ddfbfe3d38a813f004cc2f37d2a5866" category="section-title">2026 年 3 月 02 日</block>
 </blocks>

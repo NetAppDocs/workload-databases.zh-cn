@@ -1,12 +1,12 @@
-= 内部数据库环境成本分析和迁移规划
+= Microsoft SQL Server 本地数据库环境成本分析和迁移规划
 :allow-uri-read: 
 
 
 
 
-=== 内部数据库环境成本分析和迁移规划
+=== Microsoft SQL Server 本地数据库环境成本分析和迁移规划
 
-现在、适用于数据库的BlueXP  工作负载工厂可以检测、分析并帮助您规划将内部数据库迁移到Amazon FSx for NetApp ONTAP的过程。您可以使用节省计算器估算在云中运行内部数据库环境的成本、并查看将内部数据库环境迁移到云的建议。
+BlueXP workload factory for Databases 现在检测、分析并帮助您规划 SQL Server 本地数据库迁移到 Amazon FSx for NetApp ONTAP。您可以使用节省计算器估算在云中运行 SQL Server 本地数据库环境的成本，并查看将本地数据库环境迁移到云的建议。
 
 link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["了解内部数据库环境的节省量"]
 
