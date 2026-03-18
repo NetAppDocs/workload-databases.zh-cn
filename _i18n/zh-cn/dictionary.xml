@@ -501,7 +501,6 @@
   <block id="3583e4a3e4e2e122cff65b8ad9045348" category="list-text">主动可观察性</block>
   <block id="16fcd85dc9469370b62b4b46381f8e2a" category="list-text">从洞察力到行动</block>
   <block id="7a3fc3cf12e9da54628c7311398bee5c" category="list-text">AWS架构完善的Framework Advisor</block>
-  <block id="de29686d1474303323860ff8044fc4ed" category="paragraph">优化范围因评估的组件而异。例如、存储优化在SQL实例级别进行、而计算优化在主机级别进行。</block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">2024年11月3日</block>
   <block id="d1e68728a28b7936858b1484445ef50f" category="sidebar">优化配置</block>
   <block id="35c4b7b7975b86786b96de60f8d9159c" category="doc">适用于数据库的BlueXP  工作负载工厂的初始版本</block>
@@ -706,10 +705,6 @@
   <block id="dae891145ffbf1b1653fc3da2a87faac" category="list-text">当选项可用时，选择“查看并修复”配置问题。</block>
   <block id="45b5dce37159255d07342e3102124571" category="list-text">选择*继续*以修复配置问题。</block>
   <block id="ebc3bf5de769bc75ad8e36a90a0ed695" category="list-text">每日配置分析</block>
-  <block id="fc34f37e0124ad3486b3476b4c3bf8ba" category="section-title">架构良好的状态</block>
-  <block id="a64cfe5c8ae4b3445ff288e9acf4b12e" category="list-text">精心设计的得分</block>
-  <block id="a4394e01049a42d14bd6258585de98b7" category="list-text">配置类别</block>
-  <block id="8b75b787538a5ee0eb97dc541694c82a" category="list-text">分析范围</block>
   <block id="3f6f8b4e204fd3aa39cac35661de164d" category="section-title">分析要求</block>
   <block id="4eadd345921a1f4292d9b98892d3b84e" category="inline-link-macro">实施结构良好的数据库配置</block>
   <block id="9f79767d5e4eb4d13f2a6d925ed59d0f" category="paragraph"><block ref="9f79767d5e4eb4d13f2a6d925ed59d0f" category="inline-link-macro-rx"></block></block>
@@ -830,8 +825,6 @@
   <block id="74bdd3d51d7fef35f3c1e1829b2c63fe" category="section-title">修复配置问题</block>
   <block id="1c6128cdb2d10cb97e9f36f037cb4ceb" category="paragraph">修复在 FSx for ONTAP存储上运行的 SQL Server 或 Oracle 环境的配置问题。</block>
   <block id="47df3bf0f7ade58852082d72bcde28c6" category="admonition">修复过程可能会导致实例停机或服务中断。在选择修复配置问题之前，请务必仔细查看建议。</block>
-  <block id="4c7f98dd35929abb47ec47b5961e9ca4" category="paragraph">为了进行完整的数据库环境分析，资源必须注册并在线。</block>
-  <block id="aed8a618f1e8a1dc325945b821521d6c" category="paragraph"><block ref="aed8a618f1e8a1dc325945b821521d6c" category="inline-link-macro-rx"></block></block>
   <block id="15e4986095a476a300a86c98e005c03f" category="list-text">如果出现提示，请提供具有管理访问权限的 Windows 凭据。</block>
   <block id="0670483b9d94213fd07ca4df3baae2eb" category="list-text"><block ref="c202a4052bc97ff0191552ea4c2c865c" prefix="" category="inline-code"></block>（SQL 服务器）</block>
   <block id="6da87aebc1358666c2653e7d0852ee63" category="list-text"><block ref="1f378775539050b7c7b5e1cdfe121e2f" prefix="" category="inline-code"></block>（SQL 服务器）</block>
@@ -1174,11 +1167,6 @@
   <block id="c9c975f5587642db7fde90312ee94825" category="inline-link-macro">使用标签筛选分析错误日志</block>
   <block id="99d2df171fdf12824fa9334fd19cf105" category="paragraph"><block ref="99d2df171fdf12824fa9334fd19cf105" category="inline-link-macro-rx"></block></block>
   <block id="2598ae987a85e3352d674a4bfade0940" category="list-text">使用过滤器，根据严重性、时间范围和错误代码等标准，或根据面向基础架构的标签（例如计算、存储、网络和安全）来筛选显示的错误。</block>
-  <block id="cb7f9c10896377bc079174e74f841859" category="section-title">配置分析的组成部分</block>
-  <block id="6ef2457afc865f25d3bed5cf0e06ad81" category="paragraph">配置分析包括以下几个组成部分：</block>
-  <block id="1fa0a7ab43424d65902e6734a2c7cc84" category="list-text">架构良好状态指的是数据库配置的整体健康状况；配置分为“已优化”、“未优化”或“过度配置”三类。在 Workload Factory 控制台中，可以从 Microsoft SQL Server 实例或 Oracle 数据库中查看配置的良好架构状态。</block>
-  <block id="5c947d6fa21e25852d9b8fc4ae1d52fb" category="list-text">得分包括所有当前已分析的配置，并以百分比形式显示。25% 的得分意味着 25% 的数据库部署架构良好。架构良好评分可从“架构良好”屏幕以及 Workload Factory 控制台中的 Microsoft SQL Server 实例或 Oracle 数据库中获取。</block>
-  <block id="b63a27b7b1942197825500589350fdb1" category="list-text">配置分为以下几类：存储、计算、应用程序、弹性、克隆。每个类别都包含特定的配置评估，这些评估会定期进行分析。配置类别可以从“架构完善”屏幕以及工作负载工厂控制台中的 Microsoft SQL Server 实例或 Oracle 数据库中进行引用。</block>
   <block id="2afa479317acb4455a0a649aab2944d1" category="section-title">2025年11月2日</block>
   <block id="d0892726ec1e74441a4a801494ed29bb" category="paragraph">添加凭据时，您可以根据要授予 Workload Factory for Databases 的访问级别，选择一个或多个权限策略。</block>
   <block id="af7c77855745c2192ad309cfc11ed68c" category="inline-link-macro">授予_查看、规划和分析_权限</block>
@@ -1394,4 +1382,88 @@
   <block id="485a40f8631dfca236f2084899a28a0c" category="list-text">完成先决条件后，*注册*数据库。</block>
   <block id="2b1eb132ebb67244be9fd5e374964f2e" category="paragraph">注册后，您可以执行这些任务。</block>
   <block id="6ddfbfe3d38a813f004cc2f37d2a5866" category="section-title">2026 年 3 月 02 日</block>
+  <block id="9ffdb95250e26c7a6b468126ac7c75b0" category="section-title">工作原理</block>
+  <block id="2888fa977354ad1bf513fa2f17fdd7df" category="paragraph">Workload Factory 每天分析在 Amazon FSx for NetApp ONTAP 文件系统部署上运行的工作负载。该分析提供了精心设计的状态、见解和建议。</block>
+  <block id="678b83ba882b41e4bae10f8e48f4a766" category="paragraph">每日分析完成后，配置在 Well-architected 仪表板中显示为"优化"或"未优化"。您可以找到总优化分数、按类别划分的配置问题以及配置问题和建议列表。您可以查看配置问题的建议。有些问题可以由 Workload Factory 自动修复，而其他问题则需要手动干预。在这种情况下，Workload Factory 会提供详细说明，以帮助您实施建议的更改。</block>
+  <block id="1fab3ff575faec37f5f5855ba6c44e9b" category="paragraph">您可以忽略不适用于您环境的配置分析。这样可以避免不必要的警报和不准确的优化结果。当您忽略特定配置分析时，Workload Factory 不将配置包含在总优化分数中。</block>
+  <block id="ee25e0b6cd574166f206b4c5b7f02df3" category="section-title">为什么很重要</block>
+  <block id="1ae45cc8915c23757127ca10c1cc4000" category="paragraph">Workload Factory 通过将持续评估与建议见解和补救措施相结合，将最佳实践应用于大型存储、数据库和 VMware 环境。在 Workload Factory 控制台中应用的自动修复可减少人为错误，确保统一管理，并保持整个工作负载基础架构的性能和可靠性。</block>
+  <block id="b5c307f00406a7d48e2b76f206ea8a5f" category="paragraph">要进行完整的数据库环境分析，必须执行以下操作：</block>
+  <block id="a54f5b1fe41547cbf19f1fb9561340dc" category="inline-link-macro">注册您的资源</block>
+  <block id="32b8a48be5601496781767d49968bd51" category="list-text"><block ref="89c16bb90a0fdfa73434baf56ae09810" category="inline-link-macro-rx"></block> 并确保它们处于联机状态。</block>
+  <block id="25c44f83d9d45dc9b2d2a8e46fcc5b19" category="list-text">关联链接。链接连接让 Workload Factory 能够分析所有数据库部署配置，例如存储布局和弹性。</block>
+  <block id="be8334e3a8f0885af8e03ba816b24537" category="inline-link-macro">了解如何关联现有链接或创建和关联新链接</block>
+  <block id="3b1785543fb9e9ab18e56f4cf89f47d9" category="paragraph"><block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。</block>
+  <block id="64aefaaa1ffe9f3b50d13850f89ff59a" category="list-text">在您的 AWS 账户中授予查看、规划和分析权限。</block>
+  <block id="bf2ef084e923ce6ebc4b57db27892de8" category="inline-link-macro">了解如何向 AWS 帐户授予权限</block>
+  <block id="582f3532371a870cf4bd6406f93d26de" category="paragraph"><block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block></block>
+  <block id="1828f0f67d6613341efbc43d822fd8dc" category="section-title">数据库工作负载的最佳实践和建议</block>
+  <block id="1ed3d8c93156794cc432b123457d635f" category="paragraph">Workload Factory 提供了一套最佳实践和建议，用于运行精心设计的数据库工作负载。精心设计的分析评估与存储规模、存储布局、存储配置、计算、应用程序（SQL Server）和弹性相关的 Microsoft SQL Server 和 Oracle 数据库配置和设置。</block>
+  <block id="894445e8ea6df545bfbc4247797a2162" category="section-title">存储规模调整</block>
+  <block id="5418270ffed466b82b925869518520c0" category="list-text">*存储层*</block>
+  <block id="117987020781031a1637fb2474fcda5a" category="paragraph">使用 FSx for ONTAP 卷的主 SSD 层来确保最佳性能。容量池层可能会降低性能并增加延迟。主 SSD 层专为高性能工作负载而设计，而容量池层则针对成本效益进行了优化，可能无法满足 SQL Server 工作负载的性能要求。</block>
+  <block id="50a35154861297e0463ad6610197fd71" category="list-text">*文件系统余量*</block>
+  <block id="d3b9cd115041e7966b18702c6a73f2a0" category="paragraph">将文件系统容量保持在总卷大小以上。空间太小会导致性能问题；浪费太多存储空间并增加成本。</block>
+  <block id="e52ac523a924c00b4c5ccd742f0d98f3" category="list-text">*日志驱动器大小*</block>
+  <block id="88a778779ac5da9ed188a4ca76e5ea7b" category="paragraph">适当调整 SQL Server 日志驱动器的大小并进行监控，以防止事务回滚、数据库不可用、数据损坏以及由完整日志驱动器导致的性能问题。</block>
+  <block id="300311b18477e304f1d9e66ce254c8fd" category="list-text">*TempDB 驱动器大小*</block>
+  <block id="6f6c8627ab8cdaf7724764b892b49c26" category="paragraph">适当调整 TempDB 大小并进行监控，以保持最佳性能和系统稳定性。TempDB 空间不足会导致查询速度减慢、应用程序超时和系统崩溃。</block>
+  <block id="196cc0216fd769aaf46f47da965f30f0" category="section-title">存储布局</block>
+  <block id="983e88e86ed869a9aab818469a6f0c9d" category="list-text">*数据文件 (.mdf) 放置*和*日志文件 (.ldf) 放置*</block>
+  <block id="cea56a3ff1140d20f606958853a708ce" category="paragraph">将数据和日志文件放在单独的驱动器上，以提高性能并实现独立的备份和还原操作。</block>
+  <block id="5b9b356226fe0fdbf3042c364d45373b" category="list-text">*TempDB 放置*</block>
+  <block id="7a94f55aa80442d5d46490909ae726d7" category="paragraph">将 TempDB 放在专用驱动器上，以避免 I/O 争用并提高 SQL Server 性能和稳定性。否则，您可能会遇到 I/O 瓶颈、查询速度变慢和系统不稳定。</block>
+  <block id="6e8775bd755a8835ce86806d669677ea" category="section-title">存储配置</block>
+  <block id="6fff5b0f8a5584251f9c517e970984b4" category="list-text">*ONTAP 配置*</block>
+  <block id="7824f7be61b3770dbf45d9c0e7149f1a" category="paragraph">为 FSx for ONTAP 卷启用精简配置、自动大小和空间管理，以优化存储效率和成本效益。配置分层策略以将较旧的快照移动到容量层，同时保持活动数据的高性能。对于 LUN，请确保操作系统类型与操作系统分区方案匹配，以实现正确的 I/O 对齐，启用空间保留以防止写入失败，并启用空间分配以允许在存储已满时自动回收空间并发出主机通知。</block>
+  <block id="f17cbc45bebb2b318df7730cf320226f" category="list-text">*操作系统*</block>
+  <block id="64845b1fc47ddfef3f821cf6b77deab0" category="paragraph">使用适当的超时设置启用和配置 Microsoft 多路径 I/O (MPIO)，以确保 EC2 上使用 FSx for ONTAP 的 SQL Server 数据库的高可用性和数据访问一致性。MPIO 为故障转移期间的增强弹性和性能提供了冗余路径。适当配置 NTFS 分配单元大小，以实现最佳磁盘利用率和性能。</block>
+  <block id="a623a8d0366bf079411aa30be45b2d10" category="section-title">计算</block>
+  <block id="552508d9abd0206f8a2258a4e950c0ce" category="list-text">*计算资源优化*</block>
+  <block id="e2f45442bdec494bd836b4ec7ed91332" category="paragraph">根据工作负载需求调整 SQL Server EC2 实例的大小，以平衡性能和成本效益。如果当前实例配置不足，升级可以增强 CPU、内存和 I/O 容量。如果过度配置，降级可以在降低成本的同时保持性能。</block>
+  <block id="f4aa5339a6267f9aa498876d3f99817d" category="list-text">*操作系统补丁*</block>
+  <block id="9078834dd366cfbcfbb7495028b90ff2" category="paragraph">应用最新的操作系统补丁，增强安全性和系统可靠性。</block>
+  <block id="f7ea56e7a1a3d21f93afb8868a46597f" category="list-text">*网络适配器设置*</block>
+  <block id="3e87f3ec9808572e9326017dfb470169" category="paragraph">配置接收端扩展 (RSS) ，以跨多个处理器分布网络处理并提高网络性能。在应用于生产之前测试设置。</block>
+  <block id="46042d8ee782bd40a22e572200cc7f86" category="list-text">*MTU 对齐*</block>
+  <block id="0ffe6b9fe982d3cb2c6117acb223809c" category="paragraph">将 EC2 实例最大传输单元 (MTU) 设置与 FSx for ONTAP 对齐，以防止网络碎片化并优化 SQL Server 性能。修复 MTU 未对齐问题可确保所有节点和网络路径之间的 MTU 配置一致。</block>
+  <block id="213ae318e1d77a9d7c891744d5e088ad" category="section-title">应用程序 (SQL Server)</block>
+  <block id="ee998db55a5373c890946748cb8dafeb" category="list-text">*许可证*</block>
+  <block id="dc2c42603ecce6ed6ff4935c61807ce2" category="paragraph">SQL Server 许可证评估和建议在主机级别提供。当 Workload Factory 检测到您的数据库基础架构未使用您支付的任何商业软件许可证功能时，它会将许可证视为"未优化"。未优化的许可证可能会导致不必要的成本。检查您的 SQL Server 许可证使用情况，以确保您正在使用您支付的所有功能。</block>
+  <block id="a8642bb1e88dfe2e58d1d4d34aed2d28" category="list-text">*Microsoft SQL Server 修补程序*</block>
+  <block id="aeb19b16f26ffba9cda709a80fdd7572" category="paragraph">应用最新的 SQL Server 修补程序以增强安全性、防范漏洞并提高系统可靠性。</block>
+  <block id="4eddb0eeecb1e4ae314e258e08e465e3" category="list-text">*MAXDOP*</block>
+  <block id="a87a9d28595a379a45146753041d53f3" category="paragraph">配置 MAXDOP 以优化查询性能。值 4、8 或 16 通常效果很好。测试您的工作负载并监控并行度等待类型，例如 CXPACKET。</block>
+  <block id="820b8f74ad843d1574106ec4cadfc07e" category="section-title">可靠性</block>
+  <block id="277088f7a0bc1d2b0023dc08b1d30e37" category="list-text">*计划本地快照*</block>
+  <block id="2a18a15eebd0bb67a6bfebc30c94b035" category="paragraph">安排定期快照以进行时间点备份，并从意外删除、数据损坏和其他问题中快速恢复。</block>
+  <block id="29e7ad88f894625110c66db9a5db3cae" category="list-text">*备份配置*</block>
+  <block id="4f191d1258f960fe582f682581657e6d" category="paragraph">配置 FSx for ONTAP 备份或 AWS Backup 以满足数据保留和合规性要求。避免重复备份。</block>
+  <block id="b34347ddf6e48f7eb5aee09d6f7b92a6" category="list-text">*跨区域复制*</block>
+  <block id="d4a143ea376b0803a77b86507a94ef57" category="paragraph">启用跨区域复制 (CRR) 以提高数据可用性和灾难恢复。使用 CRR 来防止区域中断并确保业务连续性。</block>
+  <block id="7b3f859ceed0c4f3ae005839c139cd94" category="list-text">*Microsoft SQL Server 高可用性*</block>
+  <block id="95e2d9af5f0697796bab45294c72c532" category="paragraph">通过检查所有群集节点都可以访问所有共享存储，跨节点的驱动器号相同以防止故障转移过程中的冲突，为群集运行状况设置仲裁，为云环境设置心跳阈值以及为自动启动和故障转移设置 SQL Server 服务，确保为 SQL Server 设置了高可用性。</block>
+  <block id="e2521a2a2f696d450620b08167cf1c24" category="list-text">*克隆清理*</block>
+  <block id="a794e82abecb038fd6fa9a47fd045637" category="paragraph">定期审查和删除过时的克隆，以降低存储成本。旧的和未使用的克隆会导致高成本。</block>
+  <block id="652ffdd012027e3af53ecb01c1e500ab" category="paragraph">保持足够的文件系统容量，以优化存储性能并防止性能下降。充足的空间可实现高效的存储管理，并支持数据库增长。</block>
+  <block id="2162171f540307c958ebbf45ee85c9e6" category="list-text">*交换空间*</block>
+  <block id="d84ec6da982197f7083af7347dab367c" category="paragraph">根据 RAM 数量设置交换空间，以便系统可以处理内存压力并避免减速或崩溃。</block>
+  <block id="8e2df12faf538d6bacaf28eee1c9ba5c" category="list-text">*Oracle 二进制放置*</block>
+  <block id="b783d71d72c6af6a879383d98084b39c" category="paragraph">将 Oracle 二进制文件放在专用卷上，通过减少 I/O 竞争来确保最佳性能和稳定性。这种分离简化了软件更新，并将意外修改或损坏的风险降至最低。</block>
+  <block id="191de1563ead1b097eb12ccf44a2c6e4" category="list-text">*数据文件放置*</block>
+  <block id="c16d7b149b235cecee807abf5f897328" category="paragraph">将数据文件放置在专用卷上或与控制文件一起，以隔离随机 I/O 并提高性能。这种分离可实现自定义快照配置、分层策略和效率机制，以优化性能和成本。</block>
+  <block id="5c5a39c795bca8602578d6afc0b265b0" category="list-text">*控制文件放置*</block>
+  <block id="d8dcefdf0aa7cd4e098cfddd267dc143" category="paragraph">将控制文件的副本存储在不同的卷或磁盘上，以避免单点故障并增加冗余。将控制文件放置在专用卷上，或与重做日志或数据文件共享，但由于性能要求，请勿将其放置在分层到对象存储的卷上。</block>
+  <block id="d2a9eedab15224a70b510d60bff1eacf" category="list-text">*重做日志放置*</block>
+  <block id="874e6770e7350eb26458ff75f3c9371b" category="paragraph">将重做日志放在专用卷上，或与临时或控制文件适当共享，以隔离高写入 I/O 操作并提高性能。将重做日志的每个副本存储在单独的卷上，以实现冗余。请勿将重做日志放置在卷快照或分层到对象存储的卷上，因为它们会经常更新。</block>
+  <block id="cef21d61286ad1feaed1b9c70b94e413" category="list-text">*临时放置*</block>
+  <block id="cf0091757f6ff40803416e58f1745563" category="paragraph">将临时文件放置在专用卷上，或与重做或控制文件适当共享，以隔离高写入 I/O 操作并提高性能。每个多路复用的临时副本应驻留在单独的卷上，以实现冗余。由于其频繁更新模式，不应将临时文件放置在卷快照或分层到对象存储的卷上。</block>
+  <block id="e160b9717e54bc435262f70122ed19d8" category="list-text">*归档放置*</block>
+  <block id="a0659f391b761a5b4ff8b65f28154fd3" category="paragraph">将存档日志放置在专用卷上，以通过防止高 I/O 要求干扰其他数据库操作来增强性能和恢复过程。</block>
+  <block id="ba4e74fb4a08b807adc219f9df1ea143" category="list-text">*仅限 ASM 配置：ASM 数据磁盘组 LUN、ASM 日志磁盘组 LUN 和 ASM 存档磁盘组 LUN*</block>
+  <block id="e7c6352933ceb00c7f004d9b3b578903" category="paragraph">将 LUN 分布在 Automatic Storage Management (ASM) 数据、重做日志和归档日志磁盘组中，以实现最佳性能和冗余。</block>
+  <block id="d911b17f4f4cdcca62a04ad77aa9403d" category="list-text">*ONTAP*</block>
+  <block id="d1bf0b5773fa36619112fb2acdf1eef8" category="paragraph">通过为卷启用精简配置、自动调整大小和空间管理，优化 FSx for ONTAP 配置以支持 Oracle 数据库。配置适当的快照策略和分层策略，以平衡性能和成本。对于 LUN，确保正确的操作系统类型对齐、空间保留和空间分配设置，以防止写入失败并启用自动空间回收。</block>
+  <block id="ec2a0c82b5fcb006f719221eff77fb9b" category="paragraph">配置操作系统设置以获得最佳 Oracle 数据库性能，包括调整数据库工作负载的内核参数以及为网络文件系统访问适当配置 NFS 或 dNFS 设置。</block>
+  <block id="f02adb373ce0bc6a6199e6d2ba9b16b9" category="paragraph">定期应用操作系统修补程序，以确保 Oracle 数据库环境的安全性、稳定性和性能改进。</block>
 </blocks>
