@@ -348,6 +348,9 @@ Workload Factory 将多个 SQL Server 本地主机整合到单个 FSx for ONTAP 
 
 
 . 要获得更准确的结果、请更新计算信息以及存储和性能详细信息。
++
+Workload Factory 将多个 Oracle 本地数据库整合到单个 FSx for ONTAP 配置建议中，以优化成本节约，除非所选的本地数据库超过了单个 FSx for ONTAP 文件系统的吞吐量、容量或 IOPS 限制。
+
 
 
 --
