@@ -13,7 +13,6 @@
   <block id="655a2ef85749dcbb368e1b8b32300552" category="list-text">在完整性检查对话框中，单击*Integrity check*。</block>
   <block id="d2212da19c03bb2b369faeaf9d65f109" category="list-text">在沙盒或作业监控中检查完整性检查的状态。</block>
   <block id="8ea37d89915fca644158ae5283f70e68" category="paragraph">如果完整性检查失败、建议您不要使用沙盒克隆并创建新的沙盒克隆。</block>
-  <block id="4d347b6072ee47e025ccdfd378498ab5" category="summary">使用REST API代码将沙盒克隆连接到CI/CD管道、以通过自动化改进软件交付。</block>
   <block id="2af2cf99863645202599afd2708773e2" category="doc">将沙盒克隆连接到CI/CD工具</block>
   <block id="bc71cf96586c8edb703f886cce218a0c" category="paragraph">要自动向数据库克隆交付新版本的软件、您应连接到CI/CD管道。使用此操作提供的REST API代码进行连接。</block>
   <block id="452804eac893658bcf658126b3087551" category="list-text">选择*连接到CI/CD工具*。</block>
@@ -761,7 +760,6 @@
   <block id="0f2833865dd9bd39be8189333dae1c4f" category="list-text">*克隆刷新频率*：从菜单中选择克隆刷新的频率。</block>
   <block id="ca1bcaaac2fa2065767d6cb9b43a5bf7" category="list-text">在“探索节省”选项卡中，选择使用 FSx for Windows File Server 存储的数据库主机的“探索节省”*。</block>
   <block id="546dcae8b2a33c531e585b76d51af0dd" category="paragraph">在某些权限有限的情况下，身份验证成功后，探索储蓄页面不会加载数据。</block>
-  <block id="012a999834d8188ec17b6ec67f4db97d" category="list-text">弹性：包括本地快照、FSx for ONTAP备份、跨区域复制 (CRR) 和 Microsoft SQL 高可用性。</block>
   <block id="1caf2514b723d82877e2b000e3ba5e3f" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>发现或部署资源</block>
   <block id="714bf7245115e9e60e5f4ba3dc04e4f5" category="paragraph">使用凭证和 IAM 策略，您可以发现清单中的现有数据库资源或<block ref="086045f9b9433534ba0bc16ba8744718" category="inline-link-macro-rx"></block>。库存提供了统一的界面来管理资源。</block>
   <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">四个</block>
@@ -942,7 +940,6 @@
   <block id="da04ea76e1caee6b818a505ce02fa93b" category="paragraph">通过比较在 Amazon Elastic Block Store (EBS) 上使用 Microsoft SQL Server、FSx for Windows File Server 和本地存储与 FSx for ONTAP存储的成本，探索NetApp Workload Factory for Databases 为您的数据库工作负载节省的成本。</block>
   <block id="e123e8395730b190f146babf1b2d52a4" category="inline-image-macro">工作负载工厂控制台中数据库仪表板的潜在节省图块的屏幕截图。潜在节省图块显示您在 Elastic Block Store 和 FSx for Windows File Server 上的所有数据库工作负载的数量、潜在的成本节省、节省百分比以及条形图中的直观表示。</block>
   <block id="092e04ebb92f098a8d23a32d9a42e747" category="paragraph"><block ref="092e04ebb92f098a8d23a32d9a42e747" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e5af3e73361e966fe2adc79aadc34d57" category="paragraph">Workload Factory 输入检测到的 Elastic Block Store 和 FSx for Windows File Server 主机特性，以便您可以自动探索节省。</block>
   <block id="b9382a492febc168d96a9e8228ee319f" category="paragraph">在您了解了 Microsoft SQL 服务器本地主机的节省情况后，您可以选择从 Workload Factory 中删除本地主机记录。选择 Microsoft SQL Server 本地主机的操作菜单，然后选择*删除*。</block>
   <block id="1dbb11b39a311ecc5e8a64d372008d84" category="admonition">Workload Factory 不支持保存或创建多个 FSx for ONTAP文件系统。</block>
   <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="summary">NetApp通过多种方式为 Workload Factory 及其云服务提供支持。全天候提供广泛的免费自助支持选项，例如知识库 (KB) 文章和社区论坛。您的支持注册包含通过网络工单获取的远程技术支持。</block>
@@ -1416,7 +1413,6 @@
   <block id="aeb19b16f26ffba9cda709a80fdd7572" category="paragraph">应用最新的 SQL Server 修补程序以增强安全性、防范漏洞并提高系统可靠性。</block>
   <block id="4eddb0eeecb1e4ae314e258e08e465e3" category="list-text">*MAXDOP*</block>
   <block id="a87a9d28595a379a45146753041d53f3" category="paragraph">配置 MAXDOP 以优化查询性能。值 4、8 或 16 通常效果很好。测试您的工作负载并监控并行度等待类型，例如 CXPACKET。</block>
-  <block id="820b8f74ad843d1574106ec4cadfc07e" category="section-title">可靠性</block>
   <block id="277088f7a0bc1d2b0023dc08b1d30e37" category="list-text">*计划本地快照*</block>
   <block id="2a18a15eebd0bb67a6bfebc30c94b035" category="paragraph">安排定期快照以进行时间点备份，并从意外删除、数据损坏和其他问题中快速恢复。</block>
   <block id="29e7ad88f894625110c66db9a5db3cae" category="list-text">*备份配置*</block>
@@ -1468,7 +1464,6 @@
   <block id="3a40f68be193f0f7bc0c01f622d3cc5f" category="paragraph">或者，您可以执行一次性评估，查看数据库配置的最佳实践，而无需存储凭据或注册资源。</block>
   <block id="e112d8634bd0280eb27ad63e9eeb9493" category="list-text">应用程序：包括 Microsoft SQL Server 许可证、Microsoft SQL Server 修补程序和 MAXDOP 设置</block>
   <block id="f953bb98ceaddd49464d672fa425c300" category="list-text">应用程序：包括 Oracle 关键补丁更新</block>
-  <block id="10e1b7780581fec77099c3ba816f3e14" category="list-text">弹性：包括跨区域复制 (CRR) 和应用程序一致性快照</block>
   <block id="c20a2029d45b71b182aee84243212b9d" category="section-title">对您的配置执行一次性评估</block>
   <block id="384e59575141746d138a94a55377c6e8" category="paragraph">执行一次性评估以找出 Microsoft SQL Server 实例或 Oracle 数据库的良好架构状态，而无需存储凭据或注册资源。</block>
   <block id="c091a4936cfa8cd2dad53f925bd5aee2" category="paragraph">您可以多次运行脚本并上传结果。Workload Factory 会在每次上传时更新架构完善的状态和见解。</block>
@@ -1502,4 +1497,14 @@
   <block id="0d0d1e59f6397f54691afa326ea6ef15" category="paragraph">使用与 NetApp SnapCenter 应用程序一致的快照，在特定时刻为卷数据拍摄准确、可靠的快照。这可确保您的应用程序顺利运行和数据安全。SnapCenter 使备份更轻松，并帮助您快速、正确地还原数据，从而减少停机时间并保护您最重要的工作负载。</block>
   <block id="7f65119c79afd09b7f99936d13e97909" category="section-title">2026 年 4 月 6 日</block>
   <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">2025 年 10 月 6 日</block>
+  <block id="e41556fc62415ea0a9f5770be89f198d" category="summary">使用 REST API 代码将沙盒克隆连接到 CI 和 CD 管道，以通过自动化改进软件交付。</block>
+  <block id="7c82c4b76396ded628b47eba74c65565" category="paragraph">Workload Factory 输入检测到的主机特性，以便您可以自动探索节省金额。</block>
+  <block id="d3fcf12bb075f268d31cdb0724f5ce8c" category="section-title">探索检测到的 Microsoft SQL Server 主机的节省</block>
+  <block id="86a575769a61e2abed6c5895311f8530" category="section-title">探索检测到的 Oracle 主机的节省</block>
+  <block id="44f6dcaf4df7850e972b2333b05391b1" category="list-text">在浏览优惠中，选择 *Oracle on Elastic Block Store (EBS)* 选项卡。</block>
+  <block id="d2b291a665d715eddff69d121f8023e5" category="list-text">如果需要，请使用 Oracle 凭据或通过添加缺少的 Oracle 权限对数据库主机进行身份验证。</block>
+  <block id="e83aba812fc0f70eadb6faace95a02ef" category="paragraph">Workload Factory 将多个 Oracle 主机整合到单个 FSx for ONTAP 配置建议中，以优化成本节约，除非选定的 EBS 主机超过单个 FSx for ONTAP 文件系统的吞吐量、容量或 IOPS 限制。</block>
+  <block id="2a1f70a024ddcf60632c72e3981ec1bd" category="paragraph">在探索 Oracle 本地主机的节省后，您可以选择从 Workload Factory 中删除本地主机记录。选择 Oracle 本地主机的操作菜单，然后选择*删除*。</block>
+  <block id="59b293a0a31a179071c10aecd46b5de5" category="list-text">弹性：包括本地快照、备份配置、跨区域复制 (CRR)、Microsoft SQL High Availability 和克隆清理</block>
+  <block id="07081ec6223cf25eb33c5a000e4055a1" category="list-text">弹性：包括跨区域复制 (CRR)、应用程序一致性快照、备份配置和克隆清理</block>
 </blocks>

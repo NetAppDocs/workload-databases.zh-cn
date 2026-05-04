@@ -37,7 +37,7 @@ Workload Factory 分析以下配置的良好架构状态：
 * 存储配置：包括容量管理、精简配置、分层策略、快照、Microsoft 多路径 I/O (MPIO) 状态和 MPIO 超时设置
 * 计算：包括调整大小、操作系统补丁和网络适配器设置，如接收方缩放 (RSS)、TCP 卸载和 MTU 对齐
 * 应用程序：包括 Microsoft SQL Server 许可证、Microsoft SQL Server 修补程序和 MAXDOP 设置
-* 弹性：包括本地快照、FSx for ONTAP备份、跨区域复制 (CRR) 和 Microsoft SQL 高可用性。
+* 弹性：包括本地快照、备份配置、跨区域复制 (CRR)、Microsoft SQL High Availability 和克隆清理
 * 克隆：包括刷新和删除在 Workload Factory 内部或外部创建的超过 60 天的克隆（沙盒）的选项
 
 
@@ -48,7 +48,7 @@ Workload Factory 分析以下配置的良好架构状态：
 * 存储布局：包括重做日志放置、临时表空间放置、数据文件放置、存档日志放置、控制文件放置和二进制文件放置、ASM 磁盘组 LUN 数量
 * 计算：包括操作系统补丁
 * 应用程序：包括 Oracle 关键补丁更新
-* 弹性：包括跨区域复制 (CRR) 和应用程序一致性快照
+* 弹性：包括跨区域复制 (CRR)、应用程序一致性快照、备份配置和克隆清理
 
 
 当配置依赖于其他配置时，Oracle 的架构完善分析会通知您，并列出优化链接配置的操作。

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: connect-clone-cicd.html 
-keywords: connect ci/cd pipeline, clone 
-summary: 使用REST API代码将沙盒克隆连接到CI/CD管道、以通过自动化改进软件交付。 
+keywords: connect ci and cd pipeline, clone 
+summary: 使用 REST API 代码将沙盒克隆连接到 CI 和 CD 管道，以通过自动化改进软件交付。 
 ---
 = 将沙盒克隆连接到CI/CD工具
 :allow-uri-read: 
