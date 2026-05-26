@@ -270,14 +270,7 @@
   <block id="8c13e82e1f3b94b558fc62725c62e275" category="list-text">从AWS Cloud、Microsoft Windows和SQL Server以及NetApp ONTAP获得集成知识、用于在EC2实例上部署SQL Server。</block>
   <block id="3c346a6e5b8bfffe9f594d4b570f64b2" category="list-text">总拥有成本优化部署。</block>
   <block id="95b422671139518fef625dc57caa75d6" category="list-text">遵循AWS、Microsoft和ONTAP最佳实践的端到端部署自动化。</block>
-  <block id="b6cb73add7d1e5bdd9c209cdffe99073" category="list-text">*代码段生成*：基础架构即代码(IAC)代码段是在资源创建期间生成的、可与现有流程编排工作流无缝集成。</block>
   <block id="d8135e6fae6748dcba5e9d108c9af427" category="list-text">*代码查看器和自动化目录*：代码盒提供用于快速分析自动化的代码查看器和用于快速未来重复使用的自动化目录。</block>
-  <block id="bd3efbff9056d0d06b47ed96623fda0d" category="list-text">*简单、快速的部署*：通过选择规格问题的答案并省去研究如何在AWS上配置和配置Microsoft SQL Server通常所需的时间，简化和简化您的配置体验。</block>
-  <block id="7cefdd05c6620bfdf3062de5a70831ff" category="list-text">*内置功能*：利用内置在部署配置中的NetApp、Microsoft和Amazon最佳实践和AWS资源选择。</block>
-  <block id="6a38d48a56c8cf63764ec7a649aee027" category="list-text">*AWS资源发现和配置*：自动检测从AWS帐户部署的FSx for ONTAP、FSx for Windows文件服务器和Elelic Block Store上的Microsoft SQL Server。数据库清单是探索其他AWS存储系统中服务器的成本节省机会的起点、也是基于ONTAP的服务器和实例FSx的管理工具。</block>
-  <block id="7d90beb1bb8e5bcdda770d6f48cd32a0" category="list-text">*沙盒创建*：创建一个可用于测试、集成、诊断和培训的按需隔离数据库环境、而不会影响生产数据。</block>
-  <block id="33b7686f3230da73b8d9f40afd7a5f0b" category="list-text">*数据库创建*：使用_Quick_或_Advanced_创建模式为现有Microsoft SQL Server创建用户数据库，以配置数据库整理、文件名和大小。包括存储配置。</block>
-  <block id="e8c2713d52e7c0b242eb104ecd1ab10d" category="list-text">*作业监控*：监控和跟踪数据库作业执行进度，并在发生任何故障时诊断和排除问题。</block>
   <block id="8badaf3a6e7dceba915a34b1cb4f0380" category="section-title">Amazon FSx for ONTAP为自助管理数据库带来的优势</block>
   <block id="3f6d25a55efe97b6946734de9f11179a" category="list-text">*持久性、可用性和可靠性*：FSx for ONTAP提供了多种功能来增强FSx for ONTAP上托管的自管理数据库的持久性和可用性、例如支持单可用性区域和多可用性区域部署的高可用性、应用程序感知型快照、使用复制改进的灾难恢复以及高效备份。</block>
   <block id="8a1827433b93fc37d164f704e5105ae4" category="list-text">*性能和可扩展性*：FSx for ONTAP可通过高吞吐量、低延迟、高速网络连接以及多个文件系统的可扩展性实现性能优化、从而扩展工作负载所需的聚合性能。</block>
@@ -290,7 +283,6 @@
   <block id="e40ceeaead715c564e85bdc9b183e491" category="paragraph">SQL Server 2019</block>
   <block id="4299db16db1e4a3a88d3942050ce43f2" category="paragraph">SQL Server 2022</block>
   <block id="49d814834d377dce6b3bd66dc0f18083" category="section-title">集成AWS服务</block>
-  <block id="da0a192f6b5c69db0c8e520f16669cc8" category="paragraph">数据库包括以下集成AWS服务：</block>
   <block id="58e3bfbabf904de43a6a22aca509b0d8" category="list-text">云形成</block>
   <block id="7ba6eb634dd2e14688216874c0948a82" category="list-text">Simple Notification Service</block>
   <block id="311bdda432aba736b8dcb987523c0c92" category="list-text">CloudWatch</block>
@@ -491,7 +483,6 @@
   <block id="822802a1673e79cb7dbd54947e4dc32c" category="paragraph">现在、您可以从CodeBox中使用Terraform部署Microsoft SQL Server。</block>
   <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">使用CodeBox中的Terraform</block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">了解如何使用CodeBox实现自动化</block>
-  <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">*持续优化*：持续脱机扫描您的Microsoft SQL Server资产，为您提供全面的见解、机会和建议报告，帮助您实现卓越运营。</block>
   <block id="04dff47f9a41cfa54b616dd86a4a6043" category="list-text">存储规模估算：包括存储层、文件系统余量、日志驱动器大小和TempDB驱动器大小</block>
   <block id="b1107628010e55afc5ec740439838f10" category="list-text">存储布局：包括用户数据文件放置、日志文件放置和TempDB放置</block>
   <block id="1c11d2e59190fe6a4e37f1e68abafcb4" category="paragraph">主要功能包括：</block>
@@ -512,7 +503,6 @@
   <block id="cef4156e4fa9e5869d4dee02c1b39d6e" category="paragraph">通过具有_Automate权限的AWS凭据、Workload Factory可以在工作负载工厂中使用您的AWS帐户部署和管理新的数据库主机。</block>
   <block id="d6631cc039c798bd233c70bae3023936" category="paragraph">或者、您也可以从Codebox下载部分完成的YAML文件模板、以便在工作负载出厂时创建堆栈、而无需任何凭据或权限。从“代码”框的下拉列表中选择*CloudFormation*以下载YAML文件。</block>
   <block id="3bfb7d9388422f644c389daf1ad5c953" category="paragraph">或者、您也可以使用代码框复制模板、以便使用REST API在工作负载出厂时部署数据库。<block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="ac48048cc385514c8193aeb51f798df3" category="list-text">*成本估算*：使用节省计算器评估潜在的成本节省、该计算器估算和详细说明了与FSx for ONTAP相比、采用Elelic Block Store和FSx for Windows File Server的现有Microsoft SQL Server部署的存储、计算、SQL许可、快照和克隆明细成本。</block>
   <block id="eb7ed5d3b1a2ff72006245ad37f9817b" category="paragraph">要使用数据库、您必须拥有AWS帐户。</block>
   <block id="c37e590e9c50960a15f3292676cc0c18" category="paragraph">请按照以下步骤开始操作。</block>
   <block id="056634bec4a153903ebb9b769277f4d7" category="summary">要向NetApp技术支持创建支持案例、您需要先将NetApp支持站点帐户添加到工作负载工厂、然后注册支持。</block>
@@ -595,7 +585,6 @@
   <block id="4bd2e14395b83906b0838bbcc78df388" category="list-text"><block ref="3e51061ec4171070ff2ffdabfbd63cc3" prefix="" category="inline-code"></block></block>
   <block id="9b6e1103f46b83b38494e5b294e2c410" category="list-text"><block ref="c1eaf26c3b755ad5252456a5d3f34a2f" prefix="" category="inline-code"></block></block>
   <block id="f57c49a06b4a8a20d9a723cd677b9655" category="inline-link-macro">创建PostgreSQL服务器</block>
-  <block id="d3420539383bb38c88221d86000226d1" category="paragraph"><block ref="d3420539383bb38c88221d86000226d1" category="inline-link-macro-rx"></block></block>
   <block id="1414de2121340ce91492c56f7800fcc7" category="section-title">为PostgreSQL服务器创建提供Terraform支持</block>
   <block id="9156ac6cc60e32ed114af1a49af0ffed" category="paragraph">现在、您可以使用CodeBox中的Terraform部署PostgreSQL。</block>
   <block id="7a5745faeabd31c33609adf25373d8a1" category="inline-link-macro">创建PostgreSQL数据库服务器</block>
@@ -977,19 +966,15 @@
   <block id="f72b509b27ced61253679165d0aaa2de" category="summary">NetApp Workload Factory for Databases 是一种端到端数据库部署和维护服务，具有内置的优化最佳实践、自动精简克隆以及监控和解决功能。</block>
   <block id="c985e54c06d4236f1d198dc4ebd8b5ea" category="doc">了解NetApp数据库工作负载工厂</block>
   <block id="abbf69870f02f79cb2e3732a71a2cf7a" category="section-title">什么是NetApp Workload Factory for Databases？</block>
-  <block id="4ecbb8d6e8481952dc98dc756ad0f660" category="paragraph">NetApp Workload Factory for Databases 可检测、评估、规划、配置并将 Microsoft SQL Server 数据移动到Amazon FSx for NetApp ONTAP (FSx for ONTAP) 部署，并进行优化以满足您的性能和成本预期，同时遵循行业最佳实践。在整个生命周期中， NetApp Workload Factory for Databases 为 FSx for ONTAP上的数据库提供持续的优化和管理。</block>
   <block id="6ae8e58cb52cd45b321927bcb2961f4e" category="inline-link-macro">工作负载工厂概述</block>
   <block id="1de2994a7e96b0f9f5ffc5fbf74c7cfe" category="paragraph">有关 Workload Factory 的更多信息，请参阅<block ref="74c54dbaee345ad32db577029257fe31" category="inline-link-macro-rx"></block>。</block>
   <block id="b6e94273667fda2a79903f22b68e8dfd" category="section-title">工作负载工厂为自管理数据库带来的优势</block>
-  <block id="e64b68425fc9016aa12a0706d8ce873b" category="paragraph">Workload Factory 为自管理数据库提供了以下有益的最佳实践和自动化。</block>
   <block id="effb9368ba6cbd12847f52908fa64349" category="list-text">_快速创建_部署模式可帮助您避免手动配置的潜在陷阱。</block>
   <block id="5354d1e9ecaabd928d4235d17bb92d9e" category="section-title">使用 Workload Factory Codebox 实现自动化</block>
   <block id="d9c90e086fcb11b72cc6731b0bd016c2" category="paragraph">Workload Factory 通过 _Codebox_ 引入了内置自动化功能。  Codebox 具有以下自动化优势：</block>
   <block id="3b9355b880979c4a10f7d88ded288364" category="list-text">*基础设施即代码副驾驶*：Codebox 是一个基础设施即代码 (IaC) 副驾驶，可帮助开发人员和 DevOps 生成代码来执行 Workload Factory 支持的任何操作。</block>
   <block id="1dfcc4058d887e51547cd071ae73d5ca" category="section-title">数据库工作负载工厂功能</block>
   <block id="0494ceb57b82f2b9e1bd730752e840ff" category="paragraph">数据库工作负载工厂提供以下功能：</block>
-  <block id="d05a06b8187c80e636132e3f3d756fad" category="list-text">*自动编排*：可通过 Workload Factory 控制台使用_Quick_和_Advanced_创建部署模式、Chatbot 和通过 Codebox 的 AWS CloudFormation。</block>
-  <block id="00642e68a741fc0fb7b3297f3d85e094" category="list-text">*可重复使用的自动化模板*：从 Workload Factory Codebox 创建、重复使用和自定义 CloudFormation 模板，以便将来在多个环境中部署 Microsoft SQL Server。</block>
   <block id="b637a3cf08f073bba2452017262c6f0e" category="inline-link-macro">了解适用于 Workload Factory 的 FSx for ONTAP</block>
   <block id="5451b14a2cc0c73081374e5d49684660" category="paragraph"><block ref="c8d2af036244cbf733f21cfd3484b898" category="inline-link-macro-rx"></block> 。</block>
   <block id="4bbb8d481021011f9afb73ca196bfecd" category="section-title">使用NetApp Workload Factory 的工具</block>
@@ -1001,7 +986,6 @@
   <block id="34904d30d825a389b588efb76a1ceb16" category="list-text">*REST API*：使用 Workload Factory REST API 部署和管理您的 FSx for ONTAP文件系统和其他 AWS 资源。</block>
   <block id="3995165ba76339d9d4d08edf5a17c07c" category="list-text">*CloudFormation*：使用 AWS CloudFormation 代码执行您在 Workload Factory 控制台中定义的操作，以从您的 AWS 账户中的 CloudFormation 堆栈对 AWS 和第三方资源进行建模、配置和管理。</block>
   <block id="a1b1209dad1b58c4e66fd68ee5bc0148" category="list-text">*Terraform NetApp Workload Factory 提供商*：使用 Terraform 构建和管理在 Workload Factory 控制台中生成的基础架构工作流。</block>
-  <block id="e27c3441b5ec947f9b9088fdf2414919" category="paragraph">Workload Factory 根据 AWS、 NetApp ONTAP、Microsoft SQL Server、Oracle 和 PostgreSQL 最佳实践支持以下数据库引擎、版本、操作系统和部署模型。</block>
   <block id="7bfa30721c5e726ff17e3f972237a82c" category="cell">引擎</block>
   <block id="34b6cd75171affba6957e308dcbd92be" category="cell">版本</block>
   <block id="64d354dc5879cf570ce7b4ef676e75bd" category="cell">操作系统</block>
@@ -1507,4 +1491,26 @@
   <block id="2a1f70a024ddcf60632c72e3981ec1bd" category="paragraph">在探索 Oracle 本地主机的节省后，您可以选择从 Workload Factory 中删除本地主机记录。选择 Oracle 本地主机的操作菜单，然后选择*删除*。</block>
   <block id="59b293a0a31a179071c10aecd46b5de5" category="list-text">弹性：包括本地快照、备份配置、跨区域复制 (CRR)、Microsoft SQL High Availability 和克隆清理</block>
   <block id="07081ec6223cf25eb33c5a000e4055a1" category="list-text">弹性：包括跨区域复制 (CRR)、应用程序一致性快照、备份配置和克隆清理</block>
+  <block id="3d7f3a166eb82241be57455d7ef203f8" category="paragraph"><block ref="3d7f3a166eb82241be57455d7ef203f8" category="inline-link-macro-rx"></block></block>
+  <block id="f6fc5d0b34e0c83d4e75f7be25a32b82" category="list-text">*备份配置*：检查您的 Oracle 数据库是否受到 AWS Backup 或 FSx for ONTAP 备份的保护。</block>
+  <block id="e77f1d098a7b16b8bd4d2f20f9aba65f" category="list-text">*克隆清理*：建议删除过时或未使用的克隆，以降低存储成本。</block>
+  <block id="89840aef48298f433a57c56ab247ae08" category="section-title">Amazon Elastic Block Store (EBS) 上 Oracle 数据库的自动节省计算</block>
+  <block id="820714d6c08a1a257cd36fe74e1fed2b" category="paragraph">Workload Factory 自动分析用于 Oracle 数据库的 EBS 存储成本，然后建议最佳且最具成本效益的 FSx for ONTAP 配置。您可以选择多个 EBS 主机进行分析，然后比较在 EBS 与 FSx for ONTAP 上运行这些主机的成本。</block>
+  <block id="19b3c31ea822597c2e4628964f178a69" category="section-title">CRR 配置先决条件检查</block>
+  <block id="9806495507d3f9631835ef96ec7c6a20" category="paragraph">当您为数据库资源启用跨区域复制 (CRR) 时，Database 工作负载将检查 FSx for ONTAP 文件系统是否具有相关的链接和复制设置。如果需要，Database 工作负载会将您重定向到 FSx for ONTAP Storage 工作负载复制向导，以与 Storage 相同的方式处理链接先决条件。</block>
+  <block id="2570f829ce5d9920c913ea709da38970" category="section-title">Microsoft SQL Server 数据库的关联 LUN</block>
+  <block id="7bcbdd4b76f415ad3e96438de020e5cf" category="paragraph">现在，您可以从清单屏幕在 Workload Factory 中查看映射到 Microsoft SQL Server 数据库的 LUN。这使您可以轻松识别哪些 LUN 与哪些数据库关联，从而更轻松地管理和优化存储资源。</block>
+  <block id="0f9de74730bb09b7129b5bec63fe8ce9" category="paragraph">NetApp Workload Factory for Databases 可发现、评估、规划、调配 Microsoft SQL Server、PostgreSQL 和 Oracle 数据并将其移动到 Amazon FSx for NetApp ONTAP（FSx for ONTAP）部署，以满足您的性能和成本期望，同时遵守行业最佳实践。NetApp Workload Factory for Databases 持续优化和管理 FSx for ONTAP 上的数据库。</block>
+  <block id="c252e83650a9c47e189944990f1d7083" category="paragraph">Workload Factory 为自管理数据库提供最佳实践和自动化。</block>
+  <block id="f90d5cb97d93d7e68056a2f5badd5f79" category="list-text">*代码片段生成*：Workload Factory 在资源创建过程中生成基础设施即代码 (IaC) 片段，从而实现与现有编排工作流的无缝集成。</block>
+  <block id="a2f0f47aec89e37ce696cdda24d3cf98" category="list-text">*成本估算*：使用节约计算器评估潜在的成本节约，该计算器估算并详细说明了现有 Microsoft SQL Server 和 Oracle 部署使用 Elastic Block Store、FSx for Windows File Server 和本地部署与 FSx for ONTAP 相比的存储、计算、SQL 许可、快照和克隆逐项成本。</block>
+  <block id="59338940c5b2252ec4d59f4ba7020605" category="list-text">*简单、快速的部署*：使用内置的 NetApp、Microsoft 和 Amazon 最佳实践来简化和简化主机、数据库和沙盒配置，从而消除 AWS 上 Microsoft SQL Server 和 PostgreSQL 实例的手动配置复杂性。</block>
+  <block id="91f70e378b6c5149f23a2895da334e35" category="list-text">使用_快速_或_高级_创建模式从 Workload Factory 控制台部署，或通过 Codebox 创建、重用和自定义 AWS CloudFormation 模板，以便将来跨多个环境部署。</block>
+  <block id="3b047b120a2726d95e813aa89ad84307" category="list-text">使用存储配置和沙盒克隆创建按需、隔离的数据库，这些数据库可用于测试、集成、诊断和培训，而不会影响生产数据。</block>
+  <block id="91afe1c5fd9eff39f92a541162ef4572" category="list-text">*精心设计的评估功能*：持续扫描您的 Microsoft SQL Server 和 Oracle 资产，获取全面的见解、机会和建议报告，以帮助您根据 AWS 最佳实践实现卓越运营、安全性、可靠性、性能效率和成本优化。</block>
+  <block id="68c237241d06c96100377b39ca69c988" category="list-text">*错误分析*：使用 AI 分析器分析和解决日志错误，以获取详细的错误消息、故障排除步骤和解决问题的建议。</block>
+  <block id="dbdc9cd8f78b8f960f695e636317594c" category="list-text">*集中管理*：从一个地方管理 FSx for ONTAP 上的 Microsoft SQL Server、Oracle 和 PostgreSQL 资源。在 Workload Factory 中，查看附加的基础架构、AWS 账户、凭据、连接的 FSx for ONTAP 文件系统、存储使用（包括 NFS 卷和 iSCSI LUN）、保护状态、性能、架构完善状态和错误分析。</block>
+  <block id="23c8b3278aec20410e7c213fe3d1710e" category="paragraph">您可以将 Workload Factory 与以下数据库引擎、版本、操作系统和部署模型一起使用，遵循 AWS、NetApp ONTAP、Microsoft SQL Server、Oracle 和 PostgreSQL 最佳实践。</block>
+  <block id="38906c16694b06c5ec22a20b6840bc5d" category="paragraph">数据库包括以下集成 AWS 服务：</block>
+  <block id="3be044b694628f6e958377c22febfacd" category="section-title">2026 年 5 月 3 日</block>
 </blocks>
