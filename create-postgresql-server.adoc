@@ -105,6 +105,9 @@ NOTE: HA部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。
 +
 ... *创建新的FSx for FS* ONTAP：输入用户名和密码。
 +
+对于 GovCloud 账户，请按以下格式输入 FSx for ONTAP 凭据的 AWS SSM Parameter ARN 值： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSM Parameter 类型必须为"Secure String"，名称格式为  `/netapp/wlmdb/<anyname>`。了解有关从 link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud 文档"^] 检索 SSM 参数的更多信息。
+
++
 新的FSx for ONTAP文件系统可能会增加30分钟或更长时间的安装时间。
 
 ... *选择现有FSx for FS* ONTAP：从下拉菜单中选择FSx for ONTAP name，然后输入文件系统的用户名和密码。
@@ -187,15 +190,7 @@ AWS服务接口端点(SQS、FSx、EC2、CloudWatch、Cloud Formation、 SSM)和S
 ... 在*集群配置-节点2*字段中，从*可用性分区*下拉菜单中选择MAZ FSx for ONTAP配置的二级可用性分区，并从*子网*下拉菜单中选择一个子网。
 
 
-.. *安全组*：选择现有安全组或创建新安全组。
-+
-在新服务器部署期间、两个安全组会连接到SQL节点(EC2实例)。
-
-+
-... 创建了一个工作负载安全组、用于支持PostgreSQL所需的端口和协议。
-... 对于新的FSx for ONTAP文件系统、将创建一个新安全组并将其附加到SQL节点。对于现有FSx for ONTAP文件系统、与其关联的安全组会自动添加到PostgreSQL节点中、从而允许与文件系统进行通信。
-
-
+.. *安全组*：创建工作负载安全组以允许 PostgreSQL 所需的端口和协议。此外，您可以选择一个或多个安全组。
 
 
 . 在*应用程序设置*下，提供以下内容：
@@ -204,6 +199,9 @@ AWS服务接口端点(SQS、FSx、EC2、CloudWatch、Cloud Formation、 SSM)和S
 .. 从下拉菜单中选择*PostgreSQL版本*。
 .. *数据库服务器名称*：输入数据库集群名称。
 .. *数据库凭据*：输入新服务帐户的用户名和密码或使用Active Directory中的现有服务帐户凭据。
++
+对于 GovCloud 帐户，请按以下格式输入凭据的 AWS SSM 参数 ARN 值： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSM 参数类型必须为"安全字符串"，名称的格式为 `/netapp/wlmdb/<anyname>`。了解有关从 link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud 文档"^] 检索 SSM 参数的更多信息。
+
 
 
 . 在*Connectity*下，选择要安全连接到实例的密钥对。
@@ -214,7 +212,10 @@ AWS服务接口端点(SQS、FSx、EC2、CloudWatch、Cloud Formation、 SSM)和S
 +
 ... *创建新的FSx for FS* ONTAP：输入用户名和密码。
 +
-新的FSx for ONTAP文件系统可能会增加30分钟或更长时间的安装时间。
++ 对于 GovCloud 账户，请按以下格式输入 FSx for ONTAP 凭据的 AWS SSM Parameter ARN 值： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSM Parameter 类型必须为"Secure String"，名称格式为  `/netapp/wlmdb/<anyname>`。了解有关从 link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud 文档"^] 检索 SSM 参数的更多信息。
+
++
++ 新的 FSx for ONTAP 文件系统可能会增加 30 分钟或更多的安装时间。
 
 ... *选择现有FSx for FS* ONTAP：从下拉菜单中选择FSx for ONTAP name，然后输入文件系统的用户名和密码。
 +
@@ -245,7 +246,7 @@ AWS服务接口端点(SQS、FSx、EC2、CloudWatch、Cloud Formation、 SSM)和S
 AWS管理的密钥会根据服务适用性进行筛选。
 
 .. *标记*：您可以选择最多添加40个标记。
-.. *简单通知服务*：您也可以通过从下拉菜单中选择Microsoft SQL Server的SNS主题来为此配置启用简单通知服务(SNS)。
+.. *Simple Notification Service*：您也可以从下拉菜单中选择 PostgreSQL 的 SNS 主题，为此配置启用 Simple Notification Service (SNS)。
 +
 ... 启用简单通知服务。
 ... 从下拉菜单中选择ARN。

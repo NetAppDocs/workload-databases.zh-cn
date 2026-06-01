@@ -92,10 +92,6 @@
   <block id="cd1a078082e7012671955f628fc5a709" category="paragraph">AWS服务接口端点(SQS、FSx、EC2、CloudWatch、Cloud Formation、 SSM)和S3网关端点会在部署期间创建(如果未找到)。</block>
   <block id="4f8707176b7235252f943ef6ef597d55" category="paragraph">修改了VPC DNS属性<block ref="cb0df2380d372b70fd568d139d704794" prefix=" " category="inline-code"></block> 和<block ref="df550516571c5adda5f49cb0f14d22f1" prefix=" " category="inline-code"></block> ，以便在尚未设置为时启用解析端点地址解析<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>。</block>
   <block id="8738f299dd52a2650f23bf1ae30694fa" category="list-text">在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择可用性分区，并从*子网*下拉菜单中选择子网。</block>
-  <block id="5ac7c1b392927ce429f17a8855e854b5" category="list-text">*安全组*：选择现有安全组或创建新安全组。</block>
-  <block id="ba4f09fe932ad91d759a5dd3636acec6" category="list-text">此时将创建一个工作负载安全组、以允许在节点上进行Microsoft SQL和Windows集群通信所需的端口和协议。</block>
-  <block id="1f653bdd2a02e3ebdc4f28328a96b00f" category="list-text">如果使用的是AWS管理的Active Directory、则连接到目录服务的安全组会自动添加到Microsoft SQL节点中、以允许与Active Directory进行通信。</block>
-  <block id="84c62c2707904a024819612ef450ef1d" category="list-text">对于现有FSx for ONTAP文件系统、与其关联的安全组会自动添加到SQL节点中、从而允许与文件系统进行通信。创建新的FSx for ONTAP系统时、将为FSx for ONTAP文件系统创建一个新安全组、并且同一安全组也会连接到SQL节点。</block>
   <block id="1001245fbd8a96ced15590168ee50912" category="list-text">在*应用程序设置*下，提供以下内容：</block>
   <block id="5f90cc9084764f349d384957856b0b40" category="list-text">在*SQL Server安装类型*下，选择*License included AMI*或*Use custom AMI*。</block>
   <block id="51af4699ded2f99936c69e9d355ac856" category="list-text">如果选择*含许可证AMI*，请提供以下内容：</block>
@@ -431,7 +427,6 @@
   <block id="42284190cc0e4af01d69e70bf8966f0e" category="paragraph">对于现有FSx for ONTAP文件系统、请确保满足以下要求：</block>
   <block id="996d6e2f42d7b52c1cba72a8225cbb65" category="list-text">连接到FSx for ONTAP的路由组允许使用到子网的路由进行部署。</block>
   <block id="74c33b9e5d949f9ac1669cc2da38be60" category="list-text">此安全组允许来自用于部署的子网的流量、尤其是HTTPS (443)和iSCSI (3260) TCP端口。</block>
-  <block id="513217cdb8cfdacc4a193bdd0bbbee78" category="paragraph">对于用户管理的Active Directory、请确保在AD实例上配置的安全组允许来自用于部署的子网的流量。安全组应允许从配置了适用于Microsoft SQL的EC2实例的子网与Active Directory域控制器进行通信。</block>
   <block id="f565eb47bc8c215541fe00205d9b37d3" category="doc">了解通过自定义实现的节省</block>
   <block id="bfbd25ddeba7cedc974f1a5a1d0a295c" category="paragraph">现在、您可以在节省量计算器中使用FSx for Windows File Server和Elelic Block Store存储为Amazon EC2上的Microsoft SQL Server自定义配置设置。根据您的存储要求、您可能会发现FSx for ONTAP存储对于您的数据库工作负载来说最经济高效。</block>
   <block id="f94c119bb7d164adbb1a390a249741e0" category="section-title">从主页导航到节省量计算器</block>
@@ -518,8 +513,6 @@
   <block id="7a65409a338637d9c410720ad6eb8500" category="list-text">创建新的PostgreSQL服务器需要FSx for ONTAP文件系统作为存储后端。您可以使用现有FSx for ONTAP文件系统、也可以创建新文件系统。如果您选择一个现有FSx for ONTAP文件系统作为数据库服务器存储后端、我们将为PostgreSQL工作负载创建一个新的Storage VM。</block>
   <block id="75b39c0795d7295af69b1d13bbf82285" category="list-text">*可用性分区*：选择可用性分区和子网。</block>
   <block id="d576650f664651e9b2569ccb346b6649" category="list-text">在*集群配置-节点1*字段中，从*可用性分区*下拉菜单中选择可用性分区，并从*子网*下拉菜单中选择子网。</block>
-  <block id="720301aea3fac96d94759700c949e15f" category="paragraph">在新服务器部署期间、两个安全组会连接到SQL节点(EC2实例)。</block>
-  <block id="f8473adfeac8aca2a2eaa799d6cde778" category="list-text">创建了一个工作负载安全组、用于支持PostgreSQL所需的端口和协议。</block>
   <block id="5d48b45f2ad58c8e1145b474d95593f9" category="list-text">从下拉菜单中选择*操作系统*。</block>
   <block id="6dd53f240f48678994cf9b0109fa0ec2" category="list-text">从下拉菜单中选择*PostgreSQL版本*。</block>
   <block id="d456e032669379ad4e2388045a89301d" category="list-text">*数据库服务器名称*：输入数据库集群名称。</block>
@@ -598,7 +591,6 @@
   <block id="30e232f58ccaf796b9d3c66a4c7f3eae" category="list-text">*单实例部署*：创建新的PostgreSQL服务器时、将创建适用于ONTAP文件系统的单可用性区域FSx。此外、还会为数据、日志和tempdb文件创建单独的卷和LUN。</block>
   <block id="5ac68d725f8eef71a0523eb1c6cca14f" category="list-text">在*Landing zones*下，提供以下内容：</block>
   <block id="9a7005e13653f915b8e1367cbdc68e4e" category="list-text">在*部署模式*下，选择*独立实例*或*高可用性(HA)*。</block>
-  <block id="d2eadd2943100e3e5ea25460fadf93c2" category="list-text">对于新的FSx for ONTAP文件系统、将创建一个新安全组并将其附加到SQL节点。对于现有FSx for ONTAP文件系统、与其关联的安全组会自动添加到PostgreSQL节点中、从而允许与文件系统进行通信。</block>
   <block id="6040bb4a85eec1c3be0e69ac393a4c24" category="paragraph-title">所有数据库工作负载都可能节省空间</block>
   <block id="14e0ba144c9ea737e00075f15ba92914" category="paragraph-title">节省计算器</block>
   <block id="34bd0eb13cbfc5b3e75abc9ef37d28a9" category="inline-xref">了解如何使用计算器。</block>
@@ -611,8 +603,6 @@
   <block id="037fbb0239239f2168489bba99e09b67" category="list-text">*导出PDF*</block>
   <block id="10acfa1cd5e4b3b5f4da60bba2257672" category="list-text">*通过电子邮件发送*</block>
   <block id="3902a76bb589f831b404ce1ec9865654" category="list-text">*查看计算结果*</block>
-  <block id="68bfcbb9e0f73d04499c64e0bc23d369" category="inline-xref">使用FSx for ONTAP文件系统在AQS EC2上部署Microsoft SQL Server</block>
-  <block id="a8aa5970e795fc6acbc94959e79d385e" category="paragraph">要切换到FSx for ONTAP，请按照中的说明进行操作 <block ref="111c1b12d181a36b3809e884a469d22f" category="inline-xref-macro-rx"></block>。</block>
   <block id="4fbdcdf3c2d8694d5e358b3175b867da" category="section-title">2025 年 3 月 3 日</block>
   <block id="5b9ce98e8b3125f8d921be7829ab8a26" category="sidebar">创建Microsoft SQL Server</block>
   <block id="25b3aca23d0668827e396e11779fd3e8" category="paragraph"><block ref="25b3aca23d0668827e396e11779fd3e8" category="inline-link-macro-rx"></block></block>
@@ -620,7 +610,6 @@
   <block id="05e1e00bdb39e9c766a6a0f69a222a3b" category="list-text"><block ref="05e1e00bdb39e9c766a6a0f69a222a3b" category="inline-link-macro-rx"></block></block>
   <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
   <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
-  <block id="b344730cd36668c36266c1d50c447eea" category="list-text">*安全组*：选择现有安全组或创建新安全组。在新服务器部署期间、三个安全组会连接到SQL节点(EC2实例)。</block>
   <block id="292e876f4d1d5af73b815913bd3d9b26" category="doc">PostgreSQL高可用性配置</block>
   <block id="047e8f86b83bb2e8d4c34b1dc560257b" category="paragraph">现在、您可以为PostgreSQL服务器部署高可用性(HA)配置。</block>
   <block id="8bb788607f31f673e25d0ba34b09a14d" category="doc">优化增强功能</block>
@@ -1247,9 +1236,7 @@
   <block id="6b49f93b8fce5f712f19faf1d7e86198" category="list-text">选择 *Use the same credentials for all instances* 或 *Manage credentials manually*。</block>
   <block id="f401c2a4f95521388399cd9160d348c0" category="list-text">通过提供用户名和密码信息对 SQL Server 和 Windows 进行身份验证。</block>
   <block id="5af06cdcd5f2ae831a171dc46f044c7f" category="paragraph">如果实例已通过身份验证，请选择 *Next*。</block>
-  <block id="86f5d456064bc146b2c9f4537f5b1d93" category="list-text">要验证 FSx for ONTAP（步骤 2），请执行以下操作：</block>
   <block id="69724d4e89d54d12f3752423c87be644" category="list-text">选择 *Use the same credentials for all resources* 或 *Manage credentials manually*。</block>
-  <block id="a26f5beb654e47a87608f8a28b573758" category="list-text">输入 FSx for ONTAP 文件系统用户名和密码，然后选择*下一步*。</block>
   <block id="34b2f9d708b57fa0ab164ac81a844832" category="paragraph">如果 FSx for ONTAP 文件系统已通过身份验证，请选择*下一步*。</block>
   <block id="9ed181f71730a4b981c04369e2f1719e" category="list-text">要准备（步骤 3），请确保实例满足最低要求。</block>
   <block id="4aa1b1ff22a8dfe18a969e9e18594ab0" category="list-text">为每个功能选择 *Setup details* 以了解功能先决条件，并按照屏幕上的说明完成任何缺少的功能先决条件。</block>
@@ -1257,11 +1244,9 @@
   <block id="9d96bcc0867ec5be17a78fc127af4785" category="paragraph">实例注册启动。选择 *Job monitoring* 选项卡以跟踪进度。</block>
   <block id="efd81ed9168d148e7b33debfd48f5bbe" category="paragraph">注册实例有三个步骤 - 数据库身份验证、FSx for ONTAP 身份验证以及完成缺失先决条件的准备。您可以注册单个或多个数据库。</block>
   <block id="67b60232330635a005ec1fd48b8378f5" category="list-text">在库存中，选择 *Oracle* 作为引擎类型。</block>
-  <block id="5ad1176ca2fc8fe103dbef7c2c2368a4" category="list-text">要验证数据库（步骤 1），请执行以下操作：</block>
   <block id="4a259cdca92c769ffaab7b1900cdf9a3" category="list-text">通过提供用户名和密码信息对 Oracle 用户和自动存储管理 (ASM) 网格用户（如果适用）进行身份验证。</block>
   <block id="d80e97cf9f44825e6a448342f9ee18ae" category="paragraph">如果数据库已通过身份验证，请选择 *Next*。</block>
   <block id="90252dc7d534ac36ea9f5b1fd7c90573" category="list-text">要对 FSx for ONTAP 进行身份验证（步骤 2），请执行以下操作，然后选择*下一步*：</block>
-  <block id="0d5d725b7763bd90d5bb71ad44e05f13" category="list-text">输入 FSx for ONTAP 文件系统用户名和密码。</block>
   <block id="aea7afc9754b2383c56fbbaee6c6009d" category="list-text">要准备（步骤 3），请确保数据库满足所需的先决条件。如果安装了所有必需的模块并满足先决条件，请选择*下一步*注册数据库。否则，请按照以下步骤操作。</block>
   <block id="1717c98238cd6bd4091f92979d40a891" category="list-text">在*先决条件检查视图*中查看先决条件。</block>
   <block id="3f4c61df91a8ed4b5fc7622369d6e56d" category="paragraph">您必须完成单个功能的所有先决条件，例如 *Review well-architected issues and recommendations* 才能注册数据库。</block>
@@ -1513,4 +1498,45 @@
   <block id="23c8b3278aec20410e7c213fe3d1710e" category="paragraph">您可以将 Workload Factory 与以下数据库引擎、版本、操作系统和部署模型一起使用，遵循 AWS、NetApp ONTAP、Microsoft SQL Server、Oracle 和 PostgreSQL 最佳实践。</block>
   <block id="38906c16694b06c5ec22a20b6840bc5d" category="paragraph">数据库包括以下集成 AWS 服务：</block>
   <block id="3be044b694628f6e958377c22febfacd" category="section-title">2026 年 5 月 3 日</block>
+  <block id="779d05f80e557ffb6b9d91002c8c535c" category="doc">Amazon Elastic Block Store 上 Oracle 主机的定制节省</block>
+  <block id="3a4be47663e2fa751113137a974a3fbf" category="paragraph">NetApp Workload Factory for Databases 允许您为 Amazon Elastic Block Store (EBS) 上的 Oracle 主机自定义节省。您可以调整多个字段，如快照频率、克隆副本数量和卷详细信息，以了解它们如何影响您的节省。</block>
+  <block id="df8ce82904fb7f768a98668382cdec3a" category="inline-link-macro">探索 Oracle 主机在 EBS 上的节省</block>
+  <block id="d1839e6ad7687f9aaf499df8a37a528b" category="paragraph"><block ref="d1839e6ad7687f9aaf499df8a37a528b" category="inline-link-macro-rx"></block></block>
+  <block id="1ed508a845657aa228cb523211b501a0" category="section-title">适用于 Microsoft SQL Server 和 PostgreSQL 主机部署的多个安全组选择</block>
+  <block id="5f3983aebdf54bf31555d0b354f825df" category="paragraph">NetApp Workload Factory for Databases 现在允许您在部署 Microsoft SQL Server 和 PostgreSQL 主机时选择多个安全组。这为您在为数据库工作负载配置网络安全性时提供了更大的灵活性。</block>
+  <block id="2e9b0a449319af8e501ebf42f946b3a4" category="inline-link-macro">部署 Microsoft SQL Server 主机</block>
+  <block id="36827721f24c7683f7cbb55f48380665" category="list-text"><block ref="36827721f24c7683f7cbb55f48380665" category="inline-link-macro-rx"></block></block>
+  <block id="3b1a9a0ee670c86859aadb420ba7a43d" category="inline-link-macro">部署 PostgreSQL 主机</block>
+  <block id="d9d75ceb2e92d25dfa5fd1bd2ea01dfc" category="list-text"><block ref="d9d75ceb2e92d25dfa5fd1bd2ea01dfc" category="inline-link-macro-rx"></block></block>
+  <block id="ed577820f4fec6bbade3e14c5eb7020d" category="section-title">在 NetApp Workload Factory 中支持 AWS GovCloud (US)</block>
+  <block id="092e50fff7799a091642caa817b6e9ee" category="paragraph">NetApp Workload Factory 支持 AWS GovCloud (US) 账户。使用 GovCloud 账户，您可以在 AWS GovCloud (US) 区域中部署和管理数据库工作负载。</block>
+  <block id="6ff0d958975c87c2993a4cbc405cf5e2" category="paragraph">对于 GovCloud 帐户，请按以下格式输入 AWS SSM Parameter ARN 的值：<block ref="e9051332cce6a4a45153762fd24852b2" prefix=" " category="inline-code"></block>。</block>
+  <block id="d35fe72916965367b860a356cc655c22" category="inline-link-macro">AWS GovCloud 文档</block>
+  <block id="3605f548d7067c850fcfa120dccc5284" category="paragraph">该值在 AWS 管理控制台的参数详细信息下的参数存储中提供。AWS SSM 参数类型必须为"安全字符串"，名称格式为<block ref="2bf2dc3b6c5a539d284c40964555ce50" prefix=" " category="inline-code"></block>。详细了解如何从<block ref="19e2986392c22c543c40f011778abe34" category="inline-link-macro-rx"></block>检索 SSM 参数。</block>
+  <block id="1ffb1c1e9c9cf46be39ad78618e7329d" category="paragraph">对于 GovCloud 账户，请按以下格式输入 Active Directory 凭据的 AWS SSM Parameter ARN 值：<block ref="e9051332cce6a4a45153762fd24852b2" prefix=" " category="inline-code"></block>。AWS SSM Parameter 类型必须为"Secure String"，名称格式为 <block ref="2bf2dc3b6c5a539d284c40964555ce50" prefix=" " category="inline-code"></block>。了解有关从 <block ref="19e2986392c22c543c40f011778abe34" category="inline-link-macro-rx"></block> 检索 SSM 参数的更多信息。</block>
+  <block id="c1617fe1cfd84c9b1bc06ba892d45a49" category="paragraph">对于 GovCloud 账户，请按以下格式输入 FSx for ONTAP 凭据的 AWS SSM Parameter ARN 值：<block ref="e9051332cce6a4a45153762fd24852b2" prefix=" " category="inline-code"></block>。AWS SSM Parameter 类型必须为"Secure String"，名称格式为 <block ref="2bf2dc3b6c5a539d284c40964555ce50" prefix=" " category="inline-code"></block>。了解有关从 <block ref="19e2986392c22c543c40f011778abe34" category="inline-link-macro-rx"></block> 检索 SSM 参数的更多信息。</block>
+  <block id="d81272299934c4775982dc603c25dbf2" category="list-text">*选择现有的 FSx for ONTAP*：选择 FSx for ONTAP 名称，并为文件系统输入用户名和密码。</block>
+  <block id="e574ad20aebdb0717a191a1f8a42a773" category="list-text">*安全组*：创建工作负载安全组，以允许在节点上进行 Microsoft SQL Server 和 Windows 群集通信所需的端口和协议。此外，您可以选择一个或多个安全组。</block>
+  <block id="28da446fb4b04fab548977677825309f" category="list-text">输入 Active Directory 域的用户名和密码。</block>
+  <block id="f00fe8f9c85e91dd0181e63717f16462" category="paragraph">对于 GovCloud 账户，请按以下格式输入 FSx for ONTAP 凭据的 AWS SSM Parameter ARN 值：<block ref="e9051332cce6a4a45153762fd24852b2" prefix=" " category="inline-code"></block>。AWS SSM Parameter 类型必须为"Secure String"，名称格式为 <block ref="2bf2dc3b6c5a539d284c40964555ce50" prefix=" " category="inline-code"></block>。了解有关从 <block ref="19e2986392c22c543c40f011778abe34" category="inline-link-macro-rx"></block> 检索 SSM 参数的更多信息。</block>
+  <block id="5703c433440d20d33af4c4796d45da41" category="list-text">*安全组*：创建工作负载安全组以允许 PostgreSQL 所需的端口和协议。此外，您可以选择一个或多个安全组。</block>
+  <block id="48aa17a242c1289545660436a5da586e" category="paragraph">对于 GovCloud 帐户，请按以下格式输入凭据的 AWS SSM 参数 ARN 值：<block ref="e9051332cce6a4a45153762fd24852b2" prefix=" " category="inline-code"></block>。AWS SSM 参数类型必须为"安全字符串"，名称的格式为<block ref="2bf2dc3b6c5a539d284c40964555ce50" prefix=" " category="inline-code"></block>。了解有关从 <block ref="19e2986392c22c543c40f011778abe34" category="inline-link-macro-rx"></block> 检索 SSM 参数的更多信息。</block>
+  <block id="79841a1330c11b7cedd1a1d3cbb4ae1c" category="paragraph">+ 对于 GovCloud 账户，请按以下格式输入 FSx for ONTAP 凭据的 AWS SSM Parameter ARN 值：<block ref="e9051332cce6a4a45153762fd24852b2" prefix=" " category="inline-code"></block>。AWS SSM Parameter 类型必须为"Secure String"，名称格式为 <block ref="2bf2dc3b6c5a539d284c40964555ce50" prefix=" " category="inline-code"></block>。了解有关从 <block ref="19e2986392c22c543c40f011778abe34" category="inline-link-macro-rx"></block> 检索 SSM 参数的更多信息。</block>
+  <block id="6e9a724ad6108741081bde02ae2912e7" category="paragraph">+ 新的 FSx for ONTAP 文件系统可能会增加 30 分钟或更多的安装时间。</block>
+  <block id="d452bc6133c698b08bf18ab5b595d341" category="list-text">*Simple Notification Service*：您也可以从下拉菜单中选择 PostgreSQL 的 SNS 主题，为此配置启用 Simple Notification Service (SNS)。</block>
+  <block id="4a82368a947d7ff0c661da3504176f5c" category="paragraph">自定义计算器中的字段，以获取最准确的节省估计值。</block>
+  <block id="9ef59a9ba51ad7927edec8e6fcbeb5ed" category="section-title">自定义 Microsoft SQL Server 主机的节省费用</block>
+  <block id="e3b5d24f9b2b4bd0d9776a64e49e3aee" category="inline-xref">使用 FSx for ONTAP 文件系统在 AWS EC2 上部署 Microsoft SQL Server</block>
+  <block id="120a7a3f9a78e3752bd191352982ccaf" category="paragraph">要切换到 FSx for ONTAP，请按照说明进行操作 <block ref="ab783e4a59e2505394508c3b2225ca48" category="inline-xref-macro-rx"></block>。</block>
+  <block id="78c80474c1ac9b3ac29b3054a0be0356" category="section-title">为 EBS 上的 Oracle 主机自定义节省</block>
+  <block id="63a6d626ebb7927e5fc36780f4bb6247" category="paragraph">自定义计算器中的字段，为在 Amazon Elastic Block Store (EBS) 上运行的 Oracle 主机获取最准确的节省估计值。</block>
+  <block id="8e99d4b967a68c2639bd0e29eb652859" category="list-text">在数据库中，选择 *Explore savings*，然后选择 *Oracle on EBS*。</block>
+  <block id="cb1217d0ae1d0062d087d1a39e9f29af" category="list-text">*Oracle 版本*：从下拉菜单中选择 Oracle 版本。</block>
+  <block id="298643abfe0d666f175f7f94a8751629" category="list-text">*每月 Oracle BYOL 费用（$）*：可选择以美元输入每月 Oracle BYOL 费用。</block>
+  <block id="45d65f4c65aa938b39f96d1b869cd23a" category="paragraph">AWS GovCloud (US) 用户必须使用 AWS Secrets Manager 对 FSx for ONTAP 凭据进行身份验证。对于所有其他用户，您必须使用文件系统凭据对 FSx for ONTAP 进行身份验证。</block>
+  <block id="2ef73c74b0cad2520f602596db0ba30e" category="list-text">输入带有 FSx for ONTAP 凭据的 AWS SSM Parameter ARN（适用于 GovCloud 账户）或 FSx for ONTAP 文件系统用户名和密码（适用于所有其他账户），然后选择 *Next*。</block>
+  <block id="9fc473da6470452a4af104eed53ea7a9" category="paragraph">对于 GovCloud 账户，AWS SSM Parameter ARN 值在 AWS Management Console 的 Parameter Store 中的 Parameter details 下提供，格式如下：<block ref="e9051332cce6a4a45153762fd24852b2" prefix=" " category="inline-code"></block>。AWS SSM Parameter 类型必须为"Secure String"，名称格式为 <block ref="a698aa1fbee7824723aef2f6f3386343" prefix=" " category="inline-code"></block>。了解有关从 <block ref="19e2986392c22c543c40f011778abe34" category="inline-link-macro-rx"></block> 检索 SSM 参数的更多信息。</block>
+  <block id="fcf9f8c650605555c801d6284a159f59" category="list-text">要验证数据库（步骤 1），请执行以下操作，然后选择 *Next*：</block>
+  <block id="4c290bde270addf9889d6824ca16e3ab" category="paragraph">AWS SSM 参数类型必须为"Secure String"，名称格式为<block ref="a698aa1fbee7824723aef2f6f3386343" prefix=" " category="inline-code"></block>。按以下格式输入 AWS SSM 参数 ARN 的值：<block ref="e9051332cce6a4a45153762fd24852b2" prefix=" " category="inline-code"></block>。了解有关从<block ref="19e2986392c22c543c40f011778abe34" category="inline-link-macro-rx"></block>检索 SSM 参数的更多信息。</block>
+  <block id="431b3c73dcd090440f753c5d3af80bb0" category="section-title">2026 年 6 月 1 日</block>
 </blocks>

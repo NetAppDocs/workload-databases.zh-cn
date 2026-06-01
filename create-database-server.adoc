@@ -139,6 +139,13 @@ NOTE: FCI部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。
 
 
 . 在*应用程序设置*下，输入*数据库凭据*的用户名和密码。
++
+对于 GovCloud 帐户，请按以下格式输入 AWS SSM Parameter ARN 的值：
+`{fsx:{"username":"fsxadmin","password":"pass"}}`。
+
++
+该值在 AWS 管理控制台的参数详细信息下的参数存储中提供。AWS SSM 参数类型必须为"安全字符串"，名称格式为 `/netapp/wlmdb/<anyname>`。详细了解如何从link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud 文档"^]检索 SSM 参数。
+
 . 在*连接*下，提供以下内容：
 +
 .. *密钥对*：选择密钥对。
@@ -156,6 +163,9 @@ NOTE: FCI部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。
 
 ... 在*用户名*字段中，输入Active Directory域的用户名。
 ... 在*密码*字段中，输入Active Directory域的密码。
++
+对于 GovCloud 账户，请按以下格式输入 Active Directory 凭据的 AWS SSM Parameter ARN 值： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSM Parameter 类型必须为"Secure String"，名称格式为  `/netapp/wlmdb/<anyname>`。了解有关从 link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud 文档"^] 检索 SSM 参数的更多信息。
+
 
 
 
@@ -166,9 +176,12 @@ NOTE: FCI部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。
 +
 ... *创建新的FSx for FS* ONTAP：输入用户名和密码。
 +
+对于 GovCloud 账户，请按以下格式输入 FSx for ONTAP 凭据的 AWS SSM Parameter ARN 值： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSM Parameter 类型必须为"Secure String"，名称格式为  `/netapp/wlmdb/<anyname>`。了解有关从 link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud 文档"^] 检索 SSM 参数的更多信息。
+
++
 新的FSx for ONTAP文件系统可能会增加30分钟或更长时间的安装时间。
 
-... *选择现有FSx for FS* ONTAP：从下拉菜单中选择FSx for ONTAP name，然后输入文件系统的用户名和密码。
+... *选择现有的 FSx for ONTAP*：选择 FSx for ONTAP 名称，并为文件系统输入用户名和密码。
 +
 对于现有FSx for ONTAP文件系统、请确保满足以下要求：
 
@@ -251,16 +264,7 @@ NOTE: FCI部署仅在多可用性区域(MAZ) FSx for ONTAP配置上受支持。
 
 
 
-.. *安全组*：选择现有安全组或创建新安全组。在新服务器部署期间、三个安全组会连接到SQL节点(EC2实例)。
-+
-... 此时将创建一个工作负载安全组、以允许在节点上进行Microsoft SQL和Windows集群通信所需的端口和协议。
-... 如果使用的是AWS管理的Active Directory、则连接到目录服务的安全组会自动添加到Microsoft SQL节点中、以允许与Active Directory进行通信。
-... 对于现有FSx for ONTAP文件系统、与其关联的安全组会自动添加到SQL节点中、从而允许与文件系统进行通信。创建新的FSx for ONTAP系统时、将为FSx for ONTAP文件系统创建一个新安全组、并且同一安全组也会连接到SQL节点。
-+
-对于用户管理的Active Directory、请确保在AD实例上配置的安全组允许来自用于部署的子网的流量。安全组应允许从配置了适用于Microsoft SQL的EC2实例的子网与Active Directory域控制器进行通信。
-
-
-
+.. *安全组*：创建工作负载安全组，以允许在节点上进行 Microsoft SQL Server 和 Windows 群集通信所需的端口和协议。此外，您可以选择一个或多个安全组。
 
 
 . 在*应用程序设置*下，提供以下内容：
@@ -288,6 +292,13 @@ NOTE: 如果选定的整理集与安装不兼容、建议您选择默认整理"S
 +
 可选：选择“使用托管服务帐户”作为 SQL Server 服务帐户。如果您的环境使用 MSA（托管服务帐户）或组托管服务帐户 (gMSA)，并且密码管理由 Active Directory 处理，请使用此选项。
 
++
+对于 GovCloud 帐户，请按以下格式输入 AWS SSM Parameter ARN 的值：
+`{fsx:{"username":"fsxadmin","password":"pass"}}`。
+
++
+该值在 AWS 管理控制台的参数详细信息下的参数存储中提供。AWS SSM 参数类型必须为"安全字符串"，名称格式为 `/netapp/wlmdb/<anyname>`。详细了解如何从link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud 文档"^]检索 SSM 参数。
+
 
 
 . 在*连接*下，提供以下内容：
@@ -305,8 +316,10 @@ NOTE: 如果选定的整理集与安装不兼容、建议您选择默认整理"S
 +
 对于AWS管理的Active Directory、DNS IP地址将显示在下拉菜单中。
 
-... 在*用户名*字段中，输入Active Directory域的用户名。
-... 在*密码*字段中，输入Active Directory域的密码。
+... 输入 Active Directory 域的用户名和密码。
++
+对于 GovCloud 账户，请按以下格式输入 Active Directory 凭据的 AWS SSM Parameter ARN 值： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSM Parameter 类型必须为"Secure String"，名称格式为  `/netapp/wlmdb/<anyname>`。了解有关从 link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud 文档"^] 检索 SSM 参数的更多信息。
+
 ... *首选域控制器*：（可选）输入要用于加入 Active Directory 的首选域控制器。
 ... *首选组织单元路径*：（可选）在 Active Directory 中输入要加入的首选组织单元 (OU)。
 ... *目标 Active Directory 组*：可选，输入要将计算机添加到的目标 Active Directory 组。
@@ -320,6 +333,9 @@ NOTE: 如果选定的整理集与安装不兼容、建议您选择默认整理"S
 .. *FSx for ONTAP system*：创建新的FSx for ONTAP文件系统或使用现有FSx for ONTAP文件系统。
 +
 ... *创建新的FSx for FS* ONTAP：输入用户名和密码。
++
+对于 GovCloud 账户，请按以下格式输入 FSx for ONTAP 凭据的 AWS SSM Parameter ARN 值： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSM Parameter 类型必须为"Secure String"，名称格式为  `/netapp/wlmdb/<anyname>`。了解有关从 link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud 文档"^] 检索 SSM 参数的更多信息。
+
 +
 新的FSx for ONTAP文件系统可能会增加30分钟或更长时间的安装时间。
 
