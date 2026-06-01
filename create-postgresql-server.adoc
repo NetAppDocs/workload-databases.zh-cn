@@ -212,10 +212,10 @@ AWS服务接口端点(SQS、FSx、EC2、CloudWatch、Cloud Formation、 SSM)和S
 +
 ... *创建新的FSx for FS* ONTAP：输入用户名和密码。
 +
-+ 对于 GovCloud 账户，请按以下格式输入 FSx for ONTAP 凭据的 AWS SSM Parameter ARN 值： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSM Parameter 类型必须为"Secure String"，名称格式为  `/netapp/wlmdb/<anyname>`。了解有关从 link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud 文档"^] 检索 SSM 参数的更多信息。
+对于 GovCloud 账户，请按以下格式输入 FSx for ONTAP 凭据的 AWS SSM Parameter ARN 值： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSM Parameter 类型必须为"Secure String"，名称格式为  `/netapp/wlmdb/<anyname>`。了解有关从 link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud 文档"^] 检索 SSM 参数的更多信息。
 
 +
-+ 新的 FSx for ONTAP 文件系统可能会增加 30 分钟或更多的安装时间。
+新的FSx for ONTAP文件系统可能会增加30分钟或更长时间的安装时间。
 
 ... *选择现有FSx for FS* ONTAP：从下拉菜单中选择FSx for ONTAP name，然后输入文件系统的用户名和密码。
 +
