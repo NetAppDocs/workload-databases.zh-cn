@@ -4,12 +4,14 @@
 
 
 
+[[dashboard-improvements]]
 === 仪表盘改进
 
 新的仪表板经过简化和更好地组织，可以在一个屏幕上更清晰地概览数据库资源和工作负载工厂的关键功能；一张卡片突出显示数据库资源，一张卡片提供有关架构良好评分和分析的信息，一张卡片显示错误分析，两张卡片显示每月成本和潜在节省，一张卡片显示有关沙盒的信息。
 
 
 
+[[well-architected-analysis-for-oracle]]
 === 针对 Oracle 的良好架构分析
 
 精心设计的分析包括对 Oracle 配置的以下评估和修复：
@@ -23,6 +25,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[permissions-changes-for-workload-factory-for-databases]]
 === 数据库工作负载工厂的权限变更
 
 Workload Factory for Databases 更新了权限策略，以便更清晰地说明特定操作所需的权限，并允许您更精细地选择所需的权限。添加凭据时，您将有三个权限选项可供选择，而不是之前的权限模型（_只读_和_读/写_）。新的权限模型将权限策略分解如下：
@@ -38,12 +41,14 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
+[[well-architected-dashboard-screen-added]]
 === 新增了设计精良的仪表盘界面。
 
 数据库菜单中新增了一个名为“架构完善的仪表盘”的屏幕。通过此屏幕，您可以获得整个数据库环境配置状态的汇总视图。
 
 
 
+[[edit-protection-for-database-deployments-in-netapp-backup-and-recovery]]
 === NetApp Backup and Recovery中数据库部署的编辑保护
 
 在 Workload Factory 控制台中，您可以选择编辑受保护资源的保护，然后您将被重定向到NetApp Console中的备份和恢复，在那里您可以修改保护策略或计划。
@@ -52,6 +57,7 @@ link:https://docs.netapp.com/us-en/workload-databases/protect-sql-server.html["�
 
 
 
+[[error-filtering-by-tags-available-for-the-error-analysis-feature]]
 === 错误分析功能支持按标签进行错误筛选
 
 使用 Workload Factory 中的错误分析功能时，您可以按面向基础架构的标签筛选和查看 Microsoft SQL Server 错误日志。这项增强功能可帮助您快速对问题进行分类、排查和解决问题。

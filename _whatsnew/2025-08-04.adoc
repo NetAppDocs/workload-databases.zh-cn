@@ -4,6 +4,7 @@
 
 
 
+[[well-architected-analysis-includes-high-availability-cluster-validation]]
 === 架构良好的分析包括高可用性集群验证
 
 精心设计的分析现在包括对高可用性集群的验证。此验证从服务器端检查所有与集群相关的配置，包括两个节点上的磁盘可用性和配置、Windows 集群配置和故障转移准备情况。这可确保 Windows 集群正确设置并可在需要时成功进行故障转移。
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[multi-level-menu-available-for-instances]]
 === 实例可用的多级菜单
 
 工作负载工厂控制台现在包括实例的多级菜单。此更改为管理实例提供了更有条理、更直观的导航结构。实例管理的菜单选项包括查看实例仪表板、查看数据库、创建数据库和创建沙盒克隆。
@@ -20,6 +22,7 @@ image:manage-instance-table-menu.png["具有多级菜单结构的实例表菜单
 
 
 
+[[new-authentication-option-to-explore-savings]]
 === 新的身份验证选项可探索节省
 
 当 `NT Authority\SYSTEM`用户在 Microsoft SQL Server 上没有足够的权限，您可以使用 SQL Server 凭据进行身份验证，或将缺少的 SQL Server 权限添加到 `NT Authority\SYSTEM`。

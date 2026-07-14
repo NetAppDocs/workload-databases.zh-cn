@@ -15,6 +15,7 @@ summary: '比较将Amazon Elasic Block Store (EBS)、FSx for Windows File Server
 
 
 
+[[about-this-task]]
 == 关于此任务
 
 您可以使用仪表板、库存选项卡或浏览节省选项卡来探索数据库工作负载在 EBS、FSx for Windows File Server 和本地存储上的节省。在所有情况下，您可以使用节省计算器来比较在 FSx for ONTAP 文件系统上运行 Microsoft SQL Server 工作负载与 Elastic Block Store (EBS)、FSx for Windows File Server 和本地存储相比的各种成本组件，如存储、计算、SQL 许可证、快照和克隆。
@@ -35,6 +36,7 @@ image:screenshot-ebs-savings-calculator-update.png["节省量计算器页面的�
 
 
 
+[[sql-server-deployment-analysis]]
 == SQL Server部署分析
 
 计算器会检查 SQL Server 部署，以确保使用的资源和功能与 SQL Server 版本相匹配。以下是计算器在建议降级到标准版之前检查的关键因素和条件：
@@ -64,6 +66,7 @@ image:screenshot-ebs-savings-calculator-update.png["节省量计算器页面的�
 
 
 
+[[calculator-options]]
 == 计算器选项
 
 您可以使用两个计算器选项来比较系统与FSx for ONTAP之间的成本—自定义和检测。
@@ -76,6 +79,7 @@ image:screenshot-ebs-savings-calculator-update.png["节省量计算器页面的�
 
 
 
+[[explore-savings-via-customization]]
 === 了解通过自定义实现的节省
 
 自定义计算器中的字段，以获取最准确的节省估计值。
@@ -214,6 +218,7 @@ image:screenshot-ebs-savings-calculator-update.png["节省量计算器页面的�
 
 
 
+[[explore-savings-for-detected-hosts]]
 === 了解检测到的主机的节省量
 
 Workload Factory 输入检测到的主机特性，以便您可以自动探索节省金额。
@@ -479,6 +484,7 @@ Workload Factory 将多个 Oracle 本地数据库整合到单个 FSx for ONTAP �
 
 
 
+[[deploy-microsoft-sql-server-on-aws-ec2-using-fsx-for-ontap]]
 == 使用FSx for ONTAP在AWS EC2上部署Microsoft SQL Server
 
 如果要切换到FSx for ONTAP以节省成本，请直接从“创建新的Microsoft SQL Server”向导中单击*Creation*创建建议的配置，或者单击*Save*保存建议的配置供以后使用。

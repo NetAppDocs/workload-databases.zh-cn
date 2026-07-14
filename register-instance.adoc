@@ -17,6 +17,7 @@ summary: 注册资源，以便您可以监控NetApp Workload Factory for Databas
 
 
 
+[[about-the-task]]
 == 关于任务
 
 注册实例（SQL Server）或数据库（Oracle）涉及三个步骤：实例或数据库身份验证、FSx for ONTAP 身份验证以及准备。要准备，请在实例或数据库上安装 AWS、NetApp 和 PowerShell 模块，并满足 Workload Factory for Databases 功能（如 link:analyze-error-logs.html["错误日志分析"] 或 link:optimize-configurations.html["精心策划的评估"]）的最低要求。
@@ -27,12 +28,14 @@ AWS GovCloud (US) 用户必须使用 AWS Secrets Manager 对 FSx for ONTAP 凭�
 
 
 
+[[before-you-begin]]
 == 开始之前
 
 实例或数据库的主机必须出现在清单中。要使主机出现在库存中，您必须 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、规划和分析_权限"^] 在您的 AWS 账户中。
 
 
 
+[[registering-an-instance-in-a-private-network]]
 === 在私有网络中注册实例
 
 要在没有外部连接的专用网络中注册实例或数据库，请在 VPC 中提供所需的端点，并将其与相关子网关联。允许接口端点的 Security Group 中的端口 443。
@@ -52,6 +55,7 @@ AWS GovCloud (US) 用户必须使用 AWS Secrets Manager 对 FSx for ONTAP 凭�
 
 
 
+[[register-a-microsoft-sql-server-instance]]
 == 注册 Microsoft SQL Server 实例
 
 注册实例有三个步骤：实例身份验证、FSx for ONTAP 身份验证以及完成缺失先决条件的准备。您可以注册单个实例或多个实例。
@@ -109,6 +113,7 @@ Workload Factory 支持 SQL Server 的故障转移群集实例 (FCI) 和独立�
 
 
 
+[[register-an-oracle-database]]
 == 注册 Oracle 数据库
 
 注册实例有三个步骤 - 数据库身份验证、FSx for ONTAP 身份验证以及完成缺失先决条件的准备。您可以注册单个或多个数据库。

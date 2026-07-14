@@ -19,6 +19,7 @@ link:optimize-overview.html["了解 Workload Factory 中的配置分析和良好
 
 
 
+[[about-this-task]]
 == 关于此任务
 
 Workload Factory 每天分析数据库配置。每日分析提供精心设计的状态、见解和建议。您可以自动修复配置问题以满足最佳实践要求。
@@ -55,6 +56,7 @@ Workload Factory 分析以下配置的良好架构状态：
 
 
 
+[[perform-a-one-time-assessment-of-your-configurations]]
 == 对您的配置执行一次性评估
 
 执行一次性评估以找出 Microsoft SQL Server 实例或 Oracle 数据库的良好架构状态，而无需存储凭据或注册资源。
@@ -102,6 +104,7 @@ Workload Factory 分析以下配置的良好架构状态：
 ====
 
 
+[[before-you-begin-fixing-dismissing-and-re-activating-configurations]]
 == 在开始修复、关闭和重新激活配置之前
 
 以下要求对于持续监控数据库环境和自动修复配置问题是必要的。一次性评估不需要这些要求。
@@ -113,6 +116,7 @@ Workload Factory 分析以下配置的良好架构状态：
 
 
 
+[[fix-a-configuration-issue]]
 == 修复配置问题
 
 修复在 FSx for ONTAP存储上运行的 SQL Server 或 Oracle 环境的配置问题。
@@ -161,6 +165,7 @@ Workload Factory 开始修复问题。选择“作业监控”选项卡来查看
 
 
 
+[[dismiss-the-analysis-of-database-configurations]]
 == 忽略对数据库配置的分析
 
 忽略不适用于数据库环境的特定数据库配置的分析，以避免不必要的警报和不准确的优化结果。您可以随时重新激活已忽略的配置分析。
@@ -182,6 +187,7 @@ Workload Factory 停止配置分析。
 
 
 
+[[reactivate-a-dismissed-configuration-analysis]]
 == 重新激活已解除的配置分析
 
 随时重新激活已关闭的配置分析。您可以选择一个或多个要重新激活的配置。

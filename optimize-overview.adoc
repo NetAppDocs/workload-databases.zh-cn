@@ -25,6 +25,7 @@ summary: 数据库工作负载工厂定期分析 Microsoft SQL Server 和 Oracle
 
 
 
+[[how-it-works]]
 == 工作原理
 
 Workload Factory 每天分析在 Amazon FSx for NetApp ONTAP 文件系统部署上运行的工作负载。该分析提供了精心设计的状态、见解和建议。
@@ -35,12 +36,14 @@ Workload Factory 每天分析在 Amazon FSx for NetApp ONTAP 文件系统部署�
 
 
 
+[[why-it-matters]]
 == 为什么很重要
 
 Workload Factory 通过将持续评估与建议见解和补救措施相结合，将最佳实践应用于大型存储、数据库和 VMware 环境。在 Workload Factory 控制台中应用的自动修复可减少人为错误，确保统一管理，并保持整个工作负载基础架构的性能和可靠性。
 
 
 
+[[options-for-analyzing-your-database-environment]]
 == 用于分析数据库环境的选项
 
 Workload Factory 为分析数据库环境提供了以下选项：
@@ -51,6 +54,7 @@ Workload Factory 为分析数据库环境提供了以下选项：
 
 
 
+[[analysis-requirements]]
 == 分析要求
 
 对于一次性评估，您只需为要分析的 Microsoft SQL Server 实例或 Oracle 数据库提供一次凭据。
@@ -70,12 +74,14 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["�
 
 
 
+[[best-practices-and-recommendations-for-database-workloads]]
 == 数据库工作负载的最佳实践和建议
 
 Workload Factory 提供了一套最佳实践和建议，用于运行精心设计的数据库工作负载。精心设计的分析评估与存储规模、存储布局、存储配置、计算、应用程序（SQL Server）和弹性相关的 Microsoft SQL Server 和 Oracle 数据库配置和设置。
 
 
 
+[[microsoft-sql-server]]
 === Microsoft SQL Server
 
 
@@ -196,6 +202,7 @@ SQL Server 许可证评估和建议在主机级别提供。当 Workload Factory 
 
 
 
+[[oracle]]
 === Oracle
 
 

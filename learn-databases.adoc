@@ -15,6 +15,7 @@ NetApp Workload Factory for Databases 是一种端到端数据库部署和维护
 
 
 
+[[what-is-netapp-workload-factory-for-databases]]
 == 什么是NetApp Workload Factory for Databases？
 
 NetApp Workload Factory for Databases 可发现、评估、规划、调配 Microsoft SQL Server、PostgreSQL 和 Oracle 数据并将其移动到 Amazon FSx for NetApp ONTAP（FSx for ONTAP）部署，以满足您的性能和成本期望，同时遵守行业最佳实践。NetApp Workload Factory for Databases 持续优化和管理 FSx for ONTAP 上的数据库。
@@ -23,12 +24,14 @@ NetApp Workload Factory for Databases 可发现、评估、规划、调配 Micro
 
 
 
+[[workload-factory-benefits-for-self-managed-databases]]
 == 工作负载工厂为自管理数据库带来的优势
 
 Workload Factory 为自管理数据库提供最佳实践和自动化。
 
 
 
+[[best-practices]]
 === 最佳实践
 
 * 从AWS Cloud、Microsoft Windows和SQL Server以及NetApp ONTAP获得集成知识、用于在EC2实例上部署SQL Server。
@@ -39,6 +42,7 @@ Workload Factory 为自管理数据库提供最佳实践和自动化。
 
 
 
+[[automation-with-workload-factory-codebox]]
 === 使用 Workload Factory Codebox 实现自动化
 
 Workload Factory 通过 _Codebox_ 引入了内置自动化功能。  Codebox 具有以下自动化优势：
@@ -50,6 +54,7 @@ Workload Factory 通过 _Codebox_ 引入了内置自动化功能。  Codebox 具
 
 
 
+[[workload-factory-for-databases-features]]
 === 数据库工作负载工厂功能
 
 数据库工作负载工厂提供以下功能：
@@ -68,6 +73,7 @@ Workload Factory 通过 _Codebox_ 引入了内置自动化功能。  Codebox 具
 
 
 
+[[benefits-of-amazon-fsx-for-ontap-for-self-managed-databases]]
 == Amazon FSx for ONTAP为自助管理数据库带来的优势
 
 * *持久性、可用性和可靠性*：FSx for ONTAP提供了多种功能来增强FSx for ONTAP上托管的自管理数据库的持久性和可用性、例如支持单可用性区域和多可用性区域部署的高可用性、应用程序感知型快照、使用复制改进的灾难恢复以及高效备份。
@@ -79,6 +85,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["了�
 
 
 
+[[tools-to-use-netapp-workload-factory]]
 == 使用NetApp Workload Factory 的工具
 
 您可以将NetApp Workload Factory 与以下工具一起使用：
@@ -94,6 +101,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["了�
 
 
 
+[[supported-configurations]]
 == 支持的配置
 
 您可以将 Workload Factory 与以下数据库引擎、版本、操作系统和部署模型一起使用，遵循 AWS、NetApp ONTAP、Microsoft SQL Server、Oracle 和 PostgreSQL 最佳实践。
@@ -167,6 +175,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["了�
 |===
 
 
+[[integrated-aws-services]]
 == 集成AWS服务
 
 数据库包括以下集成 AWS 服务：
@@ -180,6 +189,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["了�
 
 
 
+[[regions]]
 == 区域
 
 支持FSx for ONTAP的所有商业区域均支持数据库。 https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["查看支持的 Amazon 地区。"^]
@@ -187,13 +197,13 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["了�
 不支持以下AWS区域：
 
 * 中国地区
-* GovCloud (美国)地区
 * 机密云
 * 云的绝密
 
 
 
 
+[[getting-help]]
 == 获取帮助
 
 适用于NetApp ONTAP 的Amazon FSX是AWS第一方解决方案。如有与您的FSx for ONTAP文件系统、基础架构或使用此服务的任何解决方案相关的问题或技术支持问题、请使用AWS管理控制台中的支持中心创建AWS支持案例。选择 "FSX for ONTAP " 服务和相应的类别。提供创建 AWS 支持案例所需的其余信息。

@@ -15,6 +15,7 @@ summary: 在NetApp Workload Factory for Databases 中创建一个新的 Microsof
 
 
 
+[[about-this-task]]
 == 关于此任务
 
 在从 Workload Factory 创建 Microsoft SQL Server 之前，请了解数据库主机配置的可用存储部署类型、Microsoft 多路径 I/O 配置、Active Directory 部署、网络详细信息以及完成此操作的要求。
@@ -55,6 +56,7 @@ Microsoft SQL Server 部署模型都需要使用 iSCSI 存储协议创建 LUN。
 
 
 
+[[before-you-begin]]
 == 开始之前
 
 在创建新数据库主机之前、请确保满足以下前提条件。
@@ -75,6 +77,7 @@ Microsoft SQL Server 部署模型都需要使用 iSCSI 存储协议创建 LUN。
 
 
 
+[[step-1-create-a-database-server]]
 == 第1步：创建数据库服务器
 
 您可以使用_快速创建_或_高级创建_部署模式在具有_自动化_模式权限的工作负载工厂中完成此任务。您还可以使用 Codebox 中提供的以下工具：REST API、AWS CLI、AWS CloudFormation 和 Terraform。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["了解如何使用CodeBox实现自动化"^] 。
@@ -399,6 +402,7 @@ AWS管理的密钥会根据服务适用性进行筛选。
 ====
 
 
+[[step-2-enable-remote-connection-on-the-microsoft-sql-server]]
 == 第2步：在Microsoft SQL Server上启用远程连接
 
 服务器部署后，Workload Factory 不会在 Microsoft SQL Server 上启用远程连接。要启用远程连接，请完成以下步骤。

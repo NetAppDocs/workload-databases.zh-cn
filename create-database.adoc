@@ -37,6 +37,7 @@ NOTE: 使用SMB协议的Microsoft SQL Server不支持创建数据库。
 
 
 
+[[create-a-database]]
 == 创建数据库
 
 在 Workload Factory 中，您可以使用“快速创建”或“高级创建”部署模式来完成此任务。

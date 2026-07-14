@@ -15,18 +15,21 @@ summary: 已知限制确定了本产品版本不支持的平台、设备或功�
 
 
 
+[[instance-detection-support]]
 == 实例检测支持
 
 Workload Factory 支持检测仅在 Amazon Linux 操作系统上运行的 PostgreSQL 实例和仅在 Red Hat Enterprise Linux 上运行的 Oracle 实例。
 
 
 
+[[ami-image-version-support]]
 == AMI映像版本支持
 
 对于每个SQL版本、我们最多只会显示四个最新版本或修订版的AMI映像。我们不允许从早于最新四个版本的AMI映像进行安装。
 
 
 
+[[custom-ami]]
 == 自定义AMI
 
 使用自定义AMI进行部署会假定映像中存在安装介质。FCI配置需要执行此操作的原因如下：
@@ -39,12 +42,14 @@ Workload Factory 支持检测仅在 Amazon Linux 操作系统上运行的 Postgr
 
 
 
+[[roll-back-and-retry-for-failed-deployments]]
 == 对于失败的部署、请回滚并重试
 
 Workload Factory 不支持回滚和重试失败的部署。您可以从 AWS 中的 CloudFormation 控制台回滚或重试失败的堆栈。
 
 
 
+[[active-directory-and-dns-resource-rollback]]
 == Active Directory和DNS资源回滚
 
 从AWS中的CloudFormation控制台回滚测试或失败的部署时、不会从Active Directory和DNS中删除以下DNS资源：
@@ -58,76 +63,89 @@ Workload Factory 不支持回滚和重试失败的部署。您可以从 AWS 中�
 
 
 
+[[always-on-availability-groups-configuration-support]]
 == 始终可用性组配置支持
 
 工作负载工厂不支持管理 Always On 可用性组配置。
 
 
 
+[[custom-encryption-keys]]
 == 自定义加密密钥
 
 根据服务适用性、不会列出FSx for ONTAP的自定义加密密钥。您必须选择适当的密钥。AWS托管密钥会根据服务适用性进行筛选。
 
 
 
+[[cloudformation-template]]
 == CloudFormation模板
 
 下载或复制的CodeBox生成的CloudFormation模板(YAML文件)的保留期限为7天。
 
 
 
+[[sandbox-support]]
 == 沙盒支持
 
 可以从数据库服务器创建的沙盒克隆的最大数量为90个。
 
 
 
+[[microsoft-sql-server-detection-and-management]]
 == Microsoft SQL Server检测和管理
 
 Microsoft SQL Server 检测未保存。每次访问 Workload Factory 中的数据库时，Microsoft SQL Server 检测都会再次运行以识别该区域中的 SQL 安装。
 
 
 
+[[explore-savings]]
 == 了解节省量
 
 在"清单"选项卡中、为每个Microsoft SQL实例显示的估计成本是在ONTAP文件系统级别(而不是托管此SQL实例的卷)的FSx上计算的。
 
 
 
+[[multiple-fsx-for-ontap-file-systems]]
 == 多个FSx for ONTAP文件系统
 
 Workload Factory不支持为具有多个FSx for ONTAP文件系统的Microsoft SQL Server创建或保存配置。仅支持部署一个FSx for ONTAP文件系统配置。
 
 
 
+[[optimization-limitations]]
 == 优化限制
 
 
 
+[[compute-rightsizing-optimization]]
 === 优化计算规模
 
 更改为某些实例类型时、可能会重置网络配置、从而可能导致优化期间节点连接失败并导致作业失败。检查和更新DNS设置和iSCSI会话可能需要手动干预。有关EC2大小调整限制的详细信息、请参见link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Amazon Elel生 计算云文档"^]。
 
 
 
+[[ontap-and-os-configuration-optimization]]
 === ONTAP和操作系统配置优化
 
 ONTAP配置和操作系统配置不支持对多个SQL Server实例进行批量优化。
 
 
 
+[[operating-system-patch-assessment-for-optimization]]
 === 操作系统修补程序评估以实现优化
 
 为优化目的而进行的操作系统补丁评估可能无法在专用网络中发挥作用。评估依赖于 AWS Patch Manager。要了解如何修补私有网络中的 Windows EC2 实例，请参阅 AWS 云操作博客link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["如何使用 AWS Systems Manager 修补私有子网中的 Windows EC2 实例"^]。
 
 
 
+[[on-premises-savings-calculation]]
 == 内部成本节省计算
 
 Microsoft SQL Server内部存储卷大小的成本节省和节省百分比计算未考虑在内。
 
 
 
+[[cross-region-replication-assessment]]
 == 跨区域复制评估
 
 * 如果目标FSx for ONTAP文件系统位于其他AWS帐户中、则优化评估无法确定是否正在使用跨区域复制(CRR)。
@@ -136,30 +154,33 @@ Microsoft SQL Server内部存储卷大小的成本节省和节省百分比计算
 
 
 
+[[database-host-authentication-when-exploring-savings]]
 == 探索节省时进行数据库主机身份验证
 
 在某些权限有限的情况下，身份验证成功后，探索储蓄页面不会加载数据。
 
 
 
+[[integration-with-netapp-backup-and-recovery]]
 == 与NetApp备份和恢复集成
 
 将主机添加到NetApp Backup and Recovery 进行保护后，数据库发现有时会失败。
 
 
 
+[[region-support]]
 == 区域支持
 
 不支持以下AWS区域：
 
 * 中国地区
-* GovCloud (美国)地区
 * 机密云
 * 最高机密
 
 
 
 
+[[registering-oracle-on-suse-linux-enterprise-server-12]]
 == 在 SUSE Linux Enterprise Server 12 上注册 Oracle
 
 在 SUSE Linux Enterprise Server 12 上注册 Oracle 数据库时，Workload Factory 不会安装 Python 依赖项。您必须手动配置所需的 Python 版本。  Workload Factory 要求最低版本为 3.6；但是，我们推荐版本 3.11。

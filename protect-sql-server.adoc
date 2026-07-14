@@ -15,6 +15,7 @@ summary: 保护 Microsoft SQL Server 实例和数据库。
 
 
 
+[[about-this-task]]
 == 关于此任务
 
 Workload Factory 可自动发现资源、验证先决条件以及配置和安装 Microsoft SQL Server 插件，为使用NetApp Backup and Recovery 保护您的工作负载做好准备。该插件是NetApp软件的主机端组件，可让您保护 Microsoft SQL Server 工作负载。
@@ -25,6 +26,7 @@ NetApp Backup and Recovery 利用NetApp SnapMirror数据复制技术，通过创
 
 
 
+[[before-you-begin]]
 == 开始之前
 
 必须满足以下要求才能使用备份和恢复保护 Microsoft SQL Server 工作负载。
@@ -47,6 +49,7 @@ NetApp Backup and Recovery 利用NetApp SnapMirror数据复制技术，通过创
 
 
 
+[[prepare-for-protection-with-netapp-backup-and-recovery]]
 == 使用NetApp Backup and Recovery 做好保护准备
 
 完成准备过程，以使用NetApp备份和恢复保护您的 Microsoft SQL Server 资源。
@@ -75,6 +78,7 @@ link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies
 
 
 
+[[edit-protection-for-microsoft-sql-server-resources]]
 == Microsoft SQL Server 资源的编辑保护
 
 您可以编辑NetApp Backup and Recovery中已受保护的 Microsoft SQL Server 实例和数据库的保护设置。编辑保护功能允许您修改受保护 SQL Server 实例的保护策略或计划。

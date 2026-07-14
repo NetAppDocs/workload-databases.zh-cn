@@ -4,6 +4,7 @@
 
 
 
+[[databases-dashboard-enhancements]]
 === 数据库信息板增强功能
 
 仪表板的全新设计包括以下图形和增强功能：
@@ -19,6 +20,7 @@
 
 
 
+[[new-completed-with-issues-status-in-job-monitoring]]
 === 作业监控中新增了"已完成但存在问题"状态
 
 现在、数据库的作业监控功能可提供新的"已完成但存在问题"状态、以便您可以了解哪些子作业存在问题以及存在哪些问题。
@@ -27,6 +29,7 @@ link:https://docs.netapp.com/us-en/workload-databases/monitor-databases.html["�
 
 
 
+[[assessment-and-optimization-for-over-provisioned-microsoft-sql-server-licenses]]
 === 评估和优化过度配置的Microsoft SQL Server许可证
 
 现在、节省量计算器将评估您的Microsoft SQL Server部署是否需要Enterprise Edition。如果许可证配置过度、计算器建议降级。通过优化应用程序、您将能够自动降级数据库中的许可证。

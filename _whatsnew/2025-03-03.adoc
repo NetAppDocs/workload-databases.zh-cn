@@ -4,6 +4,7 @@
 
 
 
+[[postgresql-high-availability-configuration]]
 === PostgreSQL高可用性配置
 
 现在、您可以为PostgreSQL服务器部署高可用性(HA)配置。
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.h
 
 
 
+[[terraform-support-for-postgresql-server-creation]]
 === 为PostgreSQL服务器创建提供Terraform支持
 
 现在、您可以使用CodeBox中的Terraform部署PostgreSQL。
@@ -22,6 +24,7 @@ link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.h
 
 
 
+[[resiliency-assessment-for-local-snapshot-schedule]]
 === 本地快照计划的故障恢复能力评估
 
 为数据库工作负载提供了新的故障恢复能力评估。我们将评估Microsoft SQL Server实例中的卷是否具有有效的计划快照策略。快照是数据的时间点副本、可帮助您的数据库环境在数据丢失时保持弹性。
@@ -30,6 +33,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[maxdop-remediation-for-database-workloads]]
 === 数据库工作负载的MAXDOP修复
 
 现在、适用于数据库的BlueXP  工作负载工厂支持针对最大并行度(MAXDOP)服务器配置进行修复。如果MAXDOP配置不是最佳配置、则可以让BlueXP  工作负载在出厂时为您优化配置。
@@ -38,6 +42,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[email-savings-analysis-report]]
 === 通过电子邮件发送节省量分析报告
 
 与FSx for ONTAP相比、在探索Amazon El生 性块存储和FSx for Windows文件服务器存储环境的节省空间时、您现在可以通过电子邮件将建议报告发送给您自己、团队成员和客户。

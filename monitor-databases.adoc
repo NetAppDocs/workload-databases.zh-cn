@@ -15,6 +15,7 @@ summary: 在NetApp Workload Factory for Databases 中跟踪数据库作业并监
 
 
 
+[[about-this-task]]
 == 关于此任务
 
 数据库提供作业监控功能、以便您可以跟踪作业进度、并在发生任何故障时进行诊断和故障排除。您可以按类型和状态筛选作业、使用搜索功能查找作业以及下载作业表。
@@ -35,6 +36,7 @@ summary: 在NetApp Workload Factory for Databases 中跟踪数据库作业并监
 
 
 
+[[monitor-jobs]]
 == 监控作业
 
 监控作业以跟踪数据库操作的进度，并在发生任何故障时进行诊断和排除故障。
