@@ -11,7 +11,7 @@ summary: 注册资源，以便您可以监控NetApp Workload Factory for Databas
 
 
 [role="lead"]
-注册 Microsoft SQL Server 实例和 Oracle 数据库，以便您可以在NetApp Workload Factory for Databases 中监控实例和数据库状态、资源利用率、保护和存储性能。
+为 Microsoft SQL Server 注册实例，为 Oracle 注册数据库，以便您可以在 NetApp Workload Factory for Databases 中管理资源、创建数据库和沙盒克隆、运行错误日志分析以及优化配置。
 
 仅当资源在 FSx for ONTAP 文件系统存储上运行时，您才能注册资源。
 
@@ -20,18 +20,20 @@ summary: 注册资源，以便您可以监控NetApp Workload Factory for Databas
 [[about-the-task]]
 == 关于任务
 
-注册实例（SQL Server）或数据库（Oracle）涉及三个步骤：实例或数据库身份验证、FSx for ONTAP 身份验证以及准备。要准备，请在实例或数据库上安装 AWS、NetApp 和 PowerShell 模块，并满足 Workload Factory for Databases 功能（如 link:analyze-error-logs.html["错误日志分析"] 或 link:optimize-configurations.html["精心策划的评估"]）的最低要求。
+注册实例（SQL Server）或数据库（Oracle）涉及两个步骤：实例或数据库身份验证和准备。身份验证是验证实例或数据库凭据的过程。准备工作包括在实例或数据库上安装 AWS、NetApp 和 PowerShell 模块，以满足 Workload Factory for Databases 功能（如 link:create-database.html["创建数据库"]、link:create-sandbox-clone.html["创建沙盒"]、link:analyze-error-logs.html["错误日志分析"] 或 link:optimize-configurations.html["架构完善的评估"]）的最低要求。
 
 Workload Factory 仅支持 Microsoft SQL Server 实例和 Oracle 数据库注册和管理。根据您在 Workload Factory 中选择的 AWS 账户凭据，PostgreSQL 主机将显示在清单中。目前，Workload Factory 支持仅在 Amazon Linux 操作系统上运行的未注册 PostgreSQL 实例。
-
-AWS GovCloud (US) 用户必须使用 AWS Secrets Manager 对 FSx for ONTAP 凭据进行身份验证。对于所有其他用户，您必须使用文件系统凭据对 FSx for ONTAP 进行身份验证。
 
 
 
 [[before-you-begin]]
 == 开始之前
 
-实例或数据库的主机必须出现在清单中。要使主机出现在库存中，您必须 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、规划和分析_权限"^] 在您的 AWS 账户中。
+在注册实例或数据库之前，必须执行以下操作：
+
+* 请确保要注册的资源的主机显示在清单中。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_操作和修复_权限"^]在您的 AWS 帐户中。
+* 将链接与托管要注册的资源的 FSx for ONTAP 文件系统关联。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何关联现有链接或创建和关联新链接。"^] 链接关联后，返回此操作。
+
 
 
 
@@ -58,7 +60,7 @@ AWS GovCloud (US) 用户必须使用 AWS Secrets Manager 对 FSx for ONTAP 凭�
 [[register-a-microsoft-sql-server-instance]]
 == 注册 Microsoft SQL Server 实例
 
-注册实例有三个步骤：实例身份验证、FSx for ONTAP 身份验证以及完成缺失先决条件的准备。您可以注册单个实例或多个实例。
+注册实例有两个步骤 - 实例身份验证和准备。您可以注册单个实例或多个实例。
 
 Workload Factory 支持 SQL Server 的故障转移群集实例 (FCI) 和独立部署的注册。
 
@@ -78,19 +80,7 @@ Workload Factory 支持 SQL Server 的故障转移群集实例 (FCI) 和独立�
 
 
 
-. 要对 FSx for ONTAP 进行身份验证（步骤 2），请执行以下操作，然后选择*下一步*：
-+
-.. 选择 *Use the same credentials for all resources* 或 *Manage credentials manually*。
-.. 输入带有 FSx for ONTAP 凭据的 AWS SSM Parameter ARN（适用于 GovCloud 账户）或 FSx for ONTAP 文件系统用户名和密码（适用于所有其他账户），然后选择 *Next*。
-+
-对于 GovCloud 账户，AWS SSM Parameter ARN 值在 AWS Management Console 的 Parameter Store 中的 Parameter details 下提供，格式如下： `{fsx:{"username":"fsxadmin","password":"pass"}}`。AWS SSM Parameter 类型必须为"Secure String"，名称格式为  `/netapp/wlmdb/<fsx_filesystemID>`。了解有关从 link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud 文档"^] 检索 SSM 参数的更多信息。
-
-+
-如果 FSx for ONTAP 文件系统已通过身份验证，请选择*下一步*。
-
-
-
-. 要准备（步骤 3），请确保实例满足最低要求。
+. 要准备（步骤 2），请确保实例满足最低要求。
 +
 为了满足最低要求，实例必须安装 AWS 和 NetApp PowerShell 模块以及 PowerShell 7 模块，并且您必须完成先决条件检查中列出的至少一项功能的先决条件。
 
@@ -116,7 +106,7 @@ Workload Factory 支持 SQL Server 的故障转移群集实例 (FCI) 和独立�
 [[register-an-oracle-database]]
 == 注册 Oracle 数据库
 
-注册实例有三个步骤 - 数据库身份验证、FSx for ONTAP 身份验证以及完成缺失先决条件的准备。您可以注册单个或多个数据库。
+注册实例有两个步骤 - 数据库身份验证和准备。您可以注册单个实例或多个数据库。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
@@ -134,20 +124,7 @@ Workload Factory 支持 SQL Server 的故障转移群集实例 (FCI) 和独立�
 
 
 
-. 要对 FSx for ONTAP 进行身份验证（步骤 2），请执行以下操作，然后选择*下一步*：
-+
-.. 选择 *Use the same credentials for all resources* 或 *Manage credentials manually*。
-.. 输入带有 FSx for ONTAP 凭据的 AWS SSM Parameter ARN（适用于 GovCloud 账户）或 FSx for ONTAP 文件系统用户名和密码（适用于所有其他账户），然后选择 *Next*。
-+
-AWS SSM 参数类型必须为"Secure String"，名称格式为 `/netapp/wlmdb/<fsx_filesystemID>`。按以下格式输入 AWS SSM 参数 ARN 的值：
-`{fsx:{"username":"fsxadmin","password":"pass"}}`。了解有关从link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["AWS GovCloud 文档"^]检索 SSM 参数的更多信息。
-
-+
-如果 FSx for ONTAP 文件系统已通过身份验证，请选择*下一步*。
-
-
-
-. 要准备（步骤 3），请确保数据库满足所需的先决条件。如果安装了所有必需的模块并满足先决条件，请选择*下一步*注册数据库。否则，请按照以下步骤操作。
+. 要准备（步骤 2），请确保数据库满足所需的先决条件。如果安装了所有必需的模块并满足先决条件，请选择*下一步*注册数据库。否则，请按照以下步骤操作。
 +
 .. 在*先决条件检查视图*中查看先决条件。
 +
@@ -171,5 +148,5 @@ AWS SSM 参数类型必须为"Secure String"，名称格式为 `/netapp/wlmdb/<f
 * 从清单中查看数据库
 * link:create-database.html["创建数据库"]
 * link:create-sandbox-clone.html["创建数据库克隆（沙盒）"]
-* link:optimize-configurations.html["实施结构良好的数据库配置"]
+* link:optimize-configurations.html["对数据库配置进行全面、精心设计的评估"]
 

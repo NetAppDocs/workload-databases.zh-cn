@@ -22,11 +22,15 @@ link:optimize-overview.html["了解 Workload Factory 中的配置分析和良好
 [[about-this-task]]
 == 关于此任务
 
-Workload Factory 每天分析数据库配置。每日分析提供精心设计的状态、见解和建议。您可以自动修复配置问题以满足最佳实践要求。
+Workload Factory 每天分析数据库配置。每日分析提供精心设计的状态、见解和建议。
 
-您可以从 Workload Factory 控制台中的数据库清单或 Well-architected 仪表板查看和修复问题。
+当您向 AWS 账户授予 _view、planning 和 analysis_ 权限时，许多建议都可用。如果您授予 _operations and remediation_ 权限，则所有建议都可用，您可以自动修复配置问题以满足最佳实践。
+
+您可以从 Workload Factory 控制台中的数据库清单或精心设计的仪表板查看和修复问题。由于数据库配置的要求各不相同，您可以忽略不适用于数据库环境的特定配置的分析。这有助于您避免不必要的警报和不准确的优化结果。
 
 或者，您可以执行一次性评估，查看数据库配置的最佳实践，而无需存储凭据或注册资源。
+
+您还可以用简单的语言创建自定义规则，以根据组织的标准和 NetApp 最佳实践验证您的环境。通过试运行测试规则，然后安排它们在您的环境中运行。 link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["详细了解自定义规则。"^]
 
 .分析的内容
 Workload Factory 分析以下配置的良好架构状态：
@@ -62,6 +66,8 @@ Workload Factory 分析以下配置的良好架构状态：
 执行一次性评估以找出 Microsoft SQL Server 实例或 Oracle 数据库的良好架构状态，而无需存储凭据或注册资源。
 
 您可以多次运行脚本并上传结果。Workload Factory 会在每次上传时更新架构完善的状态和见解。
+
+对于每个配置，您可以查看当前值和建议值。
 
 [role="tabbed-block"]
 ====
@@ -104,13 +110,29 @@ Workload Factory 分析以下配置的良好架构状态：
 ====
 
 
+[[perform-an-on-demand-assessment]]
+== 执行按需评估
+
+如果您在 AWS 帐户中授予 _operations and remediation_ 权限，则可以对 Oracle 数据库执行按需评估。您无需注册资源即可运行此评估。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择 *Databases*。
+. 在*库存*中，选择 *Oracle* 作为引擎类型。
+. 选择*查看和修复*。
+. 在 Well-architected 状态选项卡中，选择*立即分析*。
+. 查看任何配置的建议。如果未优化配置，Workload Factory 将在建议中包含最佳实践和潜在问题。
+
+
+
+
 [[before-you-begin-fixing-dismissing-and-re-activating-configurations]]
 == 在开始修复、关闭和重新激活配置之前
 
-以下要求对于持续监控数据库环境和自动修复配置问题是必要的。一次性评估不需要这些要求。
+以下要求是持续评估数据库环境和自动修复配置问题所必需的。一次性评估不需要这些要求。
 
 * 你必须link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _操作和修复_ 权限"^]在您的 AWS 账户中。
-* 资源必须在 Workload Factory 中注册，存储类型必须是 FSx for ONTAP。link:register-instance.html["了解如何注册资源。"]
+* 您必须在 Workload Factory 中注册资源，且存储类型必须为 FSx for ONTAP。 link:register-instance.html["了解如何注册资源。"]
 * 在修复设置或配置之前，请查看每个建议。对于 RSS 和 MAXDOP，请在更改生产环境之前测试建议的设置以检查性能。
 
 
@@ -204,3 +226,13 @@ Workload Factory 停止配置分析。
 
 .结果
 Workload Factory 重新激活配置分析并从现在开始每天运行。
+
+
+
+[[related-information]]
+== 相关信息
+
+* link:optimize-overview.html["了解 Workload Factory 中数据库资源的配置分析和架构良好的状态"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用链接连接到 FSx for ONTAP 文件系统"^]
+* link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["了解自定义规则"^]
+

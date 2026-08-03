@@ -33,6 +33,9 @@ summary: 分析数据库工作负载工厂中的错误日志。
 link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定价"^]
 
 
+NOTE: 如果您的账号管理员已关闭 AI 功能，您将看到一条消息，无法使用 AI 分析功能。请联系您的管理员或 link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["了解人工智能管理"^]。
+
+
 
 [[data-privacy-and-security]]
 === 数据隐私和安全
