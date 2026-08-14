@@ -4,47 +4,98 @@ permalink: monitor-databases.html
 keywords: monitor databases, monitor jobs, track database jobs 
 summary: 在NetApp Workload Factory for Databases 中跟踪数据库作业并监控数据库。 
 ---
-= 在数据库工作负载工厂中监控数据库作业
+= 监控 Workload Factory for Databases 中的操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在NetApp Workload Factory for Databases 中跟踪数据库作业并监控数据库，以提高对数据库操作的可见性和控制力。
+使用 NetApp Workload Factory 中的 Tracker 监控和跟踪 FSx for ONTAP、凭据和链接操作的执行情况，并监控任务进度。
+
+.关于此任务
+Workload Factory 提供了 Tracker（一种监控功能），让您可以监控和跟踪 FSx for ONTAP、凭据和链接操作的进度与状态，查看操作任务和子任务的详细信息，并诊断任何问题或故障。
+
+Tracker 中提供了几种操作。您可以按时间范围（过去 24 小时、7 天、14 天或 30 天）、工作负载、状态和用户筛选作业；使用搜索功能查找作业；并将作业表下载为 CSV 文件。您可以随时刷新 Tracker。您还可以快速重试失败的操作，或编辑失败操作的参数后重试该操作。
+
+跟踪器支持两个级别的监控，具体取决于操作。每个任务（如文件系统部署）都显示任务描述、状态、开始时间、任务持续时间、用户、区域、代理资源、任务 ID 和所有相关的子任务。您可以查看 API 响应以了解操作期间发生的情况。
+
+跟踪器任务级别（含示例）::
++
+--
+* 级别 1（任务）：跟踪文件系统部署。
+* 级别 2（子任务）：跟踪与文件系统部署相关的子任务。
+
+
+--
+操作状态:: 跟踪器中的操作状态如下：_正在进行_、_成功_和_失败_。
++
+--
+操作频率:: 操作频率基于作业类型和作业计划。
+
+
+--
+事件保留:: 事件在用户界面中保留 30 天。
 
 
 
-[[about-this-task]]
-== 关于此任务
 
-数据库提供作业监控功能、以便您可以跟踪作业进度、并在发生任何故障时进行诊断和故障排除。您可以按类型和状态筛选作业、使用搜索功能查找作业以及下载作业表。
+[[track-and-monitor-operations]]
+== 跟踪和监控操作
 
-作业监控支持多达三个级别的监控、具体取决于作业。例如、对于新数据库和沙盒克隆创建、作业监控会跟踪父作业和子作业。
-
-.作业监控级别
-* 1级(父作业)：跟踪主机部署作业。
-* 级别2 (子作业)：跟踪与主机部署父作业相关的子作业。
-* 级别3 (任务)：列出对每个资源执行的操作顺序。
-
-
-.作业状态
-作业监控功能会每天、每周、每两周和每月跟踪_进行中_、_已完成_、_已完成但出现问题_和_失败_作业。
-
-.作业事件保留
-作业监控事件将在用户界面中保留30天。
-
-
-
-[[monitor-jobs]]
-== 监控作业
-
-监控作业以跟踪数据库操作的进度，并在发生任何故障时进行诊断和排除故障。
+使用 Tracker 跟踪和监控 NetApp Console 中的操作。
 
 .步骤
 . 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
-. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择*数据库*。
-. 从数据库菜单中，选择*作业监控*。
-. 在“作业监控”中，使用过滤器或搜索来缩小作业结果范围。您还可以下载工作报告。
-. 或者，选择作业的操作菜单，然后单击“转到 CloudFormation”以在 AWS CloudFormation 控制台中查看作业日志。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] ，然后选择*Administration*。
+. 在"管理"菜单中，选择 *Tracker*。
+. 在 Tracker 中，使用筛选器或搜索来缩小作业结果。您也可以下载作业报告。
 
+
+
+
+[[view-api-request]]
+== 查看 API 请求
+
+在 Codebox 中查看 Tracker 中任务的 API 请求。
+
+.步骤
+. 在 Tracker 中，选择一个任务。
+. 选择操作菜单，然后选择 *View API request*。
+
+
+
+
+[[retry-a-failed-operation]]
+== 重试失败的操作
+
+在 Tracker 中重试失败的操作。您还可以复制失败操作的错误消息。
+
+
+NOTE: 对于失败的操作，仅允许 x 次重试。
+
+.步骤
+. 在跟踪器中，选择一个失败的操作。
+. 选择操作菜单，然后选择*重试*。
+
+
+.结果
+操作已重新启动。
+
+
+
+[[edit-and-retry-a-failed-operation]]
+== 编辑并重试失败的操作
+
+编辑失败操作的参数，然后在 Tracker 之外重试该操作。
+
+.步骤
+. 在跟踪器中，选择一个失败的操作。
+. 选择操作菜单，然后选择*编辑并重试*。
++
+您将被重定向到可以编辑参数并重试此操作的操作页面。
+
+
+
+.结果
+操作已重新启动。转到 Tracker 以查看操作状态。

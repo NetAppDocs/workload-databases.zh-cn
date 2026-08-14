@@ -310,15 +310,6 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">结果</block>
-  <block id="67b0a66954400448325457f930e0f82b" category="paragraph">作业监控支持多达三个级别的监控、具体取决于作业。例如、对于新数据库和沙盒克隆创建、作业监控会跟踪父作业和子作业。</block>
-  <block id="b830a8f027299af6d1d8ffbb130bcc58" category="list-text">作业监控级别</block>
-  <block id="f52bf93027629736a089ef7f590091e0" category="list-text">1级(父作业)：跟踪主机部署作业。</block>
-  <block id="0954e42bf0119b1189263290f1e567d2" category="list-text">级别2 (子作业)：跟踪与主机部署父作业相关的子作业。</block>
-  <block id="df942ff3756f5cbd24f42b521acc64f8" category="list-text">级别3 (任务)：列出对每个资源执行的操作顺序。</block>
-  <block id="79ea79a1991592553b64d7ab6d30bdc0" category="list-text">作业状态</block>
-  <block id="5c7a83ffcacee6b5f8b97e61c20dc908" category="list-text">作业事件保留</block>
-  <block id="a4c455fbdb91b6c5a283d4a40626cd5b" category="list-text">作业监控事件将在用户界面中保留30天。</block>
-  <block id="4639d0e2e2909a747265c2f704128bca" category="section-title">监控作业</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">一个</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">两个</block>
   <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 添加凭据和权限</block>
@@ -539,8 +530,6 @@
   <block id="9812aa4803326e6a5401134b4e94a3d3" category="list-text">计算器将评估以下因许可证而分配的资源的条件：</block>
   <block id="509a14e7eed7c8c8d42162d9af93a1ec" category="list-text">企业功能使用情况</block>
   <block id="4fdb074e0b83810d198c8cb5f3b2752e" category="list-text">计算器将验证是否正在使用以下任何企业功能：</block>
-  <block id="5f08a8bbfa89b18958e70a8c6cbc44c3" category="paragraph">数据库提供作业监控功能、以便您可以跟踪作业进度、并在发生任何故障时进行诊断和故障排除。您可以按类型和状态筛选作业、使用搜索功能查找作业以及下载作业表。</block>
-  <block id="5ade2a57e46cf328c900013574754aa9" category="list-text">作业监控功能会每天、每周、每两周和每月跟踪_进行中_、_已完成_、_已完成但出现问题_和_失败_作业。</block>
   <block id="13ac5039f81a1aa4ae7419bf17b5b6a0" category="section-title">2025年1月6日</block>
   <block id="f2398fe4ddb880ba6c52b376ef9b960c" category="list-text"><block ref="f2398fe4ddb880ba6c52b376ef9b960c" category="inline-link-macro-rx"></block></block>
   <block id="f7626e6c4414254923965c059c538355" category="section-title">操作系统修补程序评估以实现优化</block>
@@ -992,12 +981,6 @@
   <block id="11a6396604d8219ed002cb8225307c46" category="paragraph">通过管理NetApp Workload Factory for Databases 中的资源，您可以使用高级功能，包括数据库和克隆创建、资源利用和监控。此外，您可以分析数据库配置的良好架构状态并实施配置最佳实践以提高性能并降低运营成本。资源管理仅适用于在 FSx for ONTAP文件系统存储上运行的 Microsoft SQL Server 和 Oracle 环境。</block>
   <block id="e98220d7d332a2a7434542839da04607" category="list-text">从库存中查看数据库</block>
   <block id="0690b01336afa366f51f1055a4ad9fe3" category="summary">在NetApp Workload Factory for Databases 中跟踪数据库作业并监控数据库。</block>
-  <block id="a6b42ef301955a90099ca61e9ef81cf4" category="doc">在数据库工作负载工厂中监控数据库作业</block>
-  <block id="286fce2abd655f344b009a041e8e00c8" category="paragraph">在NetApp Workload Factory for Databases 中跟踪数据库作业并监控数据库，以提高对数据库操作的可见性和控制力。</block>
-  <block id="1cd28a54c1c28cd395b6d2b065f22570" category="paragraph">监控作业以跟踪数据库操作的进度，并在发生任何故障时进行诊断和排除故障。</block>
-  <block id="83ec30ad643377590496c7c3f631d82e" category="list-text">从数据库菜单中，选择*作业监控*。</block>
-  <block id="25372b696736cc8872762877a51aa062" category="list-text">在“作业监控”中，使用过滤器或搜索来缩小作业结果范围。您还可以下载工作报告。</block>
-  <block id="a2d1f59bacfe584c82f07fe77341a830" category="list-text">或者，选择作业的操作菜单，然后单击“转到 CloudFormation”以在 AWS CloudFormation 控制台中查看作业日志。</block>
   <block id="58ee6063aaed57090a82d5cfa901a882" category="summary">NetApp Workload Factory for Databases 扫描 Microsoft SQL Server 配置，提供见解和建议，帮助您实现卓越运营。</block>
   <block id="04b3e1206245453c778ab6cffd793ea7" category="inline-link-macro">了解 Workload Factory 中的配置分析和良好架构状态。</block>
   <block id="9198e3a1fac406d0bf2e8a31d569e09c" category="paragraph"><block ref="9198e3a1fac406d0bf2e8a31d569e09c" category="inline-link-macro-rx"></block></block>
@@ -1466,8 +1449,6 @@
   <block id="8215457eb88ef1fb110b79579b908e3d" category="paragraph">您可以忽略不适用于您环境的配置分析。这样可以避免不必要的警报和不准确的优化结果。</block>
   <block id="8817b0c6f0795c52cab62044416eee8a" category="inline-link-macro">详细了解自定义规则</block>
   <block id="821af7226458ea25572e88e8ab2026e4" category="paragraph">您还可以用简单的语言创建自定义规则，以根据组织的标准和 NetApp 最佳实践验证您的环境。通过试运行测试规则，然后安排它们在您的环境中运行。<block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>。</block>
-  <block id="8be08850265c9930c26a8e5b28183a2e" category="paragraph">您还可以用简单的语言创建自定义规则，以根据组织的标准和 NetApp 最佳实践验证您的环境。通过试运行测试规则，然后安排它们在您的环境中运行。</block>
-  <block id="7c24f3892a999a3e8d688cabe068b17a" category="paragraph"><block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>。</block>
   <block id="e2f155aff866bc2907bb5aaf211ff083" category="paragraph">对于一次性评估，只需为要分析的 Microsoft SQL Server 实例或 Oracle 数据库提供一次凭据。</block>
   <block id="3132f405525cd70f7bad3d7130c03410" category="list-text">*持续评估*：Workload Factory 定期分析数据库环境，为优化配置提供持续建议，并自动修复问题。</block>
   <block id="90d64ee5b341967517900bb62d4c728f" category="paragraph">要进行持续评估，您需要在 AWS 帐户中注册资源、关联链接并授予权限。</block>
@@ -1664,4 +1645,38 @@
   <block id="ecf2ed7ba31a9f6e31583b9d9052f055" category="inline-link-macro">对数据库配置进行全面、精心设计的评估</block>
   <block id="75c47d4b747a86f2b6de36d602facc46" category="list-text"><block ref="75c47d4b747a86f2b6de36d602facc46" category="inline-link-macro-rx"></block></block>
   <block id="91d90ea5487ed9ed44e834f42f272ccb" category="section-title">2026年8月3日</block>
+  <block id="454b8bf6ce5d6ce9ec4bbed2cbcc375b" category="doc">监控 Workload Factory for Databases 中的操作</block>
+  <block id="674b84367e7a585d7eb4cb69538ab5be" category="paragraph">使用 NetApp Workload Factory 中的 Tracker 监控和跟踪 FSx for ONTAP、凭据和链接操作的执行情况，并监控任务进度。</block>
+  <block id="8dbebb7d8525e0c16443f866feb41a02" category="paragraph">Workload Factory 提供了 Tracker（一种监控功能），让您可以监控和跟踪 FSx for ONTAP、凭据和链接操作的进度与状态，查看操作任务和子任务的详细信息，并诊断任何问题或故障。</block>
+  <block id="6092aff2fd96382c8039bf4b05f69f42" category="paragraph">Tracker 中提供了几种操作。您可以按时间范围（过去 24 小时、7 天、14 天或 30 天）、工作负载、状态和用户筛选作业；使用搜索功能查找作业；并将作业表下载为 CSV 文件。您可以随时刷新 Tracker。您还可以快速重试失败的操作，或编辑失败操作的参数后重试该操作。</block>
+  <block id="9233b1148f18eb744b69d4d3620c296c" category="paragraph">跟踪器支持两个级别的监控，具体取决于操作。每个任务（如文件系统部署）都显示任务描述、状态、开始时间、任务持续时间、用户、区域、代理资源、任务 ID 和所有相关的子任务。您可以查看 API 响应以了解操作期间发生的情况。</block>
+  <block id="5cdbeb1c4cc65e8f551e161828701113" category="list-text">跟踪器任务级别（含示例）</block>
+  <block id="21a1f3fb63f8e2b67d072b29080f89f9" category="list-text">级别 1（任务）：跟踪文件系统部署。</block>
+  <block id="5517abda6821fee1e969e9d59498b33e" category="list-text">级别 2（子任务）：跟踪与文件系统部署相关的子任务。</block>
+  <block id="88ebc1f479e6de47fd711c4be81c4d26" category="list-text">操作状态</block>
+  <block id="afcc9733e2e2e0ce70f1ecee29c8f008" category="list-text">跟踪器中的操作状态如下：_正在进行_、_成功_和_失败_。</block>
+  <block id="de32977622108a1960ab0fcf45adaf80" category="list-text">操作频率</block>
+  <block id="a9853b6069302c4152781f48222c3541" category="list-text">操作频率基于作业类型和作业计划。</block>
+  <block id="01b0a4fcc33bdafd6e65537f24f463de" category="list-text">事件保留</block>
+  <block id="b3c382e94f4b4abcc049ce95e85dc998" category="list-text">事件在用户界面中保留 30 天。</block>
+  <block id="cfd98e00a6e308c04ab9f76a854b6989" category="section-title">跟踪和监控操作</block>
+  <block id="e80eb219e8472681a001172074028f46" category="paragraph">使用 Tracker 跟踪和监控 NetApp Console 中的操作。</block>
+  <block id="90f9c44ed80c8f4c833d62a795593434" category="list-text">选择菜单 <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> ，然后选择*Administration*。</block>
+  <block id="31793001124176cff5a1e8aea00621a1" category="list-text">在"管理"菜单中，选择 *Tracker*。</block>
+  <block id="2ba65fb298b74a9b72d949d4fe3479b3" category="list-text">在 Tracker 中，使用筛选器或搜索来缩小作业结果。您也可以下载作业报告。</block>
+  <block id="aa2a2cd452f8a71b2f2dcdae68114732" category="section-title">查看 API 请求</block>
+  <block id="68538d555ae12c680ea428aaa850d90f" category="paragraph">在 Codebox 中查看 Tracker 中任务的 API 请求。</block>
+  <block id="968877018213bf42962084001c210472" category="list-text">在 Tracker 中，选择一个任务。</block>
+  <block id="bd56fc255ce900fc195c9bc0d7ed20c0" category="list-text">选择操作菜单，然后选择 *View API request*。</block>
+  <block id="1448fba076a066622a9f93a25ab170a2" category="section-title">重试失败的操作</block>
+  <block id="89f1070b2ef1ba678a8cb4823fa74cb2" category="paragraph">在 Tracker 中重试失败的操作。您还可以复制失败操作的错误消息。</block>
+  <block id="2d7556f00012ad460e93441b51cce6ea" category="admonition">对于失败的操作，仅允许 x 次重试。</block>
+  <block id="b866b632b7f32ded2a0a0907100641bf" category="list-text">在跟踪器中，选择一个失败的操作。</block>
+  <block id="9d506eb8fb5e05c2467a690e5e727cd8" category="list-text">选择操作菜单，然后选择*重试*。</block>
+  <block id="121145d60db2324903b129ae74d6c0a9" category="paragraph">操作已重新启动。</block>
+  <block id="bde5076ae2a993de9042a7e1dd4dc445" category="section-title">编辑并重试失败的操作</block>
+  <block id="2ae5a8ae85adca2aebf16aa81130c9c5" category="paragraph">编辑失败操作的参数，然后在 Tracker 之外重试该操作。</block>
+  <block id="0270fd4391a6b334aa157faf0a6b7304" category="list-text">选择操作菜单，然后选择*编辑并重试*。</block>
+  <block id="a071e4310b0dbc18ec326c217f47692f" category="paragraph">您将被重定向到可以编辑参数并重试此操作的操作页面。</block>
+  <block id="49814788ce382c87a117a40e54ae858b" category="paragraph">操作已重新启动。转到 Tracker 以查看操作状态。</block>
 </blocks>
