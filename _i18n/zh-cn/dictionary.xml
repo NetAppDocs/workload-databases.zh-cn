@@ -4,7 +4,6 @@
   <block id="2ea6aca63123969c1931cd33bf4619a0" category="doc">使用CodeBox实现自动化</block>
   <block id="bd282943a337f4287ca0d70f9a836261" category="inline-link-macro">CodeBox自动化</block>
   <block id="7954c9f6b266222ad558a397a97a8531" category="paragraph">详细了解 <block ref="d6a91743d83ea88006a3d66c27289981" category="inline-link-macro-rx"></block> 以及如何使用它。</block>
-  <block id="7a5c12f2d0d30b237d1a31e54803d0f8" category="doc">检查沙盒克隆中数据的完整性</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">关于此任务</block>
   <block id="6a2235a7d08e9218e23793c114adf3a3" category="paragraph">如果在源数据库繁忙时从该数据库创建沙盒克隆、则该克隆的数据可能与源数据库的最新快照不同步。此操作会检查沙盒克隆中所有对象的完整性、以确定沙盒克隆数据是否为最新数据。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
@@ -13,7 +12,6 @@
   <block id="655a2ef85749dcbb368e1b8b32300552" category="list-text">在完整性检查对话框中，单击*Integrity check*。</block>
   <block id="d2212da19c03bb2b369faeaf9d65f109" category="list-text">在沙盒或作业监控中检查完整性检查的状态。</block>
   <block id="8ea37d89915fca644158ae5283f70e68" category="paragraph">如果完整性检查失败、建议您不要使用沙盒克隆并创建新的沙盒克隆。</block>
-  <block id="2af2cf99863645202599afd2708773e2" category="doc">将沙盒克隆连接到CI/CD工具</block>
   <block id="bc71cf96586c8edb703f886cce218a0c" category="paragraph">要自动向数据库克隆交付新版本的软件、您应连接到CI/CD管道。使用此操作提供的REST API代码进行连接。</block>
   <block id="452804eac893658bcf658126b3087551" category="list-text">选择*连接到CI/CD工具*。</block>
   <block id="8191f4b1aee7fafe827afe8814de01a6" category="list-text">在CI/CD对话框中、复制或下载连接到CI/CD工具所需的REST API代码。</block>
@@ -809,7 +807,6 @@
   <block id="75851f48043c7a3877391f5330fb19c1" category="inline-link-macro">在 Workload Factory 控制台中探索检测到的存储环境的节省情况</block>
   <block id="a0766b901d28d8d972d369d556ae3e10" category="paragraph"><block ref="a0766b901d28d8d972d369d556ae3e10" category="inline-link-macro-rx"></block></block>
   <block id="c6ce33e049285b31d2f12d7b30e16106" category="summary">分析数据库工作负载工厂中的错误日志。</block>
-  <block id="de5aa3916ae7d5763f4d4fe818491a77" category="doc">分析工作负载工厂中的错误日志</block>
   <block id="3d573c7428ab9f849be508456eb81821" category="paragraph">无论何时使用错误日志分析器，您都可以完全控制您的环境，同时受益于先进的 AI 分析。</block>
   <block id="14f1fce00d2e95227126f5556a73ec6a" category="paragraph">要使用错误日志分析器，您需要激活 Amazon Bedrock、选择 Workload Factory 使用的模型、创建私有端点以连接到 Amazon Bedrock、添加权限并创建企业许可证。</block>
   <block id="bf71ae5aa16f5632361df660e7d643c6" category="section-title">数据隐私和安全</block>
@@ -838,7 +835,6 @@
   <block id="6c66105ac3f36d7885800e03e5285fd9" category="paragraph">使用 REST API 代码将沙盒克隆连接到持续集成和持续交付 (CI/CD) 管道，以通过NetApp Workload Factory for Databases 中的自动化改进软件交付。</block>
   <block id="db976ff1c57ed4bcfb284135455febc2" category="list-text">在沙盒中，选择沙盒克隆的操作菜单以连接到 CI/CD 工具。</block>
   <block id="b95fa4e6e7b8f2168ad9a4d81e4e65cb" category="summary">在NetApp Workload Factory for Databases 中创建一个新的 Microsoft SQL Server。</block>
-  <block id="03f5b1a395b2051aedbbb6bf1bdb40e6" category="doc">在数据库工作负载工厂中创建 Microsoft SQL Server</block>
   <block id="197df9493ba9fcc2016851ab07990409" category="paragraph">在 Workload Factory for Databases 中创建新的 Microsoft SQL Server 或数据库主机需要 FSx for ONTAP文件系统部署和 Active Directory 资源。</block>
   <block id="a6955f3c1d9afee975ddac409c1488f3" category="paragraph">在从 Workload Factory 创建 Microsoft SQL Server 之前，请了解数据库主机配置的可用存储部署类型、Microsoft 多路径 I/O 配置、Active Directory 部署、网络详细信息以及完成此操作的要求。</block>
   <block id="bc032bc6a4cd520164072ac886f6e6fe" category="paragraph">Microsoft SQL Server 部署模型都需要使用 iSCSI 存储协议创建 LUN。  Workload Factory 将 Microsoft 多路径 I/O (MPIO) 配置为通过 FSx for ONTAP配置 SQL Server 的 LUN 的一部分。  MPIO 是根据 AWS 和NetApp最佳实践配置的。</block>
@@ -870,7 +866,6 @@
   <block id="33802730984f4af59a8f5644e1ba546a" category="list-text">选择具有托管 SQL 服务器实例的数据库服务器来创建数据库。</block>
   <block id="9b54a5b8ea82e880e1fd6cc2a1d063e7" category="list-text">单击托管实例的操作菜单，然后选择*创建用户数据库*。</block>
   <block id="af3c6f6c1f47dc04d93d4779689c9eca" category="summary">在NetApp Workload Factory for Databases 中创建一个新的 PostgreSQL SQL 服务器。</block>
-  <block id="3df8ab93e6ee66742b140a409805477c" category="doc">在NetApp Workload Factory 中创建 PostgreSQL 服务器</block>
   <block id="8b9f915cb2ecd69bdd7dd72955de0196" category="paragraph">在NetApp Workload Factory for Databases 中创建新的 PostgreSQL 服务器或数据库主机需要 FSx for ONTAP文件系统部署和 Active Directory 资源。</block>
   <block id="aee2d1bda2fa7a372599f9dc76274403" category="paragraph">在从 Workload Factory 创建 PostgreSQL 服务器之前，请了解数据库主机配置的可用存储部署类型、工作负载工厂操作模式以及完成此操作的要求。</block>
   <block id="ff041d4f4cf4ed6c6abc6b5c4266cc8c" category="paragraph">+ FSx for ONTAP文件系统有两种 PostgreSQL 服务器部署模型：_高可用性 (HA)_ 或_单实例_。根据您选择的 FSx for ONTAP部署模型，为 FSx for ONTAP文件系统创建不同的资源。</block>
@@ -885,11 +880,9 @@
   <block id="c4445bf1142f4fd36aa3139618ee4f3f" category="list-text">*源数据库*：您需要一个可用于克隆的源数据库。</block>
   <block id="969e7140d33129e87f01e95c59fed40f" category="list-text">*安装*：当克隆具有多个数据和/或日志文件的 SQL 数据库时，Workload Factory 会克隆自动分配或定义的驱动器号下的所有文件。</block>
   <block id="e84beb556a76fd6484a39d4447262026" category="summary">当您不再需要NetApp Workload Factory for Databases 中的沙盒克隆并想要释放存储容量时，请将其删除。</block>
-  <block id="b0a116a4eb9216062a5e5afb2cd40a82" category="doc">在NetApp Workload Factory for Databases 中删除数据库克隆</block>
   <block id="e0c0b02aa121e916724ee28f460bc605" category="list-text">在沙盒中，选择要删除的沙盒克隆的操作菜单。</block>
   <block id="478b782141e49e75e5d4d0534bf71587" category="list-text">在删除对话框中，选择*删除*确认删除。</block>
   <block id="54be7afd7595249ed399278de89305fa" category="summary">如果您不再想从 Workload Factory 控制台部署或监控资源，请取消注册该资源。</block>
-  <block id="5a2d38279bf5114017c85d3f5b74a52f" category="doc">在NetApp Workload Factory 中取消注册资源</block>
   <block id="df442bf005a0d53e338d95bb9b23b0c2" category="paragraph">如果您不再想从NetApp Workload Factory 控制台部署或监控资源，请取消注册资源，例如 Microsoft SQL Server 实例或 Oracle 数据库。取消注册资源还会删除实例使用的 FSx for ONTAP存储容量。</block>
   <block id="5e515299dfd2f2c8ff923eaac6bbb1bf" category="list-text">在清单中，选择引擎类型：*Microsoft SQL Server*、*Oracle* 或 *PostgreSQL*。</block>
   <block id="e91df2086570d35902c167d64feb1a17" category="list-text">找到您要取消注册的资源，选择操作菜单，然后选择*取消注册*。</block>
@@ -1002,7 +995,6 @@
   <block id="51bbd388cda4367b34d6dc50a5e134a5" category="list-text">在 Well-architected 分析页面上，选择 *Dismissed configuration* 以仅显示已解除的配置。</block>
   <block id="bc4a349f7f95e73490c3e2f8aaabe892" category="list-text">选择*重新激活*以重新启动已推迟或已取消的配置的配置分析。</block>
   <block id="7c6a7786a083c7d074bada76f0bcd33b" category="summary">数据库工作负载工厂定期分析 Microsoft SQL Server 和 Oracle 配置以确定是否存在任何问题。</block>
-  <block id="8317ffd1a53e5d269aaac07d321b8dd0" category="doc">Workload Factory 中的数据库环境配置分析</block>
   <block id="84ee3cc4e2a4f169585c115121112580" category="paragraph">使用 Workload Factory 控制台中的NetApp Backup and Recovery 保护您的 Microsoft SQL Server 应用程序数据。通过此集成，您可以实现以下保护目标：使用本地快照在本地主Amazon FSx for NetApp ONTAP （FSx for ONTAP）存储上备份工作负载，并将工作负载复制到辅助 FSx for ONTAP存储。</block>
   <block id="bb1b704677e0a9ac00a2bda88f85fe27" category="paragraph">Workload Factory 可自动发现资源、验证先决条件以及配置和安装 Microsoft SQL Server 插件，为使用NetApp Backup and Recovery 保护您的工作负载做好准备。该插件是NetApp软件的主机端组件，可让您保护 Microsoft SQL Server 工作负载。</block>
   <block id="e9575ae90b7ec054c43a9797544d0103" category="paragraph">NetApp Backup and Recovery 利用NetApp SnapMirror数据复制技术，通过创建快照副本并将其传输到备份位置来确保所有备份完全同步。</block>
@@ -1044,7 +1036,6 @@
   <block id="b9b9dcaedb68518f618349de0f962cda" category="list-text">在沙盒中，选择要恢复的数据库克隆的操作菜单。</block>
   <block id="6e9172aaf947b38ec5222c7fb3133fb6" category="list-text">在“重新基线”对话框中，选择“*重新基线*”。</block>
   <block id="9fb5614e3401e433c6a39f267483e3be" category="summary">从源数据库中拆分数据库克隆以在NetApp Workload Factory for Databases 中创建新数据库。</block>
-  <block id="e56d0520400755a2305a399e4c431a50" category="doc">从源数据库中拆分数据库克隆</block>
   <block id="9d708cb240624cc1bb63ba25da0a742b" category="paragraph">在NetApp Workload Factory for Databases 中，将数据库克隆从其源数据库中拆分出来会创建一个新的数据库，这将消耗一定量的存储容量。当拆分完成并且新数据库出现在库存中时，克隆将被删除。</block>
   <block id="98af8bdb2147926a0a4db45c478851f0" category="list-text">在沙盒中，选择要拆分的数据库克隆的操作菜单。</block>
   <block id="2c9eebdddd5694f0300c1318fc1f439d" category="list-text">在拆分对话框中，选择*拆分*。</block>
@@ -1061,7 +1052,6 @@
   <block id="40eff8559acd41057187b6cb11fa1919" category="list-text">完成以下步骤，将您的新 NSS 帐户与您的NetApp控制台登录关联<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
   <block id="f335678326583cea28377216c5515221" category="paragraph">拥有NetApp支持站点帐户后，请按照以下步骤将该帐户与您的NetApp控制台登录关联<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
   <block id="e4fded9c69219e4b9e3629dcc1d6ec81" category="summary">查看和复制NetApp Workload Factory for Databases 中数据库克隆的连接信息。</block>
-  <block id="b5e7499b294ed4ae4fad36d6e70d1cdf" category="doc">查看数据库克隆的连接信息</block>
   <block id="cfb19a0ff7e382b29551267d52377e0f" category="list-text">在沙盒中，选择沙盒克隆的操作菜单来查看其连接信息。</block>
   <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">选择*关闭*。</block>
   <block id="0b640c5e49490eb540208568a359492b" category="summary">了解NetApp Workload Factory for Databases 的新功能。</block>
@@ -1679,4 +1669,23 @@
   <block id="0270fd4391a6b334aa157faf0a6b7304" category="list-text">选择操作菜单，然后选择*编辑并重试*。</block>
   <block id="a071e4310b0dbc18ec326c217f47692f" category="paragraph">您将被重定向到可以编辑参数并重试此操作的操作页面。</block>
   <block id="49814788ce382c87a117a40e54ae858b" category="paragraph">操作已重新启动。转到 Tracker 以查看操作状态。</block>
+  <block id="619b54ce9e8c031c19256b4d8d750363" category="doc">节省计算器更新</block>
+  <block id="e5dcb68e9a92c735dc0967956647bc80" category="paragraph">您可以仅使用查看、规划和分析权限，比较在 FSx for ONTAP 文件系统上运行 Microsoft SQL Server 工作负载的各种成本组成部分（如存储、计算、SQL 许可证、快照和克隆）与 Elastic Block Store (EBS)、FSx for Windows File Server 及本地存储之间的差异。</block>
+  <block id="fa97573f07318758714d48498eeb8beb" category="inline-link-macro">探索数据库工作负载的节省</block>
+  <block id="99e479d341973e05fca0c15ab9ffdad2" category="list-text"><block ref="99e479d341973e05fca0c15ab9ffdad2" category="inline-link-macro-rx"></block></block>
+  <block id="a5ca0e96d815aa95d08fcc15e4dee05c" category="inline-link-macro">数据库工作负载的权限</block>
+  <block id="6c371a91504dc6f98ab6ece596f7ab2f" category="list-text"><block ref="6c371a91504dc6f98ab6ece596f7ab2f" category="inline-link-macro-rx"></block></block>
+  <block id="82c635e3b100afc233299479fb3eda14" category="doc">分析 NetApp Workload Factory for Databases 中的错误日志</block>
+  <block id="8b5884ee309b1732b4b26db4f1d9391b" category="doc">在 NetApp Workload Factory for Databases 中检查沙盒数据完整性</block>
+  <block id="0354b35f78b3b0a2abc4857046c8bb44" category="doc">将沙盒克隆连接到 NetApp Workload Factory for Databases 中的 CI/CD</block>
+  <block id="c4e3c9361d524348aecb1ccf6a70b736" category="doc">在 NetApp Workload Factory for Databases 中创建 Microsoft SQL Server</block>
+  <block id="1929af40476a50a593dc74fdadb92f44" category="doc">在 NetApp Workload Factory for Databases 中创建 PostgreSQL 服务器</block>
+  <block id="0f1488f1cffdc496b17aa68133f45409" category="doc">在 NetApp Workload Factory for Databases 中删除数据库克隆</block>
+  <block id="06eec6f6dae375e43105994b315f1664" category="doc">注销 NetApp Workload Factory for Databases 中的资源</block>
+  <block id="5719a8b368e4d1cde735746b2f77b822" category="doc">在 NetApp Workload Factory 中实施架构完善的数据库配置</block>
+  <block id="c845f87358189f25588e9dd9d9cf0101" category="doc">了解 NetApp Workload Factory for Databases 中的配置分析</block>
+  <block id="b1ac22e25e1bec51612ad9e1ac8a5f03" category="doc">使用 NetApp Workload Factory for Databases 保护 Microsoft SQL Server 工作负载</block>
+  <block id="1251c2c3562b89a08c4f6e3d98cee073" category="doc">在 NetApp Workload Factory for Databases 中拆分数据库克隆</block>
+  <block id="95d5b5a9387ddb73c562c266681172d5" category="doc">在 NetApp Workload Factory for Databases 中查看克隆连接信息</block>
+  <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">2026年8月30日</block>
 </blocks>

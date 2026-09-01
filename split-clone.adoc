@@ -4,7 +4,7 @@ permalink: split-clone.html
 keywords: split, clone, source, new database 
 summary: 从源数据库中拆分数据库克隆以在NetApp Workload Factory for Databases 中创建新数据库。 
 ---
-= 从源数据库中拆分数据库克隆
+= 在 NetApp Workload Factory for Databases 中拆分数据库克隆
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

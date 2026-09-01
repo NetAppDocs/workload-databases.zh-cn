@@ -4,7 +4,7 @@ permalink: delete-clone.html
 keywords: delete, clone 
 summary: 当您不再需要NetApp Workload Factory for Databases 中的沙盒克隆并想要释放存储容量时，请将其删除。 
 ---
-= 在NetApp Workload Factory for Databases 中删除数据库克隆
+= 在 NetApp Workload Factory for Databases 中删除数据库克隆
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

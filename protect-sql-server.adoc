@@ -4,7 +4,7 @@ permalink: protect-sql-server.html
 keywords: protect, server, Microsoft SQL Server, SQL Server, protect instance, protect database 
 summary: 保护 Microsoft SQL Server 实例和数据库。 
 ---
-= 保护 Microsoft SQL Server 工作负载
+= 使用 NetApp Workload Factory for Databases 保护 Microsoft SQL Server 工作负载
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

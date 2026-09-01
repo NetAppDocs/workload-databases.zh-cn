@@ -4,7 +4,7 @@ permalink: check-clone-integrity.html
 keywords: integrity check, data corruption 
 summary: 运行完整性检查以确定NetApp Workload Factory for Databases 中的沙盒克隆数据是否完整或损坏。 
 ---
-= 检查沙盒克隆中数据的完整性
+= 在 NetApp Workload Factory for Databases 中检查沙盒数据完整性
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

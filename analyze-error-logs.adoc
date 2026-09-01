@@ -4,7 +4,7 @@ permalink: analyze-error-logs.html
 keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, Oracle database error logs, smart analysis, Agentic AI 
 summary: 分析数据库工作负载工厂中的错误日志。 
 ---
-= 分析工作负载工厂中的错误日志
+= 分析 NetApp Workload Factory for Databases 中的错误日志
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
