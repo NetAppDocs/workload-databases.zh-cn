@@ -22,7 +22,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 Workload Factory for Databases 还支持使用 AOAG 部署模型对 Microsoft SQL Server 实例进行精心设计的分析。您可以分析可用性组中 SQL Server 实例的配置，并接收优化部署配置和遵守最佳实践的建议。注册您的 AOAG 实例以启用此功能。
 
-link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#register-a-sql-server-instance["在 Workload Factory for Databases 中注册资源"]
+link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["在 Workload Factory for Databases 中注册资源"]
 
 
 

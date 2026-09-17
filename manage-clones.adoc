@@ -1,0 +1,159 @@
+---
+sidebar: sidebar 
+permalink: manage-clones.html 
+keywords: manage clones, manage sandboxes, manage sandbox clones, check clone integrity, check data integrity, connect to CICD, delete clone 
+summary: 在 NetApp Workload Factory for Databases 中管理您的沙盒克隆，以保持开发和测试环境的可靠性和成本效益。 
+---
+= 在 NetApp Workload Factory for Databases 中管理数据库克隆
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Workload Factory for Databases 中管理沙盒克隆，以保持开发和测试环境的可靠性和成本效益。验证克隆的数据是否完好无损，将克隆连接到您的 CI/CD 管道以自动化软件交付，或刷新、还原或拆分克隆以将其与您当前的开发需求保持一致。当您不再需要克隆时，请将其删除以释放存储容量。
+
+
+
+[[check-sandbox-data-integrity]]
+== 检查沙盒数据完整性
+
+运行完整性检查以确定NetApp Workload Factory for Databases 中的沙盒克隆数据是否完整或损坏。
+
+.关于此任务
+如果在源数据库繁忙时从该数据库创建沙盒克隆、则该克隆的数据可能与源数据库的最新快照不同步。此操作会检查沙盒克隆中所有对象的完整性、以确定沙盒克隆数据是否为最新数据。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择“存储”。
+. 从数据库菜单中，选择*沙盒*。
+. 在沙盒中，选择要检查完整性的沙盒克隆的操作菜单。
+. 选择*运行完整性检查*。
+. 在完整性检查对话框中，单击*Integrity check*。
+. 在沙盒或作业监控中检查完整性检查的状态。
+
+
+如果完整性检查失败、建议您不要使用沙盒克隆并创建新的沙盒克隆。
+
+
+
+[[connect-a-sandbox-clone-to-cicd]]
+== 将沙盒克隆连接到CI/CD
+
+使用 REST API 代码将沙盒克隆连接到持续集成和持续交付 (CI/CD) 管道，以通过NetApp Workload Factory for Databases 中的自动化改进软件交付。
+
+.关于此任务
+要自动向数据库克隆交付新版本的软件、您应连接到CI/CD管道。使用此操作提供的REST API代码进行连接。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择*数据库*。
+. 从数据库菜单中，选择*沙盒*。
+. 在沙盒中，选择沙盒克隆的操作菜单以连接到 CI/CD 工具。
+. 选择*连接到CI/CD工具*。
+. 在CI/CD对话框中、复制或下载连接到CI/CD工具所需的REST API代码。
+. 单击 * 关闭 * 。
+
+
+
+
+[[delete-a-database-clone]]
+== 删除数据库克隆
+
+当您不再需要NetApp Workload Factory for Databases 中的沙盒克隆并想要释放存储容量时，请将其删除。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择*数据库*。
+. 从数据库菜单中，选择*沙盒*。
+. 在沙盒中，选择要删除的沙盒克隆的操作菜单。
+. 选择 * 删除 * 。
+. 在删除对话框中，选择*删除*确认删除。
+
+
+
+
+[[refresh-a-database-clone]]
+== 刷新数据库克隆
+
+刷新NetApp Workload Factory for Databases 中的数据库（沙盒）克隆，使其等同于当前时刻或之前时间点的源数据库。
+
+.关于此任务
+刷新克隆会将克隆更新到当前的源数据库或前一个时间点创建的源数据库快照。对沙盒克隆所做的任何更改都将被删除。
+
+.开始之前
+只有在源数据库处于活动状态时才可以刷新。
+
+要从快照刷新数据库克隆、源数据库必须至少具有一个快照才能执行此操作。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择*数据库*。
+. 从数据库菜单中，选择*沙盒*。
+. 在沙盒中，选择要刷新的沙盒克隆的操作菜单。
+. 选择*刷新*。
+. 在刷新对话框中、选择以下选项之一：
++
+.. *刷新到当前时间*
+.. *刷新到时间点*
++
+对于此选项、请从下拉菜单中选择要刷新到的数据库快照。
+
+
+
+. 单击 * 刷新 * 。
+
+
+
+
+[[revert-a-database-clone]]
+== 还原数据库克隆
+
+将数据库（沙盒）克隆恢复为在NetApp Workload Factory for Databases 中创建时的原始版本。
+
+当您克隆数据库时，创建时的克隆是_baseline_克隆。克隆的数据库中的数据与创建时的源数据库相同。由于数据库克隆中的数据会随着时间而发生变化，您可能希望将数据恢复到首次创建克隆时的基线。此操作称为重新基线克隆。重新基准化克隆而不是创建新的克隆可以节省空间；但是，对数据库克隆所做的任何更改都将被删除。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择*数据库*。
+. 从数据库菜单中，选择*沙盒*。
+. 在沙盒中，选择要恢复的数据库克隆的操作菜单。
+. 选择*重新基线*。
+. 在“重新基线”对话框中，选择“*重新基线*”。
+
+
+
+
+[[split-a-database-clone]]
+== 拆分数据库克隆
+
+在NetApp Workload Factory for Databases 中，将数据库克隆从其源数据库中拆分出来会创建一个新的数据库，这将消耗一定量的存储容量。当拆分完成并且新数据库出现在库存中时，克隆将被删除。
+
+.开始之前
+考虑新数据库需要多少存储容量。如果需要、 link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html["增加文件系统容量"^] 请在开始之前对FSx for ONTAP文件系统执行此操作。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择*数据库*。
+. 从数据库菜单中，选择*沙盒*。
+. 在沙盒中，选择要拆分的数据库克隆的操作菜单。
+. 选择*S之 分*。
+. 在拆分对话框中，选择*拆分*。
+
+
+
+
+[[view-a-clones-connection-information]]
+== 查看克隆的连接信息
+
+查看和复制NetApp Workload Factory for Databases 中数据库克隆的连接信息。
+
+.步骤
+. 使用其中一个登录link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["控制台体验"^]。
+. 选择菜单 image:workloads-menu-icon.png["汉堡菜单图标用于导航至存储、EDA、AI、数据库、VMware 和管理等工作负载。"] 然后选择*数据库*。
+. 从数据库菜单中，选择*沙盒*。
+. 在沙盒中，选择沙盒克隆的操作菜单来查看其连接信息。
+. 选择*显示连接信息*。
+. 在显示连接信息对话框中、根据需要复制连接信息。
+. 选择*关闭*。
+
