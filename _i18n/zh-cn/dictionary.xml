@@ -1668,14 +1668,6 @@
   <block id="1251c2c3562b89a08c4f6e3d98cee073" category="doc">在 NetApp Workload Factory for Databases 中拆分数据库克隆</block>
   <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">2026年8月30日</block>
   <block id="b5ed82020518e1a667b7f42bf1da1877" category="paragraph"><block ref="b5ed82020518e1a667b7f42bf1da1877" category="inline-link-macro-rx"></block></block>
-  <block id="b3ae445fa637203f0dc17550b5c4a56c" category="doc">精心设计的仪表板中包含的数据库配置</block>
-  <block id="a04fc413f106e041524732d895e4258e" category="paragraph">架构完善的控制面板现在包含针对数据库配置的建议，您可以据此根据最佳实践评估和优化设置。第一批配置包括：</block>
-  <block id="0ab265b548fdc40b21483e61ffde3aba" category="list-text">冷数据分层</block>
-  <block id="4c0abf2d4c54820b8d33061abaf30759" category="list-text">Snapshot 策略</block>
-  <block id="6f5cf50fa90f8d99bf50f65e676c6cba" category="list-text">固态硬盘容量余量</block>
-  <block id="4dcac8e07a1246e665077c1572955236" category="paragraph">通过选择 Workload Factory 控制台中的主菜单并选择 *Well-architected*，找到精心架构的仪表板。</block>
-  <block id="2d647234501319107057acb4d3f8dfaf" category="inline-image-macro">Workload Factory 控制台中的架构完善菜单选项</block>
-  <block id="353cc99df6b21e74c805e74bdab4b8aa" category="paragraph"><block ref="353cc99df6b21e74c805e74bdab4b8aa" category="inline-image-macro-rx" type="image"></block></block>
   <block id="06e2f75907573850abfa673fd6e8572a" category="list-text">*NetApp Terraform 提供程序*：使用 Terraform 构建和管理在 Workload Factory 控制台中生成的基础设施工作流。</block>
   <block id="8ffaca7bd1131475769b15e5950997fd" category="summary">在 NetApp Workload Factory for Databases 中管理您的沙盒克隆，以保持开发和测试环境的可靠性和成本效益。</block>
   <block id="b4f39381f48079f073b43be17aadcceb" category="doc">在 NetApp Workload Factory for Databases 中管理数据库克隆</block>
@@ -1691,4 +1683,6 @@
   <block id="e30e82b6ba088958ce23ba4d6a33b01f" category="sidebar">对数据库工作负载使用 Workload Factory</block>
   <block id="573be33921395db38cda47a4830a127e" category="sidebar">创建数据库资源</block>
   <block id="33995eab65a0112a35f0233d5de5a0a6" category="sidebar">保护、监控和优化数据库资源</block>
+  <block id="753d621a767f80f69e64e577e1856e54" category="doc">每个实例支持多个文件系统</block>
+  <block id="6adeb7328ee4497e74b45036bf16ff9d" category="paragraph">Workload Factory for Databases 支持每个 Microsoft SQL Server 实例使用多个文件系统。您可以在 SQL Server 实例中注册多个文件系统，并同时修复 SQL Server 实例中多个文件系统的一个配置问题。</block>
 </blocks>
