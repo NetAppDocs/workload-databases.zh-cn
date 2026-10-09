@@ -1685,4 +1685,6 @@
   <block id="753d621a767f80f69e64e577e1856e54" category="doc">每个实例支持多个文件系统</block>
   <block id="6adeb7328ee4497e74b45036bf16ff9d" category="paragraph">Workload Factory for Databases 支持每个 Microsoft SQL Server 实例使用多个文件系统。您可以在 SQL Server 实例中注册多个文件系统，并同时修复 SQL Server 实例中多个文件系统的一个配置问题。</block>
   <block id="74bc5d714652a3ae18c64ee93e4ba085" category="section-title">2026年9月30日</block>
+  <block id="3fba0171e458258e875a2f8013e395b8" category="cell">SQL Server 2025</block>
+  <block id="9e5f96378bed43aac0d5d94368775263" category="cell">Windows Server 2025</block>
 </blocks>
