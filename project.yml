@@ -65,6 +65,8 @@ sidebar:
       url: "/monitor-databases.html"
     - title: 保护 Microsoft SQL Server 工作负载
       url: "/protect-sql-server.html"
+  - title: 常见问题解答
+    url: "/faq-workload-factory-databases.html"
   - title: 知识和支持
     entries:
     - title: 注册以获得支持

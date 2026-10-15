@@ -1687,4 +1687,114 @@
   <block id="74bc5d714652a3ae18c64ee93e4ba085" category="section-title">2026年9月30日</block>
   <block id="3fba0171e458258e875a2f8013e395b8" category="cell">SQL Server 2025</block>
   <block id="9e5f96378bed43aac0d5d94368775263" category="cell">Windows Server 2025</block>
+  <block id="4782267fdadc095a2cd17da937e1ccad" category="summary">关于 NetApp Workload Factory for Databases 的常见问题。</block>
+  <block id="2a4cac40440a22026c2bfd855df4dbe7" category="doc">有关 NetApp Workload Factory for Databases 的常见问题</block>
+  <block id="1e1a3b6ab01f226ca1e127f75f84287e" category="paragraph">查找有关 NetApp Workload Factory for Databases 的常见问题解答，包括在 Amazon FSx for NetApp ONTAP 上部署、注册、优化、克隆和保护数据库工作负载时非常有用的概念、前提条件和行为。</block>
+  <block id="ff937566d140b3beee0ae05fa3bf1d16" category="section-title">入门指南和权限</block>
+  <block id="49806e49d4920a1a191dc7edec063393" category="paragraph-title">什么是 Workload Factory for Databases，它支持哪些数据库引擎和部署模型？</block>
+  <block id="2534f34768fea6d6d2a3f455dcdd11b6" category="paragraph">Workload Factory for Databases 发现、评估、配置和管理 FSx for ONTAP 上的 SQL Server、PostgreSQL 和 Oracle 数据库。</block>
+  <block id="9edc1f7174eb2abf6e14bc33c86eb1ed" category="paragraph">有关受支持的型号，请参见<block ref="de005eec6ae9c7f16694e816ae3da980" category="inline-link-macro-rx"></block>。</block>
+  <block id="8f8ab4a3f82cb0a5c9ace0c25cb1f331" category="paragraph-title">Workload Factory for Databases 在哪些 AWS 区域可用？</block>
+  <block id="d58b792ff3cf7eb876f7a2615ce9c542" category="paragraph">Workload Factory for Databases 适用于支持 FSx for ONTAP 的所有商业区域，但不适用于中国区域、Secret Cloud 或 Top Secret Cloud。</block>
+  <block id="ee9b3af8630059982f4d1dd2fd3834a3" category="paragraph"><block ref="ee9b3af8630059982f4d1dd2fd3834a3" category="inline-link-rx"></block></block>
+  <block id="9b97f837f597c001894db81a4bf49825" category="paragraph-title">是否必须授予 AWS 权限才能开始使用 Workload Factory for Databases？</block>
+  <block id="583f7ad88c222c9eeb6be0a5adabca4a" category="paragraph">否。您可以在不授予权限的情况下以基本模式启动，并从 Codebox 复制部分完成的代码示例。如果要发现主机和管理资源，则必须添加 AWS 凭据并为所需的权限创建 IAM 策略。请参阅 <block ref="701d6c5998b7a600f073d19741bb6f76" category="inline-link-macro-rx"></block>。</block>
+  <block id="d5a49a1760f5eae8454d84b8ea1027b1" category="paragraph-title">每个任务（发现、注册、数据库创建、主机部署、修复配置）需要哪个权限级别？</block>
+  <block id="5574a5c0b6d209a5d99bf1cd351dd82d" category="paragraph">检测到的主机的节省计算器和错误日志分析器需要查看、规划和分析权限。注册资源、创建数据库、创建沙盒克隆以及修复架构良好的问题需要操作和修复权限。部署新数据库主机需要数据库主机创建权限。</block>
+  <block id="818beeb2b71e78e10efcaea058043e4a" category="section-title">部署数据库主机</block>
+  <block id="520f3a0f200db765ec937ead78ce446b" category="paragraph-title">部署 SQL Server 主机时，快速创建和高级创建有什么区别？</block>
+  <block id="75983eb7ad3c1f715505bd02a3095fb3" category="paragraph">快速创建应用默认值：FCI 部署、Windows Server 2016 和 SQL Server 2019 Standard Edition。通过高级创建，您可以自定义部署模型（FCI 或单个实例）、操作系统、版本、版本、实例类型、配置的 IOPS 和吞吐量、加密和监控。</block>
+  <block id="ba03f36f2433a2b0aac616d2bb21982c" category="inline-link-macro">创建 SQL Server 主机</block>
+  <block id="fca5317673ab7aed382180b8b3e0459c" category="paragraph"><block ref="5c93d04b6d4ac34e7791c381e0707def" category="inline-link-macro-rx"></block>。</block>
+  <block id="c8b3a2b20e28f630c501ddc4dd6be315" category="paragraph-title">新的 SQL Server FCI 或独立部署会创建什么 FSx for ONTAP 配置？</block>
+  <block id="8a42f97bc55e5daa61133e176e70fafb" category="paragraph">FCI 部署会创建一个 Multi-AZ FSx for ONTAP 文件系统，并且 FCI 仅在 Multi-AZ 配置上受支持。独立部署会创建一个 Single-AZ 文件系统。如果选择现有文件系统，将为 SQL Server 工作负载创建一个新的存储 VM。</block>
+  <block id="1379a0f6a94145014fed6787720550c7" category="paragraph-title">部署主机是否会更改我的 VPC 网络配置？</block>
+  <block id="f74756cfd372f6bc4d1c6a6538a11682" category="paragraph">可能。如果它们不存在，部署会创建它所需的 AWS 接口端点和 S3 网关端点。如果尚未设置，它还会将 VPC DNS 属性<block ref="cb0df2380d372b70fd568d139d704794" prefix=" " category="inline-code"></block>和<block ref="df550516571c5adda5f49cb0f14d22f1" prefix=" " category="inline-code"></block>设置为 true。</block>
+  <block id="74c1ffeee10328970a7ab8ceb202160a" category="inline-link-macro">详细了解如何创建 SQL Server 主机</block>
+  <block id="6ead88c28062baaf60c6d5e6f4f1f313" category="paragraph"><block ref="bda43f4548ee4bc87595f0de68111ac7" category="inline-link-macro-rx"></block>。</block>
+  <block id="7cb60af25bc13129ccee186d65ba8511" category="paragraph-title">部署 SQL Server 主机需要什么 Active Directory 访问权限？</block>
+  <block id="d81468426a0a35f10d104f45b9adfa5b" category="paragraph">您需要 Active Directory 管理访问权限，以便部署可以加入域并创建计算机对象。如果您不提供，部署将创建一个 SQL 服务帐户。对于用户管理的 Active Directory，您必须提供一个安全组，以允许从 EC2 实例到目录服务的流量。</block>
+  <block id="d0f051280c736f69fc18f3a0710773d7" category="paragraph-title">为什么我的 SQL Server 部署会因为 CredSSP 而失败？</block>
+  <block id="4eb056bd12f0faec74839c64756e414d" category="paragraph">在部署期间，Workload Factory 启用 CredSSP 以将凭据委派到配置脚本。如果组策略阻止所有域计算机的 CredSSP 委派，则部署将失败。Workload Factory 在部署后禁用 CredSSP。</block>
+  <block id="71c15050afabf2e28c17ebb68e94db0c" category="paragraph-title">我可以在部署后立即连接到 SQL Server 吗？</block>
+  <block id="a5157316a874f41547a714f96d5153dd" category="paragraph">不会立即生效。Workload Factory 不会在已部署的 SQL Server 上启用远程连接，因此需要自行对其进行配置，例如允许在安全组中使用所需的客户端 IP 或子网。</block>
+  <block id="4958c8f1ec71818c73a1e2d3efaedbaf" category="inline-link-macro">了解如何在 SQL Server 上启用远程连接</block>
+  <block id="f97e008ec427b318ebfaef6889042295" category="paragraph"><block ref="14cf7d66aa5058a706da37f374ee402c" category="inline-link-macro-rx"></block>。</block>
+  <block id="a9e05cf4049d5a4138457dc4467edeb6" category="section-title">注册和管理资源</block>
+  <block id="84410efd9f37ce7811945ec68cc2b64e" category="paragraph-title">在 Workload Factory 中注册实例可以获得什么？有哪些先决条件？</block>
+  <block id="4f37599f7acfe386ce98d17026d91d5f" category="paragraph">通过注册，您可以创建数据库和沙盒克隆、运行错误日志分析以及优化配置。资源必须在 FSx for ONTAP 存储上运行，并显示在清单中，这需要 AWS 凭据。您还必须将链接与 FSx for ONTAP 文件系统相关联，并完成先决条件检查，包括适用于 SQL Server 的 AWS 和 NetApp PowerShell 模块。</block>
+  <block id="9c40ded53e74c2102ef6e824ab1b6db6" category="paragraph"><block ref="2dd9f57d2265bdf5844c29c119e8ca9c" category="inline-link-macro-rx"></block>。</block>
+  <block id="e53c6b066d6c6602a811c3d11467d84a" category="paragraph-title">哪些数据库可以注册和管理，PostgreSQL 呢？</block>
+  <block id="3356e42ee4c2ec8d9acbd45ac17c1497" category="paragraph">只能注册和管理 SQL Server 实例（FCI 和独立）和 Oracle 数据库。PostgreSQL 主机根据您的 AWS 凭据显示在清单中，但尚未注册。检测仅涵盖 Amazon Linux 上的 PostgreSQL 以及 Red Hat Enterprise Linux 上的 Oracle。</block>
+  <block id="6c9d9e9e8f1e090fee51f5e6b35cffbf" category="paragraph-title">在没有互联网接入的专用网络中注册实例需要什么？</block>
+  <block id="7877d69d57003f53050f42fd212847ac" category="paragraph">在 VPC 中使 S3、AWS Systems Manager 和 FSx for ONTAP 的 VPC 端点可用，并在接口端点的安全组中允许端口 443。如果使用代理，则还必须允许所需的 Microsoft、PowerShell Gallery（SQL Server）和 AWS 域。</block>
+  <block id="f0997ab9b5b94cc907f86118e2e69a5e" category="inline-link-macro">了解如何注册资源</block>
+  <block id="b00857e376acec9ec806f92fa888fd00" category="paragraph"><block ref="553020237d27eff9374392b59b689fd2" category="inline-link-macro-rx"></block>。</block>
+  <block id="019bc8bdc013ea6dd01441af0dd627b8" category="paragraph-title">取消注册资源后会发生什么？</block>
+  <block id="cb06b21ddc280eb470693219ca29e347" category="paragraph">您无法再从控制台部署或监控该资源，并且其 FSx for ONTAP 存储容量不再计为该实例已使用的容量。您可以稍后再次注册该资源。</block>
+  <block id="258e1dcdf969c7c797e745f6a20f7e0d" category="inline-link-macro">取消注册资源</block>
+  <block id="fa489722060669b6cbfe6be503909b15" category="paragraph"><block ref="611e4576ed62c821287b729b7dab411f" category="inline-link-macro-rx"></block>。</block>
+  <block id="c1f0a545597f1b39d635f65446676dfc" category="paragraph-title">关于创建数据库，我需要了解哪些信息？</block>
+  <block id="6626cd1c97285f801e13ba3e2c689004" category="paragraph">创建数据库会为数据和日志文件添加两个具有独立 LUN 的新卷。这些文件是精简配置的，仅占用分配大小的几 MB。使用 SMB 的 SQL Server 不支持创建数据库。</block>
+  <block id="539522affb555c466b5c8f976eb383f3" category="inline-link-macro">创建 SQL Server 数据库</block>
+  <block id="2da0747e53050b6c56950827d0893fc4" category="paragraph"><block ref="75046a90403261241119455d1696bc5d" category="inline-link-macro-rx"></block>。</block>
+  <block id="0cda48b44d12625b3d3d3ec35e20bd75" category="paragraph-title">节省计算器比较什么，本地 SQL Server 主机如何评估？</block>
+  <block id="3593386e7986db9c4b4d29ff9618b055" category="paragraph">它将 FSx for ONTAP 上的存储、计算、SQL 许可证、快照和克隆成本与 Amazon Elastic Block Store、FSx for Windows File Server 以及本地存储的成本进行了比较。对于本地主机，您可以下载 PowerShell 评估脚本，在主机上运行该脚本，然后上传结果。然后，您最多可以选择五个主机进行分析。请注意，成本和节省百分比计算中未考虑本地卷大小。</block>
+  <block id="d29c90b4f82c166798f1f8e15dcd72f2" category="inline-link-macro">了解如何使用节省计算器</block>
+  <block id="3892560eb1e15954593d8839a8469893" category="paragraph"><block ref="8d0197f1622e03b4410d58423c12a49b" category="inline-link-macro-rx"></block>。</block>
+  <block id="8c73290e62f99a78591a57f6892086a1" category="paragraph-title">为什么计算器建议将 SQL Server Enterprise 降级到 Standard Edition？</block>
+  <block id="1d2450e32998a69e802f089a858f7ce2" category="paragraph">当实例具有 48 个或更少的 vCPU 和 128 GB 或更少的内存时，建议进行降级。实例也不得使用 Enterprise 功能，如在线索引操作、资源调控器、对等或 Oracle 复制、R/Python 扩展或内存优化的 TempDB。部署模型也不得要求使用 Enterprise。</block>
+  <block id="46d01e5ed21aca01e1648b2531ed1a77" category="paragraph-title">当我选择多个主机时，计算器如何调整 FSx for ONTAP 配置的大小？</block>
+  <block id="71df076cb0fed0fad9fd4d4c052d4e8f" category="paragraph">您最多可以选择五个检测到的主机。Workload Factory 会将它们整合到一个包含一个 SQL 实例的 FSx for ONTAP 配置建议中，除非这些主机超过了单个文件系统的吞吐量、容量或 IOPS 限制。不支持创建或保存多个 FSx for ONTAP 文件系统。</block>
+  <block id="92199d6114a18ff14ac267b0173c17cf" category="paragraph"><block ref="e22e7e4f32e98dc6a7aba821004e4eb9" category="inline-link-macro-rx"></block>。</block>
+  <block id="150b53a82438f77e58d4d56e871000c4" category="section-title">精心设计的配置</block>
+  <block id="426068083195285a1aab3a4ac3dad0aa" category="paragraph-title">一次性和持续性架构完善评估有什么区别？</block>
+  <block id="e62f13f574bfb5c2fd45fa1ab5cd278f" category="paragraph">一次性评估在主机上运行脚本并上传结果，因此不会存储凭据，也不需要注册资源。持续评估需要注册资源、关联链接和授予权限。它每天进行分析，并可以自动解决问题。</block>
+  <block id="0e4628a5e4d70a809c14848ca21c2f82" category="inline-link-macro">优化数据库配置</block>
+  <block id="f6985afd62801e041de4bdbdf125b562" category="paragraph"><block ref="10be26d607b04ac41b48d14462192458" category="inline-link-macro-rx"></block>。</block>
+  <block id="36484a6959ea51ce2f860df0759af8ad" category="paragraph-title">在修复架构完善的配置问题之前，我应该考虑哪些风险？</block>
+  <block id="26115cb105e2df3aff2a9d2157750eec" category="paragraph">有些修复可能会导致停机或服务中断，因此请先查看每个建议。例如，在更改生产之前测试 RSS 和 MAXDOP 性能建议。</block>
+  <block id="76d360863ce992220cc5e13d969b6bf5" category="inline-link-macro">运行评估以了解有关配置建议的更多信息</block>
+  <block id="88423f215b257810305394aaec401fc4" category="paragraph"><block ref="79479fcdf0af6ed1d4212c50bf618c17" category="inline-link-macro-rx"></block>。</block>
+  <block id="c25f05e3f5c4c56586f6b9a81eee18aa" category="paragraph-title">我可以忽略不适用于我的环境的架构完善建议吗？</block>
+  <block id="6ab26fb5272a8e6062288d07b5a960ad" category="paragraph">是。忽略配置会停止其分析，避免不必要的警报，并将其从总优化分数中删除。您可以随时重新激活它，然后每天恢复分析。</block>
+  <block id="216b0f9d0defb9c7b2fc90a44d91b17e" category="inline-link-macro">从架构完善的评估中忽略配置</block>
+  <block id="1d694d6efb18a8286bf26f017330481b" category="paragraph"><block ref="415cc2faf846f6c4919c812f17ee1f68" category="inline-link-macro-rx"></block>。</block>
+  <block id="861078a51e1d73e99a256817c9a5a154" category="paragraph-title">为什么最佳实践建议在 SQL Server 和 Oracle 的卷上禁用计划的本地快照？</block>
+  <block id="3af2059afd09ef0862a548bd0ec73305" category="paragraph">计划的 FSx for ONTAP 快照不具备应用程序一致性。建议使用 NetApp SnapCenter 等工具从外部管理快照，以获取应用程序一致的备份，并避免在还原期间发生损坏。请注意，高级创建主机部署默认启用具有 7 天保留期的每日快照策略。</block>
+  <block id="65d2da016345bf35d0d44ca8442e33fe" category="inline-link-macro">详细了解数据库配置的分析</block>
+  <block id="75fbe2066fe307cd782606b24bd4869b" category="paragraph"><block ref="07c33d76d8f0770dfab847775db7d241" category="inline-link-macro-rx"></block>。</block>
+  <block id="b106daf2fdae0a4bd49b38f8d420b68d" category="section-title">沙盒克隆</block>
+  <block id="391ca9db72946303109a24d4896a9267" category="paragraph-title">沙盒克隆是如何创建的，可以放置在哪里？</block>
+  <block id="3bbf7c958cb2e4ab495a36a32d5d63a1" category="paragraph">沙盒克隆是从源数据库的最新快照创建的。它可以在同一个 SQL Server 实例上，也可以在另一个实例上，前提是目标主机与源位于同一个 VPC 中，并且共享同一个 FSx for ONTAP 文件系统。创建沙盒克隆需要托管（已注册）的 SQL Server 以及操作和修复权限。</block>
+  <block id="1c1dbe56fdf08bd43c074d9a934cd336" category="paragraph"><block ref="6504d115c0eb5a22b47c2642ce84b891" category="inline-link-macro-rx"></block>。</block>
+  <block id="982c02d5df1637bf58d01b9461097110" category="paragraph-title">沙盒克隆的刷新、重新基线和拆分之间有什么区别？</block>
+  <block id="98c2003f15ada0740fd4faa8e94e0045" category="paragraph">刷新会将克隆同步到源数据库的当前状态或以前的快照，并删除对克隆所做的任何更改。与创建新克隆相比，重新基线会将克隆恢复到创建时的状态，同时删除更改并节省空间。拆分会将克隆转换为消耗存储容量的独立数据库，并在拆分完成时删除克隆。</block>
+  <block id="e1f1b37e7b02212acbe08f9f82f26b8e" category="inline-link-macro">管理数据库克隆</block>
+  <block id="5aa6f3dd95bb84df52cc5b97e9fd7a9f" category="list-text"><block ref="2a272be59d3fc3e9b24f62aa8d372380" category="inline-link-macro-rx"></block>。</block>
+  <block id="5f7aaee7c16475aab769c15496c46e5d" category="list-text"><block ref="b7b6079009afe43a128528756b1dbee0" category="inline-link-macro-rx"></block>。</block>
+  <block id="0dae0c13a95ce8c681bc28a121c3ae69" category="paragraph-title">如何验证沙盒克隆的数据是否正确，如果检查失败该怎么办？</block>
+  <block id="e7ed74627b1561cd8461a79358810b61" category="paragraph">如果在源数据库繁忙时创建克隆，则克隆可能与最新快照不同步。完整性检查会检查克隆中的所有对象。如果失败，请勿使用该克隆，并创建一个新克隆。</block>
+  <block id="dbb8c4266166bc0f89a2824c48e50dc4" category="inline-link-macro">检查数据库克隆的完整性</block>
+  <block id="c2ba1a80540f225e5274dff0d33108e1" category="paragraph"><block ref="8ac128c775c2cc11f12b591126762515" category="inline-link-macro-rx"></block>。</block>
+  <block id="a330102b21fc2aa74640b5b0f6d20d7f" category="paragraph-title">在拆分克隆之前，我应该检查什么？</block>
+  <block id="3cc98a05c0bcbde8d2308b172248e95b" category="paragraph">拆分会创建一个消耗额外存储容量的新数据库。规划所需容量，并在需要时提前增加 FSx for ONTAP 文件系统的容量。</block>
+  <block id="7e7397a7b79323762c61941fc0e6b5f9" category="section-title">数据保护</block>
+  <block id="d404dd8427b4c28dbfa1d2c86416a047" category="paragraph-title">备份和恢复为 SQL Server 工作负载提供什么保护？</block>
+  <block id="65bae2ad8db3bdaec75f329c8a5c1340" category="paragraph">它使用主 FSx for ONTAP 存储上的本地快照备份工作负载，并使用 SnapMirror 技术将其复制到二级 FSx for ONTAP 存储。您可以在 Backup and Recovery 中创建保护策略。</block>
+  <block id="134f4db723fad5218b0420d296c36f6a" category="inline-link-macro">使用备份和恢复保护 SQL Server 工作负载</block>
+  <block id="682e931964d4d25dc4a6e06bb893382e" category="paragraph"><block ref="235de46f62004f88453be487a16a47c1" category="inline-link-macro-rx"></block>。</block>
+  <block id="e6e540463f0da11c64286b3213d032da" category="paragraph-title">使用 NetApp Backup and Recovery 保护 SQL Server 需要做些什么？</block>
+  <block id="1f2c4d8d8181aba9734a284d26f3c4a9" category="paragraph">SQL Server 实例必须使用 Windows 凭据注册。您还必须满足 Backup and Recovery SQL Server 要求、NetApp Console 要求（包括 Console 代理）以及许可要求。然后，Workload Factory 将安装 Microsoft SQL Server 插件，并将您重定向到 Backup and Recovery 以创建保护策略。</block>
+  <block id="2e593c29b9200c847ee51d180b1672af" category="section-title">自动化和错误分析</block>
+  <block id="067d3f9b6c9ef0aac1905cdc0585e3dd" category="paragraph-title">什么是 Codebox，使用生成的代码时是否有注意事项？</block>
+  <block id="2ea6aca63123969c1931cd33bf4619a0" category="inline-link-macro">使用 Codebox 实现自动化</block>
+  <block id="d53f23cf23eba63c40f3cc866dbe6cfd" category="paragraph">Codebox 是一个基础架构即代码副驾驶，可为 Workload Factory 支持的操作生成 REST API、AWS CLI、CloudFormation 和 Terraform 代码。Terraform 代码会隐藏 fsxadmin 和 vsadmin 密码，因此您必须重新输入这些密码。下载或复制的 CloudFormation 模板仅保留七天。请参阅 <block ref="4d16796654a24e4b45ccd7b4cddbdc2e" category="inline-link-macro-rx"></block>。</block>
+  <block id="f97304e52b5c3c013082ec79473f77a0" category="paragraph-title">我需要设置什么才能使用人工智能驱动的错误日志分析器？</block>
+  <block id="5e7e8f81a0ac4fd14f2f16c1ab2fa852" category="paragraph">分析器需要 Amazon Bedrock 激活、与主机子网关联的 Bedrock VPC 端点、注册资源和所需的 IAM 权限。对于 Oracle，您还必须授予对 V$DIAG_ALERT_EXT 的访问权限。如果您的帐户管理员禁用了 AI 功能，则分析器不可用。</block>
+  <block id="d1abcf29bd372f70cbfc47a67e60c139" category="inline-link-macro">了解如何在 Workload Factory 中分析错误日志</block>
+  <block id="04449fe0790df54b48e4cb6221e921ab" category="paragraph"><block ref="52e72fd03a4cc0d6f5999e643649e945" category="inline-link-macro-rx"></block>。</block>
+  <block id="c205c53a606156f982f2d7d7c8d9b4a3" category="paragraph-title">使用错误日志分析器时，我的日志数据是否安全？</block>
+  <block id="2aec8f10b1cd6aa48fdd1951d13b132d" category="paragraph">日志数据和聚合保留在您的 AWS 帐户中，并通过私有 VPC 端点传输，不会暴露在公共互联网中。客户数据不会用于训练或改进模型。Bedrock 实时处理日志，并将结果存储在您的环境中。</block>
+  <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">常见问题解答</block>
 </blocks>

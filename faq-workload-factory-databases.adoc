@@ -1,0 +1,204 @@
+---
+sidebar: sidebar 
+permalink: faq-workload-factory-databases.html 
+keywords: faq, frequently asked questions, frequently asked questions about workload factory for databases, workload factory, databases, sql server, oracle, postgresql, fsx for ontap, savings calculator, well-architected, sandbox clones, codebox, backup and recovery 
+summary: 关于 NetApp Workload Factory for Databases 的常见问题。 
+---
+= 有关 NetApp Workload Factory for Databases 的常见问题
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+查找有关 NetApp Workload Factory for Databases 的常见问题解答，包括在 Amazon FSx for NetApp ONTAP 上部署、注册、优化、克隆和保护数据库工作负载时非常有用的概念、前提条件和行为。
+
+
+
+[[getting-started-and-permissions]]
+== 入门指南和权限
+
+.什么是 Workload Factory for Databases，它支持哪些数据库引擎和部署模型？
+Workload Factory for Databases 发现、评估、配置和管理 FSx for ONTAP 上的 SQL Server、PostgreSQL 和 Oracle 数据库。
+
+有关受支持的型号，请参见link:learn-databases.html["了解数据库工作负载工厂"]。
+
+.Workload Factory for Databases 在哪些 AWS 区域可用？
+Workload Factory for Databases 适用于支持 FSx for ONTAP 的所有商业区域，但不适用于中国区域、Secret Cloud 或 Top Secret Cloud。
+
+https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["查看支持的 Amazon 地区。"^]
+
+.是否必须授予 AWS 权限才能开始使用 Workload Factory for Databases？
+否。您可以在不授予权限的情况下以基本模式启动，并从 Codebox 复制部分完成的代码示例。如果要发现主机和管理资源，则必须添加 AWS 凭据并为所需的权限创建 IAM 策略。请参阅 link:quick-start-databases.html["快速入门"]。
+
+.每个任务（发现、注册、数据库创建、主机部署、修复配置）需要哪个权限级别？
+检测到的主机的节省计算器和错误日志分析器需要查看、规划和分析权限。注册资源、创建数据库、创建沙盒克隆以及修复架构良好的问题需要操作和修复权限。部署新数据库主机需要数据库主机创建权限。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#permissions-for-database-workloads["数据库工作负载的权限"^]
+
+
+
+[[deploy-database-hosts]]
+== 部署数据库主机
+
+.部署 SQL Server 主机时，快速创建和高级创建有什么区别？
+快速创建应用默认值：FCI 部署、Windows Server 2016 和 SQL Server 2019 Standard Edition。通过高级创建，您可以自定义部署模型（FCI 或单个实例）、操作系统、版本、版本、实例类型、配置的 IOPS 和吞吐量、加密和监控。
+
+link:create-database-server.html["创建 SQL Server 主机"]。
+
+.新的 SQL Server FCI 或独立部署会创建什么 FSx for ONTAP 配置？
+FCI 部署会创建一个 Multi-AZ FSx for ONTAP 文件系统，并且 FCI 仅在 Multi-AZ 配置上受支持。独立部署会创建一个 Single-AZ 文件系统。如果选择现有文件系统，将为 SQL Server 工作负载创建一个新的存储 VM。
+
+link:create-database-server.html["创建 SQL Server 主机"]。
+
+.部署主机是否会更改我的 VPC 网络配置？
+可能。如果它们不存在，部署会创建它所需的 AWS 接口端点和 S3 网关端点。如果尚未设置，它还会将 VPC DNS 属性 `EnableDnsSupport`和 `EnableDnsHostnames`设置为 true。
+
+link:create-database-server.html["详细了解如何创建 SQL Server 主机"]。
+
+.部署 SQL Server 主机需要什么 Active Directory 访问权限？
+您需要 Active Directory 管理访问权限，以便部署可以加入域并创建计算机对象。如果您不提供，部署将创建一个 SQL 服务帐户。对于用户管理的 Active Directory，您必须提供一个安全组，以允许从 EC2 实例到目录服务的流量。
+
+link:create-database-server.html["详细了解如何创建 SQL Server 主机"]。
+
+.为什么我的 SQL Server 部署会因为 CredSSP 而失败？
+在部署期间，Workload Factory 启用 CredSSP 以将凭据委派到配置脚本。如果组策略阻止所有域计算机的 CredSSP 委派，则部署将失败。Workload Factory 在部署后禁用 CredSSP。
+
+link:create-database-server.html["详细了解如何创建 SQL Server 主机"]。
+
+.我可以在部署后立即连接到 SQL Server 吗？
+不会立即生效。Workload Factory 不会在已部署的 SQL Server 上启用远程连接，因此需要自行对其进行配置，例如允许在安全组中使用所需的客户端 IP 或子网。
+
+link:create-database-server.html["了解如何在 SQL Server 上启用远程连接"]。
+
+
+
+[[register-and-manage-resources]]
+== 注册和管理资源
+
+.在 Workload Factory 中注册实例可以获得什么？有哪些先决条件？
+通过注册，您可以创建数据库和沙盒克隆、运行错误日志分析以及优化配置。资源必须在 FSx for ONTAP 存储上运行，并显示在清单中，这需要 AWS 凭据。您还必须将链接与 FSx for ONTAP 文件系统相关联，并完成先决条件检查，包括适用于 SQL Server 的 AWS 和 NetApp PowerShell 模块。
+
+link:register-instance.html["注册资源"]。
+
+.哪些数据库可以注册和管理，PostgreSQL 呢？
+只能注册和管理 SQL Server 实例（FCI 和独立）和 Oracle 数据库。PostgreSQL 主机根据您的 AWS 凭据显示在清单中，但尚未注册。检测仅涵盖 Amazon Linux 上的 PostgreSQL 以及 Red Hat Enterprise Linux 上的 Oracle。
+
+.在没有互联网接入的专用网络中注册实例需要什么？
+在 VPC 中使 S3、AWS Systems Manager 和 FSx for ONTAP 的 VPC 端点可用，并在接口端点的安全组中允许端口 443。如果使用代理，则还必须允许所需的 Microsoft、PowerShell Gallery（SQL Server）和 AWS 域。
+
+link:register-instance.html["了解如何注册资源"]。
+
+.取消注册资源后会发生什么？
+您无法再从控制台部署或监控该资源，并且其 FSx for ONTAP 存储容量不再计为该实例已使用的容量。您可以稍后再次注册该资源。
+
+link:deregister-instance.html["取消注册资源"]。
+
+.关于创建数据库，我需要了解哪些信息？
+创建数据库会为数据和日志文件添加两个具有独立 LUN 的新卷。这些文件是精简配置的，仅占用分配大小的几 MB。使用 SMB 的 SQL Server 不支持创建数据库。
+
+link:create-database.html["创建 SQL Server 数据库"]。
+
+
+
+[[savings-calculator]]
+== 节省计算器
+
+.节省计算器比较什么，本地 SQL Server 主机如何评估？
+它将 FSx for ONTAP 上的存储、计算、SQL 许可证、快照和克隆成本与 Amazon Elastic Block Store、FSx for Windows File Server 以及本地存储的成本进行了比较。对于本地主机，您可以下载 PowerShell 评估脚本，在主机上运行该脚本，然后上传结果。然后，您最多可以选择五个主机进行分析。请注意，成本和节省百分比计算中未考虑本地卷大小。
+
+link:explore-savings.html["了解如何使用节省计算器"]。
+
+.为什么计算器建议将 SQL Server Enterprise 降级到 Standard Edition？
+当实例具有 48 个或更少的 vCPU 和 128 GB 或更少的内存时，建议进行降级。实例也不得使用 Enterprise 功能，如在线索引操作、资源调控器、对等或 Oracle 复制、R/Python 扩展或内存优化的 TempDB。部署模型也不得要求使用 Enterprise。
+
+.当我选择多个主机时，计算器如何调整 FSx for ONTAP 配置的大小？
+您最多可以选择五个检测到的主机。Workload Factory 会将它们整合到一个包含一个 SQL 实例的 FSx for ONTAP 配置建议中，除非这些主机超过了单个文件系统的吞吐量、容量或 IOPS 限制。不支持创建或保存多个 FSx for ONTAP 文件系统。
+
+link:explore-savings.html["了解节省量"]。
+
+
+
+[[well-architected-configurations]]
+== 精心设计的配置
+
+.一次性和持续性架构完善评估有什么区别？
+一次性评估在主机上运行脚本并上传结果，因此不会存储凭据，也不需要注册资源。持续评估需要注册资源、关联链接和授予权限。它每天进行分析，并可以自动解决问题。
+
+link:optimize-configurations.html["优化数据库配置"]。
+
+.在修复架构完善的配置问题之前，我应该考虑哪些风险？
+有些修复可能会导致停机或服务中断，因此请先查看每个建议。例如，在更改生产之前测试 RSS 和 MAXDOP 性能建议。
+
+link:optimize-configurations.html["运行评估以了解有关配置建议的更多信息"]。
+
+.我可以忽略不适用于我的环境的架构完善建议吗？
+是。忽略配置会停止其分析，避免不必要的警报，并将其从总优化分数中删除。您可以随时重新激活它，然后每天恢复分析。
+
+link:optimize-configurations.html["从架构完善的评估中忽略配置"]。
+
+.为什么最佳实践建议在 SQL Server 和 Oracle 的卷上禁用计划的本地快照？
+计划的 FSx for ONTAP 快照不具备应用程序一致性。建议使用 NetApp SnapCenter 等工具从外部管理快照，以获取应用程序一致的备份，并避免在还原期间发生损坏。请注意，高级创建主机部署默认启用具有 7 天保留期的每日快照策略。
+
+link:optimize-overview.html["详细了解数据库配置的分析"]。
+
+
+
+[[sandbox-clones]]
+== 沙盒克隆
+
+.沙盒克隆是如何创建的，可以放置在哪里？
+沙盒克隆是从源数据库的最新快照创建的。它可以在同一个 SQL Server 实例上，也可以在另一个实例上，前提是目标主机与源位于同一个 VPC 中，并且共享同一个 FSx for ONTAP 文件系统。创建沙盒克隆需要托管（已注册）的 SQL Server 以及操作和修复权限。
+
+link:create-sandbox-clone.html["创建沙盒克隆"]。
+
+.沙盒克隆的刷新、重新基线和拆分之间有什么区别？
+刷新会将克隆同步到源数据库的当前状态或以前的快照，并删除对克隆所做的任何更改。与创建新克隆相比，重新基线会将克隆恢复到创建时的状态，同时删除更改并节省空间。拆分会将克隆转换为消耗存储容量的独立数据库，并在拆分完成时删除克隆。
+
+* link:manage-clones.html["管理数据库克隆"]。
+* link:split-clone.html["拆分数据库克隆"]。
+
+
+.如何验证沙盒克隆的数据是否正确，如果检查失败该怎么办？
+如果在源数据库繁忙时创建克隆，则克隆可能与最新快照不同步。完整性检查会检查克隆中的所有对象。如果失败，请勿使用该克隆，并创建一个新克隆。
+
+link:manage-clones.html["检查数据库克隆的完整性"]。
+
+.在拆分克隆之前，我应该检查什么？
+拆分会创建一个消耗额外存储容量的新数据库。规划所需容量，并在需要时提前增加 FSx for ONTAP 文件系统的容量。
+
+link:split-clone.html["拆分数据库克隆"]。
+
+
+
+[[data-protection]]
+== 数据保护
+
+.备份和恢复为 SQL Server 工作负载提供什么保护？
+它使用主 FSx for ONTAP 存储上的本地快照备份工作负载，并使用 SnapMirror 技术将其复制到二级 FSx for ONTAP 存储。您可以在 Backup and Recovery 中创建保护策略。
+
+link:protect-sql-server.html["使用备份和恢复保护 SQL Server 工作负载"]。
+
+.使用 NetApp Backup and Recovery 保护 SQL Server 需要做些什么？
+SQL Server 实例必须使用 Windows 凭据注册。您还必须满足 Backup and Recovery SQL Server 要求、NetApp Console 要求（包括 Console 代理）以及许可要求。然后，Workload Factory 将安装 Microsoft SQL Server 插件，并将您重定向到 Backup and Recovery 以创建保护策略。
+
+link:protect-sql-server.html["使用备份和恢复保护 SQL Server 工作负载"]。
+
+
+
+[[automation-and-error-analysis]]
+== 自动化和错误分析
+
+.什么是 Codebox，使用生成的代码时是否有注意事项？
+Codebox 是一个基础架构即代码副驾驶，可为 Workload Factory 支持的操作生成 REST API、AWS CLI、CloudFormation 和 Terraform 代码。Terraform 代码会隐藏 fsxadmin 和 vsadmin 密码，因此您必须重新输入这些密码。下载或复制的 CloudFormation 模板仅保留七天。请参阅 link:automate-codebox.html["使用 Codebox 实现自动化"]。
+
+.我需要设置什么才能使用人工智能驱动的错误日志分析器？
+分析器需要 Amazon Bedrock 激活、与主机子网关联的 Bedrock VPC 端点、注册资源和所需的 IAM 权限。对于 Oracle，您还必须授予对 V$DIAG_ALERT_EXT 的访问权限。如果您的帐户管理员禁用了 AI 功能，则分析器不可用。
+
+link:analyze-error-logs.html["了解如何在 Workload Factory 中分析错误日志"]。
+
+.使用错误日志分析器时，我的日志数据是否安全？
+日志数据和聚合保留在您的 AWS 帐户中，并通过私有 VPC 端点传输，不会暴露在公共互联网中。客户数据不会用于训练或改进模型。Bedrock 实时处理日志，并将结果存储在您的环境中。
