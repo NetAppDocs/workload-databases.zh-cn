@@ -720,14 +720,11 @@
   <block id="0eabf86e93873fc39b5a49903ec1c780" category="inline-link-macro">了解如何通过工作负载工厂控制台保护 Microsoft SQL Server 工作负载</block>
   <block id="7b26957c70db2d24aefeef252ab7b883" category="inline-link-macro">使用BlueXP backup and recovery保护 Microsoft SQL 工作负载概述</block>
   <block id="6f452244df857c1e0fc35a2a40650322" category="paragraph">有关BlueXP backup and recovery的详细信息，请参阅<block ref="b3db6ed8425306b30d05a9028a6a4afe" category="inline-link-macro-rx"></block>。</block>
-  <block id="6928b7abf5d9fe2390db1739e7eb6d4b" category="summary">保护 Microsoft SQL Server 实例和数据库。</block>
   <block id="3d5a9cd83b30ec6ec9f0802593907f05" category="doc">保护 Microsoft SQL Server 工作负载</block>
-  <block id="2a664f2dff1a4229f6bce49f7fdfe6f2" category="paragraph">要发现数据库，您必须在连接器上设置主机解析。在托管设备上，在<block ref="ad942c725cd0cae65ca4c63717ec464c" prefix=" " category="inline-code"></block>文件。</block>
   <block id="9a4d384d3169400fc10e8236540a38e4" category="inline-link-macro">了解如何创建策略来保护您的 Microsoft SQL Server 实例和数据库</block>
   <block id="d341f0c47f4b7ad5cc1b4c9bb210cfda" category="section-title">2025年8月12日</block>
   <block id="82776afd94423c79dbb6478467a55ee1" category="paragraph"><block ref="01ada1ee9ae7e42f0ced5cd933931e08" category="inline-link-macro-rx"></block> 。</block>
   <block id="1d7888e9a7739b1a3282310704484ae5" category="doc">BlueXP backup and recovery现在支持 Microsoft SQL Server 工作负载</block>
-  <block id="b101f17cf16b7701e98ff3ad94847a38" category="list-text">在连接器上设置主机分辨率</block>
   <block id="c66ae4617a5e7b903fa49494f6025fe3" category="doc">Agentic AI 驱动的错误日志分析器</block>
   <block id="9d9b1a38d2c7c04daeaa22b4ab5a3d5d" category="paragraph">Agentic AI 驱动的错误日志分析器是一项新功能，它利用先进的机器学习算法自动检测和分析日志文件中的错误。该工具旨在通过根据日志中识别的模式向开发人员提供可操作的见解和建议来简化故障排除过程。</block>
   <block id="b8b677d9dba6a14dd05b3a0eb592a9c5" category="inline-link-macro">了解有关 Agentic AI 驱动的错误日志分析器的更多信息</block>
@@ -983,11 +980,7 @@
   <block id="51bbd388cda4367b34d6dc50a5e134a5" category="list-text">在 Well-architected 分析页面上，选择 *Dismissed configuration* 以仅显示已解除的配置。</block>
   <block id="bc4a349f7f95e73490c3e2f8aaabe892" category="list-text">选择*重新激活*以重新启动已推迟或已取消的配置的配置分析。</block>
   <block id="7c6a7786a083c7d074bada76f0bcd33b" category="summary">数据库工作负载工厂定期分析 Microsoft SQL Server 和 Oracle 配置以确定是否存在任何问题。</block>
-  <block id="84ee3cc4e2a4f169585c115121112580" category="paragraph">使用 Workload Factory 控制台中的NetApp Backup and Recovery 保护您的 Microsoft SQL Server 应用程序数据。通过此集成，您可以实现以下保护目标：使用本地快照在本地主Amazon FSx for NetApp ONTAP （FSx for ONTAP）存储上备份工作负载，并将工作负载复制到辅助 FSx for ONTAP存储。</block>
-  <block id="bb1b704677e0a9ac00a2bda88f85fe27" category="paragraph">Workload Factory 可自动发现资源、验证先决条件以及配置和安装 Microsoft SQL Server 插件，为使用NetApp Backup and Recovery 保护您的工作负载做好准备。该插件是NetApp软件的主机端组件，可让您保护 Microsoft SQL Server 工作负载。</block>
-  <block id="e9575ae90b7ec054c43a9797544d0103" category="paragraph">NetApp Backup and Recovery 利用NetApp SnapMirror数据复制技术，通过创建快照副本并将其传输到备份位置来确保所有备份完全同步。</block>
   <block id="51c9172cf36fbb00094cffedddeabb88" category="inline-link-macro">使用备份和恢复保护 Microsoft SQL 工作负载概述</block>
-  <block id="ce8e733ff697d3370377249dbc3ffd6d" category="paragraph">必须满足以下要求才能使用备份和恢复保护 Microsoft SQL Server 工作负载。</block>
   <block id="e3f8bb97f8af8ab70be96564f7d02f6f" category="inline-link-macro">备份和恢复 SQL Server 要求</block>
   <block id="c9fac6b51e56e1759975cd42fd695b0b" category="inline-link-macro">完成NetApp控制台要求</block>
   <block id="6c10f0d7d75df4253299ebf279f9f52e" category="inline-xref">使用NetApp Backup and Recovery 做好保护准备</block>
@@ -999,8 +992,6 @@
   <block id="aff5576e83048c511b5253daf9d7f210" category="list-text">找到您想要保护的实例，然后从菜单中选择*保护*。</block>
   <block id="20f1b3a019be92852e5053e60b0d82ab" category="paragraph">要使用NetApp Backup and Recovery 进行保护，必须使用 Windows 凭据在 Workload Factory 中注册 SQL Server 实例。</block>
   <block id="63b9cd7c8282516215f0adc0c391780a" category="list-text">如果有多个控制台代理处于活动状态且可用，请选择要注册和保护工作负载的“控制台代理”。</block>
-  <block id="1f6bfa37836a1e9968d5ea7593e0629b" category="list-text">为了准备数据保护，Workload Factory 会自动在备份和恢复中注册您的 SQL Server 资源，配置和安装 Microsoft SQL Server 插件，并发现满足保护 SQL Server 实例的先决条件的资源。选择“*开始*”来启动该过程。</block>
-  <block id="8b48bc7f871383eb926099b2126e0377" category="list-text">满足先决条件后，选择*重定向*以访问备份和恢复。</block>
   <block id="0a34414f3db7a7d22b890f0de8eb8225" category="paragraph">从备份和恢复中，创建一个策略来保护您的 Microsoft SQL Server 实例和数据库。</block>
   <block id="a34428791f8c5ce4b1184d505db69402" category="inline-link-macro">备份和恢复文档</block>
   <block id="d05a91a23b39b2ef83c7f917a0c9c7e5" category="summary">开始使用NetApp Workload Factory for Databases 来使用基础设施即代码片段、发现主机、管理资源等。</block>
@@ -1048,7 +1039,6 @@
   <block id="da799d994391b08e1d7460381c98559f" category="sidebar">了解数据库工作负载工厂</block>
   <block id="b932f0cf95f538a8c687f905809c4de8" category="paragraph">有关使用备份和恢复进行保护的详细信息，请参阅 <block ref="aefe430dd4ebf4bd80cdc056d521c135" category="inline-link-macro-rx"></block>。</block>
   <block id="1a60f402f44b25587846bc52b43a5256" category="list-text">确保您的环境满足 <block ref="e28e35d1fa3b60445b98139b282e0fe6" category="inline-link-macro-rx"></block>。</block>
-  <block id="b840c4396ce722a09c18899a4424775c" category="list-text"><block ref="3a4019be669eb0d9a01f9ed45fbe9c1e" category="inline-link-macro-rx"></block> 包括设置、分配 IAM 角色和安装控制台代理。</block>
   <block id="1cad8c414706b5bcb0b45db25ebf8cb8" category="list-text"><block ref="1cad8c414706b5bcb0b45db25ebf8cb8" category="inline-link-macro-rx"></block></block>
   <block id="8cddfd1e7d348910ccb9f33f1875227b" category="paragraph"><block ref="f04d9a72ed4e336f6d3f26aa1ae4191f" category="inline-link-macro-rx"></block>。</block>
   <block id="99a41b50ffc589da72247d73d9ef02ed" category="paragraph">相关信息，请参阅 <block ref="dc3edb02c7b9b729d8ce33699dc1f607" category="inline-link-macro-rx"></block> 用于管理 Microsoft SQL Server 工作负载。</block>
@@ -1664,7 +1654,6 @@
   <block id="06eec6f6dae375e43105994b315f1664" category="doc">注销 NetApp Workload Factory for Databases 中的资源</block>
   <block id="5719a8b368e4d1cde735746b2f77b822" category="doc">在 NetApp Workload Factory 中实施架构完善的数据库配置</block>
   <block id="c845f87358189f25588e9dd9d9cf0101" category="doc">了解 NetApp Workload Factory for Databases 中的配置分析</block>
-  <block id="b1ac22e25e1bec51612ad9e1ac8a5f03" category="doc">使用 NetApp Workload Factory for Databases 保护 Microsoft SQL Server 工作负载</block>
   <block id="1251c2c3562b89a08c4f6e3d98cee073" category="doc">在 NetApp Workload Factory for Databases 中拆分数据库克隆</block>
   <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">2026年8月30日</block>
   <block id="b5ed82020518e1a667b7f42bf1da1877" category="paragraph"><block ref="b5ed82020518e1a667b7f42bf1da1877" category="inline-link-macro-rx"></block></block>
@@ -1812,4 +1801,15 @@
   <block id="2d647234501319107057acb4d3f8dfaf" category="inline-image-macro">Workload Factory 控制台中的架构完善菜单选项</block>
   <block id="9eedb850820a13204009135fc19d046a" category="paragraph"><block ref="9eedb850820a13204009135fc19d046a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="066f3a9431c48361a10c813b2b187f91" category="section-title">2026年11月2日</block>
+  <block id="02ecfb80615801fb7290324974def221" category="summary">准备 Microsoft SQL Server 实例以使用 Workload Factory 的 NetApp Backup and Recovery 进行保护，并编辑实例和数据库的保护。</block>
+  <block id="0b892c663bcd41809a45b8acf7b5cda2" category="doc">使用 Workload Factory for Databases 保护 Microsoft SQL Server 工作负载</block>
+  <block id="7c0de3bc578c3b452e48795da8cd82a5" category="paragraph">从 Workload Factory 控制台使用 NetApp Backup and Recovery 保护您的 Microsoft SQL Server 应用程序数据。通过此集成，您可以使用主 Amazon FSx for NetApp ONTAP （FSx for ONTAP） 存储上的本地快照备份工作负载，并将工作负载复制到二级 FSx for ONTAP 存储。</block>
+  <block id="701d64f5fb48795b0a93ba34aad63370" category="paragraph">Workload Factory 可自动发现资源、验证先决条件以及配置和安装 Microsoft SQL Server 插件，以为使用 NetApp Backup and Recovery 保护您的工作负载做好准备。该插件是 NetApp 软件的主机端组件，使您能够保护 Microsoft SQL Server 工作负载。</block>
+  <block id="7541804fbee8c8f777668ced547c2c33" category="paragraph">NetApp Backup and Recovery 使用 NetApp SnapMirror 数据复制技术，通过创建快照副本并将其传输到备份位置，确保所有备份完全同步。</block>
+  <block id="c435fed8dfbdb1be334cf8aa9b134d7d" category="paragraph">在使用备份和恢复保护 Microsoft SQL Server 工作负载之前，请满足这些要求。</block>
+  <block id="b3b01adadb2f2c8c7c03fa11b3fe5660" category="list-text"><block ref="3a4019be669eb0d9a01f9ed45fbe9c1e" category="inline-link-macro-rx"></block>，包括设置、分配 IAM 角色和安装 Console 代理。</block>
+  <block id="dc4aa7e67a635cdf7d0072d326c13623" category="list-text">在 Console 代理上设置主机解析</block>
+  <block id="c74765260910ab236305071e9c5dbb8b" category="paragraph">要发现数据库，必须在控制台代理上设置主机解析。在托管设备上，在<block ref="ad942c725cd0cae65ca4c63717ec464c" prefix=" " category="inline-code"></block>文件中添加 IP 地址到主机名的映射。</block>
+  <block id="c1df37818abd0d7b1c7be121d2956448" category="list-text">选择 *开始* 以准备数据保护。Workload Factory 会自动在 Backup and Recovery 中注册您的 SQL Server 资源，配置并安装 Microsoft SQL Server 插件，并发现资源以满足保护 SQL Server 实例的先决条件。</block>
+  <block id="3294c80c49799c63e5b47d745307a669" category="list-text">满足先决条件后，选择*重定向*访问 Backup and Recovery。</block>
 </blocks>

@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: protect-sql-server.html 
 keywords: protect, server, Microsoft SQL Server, SQL Server, protect instance, protect database 
-summary: 保护 Microsoft SQL Server 实例和数据库。 
+summary: 准备 Microsoft SQL Server 实例以使用 Workload Factory 的 NetApp Backup and Recovery 进行保护，并编辑实例和数据库的保护。 
 ---
-= 使用 NetApp Workload Factory for Databases 保护 Microsoft SQL Server 工作负载
+= 使用 Workload Factory for Databases 保护 Microsoft SQL Server 工作负载
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-使用 Workload Factory 控制台中的NetApp Backup and Recovery 保护您的 Microsoft SQL Server 应用程序数据。通过此集成，您可以实现以下保护目标：使用本地快照在本地主Amazon FSx for NetApp ONTAP （FSx for ONTAP）存储上备份工作负载，并将工作负载复制到辅助 FSx for ONTAP存储。
+从 Workload Factory 控制台使用 NetApp Backup and Recovery 保护您的 Microsoft SQL Server 应用程序数据。通过此集成，您可以使用主 Amazon FSx for NetApp ONTAP （FSx for ONTAP） 存储上的本地快照备份工作负载，并将工作负载复制到二级 FSx for ONTAP 存储。
 
 
 
 [[about-this-task]]
 == 关于此任务
 
-Workload Factory 可自动发现资源、验证先决条件以及配置和安装 Microsoft SQL Server 插件，为使用NetApp Backup and Recovery 保护您的工作负载做好准备。该插件是NetApp软件的主机端组件，可让您保护 Microsoft SQL Server 工作负载。
+Workload Factory 可自动发现资源、验证先决条件以及配置和安装 Microsoft SQL Server 插件，以为使用 NetApp Backup and Recovery 保护您的工作负载做好准备。该插件是 NetApp 软件的主机端组件，使您能够保护 Microsoft SQL Server 工作负载。
 
-NetApp Backup and Recovery 利用NetApp SnapMirror数据复制技术，通过创建快照副本并将其传输到备份位置来确保所有备份完全同步。
+NetApp Backup and Recovery 使用 NetApp SnapMirror 数据复制技术，通过创建快照副本并将其传输到备份位置，确保所有备份完全同步。
 
 有关使用备份和恢复进行保护的详细信息，请参阅 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["使用备份和恢复保护 Microsoft SQL 工作负载概述"^]。
 
@@ -29,17 +29,17 @@ NetApp Backup and Recovery 利用NetApp SnapMirror数据复制技术，通过创
 [[before-you-begin]]
 == 开始之前
 
-必须满足以下要求才能使用备份和恢复保护 Microsoft SQL Server 工作负载。
+在使用备份和恢复保护 Microsoft SQL Server 工作负载之前，请满足这些要求。
 
 * 确保您的环境满足 link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["备份和恢复 SQL Server 要求"^]。
-* link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#in-netapp-console["完成NetApp控制台要求"^] 包括设置、分配 IAM 角色和安装控制台代理。
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#in-netapp-console["完成NetApp控制台要求"^]，包括设置、分配 IAM 角色和安装 Console 代理。
 
 
 如果您拥有NetApp帐户的组织管理员访问权限，则 `backup and recovery super admin`当您<<使用NetApp Backup and Recovery 做好保护准备,使用NetApp Backup and Recovery 做好保护准备>>。
 
-* 在连接器上设置主机分辨率
+* 在 Console 代理上设置主机解析
 +
-要发现数据库，您必须在连接器上设置主机解析。在托管设备上，在 `/etc/hosts`文件。
+要发现数据库，必须在控制台代理上设置主机解析。在托管设备上，在 `/etc/hosts`文件中添加 IP 地址到主机名的映射。
 
 +
 ** link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html["设置NetApp Backup and Recovery 的许可"^]
@@ -65,8 +65,8 @@ NetApp Backup and Recovery 利用NetApp SnapMirror数据复制技术，通过创
 要使用NetApp Backup and Recovery 进行保护，必须使用 Windows 凭据在 Workload Factory 中注册 SQL Server 实例。
 
 . 如果有多个控制台代理处于活动状态且可用，请选择要注册和保护工作负载的“控制台代理”。
-. 为了准备数据保护，Workload Factory 会自动在备份和恢复中注册您的 SQL Server 资源，配置和安装 Microsoft SQL Server 插件，并发现满足保护 SQL Server 实例的先决条件的资源。选择“*开始*”来启动该过程。
-. 满足先决条件后，选择*重定向*以访问备份和恢复。
+. 选择 *开始* 以准备数据保护。Workload Factory 会自动在 Backup and Recovery 中注册您的 SQL Server 资源，配置并安装 Microsoft SQL Server 插件，并发现资源以满足保护 SQL Server 实例的先决条件。
+. 满足先决条件后，选择*重定向*访问 Backup and Recovery。
 
 
 .下一步行动
